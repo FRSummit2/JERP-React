@@ -103,4 +103,5 @@ export default App;
  * >> npm install axios
  * 
  * >> npm install react-confirm-alert --save
+ * >> npm install --save react-chartjs-2 chart.js
  */

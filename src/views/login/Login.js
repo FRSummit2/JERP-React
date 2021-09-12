@@ -8,13 +8,13 @@ import { login } from '../../service/LoginService';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
-import { SuccessModal } from '../helpers/modals/success'
+// import { SuccessModal } from '../helpers/modals/success'
 
 function Login(props) {
     // const [loading, setLoading] = useState(false);
     const username = useFormInput('');
     const password = useFormInput('');
-    const [error, setError] = useState(null);
+    // const [error, setError] = useState(null);
 
     // handle button click of login form
     // const handleLogin = () => {
@@ -126,7 +126,7 @@ function Login(props) {
                                                 <div className="forgotten text-center"><a>Forgotten Password?</a></div> */}
                                             </form>
                                             <button className="btn btn-primary text-light btn-block submit-btn" onClick={handleLoginJerp}>Log In <i className="fas fa-circle-notch spin-animation d-none"></i></button>
-                                            <div className="forgotten text-center"><a>Forgotten Password?</a></div>
+                                            <div className="forgotten text-center"><a href="/">Forgotten Password?</a></div>
                                             { 20 ? 
                                                 <p>Hello</p>
                                                 :
@@ -143,12 +143,12 @@ function Login(props) {
             <div className="footer">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-3">Copyright © 2021 <a id="jerp">JERP</a>. All rights reserved.</div>
+                        <div className="col-md-3">Copyright © 2021 <a id="jerp" href="/">JERP</a>. All rights reserved.</div>
                         <div className="col-md-4"></div>
                         <div className="col-md-5">
                             <ul>
-                                <li><a><i className="fas fa-question-circle"></i> Need Help?</a></li>
-                                <li><a>Terms and Conditions</a></li>
+                                <li><a href="/"><i className="fas fa-question-circle"></i> Need Help?</a></li>
+                                <li><a href="/">Terms and Conditions</a></li>
                                 <li>
                                     <div className="li-logo">
                                         <p>Powered by: </p>
