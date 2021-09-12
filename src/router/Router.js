@@ -5,7 +5,8 @@ import PrivateRoute from '../Utils/PrivateRoute';
 import PublicRoute from '../Utils/PublicRoute';
 
 import Login from '../views/login/Login';
-import Dashboard from '../views/Dashboard';
+import Dashboard from '../views/dashboard/Dashboard';
+
 import MonthlyDeliveryPlan from '../views/sd/mdp/MonthlyDeliveryPlan';
 import DispatchEntry from '../views/sd/dispatchEntry/DispatchEntry';
 import TransferPackingPreparation from '../views/sd/ds_n_deliveries/transferPackingPreparation/TransferPackingPreparation';
@@ -56,26 +57,17 @@ import BankRegister from '../views/sd/register/bank_register/BankRegister'
 import ChequeRegister from '../views/sd/register/cheque_register/ChequeRegister'
 import ExpenditureRegister from '../views/sd/register/expenditure_register/ExpenditureRegister'
 
+import Page401 from '../views/errors/Page401';
 import Page404 from '../views/errors/Page404';
+import Page503 from '../views/errors/Page503';
+import PageUnderConstruction from '../views/errors/PageUnderConstruction';
+import PageUnderMaintenance from '../views/errors/PageUnderMaintenance';
 
-function Router() {
+const Router = () => {
 
   return (
     <div className="App">
       <Switch>
-        {/* <Route exact path="/" component={Home} /> */}
-
-        {/* Pubic Routes */}
-        {/* <PublicRoute path="/login" component={Login} props="none" name="Compop" id="123" /> */}
-        {/* here we send component and other objects to PublicRoute and then it catch component as component and other object as rest */}
-        {/* <PublicRoute path="/login" component={Login} /> */}
-        {/* <PublicRoute path="/other" component={Other} />
-        <PublicRoute path="/vuejs/question-part-1" component={Question_Part_1} />
-
-        <PublicRoute path="/data-pass" component={OtherMain} /> */}
-
-        {/* Private Route */}
-        {/* <PrivateRoute path="/dashboard" component={Dashboard} /> */}
 
         {/* DEFAULT */}
         <PublicRoute exact path="/" component={Login} />
@@ -141,7 +133,13 @@ function Router() {
         <PrivateRoute path="/features/accounts/cheque-register" component={ChequeRegister} />
         <PrivateRoute path="/features/accounts/expenditure-register" component={ExpenditureRegister} />
 
+        {/* ERROR */}
+        <PrivateRoute path="/unauthorized" component={Page401} />
         <PrivateRoute path="*" component={Page404} />
+        <PrivateRoute path="/service-unavailable" component={Page503} />
+        <PrivateRoute path="/under-construction" component={PageUnderConstruction} />
+        <PrivateRoute path="/under-maintenance" component={PageUnderMaintenance} />
+
       </Switch>
     </div>
   );
