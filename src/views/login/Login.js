@@ -66,7 +66,7 @@ function Login(props) {
             console.log(res)
             // setUserSession(response.data.token, response.data.user);
             setUserDetailsToSesstion(res.data)
-            props.history.push('/dashboard');
+            props.history.push('/features/users/dashboard');
         }).catch(err => {
             console.log(err)
             if (err.response.status === 401) errorMessageHandle('Error', err.response.data.message);
