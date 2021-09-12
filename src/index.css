@@ -1,13 +1,78 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.content {
+  padding: 20px;
+}
+
+.header {
+  padding      : 10px;
+  background   : #edf2f4;
+  border-bottom: 1px solid #999;
+}
+
+.header a {
+  color          : #0072ff;
+  text-decoration: none;
+  margin-left    : 20px;
+  margin-right   : 5px;
+  font-size      : 14px;
+}
+
+.header a:hover {
+  color: #8a0f53;
+}
+
+.header small {
+  color: #666;
+}
+
+.header .active {
+  color: #2c7613;
+}
+
+.margin-btm-fro-lnk {
+  margin-bottom: 10px;
+}
+
+#vuejs-question-part-1 .faqHeader {
+  font-size: 27px;
+  margin   : 20px;
+}
+
+#vuejs-question-part-1 .panel-heading [data-toggle="collapse"]:after {
+  font-family      : 'Glyphicons Halflings';
+  content          : "\e072";
+  /* "play" icon */
+  float            : right;
+  color            : #F58723;
+  font-size        : 18px;
+  line-height      : 22px;
+  /* rotate "play" icon from > (right arrow) to down arrow */
+  -webkit-transform: rotate(-90deg);
+  -moz-transform   : rotate(-90deg);
+  -ms-transform    : rotate(-90deg);
+  -o-transform     : rotate(-90deg);
+  transform        : rotate(-90deg);
+}
+
+#vuejs-question-part-1 .panel-heading [data-toggle="collapse"].collapsed:after {
+  /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+  -webkit-transform: rotate(90deg);
+  -moz-transform   : rotate(90deg);
+  -ms-transform    : rotate(90deg);
+  -o-transform     : rotate(90deg);
+  transform        : rotate(90deg);
+  color            : #454444;
 }
