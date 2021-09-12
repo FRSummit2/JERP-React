@@ -90,7 +90,7 @@ function Dashboard(props) {
         { name: 'Products', url: '/features/inventory/products' },
         { name: 'Product Details', url: '/features/inventory/all-products' },
         { name: 'Price Approval', url: '/features/inventory/product-price-approval' },
-        { name: 'Special Request Approval', url: '/features/local_sales/special-req-approval-2' },
+        { name: 'Special Request Approval', url: '/features/local_sales/special-req-approval' },
         { name: 'Third Party Tender', url: '/features/local_sales/third-party-tender' },
         { name: 'Sales Area', url: '/features/configuration/sales_area' },
         { name: 'Sales Slab Discount', url: '/features/sales_promotion/slab-discount' },

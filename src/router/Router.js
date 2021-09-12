@@ -6,7 +6,56 @@ import PublicRoute from '../Utils/PublicRoute';
 
 import Login from '../views/login/Login';
 import Dashboard from '../views/Dashboard';
-import MonthlyDeliveryPlan from '../views/mdp/MonthlyDeliveryPlan';
+import MonthlyDeliveryPlan from '../views/sd/mdp/MonthlyDeliveryPlan';
+import DispatchEntry from '../views/sd/dispatchEntry/DispatchEntry';
+import TransferPackingPreparation from '../views/sd/ds_n_deliveries/transferPackingPreparation/TransferPackingPreparation';
+
+import SalesOrder from '../views/sd/order/sales_order/SalesOrder'
+import OrderApproval from '../views/sd/order/order_approval/OrderApproval'
+
+import AddStock from '../views/sd/products/add_stock/AddStock'
+import StockReport from '../views/sd/products/stock_report/StockReport'
+import Products from '../views/sd/products/products/Products'
+import ProductsList from '../views/sd/products/products_list/ProductsList'
+import ProductPriceApproval from '../views/sd/products/product_price_approval/ProductPriceApproval'
+import SpecialReqApproval from '../views/sd/products/special_req_approval/SpecialReqApproval'
+
+import CustomerPendingList from '../views/sd/customers/customer_pending_list/CustomerPendingList'
+import CustomerList from '../views/sd/customers/customer_list/CustomerList'
+import CustomerCredit from '../views/sd/customers/customer_credit/CustomerCredit'
+
+import Deliveries from '../views/sd/ds_n_deliveries/deliveries/deliveries/Deliveries'
+import CustomerPayment from '../views/sd/ds_n_deliveries/deliveries/customer_payment/CustomerPayment'
+import DeliverySchedule from '../views/sd/ds_n_deliveries/dp_ds/ds/DeliverySchedule'
+import DeliveryPreparation from '../views/sd/ds_n_deliveries/dp_ds/dp/DeliveryPreparation'
+import Collection from '../views/sd/ds_n_deliveries/deliveries/collection/Collection'
+import DeliveryGRN from '../views/sd/ds_n_deliveries/deliveries/grn/GRN'
+import GRN from '../views/sd/ds_n_deliveries/deliveries/grn/GRN'
+
+import Employee from '../views/sd/employee/Employee'
+
+import BalanceSheet from '../views/sd/balance_sheet/BalanceSheet'
+
+import Requisition from '../views/sd/requisition/requisition/Requisition'
+import CreateRequisition from '../views/sd/requisition/create_requisition/CreateRequisition'
+import ApproveRequisition from '../views/sd/requisition/approve_requisition/ApproveRequisition'
+import VerifiedRequisition from '../views/sd/requisition/verified_requisition/VerifiedRequisition'
+import VerifiedRequisitionUpdate from '../views/sd/requisition/verified_requisition_update/VerifiedRequisitionUpdate'
+import Transfer from '../views/sd/requisition/transfer/Transfer'
+
+import ThirdPartyTender from '../views/sd/third_party_tender/ThirdPartyTender'
+
+import SalesArea from '../views/sd/sales_area/SalesArea'
+
+import SlabDiscount from '../views/sd/slab_discount/SlabDiscount'
+
+import CashRegister from '../views/sd/register/cash_register/CashRegister'
+import EftnRegister from '../views/sd/register/eftn_register/EftnRegister'
+import ChallanRegister from '../views/sd/register/challan_register/ChallanRegister'
+import BankRegister from '../views/sd/register/bank_register/BankRegister'
+import ChequeRegister from '../views/sd/register/cheque_register/ChequeRegister'
+import ExpenditureRegister from '../views/sd/register/expenditure_register/ExpenditureRegister'
+
 import Page404 from '../views/errors/Page404';
 
 function Router() {
@@ -20,7 +69,6 @@ function Router() {
         {/* <PublicRoute path="/login" component={Login} props="none" name="Compop" id="123" /> */}
         {/* here we send component and other objects to PublicRoute and then it catch component as component and other object as rest */}
         {/* <PublicRoute path="/login" component={Login} /> */}
-        <PublicRoute exact path="/" component={Login} />
         {/* <PublicRoute path="/other" component={Other} />
         <PublicRoute path="/vuejs/question-part-1" component={Question_Part_1} />
 
@@ -29,45 +77,69 @@ function Router() {
         {/* Private Route */}
         {/* <PrivateRoute path="/dashboard" component={Dashboard} /> */}
 
+        {/* DEFAULT */}
+        <PublicRoute exact path="/" component={Login} />
         <PrivateRoute path="/features/users/dashboard" component={Dashboard} />
+
+        {/* MDP */}
         <PrivateRoute path="/features/local_sales/delivery_plan" component={MonthlyDeliveryPlan} />
-        {/* <PrivateRoute path="/features/local_sales/dispatch-entry" component={} />
-        <PrivateRoute path="/features/local_sales/ds-transfer-packing-preparation" component={} />
-        <PrivateRoute path="/features/local_sales/sales_order" component={} />
-        <PrivateRoute path="/features/local_sales/order_approval" component={} />
-        <PrivateRoute path="/features/goods_movement/add-stock" component={} />
-        <PrivateRoute path="/features/marketing_and_crm/customer-pending-list" component={} />
-        <PrivateRoute path="/features/stakeholders/retailer" component={} />
-        <PrivateRoute path="/features/marketing_and_crm/customer-credit" component={} />
-        <PrivateRoute path="/features/local_sales/deliveries" component={} />
-        <PrivateRoute path="/features/local_sales/customer-payment" component={} />
-        <PrivateRoute path="/features/local_sales/dp-ds" component={} />
-        <PrivateRoute path="/features/local_sales/delivery-preparation" component={} />
-        <PrivateRoute path="/features/local_sales/collection" component={} />
-        <PrivateRoute path="/features/configuration/employee" component={} />
-        <PrivateRoute path="/features/local_sales/balance-sheet" component={} />
-        <PrivateRoute path="/features/reports/stock-report" component={} />
-        <PrivateRoute path="/features/local_sales/delivery_grn" component={} />
-        <PrivateRoute path="/features/inventory/grn" component={} />
-        <PrivateRoute path="/features/inventory/requisition" component={} />
-        <PrivateRoute path="/features/local_sales/create-requisition" component={} />
-        <PrivateRoute path="/features/goods_movement/approve-requisition" component={} />
-        <PrivateRoute path="/features/goods_movement/verified-requisition" component={} />
-        <PrivateRoute path="/features/goods_movement/verified-requisition-update" component={} />
-        <PrivateRoute path="/features/inventory/transfer" component={} />
-        <PrivateRoute path="/features/inventory/products" component={} />
-        <PrivateRoute path="/features/inventory/all-products" component={} />
-        <PrivateRoute path="/features/inventory/product-price-approval" component={} />
-        <PrivateRoute path="/features/local_sales/special-req-approval-2" component={} />
-        <PrivateRoute path="/features/local_sales/third-party-tender" component={} />
-        <PrivateRoute path="/features/configuration/sales_area" component={} />
-        <PrivateRoute path="/features/sales_promotion/slab-discount" component={} />
-        <PrivateRoute path="/features/accounts/cash-register" component={} />
-        <PrivateRoute path="/features/accounts/eftn-register" component={} />
-        <PrivateRoute path="/features/accounts/challan-register" component={} />
-        <PrivateRoute path="/features/accounts/bank-register" component={} />
-        <PrivateRoute path="/features/accounts/cheque-register" component={} />
-        <PrivateRoute path="/features/accounts/expenditure-register" component={} /> */}
+        
+        {/* DISPATCH & PACKING PREPARATION */}
+        <PrivateRoute path="/features/local_sales/dispatch-entry" component={DispatchEntry} />
+        <PrivateRoute path="/features/local_sales/ds-transfer-packing-preparation" component={TransferPackingPreparation} />
+        
+        {/* ORDERS */}
+        <PrivateRoute path="/features/local_sales/sales_order" component={SalesOrder} />
+        <PrivateRoute path="/features/local_sales/order_approval" component={OrderApproval} />
+        
+        {/* PRODUCTS */}
+        <PrivateRoute path="/features/goods_movement/add-stock" component={AddStock} />
+        <PrivateRoute path="/features/reports/stock-report" component={StockReport} />
+        <PrivateRoute path="/features/inventory/products" component={Products} />
+        <PrivateRoute path="/features/inventory/all-products" component={ProductsList} />
+        <PrivateRoute path="/features/inventory/product-price-approval" component={ProductPriceApproval} />
+        <PrivateRoute path="/features/local_sales/special-req-approval" component={SpecialReqApproval} />
+        
+        {/* CUSTOMER */}
+        <PrivateRoute path="/features/marketing_and_crm/customer-pending-list" component={CustomerPendingList} />
+        <PrivateRoute path="/features/stakeholders/retailer" component={CustomerList} />
+        <PrivateRoute path="/features/marketing_and_crm/customer-credit" component={CustomerCredit} />
+        
+        {/* DELIVERIES & DS */}
+        <PrivateRoute path="/features/local_sales/deliveries" component={Deliveries} />
+        <PrivateRoute path="/features/local_sales/customer-payment" component={CustomerPayment} />
+        <PrivateRoute path="/features/local_sales/dp-ds" component={DeliverySchedule} />
+        <PrivateRoute path="/features/local_sales/delivery-preparation" component={DeliveryPreparation} />
+        <PrivateRoute path="/features/local_sales/collection" component={Collection} />
+        <PrivateRoute path="/features/local_sales/delivery_grn" component={DeliveryGRN} />
+        <PrivateRoute path="/features/inventory/grn" component={GRN} />
+        
+        {/* EMPLOYEE */}
+        <PrivateRoute path="/features/configuration/employee" component={Employee} />
+        
+        {/* BAANCE SHEET */}
+        <PrivateRoute path="/features/local_sales/balance-sheet" component={BalanceSheet} />
+        
+        {/* REQUISITION */}
+        <PrivateRoute path="/features/inventory/requisition" component={Requisition} />
+        <PrivateRoute path="/features/local_sales/create-requisition" component={CreateRequisition} />
+        <PrivateRoute path="/features/goods_movement/approve-requisition" component={ApproveRequisition} />
+        <PrivateRoute path="/features/goods_movement/verified-requisition" component={VerifiedRequisition} />
+        <PrivateRoute path="/features/goods_movement/verified-requisition-update" component={VerifiedRequisitionUpdate} />
+        <PrivateRoute path="/features/inventory/transfer" component={Transfer} />
+        
+        {/* TENDER, SALES AREA, SLAB DISCOUNT */}
+        <PrivateRoute path="/features/local_sales/third-party-tender" component={ThirdPartyTender} />
+        <PrivateRoute path="/features/configuration/sales_area" component={SalesArea} />
+        <PrivateRoute path="/features/sales_promotion/slab-discount" component={SlabDiscount} />
+
+        {/* REGISTERS */}
+        <PrivateRoute path="/features/accounts/cash-register" component={CashRegister} />
+        <PrivateRoute path="/features/accounts/eftn-register" component={EftnRegister} />
+        <PrivateRoute path="/features/accounts/challan-register" component={ChallanRegister} />
+        <PrivateRoute path="/features/accounts/bank-register" component={BankRegister} />
+        <PrivateRoute path="/features/accounts/cheque-register" component={ChequeRegister} />
+        <PrivateRoute path="/features/accounts/expenditure-register" component={ExpenditureRegister} />
 
         <PrivateRoute path="*" component={Page404} />
       </Switch>
