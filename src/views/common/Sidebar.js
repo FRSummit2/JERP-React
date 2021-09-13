@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
-// function Header() {
-class Sidebar extends Component {
-    render() {
-        return (<div id="sidenavbar" className="sidenavbar">
+const Sidebar = (props) => {
+    // class Sidebar extends Component {
+    // render() {
+    return (
+        <div id="sidenavbar" className="sidenavbar">
             <div id="sidenav-menu-sec" className="sidenav-menu-sec">
                 <div className="menu-section-area">
                     <div className="menu-section-inner">
@@ -459,8 +460,8 @@ class Sidebar extends Component {
                 </div>
             </div>
         </div>
-        );
-    }
+    );
+    // }
 }
 
 export default Sidebar;
