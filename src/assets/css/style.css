@@ -49,3 +49,13 @@
     text-decoration: none;
     cursor         : pointer;
 }
+
+.main-section {
+    transition: margin-left .5s;
+    margin-left: 60px;
+    margin-top: 74px;
+    margin-bottom: 32px;
+    /* min-height: calc(100vh - (74px + 32px)); */
+    height: calc(100vh - (74px + 32px));
+    overflow-y: auto;
+}

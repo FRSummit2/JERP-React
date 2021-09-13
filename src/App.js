@@ -6,6 +6,9 @@ import { BrowserRouter } from 'react-router-dom';
 import './assets/css/login.css'
 import './assets/css/style.css'
 
+import './assets/css/style2.css'
+import './assets/css/layout.css'
+
 // import { getToken, removeUserSession, setUserSession } from './Utils/Common';
 import Router from './router/Router'
 

@@ -4,12 +4,15 @@ import { getUser, getTokenExpiresTime, removeUserSession } from '../../Utils/Com
 import { Bar, Radar } from 'react-chartjs-2';
 import { NavLink } from "react-router-dom"
 
+import CommonLayout from '../common/CommonLayout';
+
 // function Dashboard(props) {
-function Dashboard(props) {
+class Dashboard extends React.Component {
     // const user = getUser();
 
     // handle click event of logout button
-    const handleLogout = () => {
+    // const handleLogout = () => {
+    handleLogout = () => {
         // removeUserSession();
         // props.history.push('/login');
         console.log(getTokenExpiresTime())
@@ -18,11 +21,12 @@ function Dashboard(props) {
         console.log(new Date().getTime())
 
         removeUserSession()
-        props.history.push('/');
+        this.props.history.push('/');
     }
 
     // BAR CHART
-    const data = {
+    // const data = {
+    data = {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [
             {
@@ -49,7 +53,8 @@ function Dashboard(props) {
         ],
     };
 
-    const options = {
+    // const options = {
+    options = {
         scales: {
             yAxes: [
                 {
@@ -61,7 +66,8 @@ function Dashboard(props) {
         },
     };
 
-    const menus = [
+    // const menus = [
+    menus = [
         { name: 'Monthly Delivery Plan', url: '/features/local_sales/delivery_plan' },
         { name: 'Dispatch Entry', url: '/features/local_sales/dispatch-entry' },
         { name: 'DS Transfer Packing Preparation', url: '/features/local_sales/ds-transfer-packing-preparation' },
@@ -103,7 +109,8 @@ function Dashboard(props) {
     ]
 
     // RADAR CHART
-    const radar_data = {
+    // const radar_data = {
+    radar_data = {
         labels: ['Thing 1', 'Thing 2', 'Thing 3', 'Thing 4', 'Thing 5', 'Thing 6'],
         datasets: [
             {
@@ -116,7 +123,8 @@ function Dashboard(props) {
         ],
     };
 
-    const radar_options = {
+    // const radar_options = {
+    radar_options = {
         scale: {
             ticks: { beginAtZero: true },
         },
@@ -126,73 +134,77 @@ function Dashboard(props) {
     //     props.history.push(path)
     // }
 
-    return (
-        <div>
-            Dashboard
-            {/* Welcome {user.name}!<br /><br /> */}
-            <input type="button" onClick={handleLogout} value="Logout" />
+    render() {
+        return (
+            <div>
+                <CommonLayout />
+                {/* Welcome {user.name}!<br /><br /> */}
+                <div id="main-section" className="main-section">
+                    <input type="button" onClick={this.handleLogout} value="Logout" />
 
-            <div className="dashboard-menu row">
-                {
-                    menus.map((element, index) => (
-                        <div className="col-lg-3 col-md-4 col-sm-6 url-sec-dashboard" key={index}>
-                            {/* <a className={index}> */}
-                            <NavLink to={element.url}>{element.name}</NavLink>
-                            {/* </a> */}
+                    <div className="dashboard-menu row">
+                        {
+                            this.menus.map((element, index) => (
+                                <div className="col-lg-3 col-md-4 col-sm-6 url-sec-dashboard" key={index}>
+                                    {/* <a className={index}> */}
+                                    <NavLink to={element.url}>{element.name}</NavLink>
+                                    {/* </a> */}
+                                </div>
+                            ))
+                        }
+                    </div>
+
+                    {/* <div style={{marginTop: "20px"}}> */}
+                    <div className="row m-0 w-100">
+                        <div className="col-lg-6 w-50 p-0" style={{ border: "1px solid #026CD1" }}>
+                            <div className='header'>
+                                <h1 className='title'>Vertical Bar Chart</h1>
+                                <div className='links'>
+                                    <a
+                                        className='btn btn-gh'
+                                        href='https://reactchartjs.github.io/react-chartjs-2/#/'
+                                        rel="noreferrer" target="_blank"
+                                    >
+                                        Chartjs 2 Source
+                                    </a>
+                                    <a
+                                        className='btn btn-gh'
+                                        href='https://github.com/reactchartjs/react-chartjs-2/blob/master/example/src/charts/VerticalBar.js'
+                                        rel="noreferrer" target="_blank"
+                                    >
+                                        Github Source
+                                    </a>
+                                </div>
+                            </div>
+                            <Bar data={this.data} options={this.options} />
                         </div>
-                    ))
-                }
-            </div>
-
-            {/* <div style={{marginTop: "20px"}}> */}
-            <div className="row mt_20">
-                <div className="col-lg-6 w-50" style={{ border: "1px solid #026CD1" }}>
-                    <div className='header'>
-                        <h1 className='title'>Vertical Bar Chart</h1>
-                        <div className='links'>
-                            <a
-                                className='btn btn-gh'
-                                href='https://reactchartjs.github.io/react-chartjs-2/#/'
-                                rel="noreferrer" target="_blank"
-                            >
-                                Chartjs 2 Source
-                            </a>
-                            <a
-                                className='btn btn-gh'
-                                href='https://github.com/reactchartjs/react-chartjs-2/blob/master/example/src/charts/VerticalBar.js'
-                                rel="noreferrer" target="_blank"
-                            >
-                                Github Source
-                            </a>
+                        <div className="col-lg-6 w-50 p-0" style={{ border: "1px solid #026CD1" }}>
+                            <div className='header'>
+                                <h1 className='title'>Radar Chart</h1>
+                                <div className='links'>
+                                    <a
+                                        className='btn btn-gh'
+                                        href='https://reactchartjs.github.io/react-chartjs-2/#/'
+                                        rel="noreferrer" target="_blank"
+                                    >
+                                        Chartjs 2 Source
+                                    </a>
+                                    <a
+                                        className='btn btn-gh'
+                                        href='https://github.com/reactchartjs/react-chartjs-2/blob/master/example/src/charts/Radar.js'
+                                        rel="noreferrer" target="_blank"
+                                    >
+                                        Github Source
+                                    </a>
+                                </div>
+                            </div>
+                            <Radar data={this.radar_data} options={this.radar_options} />
                         </div>
                     </div>
-                    <Bar data={data} options={options} />
-                </div>
-                <div className="col-lg-6 w-50" style={{ border: "1px solid #026CD1" }}>
-                    <div className='header'>
-                        <h1 className='title'>Radar Chart</h1>
-                        <div className='links'>
-                            <a
-                                className='btn btn-gh'
-                                href='https://reactchartjs.github.io/react-chartjs-2/#/'
-                                rel="noreferrer" target="_blank"
-                            >
-                                Chartjs 2 Source
-                            </a>
-                            <a
-                                className='btn btn-gh'
-                                href='https://github.com/reactchartjs/react-chartjs-2/blob/master/example/src/charts/Radar.js'
-                                rel="noreferrer" target="_blank"
-                            >
-                                Github Source
-                            </a>
-                        </div>
-                    </div>
-                    <Radar data={radar_data} options={radar_options} />
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Dashboard;
