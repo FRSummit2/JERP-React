@@ -1,8 +1,11 @@
 import React, { Component, useState } from 'react';
+import { getUser, getTokenExpiresTime, removeUserSession } from '../../Utils/Common';
 import group_logo from '../../assets/images/groups/nipro_jmi-pharma.png'
+import { useHistory } from "react-router"
 
 const Header = (props) => {
     const [sidenav, setSidenav] = useState(0)
+    const history = useHistory();
     
     const hamburgerToggleEvent = () => {
         if (sidenav) {
@@ -15,6 +18,21 @@ const Header = (props) => {
         }
         console.log(sidenav)
         props.hamburgerToggleEvent_FromHeader(sidenav)
+    }
+
+    const handleLogout = () => {
+        // removeUserSession();
+        // props.history.push('/login');
+        console.log(getTokenExpiresTime())
+        console.log(new Date(getTokenExpiresTime()).getTime())
+        console.log(getUser())
+        console.log(new Date().getTime())
+
+        removeUserSession()
+        // props.history.push('/');
+        history.push({
+            pathname:  "/"
+         });
     }
 
     // render() {
@@ -351,7 +369,7 @@ const Header = (props) => {
                                             Lock Screen
                                         </div>
                                     </li>
-                                    <li className="profile-dropdown-item d-flex align-items-center">
+                                    <li className="profile-dropdown-item d-flex align-items-center" onClick={ handleLogout }>
                                         <div className="dropdown-item-icon">
                                             <span className="material-icons">logout</span>
                                         </div>

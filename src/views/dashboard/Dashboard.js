@@ -1,6 +1,6 @@
 import React from 'react';
 // import { getUser, removeUserSession } from '../Utils/Common';
-import { getUser, getTokenExpiresTime, removeUserSession } from '../../Utils/Common';
+// import { getUser, getTokenExpiresTime, removeUserSession } from '../../Utils/Common';
 import { Bar, Radar } from 'react-chartjs-2';
 import { NavLink } from "react-router-dom"
 
@@ -12,7 +12,7 @@ class Dashboard extends React.Component {
 
     // handle click event of logout button
     // const handleLogout = () => {
-    handleLogout = () => {
+    /*handleLogout = () => {
         // removeUserSession();
         // props.history.push('/login');
         console.log(getTokenExpiresTime())
@@ -22,7 +22,7 @@ class Dashboard extends React.Component {
 
         removeUserSession()
         this.props.history.push('/');
-    }
+    }*/
 
     // BAR CHART
     // const data = {
@@ -140,7 +140,7 @@ class Dashboard extends React.Component {
                 <CommonLayout />
                 {/* Welcome {user.name}!<br /><br /> */}
                 <div id="main-section" className="main-section">
-                    <input type="button" onClick={this.handleLogout} value="Logout" />
+                    {/* <input type="button" onClick={this.handleLogout} value="Logout" /> */}
 
                     <div className="dashboard-menu row">
                         {

@@ -8,6 +8,7 @@ import './assets/css/style.css'
 
 import './assets/css/style2.css'
 import './assets/css/layout.css'
+import './assets/css/style_mehedi.css'
 
 // import { getToken, removeUserSession, setUserSession } from './Utils/Common';
 import Router from './router/Router'

@@ -1,0 +1,1173 @@
+/*-------- Start Schroll Style --------*/
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--blue);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background:var(--blue);
+  }
+/*-------- End Schroll Style --------*/
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+a:hover { 
+    text-decoration: none; 
+    color: #000000;
+} 
+
+/*-------- Start Status Color --------*/
+/* .active{
+    color: var(--blue)!important;
+} */
+.available{
+    color:#28A411!important;
+}
+.occupied{
+    color:#FCC428!important;
+}
+.dcr_complete{
+    color:var(--blue)!important;
+}
+/*-------- End Status Color --------*/
+
+/*-------- Start Form Style --------*/
+.form-group label{
+   color: var(--blue);
+   font-size: var(--font14);
+}
+.form-group input{
+    border-radius: 2px;
+    border: 1px solid  var(--border-color);
+}
+.form-group input::placeholder{
+    font-size: var(--font14) ;
+    color: #AAC0D9;
+}
+.form-group input:focus{
+    border-color: var(--blue)!important;
+    box-shadow: none;
+}
+.form-group textarea {
+    padding-left: 10px;
+    border-radius: 2px;
+    border: 1px solid  var(--border-color);
+}
+.form-group textarea::placeholder{
+    font-size: var(--font14) ;
+    color: #AAC0D9;
+}
+.form-group textarea:focus{
+    outline: none !important;
+    border-color: var(--blue)!important;
+    box-shadow: none;
+}
+.form-group select {
+    border-radius: 2px;
+    font-size: var(--font14) ;
+    border: 1px solid var(--border-color);
+}
+.form-group select::placeholder{
+    font-size: var(--font14) ;
+    color: #AAC0D9;
+}
+.form-group select:focus{
+    outline: none !important;
+    border-color: var(--blue)!important;
+    box-shadow: none;
+}
+/*-------- End Form Style --------*/
+
+/*-------- Start Button Style Area --------*/
+button:focus{
+    outline: none !important;
+    box-shadow: none!important;
+}
+/* start jerp common button */
+.btn-global {
+    width: 160px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size:var(--font14);
+    background-color: var(--blue);
+    border-radius: 2px;
+    border:none;
+    transition: all 0.3s ease 0s;
+    
+}
+.btn-global:hover {
+    background-color:#0285ff;
+}
+/* end jerp common button */
+/*-------- End Button Style Area --------*/
+:root {
+    --blue: #026CD1;
+    --white: #ffffff;
+    --ice-white:#FBFCFE;
+    --bluish-white:#E2EDFA;
+    --border-color:#E2EDFA;
+    --red:#DF2A43;
+    --redish-white:#F5BEC6;
+    --yellow:#FCC428;
+    --yellowish-white:#FFF7E3;
+    --green: #28A411;
+    --gray: #526471;
+    --text-red:#DF2A43;
+    --text-black:#36454F;
+    --text-label:#36454F;
+    --font22: 22px;
+    --font20: 20px;
+    --font18: 18px;
+    --font16: 16px;
+    --font14: 14px;
+    --font12: 12px;
+    --font10: 10px;
+    --navbar-height:74px;
+    --breadcrumb-height:86px;
+    --used-height: calc(var(--navbar-height) + var(--breadcrumb-height) + 25px);
+    --layout-menubar-width:74px;
+    --sidebar-width:300px;
+    --sidebar-width-extend: calc(var(--sidebar-width) + 100px);;
+  }
+@media screen and (max-width: 1440px) { 
+:root {
+    --font22: 21px;
+    --font20: 19px;
+    --font18: 17px;
+    --font16: 15px;
+    --font14: 12px;
+    --font12: 11px;
+    --font10: 9px;
+    --navbar-height:64px;
+    --breadcrumb-height:66px;
+    --layout-menubar-width:64px;
+    --sidebar-width:260px;
+    }
+}
+@media screen and (max-width: 768px) { 
+:root {
+    --font22: 20px;
+    --font20: 18px;
+    --font18: 16px;
+    --font16: 14px;
+    --font14: 12px;
+    --font12: 10px;
+    --font10: 8px;
+    }
+}
+/*-------- Start Layout Area --------*/
+.grid-container{
+    background-color: transparent;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: var(--navbar-height) var(--breadcrumb-height) auto 25px;
+    grid-template-columns: var(--layout-menubar-width) auto;
+}
+.layout-navbar{
+    grid-column: 1/-1;
+    background-color: var(--ice-white);
+    box-shadow: 0px 0px 5px #026CD129;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.layout-menubar{
+    grid-row: 2/4;
+    background-color: var(--ice-white);
+    box-shadow: 1px 5px 5px #026CD129;
+    z-index: 1001;
+}
+.layout-menubar:hover{
+    width: 300px;
+}
+.layout-breadcrumb{
+    grid-column: 2/-1;
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: var(--navbar-height);
+    z-index: 999;
+}
+.layout-footer{
+    grid-row: 4/-1;
+    grid-column: 1/-1;
+    background-color: var(--blue);
+    z-index: 1002;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+.layout-body{
+    display: grid;
+    grid-template-columns: min-content auto ;
+}
+.layout-sidebar{
+    background-color: transparent;
+}
+.layout-container{
+    height: calc( 100vh - var(--used-height) );;
+    overflow-y: auto;
+    background-color: transparent;
+}
+@media screen and (max-width: 768px) { 
+    .grid-container{
+        display: grid;
+        grid-template-rows: var(--navbar-height) var(--breadcrumb-height) auto 25px;
+        grid-template-columns: auto;
+        }
+    .layout-menubar{
+        display: none;
+        }
+    .layout-breadcrumb{
+        grid-column: auto;
+        background-color: var(--white);
+        border-bottom: 1px solid var(--border-color);
+        }
+    .layout-body{
+        display: grid;
+        grid-template-columns:auto ;
+        grid-auto-rows: 230px auto;
+        }
+    .layout-sidebar{
+        height: 232px;
+        background-color: transparent;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--border-color);
+        }
+    .layout-container{
+        background-color: transparent;
+        }
+}
+/*-------- End Layout Area --------*/
+
+/*-------- Start Breadcrumb Area --------*/
+.breadcrumb_area h5 {
+    font-size: var(--font20) ;
+    padding: .2rem 1rem;
+}
+.breadcrumb_area .breadcrumb {
+    font-size: var(--font12) ;
+    background: unset;
+    padding: .2rem 1rem;
+    margin: 0px;
+}
+/*-------- End Breadcrumb Area --------*/
+
+
+
+
+
+
+
+/* 
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************
+********************************************************************************************
+*/
+ :root{
+    --table-height: 40px;
+    --greenish-white: #B1ECB9;
+  }
+.cash-register {
+  margin-top: 15px;
+  min-height: calc(100vh - (var(--used-height) - (-30px)));
+  background-color: var(--white);
+  -webkit-box-shadow: 0px 0px 8px #026CD11A;
+          box-shadow: 0px 0px 8px #026CD11A;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.cash-register-tab .btn-active {
+  color: var(--white) !important;
+  background-color: var(--blue) !important;
+}
+.cash-register-tab #cash-register-tab-inner{
+    margin: 0px -15px;
+    border-bottom: none;
+}
+.cash-register-tab #register-single-tab {
+    font-size: var(--font14);
+    color:var(--text-black);
+    font-weight: 500;
+    border:0;
+    line-height: unset;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0px;
+    padding: 15px 0px;
+}
+.cash-register-tab #register-single-tab.active {
+    color:var(--blue);
+    position: relative;
+    z-index: 9;
+}
+.cash-register-tab #register-single-tab.active::before {
+    content: "";
+    background: var(--blue);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border:0;
+}
+.cash-register-tab #register-single-tab, 
+.cash-register-tab #register-single-tab.active {
+    background-color: transparent;
+}
+.cash-register-tab .tab-content .tab-content-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 0px;
+  border-bottom: 1px solid var(--border-color);
+}
+.cash-register-tab .tab-content .tab-content-header h5 {
+    font-size: var(--font16);
+    color: var(--text-label);
+    display: flex;
+    align-items: center;
+}
+.cash-register-tab .tab-content .tab-content-header h5 span{
+    font-size: var(--font16);
+    color:  var(--blue);
+}
+.tab-content-header .row1{
+    display: flex;
+    align-items: center;
+}
+.tab-content-header .row1 .form-group {
+    position: relative;
+    margin-bottom: 0px!important;
+    width: 100%;
+}
+.tab-content-header .row1 .form-group i{
+    position: absolute; 
+    top: 12px; 
+    left:10px; 
+    color: #AAC0D9;
+    font-size: var(--font14);
+    }
+.tab-content-header .row1 .form-group input{
+    padding-left: 36px;
+    border-radius: 2px;
+    border: 1px solid  var(--border-color);
+}
+.tab-content-header .row1 .form-group input::placeholder{
+    font-size: var(--font14);
+    color: #AAC0D9;
+}
+.tab-content-header .row1 .form-group input:focus{
+    border-color: var(--blue);
+    box-shadow: none;
+}
+.tab-content-header .row1 .filter_search,
+.tab-content-header .row1 .filter_calendar,
+.tab-content-header .row1 .transfer{
+    color: #AAC0D9;
+    font-size: var(--font16);
+    text-align: center;
+    padding: 8px;
+    height: 38px;
+    width: 38px;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+    margin-left: 10px;
+}
+.tab-content-header .row1 .filter_search:hover,
+.tab-content-header .row1 .filter_calendar:hover,
+.tab-content-header .row1 .transfer:hover{
+    color: var(--white);
+    background-color: var(--blue);
+}
+.tab-content-header .row1 .filter_search.active,
+.tab-content-header .row1 .filter_calendar.active,
+.tab-content-header .row1 .transfer.active{
+    color: var(--white);
+    background-color: var(--blue);
+}
+#cr-transfer-modal .modal-footer {
+  padding-bottom: 0rem;
+}
+/*--------- Start Cash Register Pending Table Area ---------*/
+.cr-pending-table{
+    display: block;
+    empty-cells: show;
+    border-spacing: 0;
+    box-sizing: border-box;
+  }
+  .cr-pending-table tr{
+    width: 100%;
+    display:flex;
+  }
+  .cr-pending-table td,
+  .cr-pending-table th{
+    flex-grow:1;
+    display: block;
+    padding: 0rem 1rem;
+  }
+  /* Start Table Head Area */
+  .cr-pending-table thead{ 
+    position:relative;
+    display: block;
+    width:100%;
+  }
+  .cr-pending-table thead tr{
+    height: var(--table-height);
+    font-size: var(--font14);
+    text-transform: uppercase;
+    color: var(--blue);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .cr-pending-table thead tr th{
+    height: var(--table-height);
+    display:flex;
+    align-items: center;
+  }
+  /* Start Table Body Area */
+  .cr-pending-table tbody{
+    width:100%; 
+    display: block; 
+    position:relative;
+    overflow-y:scroll;
+    font-size: var(--font14);
+    color:var(--text-black);
+    height: calc( 100vh - (var(--used-height) + 220px));
+  }
+  .cr-pending-table tbody tr{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    height: var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .cr-pending-table tbody tr td{
+    display: flex;
+    align-items: center;
+    height: var(--table-height);
+  }
+  /* Start Table Foot Area */
+  .cr-pending-table tfoot{ 
+    display: block;
+    width:100%;
+    font-size: var(--font14);
+  }
+  .cr-pending-table tfoot tr{
+    height: var(--table-height);
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    border-top: 1px solid  var(--bluish-white);
+  }
+  .cr-pending-table tfoot tr th{
+    height: var(--table-height);
+    display: flex;
+    align-items: center;
+  }
+  .cr-pending-table thead th:nth-child(1) span{
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+  .cr-pending-table thead th:nth-child(1) .dropdown-item{
+      font-size: var(--font14) ;
+  }
+
+  .cr-pending-table tbody td:nth-child(1) .form-check-input {
+    position: unset;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  /* Start Table Alignment Area*/
+  .cr-pending-table thead th:nth-child(1),
+  .cr-pending-table tbody td:nth-child(1){
+    flex-basis:5%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .cr-pending-table thead th:nth-child(2),
+  .cr-pending-table tbody td:nth-child(2){
+    flex-basis:15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .cr-pending-table thead th:nth-child(3),
+  .cr-pending-table tbody td:nth-child(3){
+    flex-basis: 40%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .cr-pending-table thead th:nth-child(4),
+  .cr-pending-table tbody td:nth-child(4),
+  .cr-pending-table thead th:nth-child(5),
+  .cr-pending-table tbody td:nth-child(5){
+    flex-basis: 10%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .cr-pending-table thead th:nth-child(6),
+  .cr-pending-table tbody td:nth-child(6),
+  .cr-pending-table thead th:nth-child(7),
+  .cr-pending-table tbody td:nth-child(7){
+    flex-basis:10%;
+    flex-grow:1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cr-pending-table tfoot th:nth-child(1){
+    flex-basis:80%;
+  }
+  .cr-pending-table tfoot th:nth-child(2),
+  .cr-pending-table tfoot th:nth-child(3){
+    flex-basis:10%;
+    flex-grow:1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .bulk-action{
+    display: flex;
+  }
+  .cr-pending-table i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: var(--font18);
+    border-radius: 100px;
+    margin: 0px 5px;
+    font-weight: 200;
+  }
+  .cr-pending-table i.verify{
+    color:  var(--white);
+    background-color:var(--blue);
+  }
+  .cr-pending-table i.cancel{
+    color:  var(--red);
+    background-color:var(--redish-white);
+  }
+/*--------- End Cash Register Pending Table Area ---------*/
+
+  /*--------- Start Cash Register Inward Table Area ---------*/
+.cr-inward-table{
+    display: block;
+    empty-cells: show;
+    border-spacing: 0;
+    box-sizing: border-box;
+  }
+  .cr-inward-table tr{
+    width: 100%;
+    display:flex;
+  }
+  .cr-inward-table td,
+  .cr-inward-table th{
+    flex-grow:1;
+    display: block;
+    padding: 0rem 1rem;
+  }
+  /* Start Table Head Area */
+  .cr-inward-table thead{ 
+    position:relative;
+    display: block;
+    width:100%;
+  }
+  .cr-inward-table thead tr{
+    height: var(--table-height);
+    font-size: var(--font14);
+    text-transform: uppercase;
+    color: var(--blue);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .cr-inward-table thead tr th{
+    height: var(--table-height);
+    display:flex;
+    align-items: center;
+  }
+  /* Start Table Body Area */
+  .cr-inward-table tbody{
+    width:100%; 
+    display: block; 
+    position:relative;
+    overflow-y:scroll;
+    font-size: var(--font14);
+    color:var(--text-black);
+    height: calc( 100vh - (var(--used-height) + 220px));
+  }
+  .cr-inward-table tbody tr{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    height: var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .cr-inward-table tbody tr td{
+    display: flex;
+    align-items: center;
+    height: var(--table-height);
+  }
+  /* Start Table Foot Area */
+  .cr-inward-table tfoot{ 
+    display: block;
+    width:100%;
+    font-size: var(--font14);
+  }
+  .cr-inward-table tfoot tr{
+    height: var(--table-height);
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    border-top: 1px solid  var(--bluish-white);
+  }
+  .cr-inward-table tfoot tr th{
+    height: var(--table-height);
+    display: flex;
+    align-items: center;
+  }
+  /* Start Table Alignment Area*/
+  .cr-inward-table thead th:nth-child(1),
+  .cr-inward-table tbody td:nth-child(1){
+    flex-basis:15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: start;
+  }
+  .cr-inward-table thead th:nth-child(2),
+  .cr-inward-table tbody td:nth-child(2){
+    flex-basis: 35%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .cr-inward-table thead th:nth-child(3),
+  .cr-inward-table tbody td:nth-child(3),
+  .cr-inward-table thead th:nth-child(4),
+  .cr-inward-table tbody td:nth-child(4){
+    flex-basis: 15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .cr-inward-table thead th:nth-child(5),
+  .cr-inward-table tbody td:nth-child(5),
+  .cr-inward-table thead th:nth-child(6),
+  .cr-inward-table tbody td:nth-child(6){
+    flex-basis:15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cr-inward-table tfoot th:nth-child(1){
+    flex-basis:80%;
+  }
+  .cr-inward-table tfoot th:nth-child(2),
+  .cr-inward-table tfoot th:nth-child(3){
+    flex-basis:15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cr-inward-table i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: var(--font18);
+    border-radius: 100px;
+    margin: 0px 5px;
+    font-weight: 600;
+    color: var(--blue);
+    background-color: var(--bluish-white);
+  }
+/*--------- End Cash Register Inward Table Area ---------*/
+
+/*--------- Start Cash Register Outward Table Area ---------*/
+.cr-outward-table{
+    display: block;
+    empty-cells: show;
+    border-spacing: 0;
+    box-sizing: border-box;
+  }
+  .cr-outward-table tr{
+    width: 100%;
+    display:flex;
+  }
+  .cr-outward-table td,
+  .cr-outward-table th{
+    flex-grow:1;
+    display: block;
+    padding: 0rem 1rem;
+  }
+  /* Start Table Head Area */
+  .cr-outward-table thead{ 
+    position:relative;
+    display: block;
+    width:100%;
+  }
+  .cr-outward-table thead tr{
+    height: var(--table-height);
+    font-size: var(--font14);
+    text-transform: uppercase;
+    color: var(--blue);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .cr-outward-table thead tr th{
+    height: var(--table-height);
+    display:flex;
+    align-items: center;
+  }
+  /* Start Table Body Area */
+  .cr-outward-table tbody{
+    width:100%; 
+    display: block; 
+    position:relative;
+    overflow-y:scroll;
+    font-size: var(--font14);
+    color:var(--text-black);
+    height: calc( 100vh - (var(--used-height) + 220px));
+  }
+  .cr-outward-table tbody tr{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    height: var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .cr-outward-table tbody tr td{
+    display: flex;
+    align-items: center;
+    height: var(--table-height);
+  }
+  /* Start Table Foot Area */
+  .cr-outward-table tfoot{ 
+    display: block;
+    width:100%;
+    font-size: var(--font14);
+  }
+  .cr-outward-table tfoot tr{
+    height: var(--table-height);
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    border-top: 1px solid  var(--bluish-white);
+  }
+  .cr-outward-table tfoot tr th{
+    height: var(--table-height);
+    display: flex;
+    align-items: center;
+  }
+  /* Start Table Alignment Area*/
+  .cr-outward-table thead th:nth-child(1),
+  .cr-outward-table tbody td:nth-child(1){
+    flex-basis:15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: start;
+  }
+  .cr-outward-table thead th:nth-child(2),
+  .cr-outward-table tbody td:nth-child(2){
+    flex-basis: 35%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .cr-outward-table thead th:nth-child(3),
+  .cr-outward-table tbody td:nth-child(3){
+    flex-basis: 15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .cr-outward-table thead th:nth-child(4),
+  .cr-outward-table tbody td:nth-child(4),
+  .cr-outward-table thead th:nth-child(5),
+  .cr-outward-table tbody td:nth-child(5){
+    flex-basis:20%;
+    flex-grow:1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cr-outward-table tfoot th:nth-child(1){
+    flex-basis:65%;
+  }
+  .cr-outward-table tfoot th:nth-child(2),
+  .cr-outward-table tfoot th:nth-child(3){
+    flex-basis:20%;
+    flex-grow:1;
+    display: flex;
+    justify-content: flex-end;
+  }
+/*--------- End Cash Register Outward Table Area ---------*/
+
+/*--------- Start Cash Register Day Closing Area ---------*/
+.cr-date-closing-table{
+    display: block;
+    empty-cells: show;
+    border-spacing: 0;
+    box-sizing: border-box;
+  }
+  .cr-date-closing-table tr{
+    width: 100%;
+    display:flex;
+  }
+  .cr-date-closing-table td,
+  .cr-date-closing-table th{
+    flex-grow:1;
+    display: block;
+    padding: 0rem 1rem;
+  }
+  /* Start Table Head Area */
+  .cr-date-closing-table thead{ 
+    position:relative;
+    display: block;
+    width:100%;
+  }
+  .cr-date-closing-table thead tr{
+    height: var(--table-height);
+    font-size: var(--font14);
+    text-transform: uppercase;
+    color: var(--blue);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .cr-date-closing-table thead tr th{
+    height: var(--table-height);
+    display:flex;
+    align-items: center;
+  }
+  /* Start Table Body Area */
+  .cr-date-closing-table tbody{
+    width:100%; 
+    display: block; 
+    position:relative;
+    overflow-y:scroll;
+    font-size: var(--font14);
+    color:var(--text-black);
+    height: calc( 100vh - (var(--used-height) + 220px));
+  }
+  .cr-date-closing-table tbody tr{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    height: var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .cr-date-closing-table tbody tr td{
+    display: flex;
+    align-items: center;
+    height: var(--table-height);
+  }
+  /* Start Table Foot Area */
+  .cr-date-closing-table tfoot{ 
+    display: block;
+    width:100%;
+    font-size: var(--font14);
+  }
+  .cr-date-closing-table tfoot tr{
+    height: var(--table-height);
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    border-top: 1px solid  var(--bluish-white);
+  }
+  .cr-date-closing-table tfoot tr th{
+    height: var(--table-height);
+    display: flex;
+    align-items: center;
+  }
+  /* Start Table Alignment Area*/
+  .cr-date-closing-table thead th:nth-child(1),
+  .cr-date-closing-table tbody td:nth-child(1){
+    flex-basis:15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: start;
+  }
+  .cr-date-closing-table thead th:nth-child(2),
+  .cr-date-closing-table tbody td:nth-child(2){
+    flex-basis: 35%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .cr-date-closing-table thead th:nth-child(3),
+  .cr-date-closing-table tbody td:nth-child(3),
+  .cr-date-closing-table thead th:nth-child(4),
+  .cr-date-closing-table tbody td:nth-child(4){
+    flex-basis: 15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .cr-date-closing-table thead th:nth-child(5),
+  .cr-date-closing-table tbody td:nth-child(5),
+  .cr-date-closing-table thead th:nth-child(6),
+  .cr-date-closing-table tbody td:nth-child(6){
+    flex-basis:15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cr-date-closing-table tfoot th:nth-child(1){
+    flex-basis:80%;
+  }
+  .cr-date-closing-table tfoot th:nth-child(2),
+  .cr-date-closing-table tfoot th:nth-child(3){
+    flex-basis:15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cr-date-closing-table i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: var(--font16);
+    border-radius: 100px;
+    margin: 0px 5px;
+    font-weight: 200;
+  }
+  .cr-date-closing-table i.add{
+    color:  var(--white);
+    background-color:var(--blue);
+  }
+    .cr-date-closing-table i.view{
+    color: var(--green);
+    background-color: var(--greenish-white);
+  }
+/*--------- End Cash Register Day Closing Area ---------*/
+
+
+
+/*--------- Start Show Denomination Modal Table Area ---------*/
+.modal-header .modal-title{
+  color: var(--black)!important;
+  font-size: var(--font16)!important;
+}
+.modal-header .modal-title span{
+  font-size: var(--font16);
+  color:  var(--blue);
+  margin-left: 5px;
+}
+#add-denomination-modal .modal-body,
+#show-denomination .modal-body{
+    padding: 0rem 1rem;
+}
+.denomination-modal-table{
+    display: block;
+    empty-cells: show;
+    border-spacing: 0;
+    box-sizing: border-box;
+  }
+  .denomination-modal-table tr{
+    width: 100%;
+    display:flex;
+  }
+  .denomination-modal-table td,
+  .denomination-modal-table th{
+    flex-grow:1;
+    display: block;
+    padding: 0rem 1rem;
+  }
+  /* Start Table Head Area */
+  .denomination-modal-table thead{ 
+    position:relative;
+    display: block;
+    width:100%;
+  }
+  .denomination-modal-table thead tr{
+    height: var(--table-height);
+    font-size: var(--font14);
+    text-transform: uppercase;
+    color: var(--blue);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .denomination-modal-table thead tr th{
+    height: var(--table-height);
+    display:flex;
+    align-items: center;
+  }
+ .denomination-modal-table thead tr:nth-child(2){
+   background-color:var(--bluish-white);
+   display: flex;
+   align-items: center;
+   height: 50px;
+ }
+  .denomination-modal-table .form-control-sm{
+    border-radius: 2px;
+    font-size: var(--font14) ;
+    border: 1px solid var(--border-color);
+    height: 30px !important;
+    width: 100px;
+  }
+   .denomination-modal-table .form-control-sm:placeholder{
+    font-size: var(--font14) ;
+    color: #AAC0D9;
+}
+  .denomination-modal-table .form-control-sm:focus{
+    outline: none !important;
+    border-color: var(--blue)!important;
+    box-shadow: none;
+}
+  .denomination-modal-table .btn-add {
+    width: 100px;
+    height: 30px;
+    padding: 0px 10px;
+    font-size: var(--font14);
+    color: var(--white);
+    background-color: var(--blue);
+    border-radius: 100px;
+    font-weight: 600;
+    border: none;
+}
+  /* Start Table Body Area */
+  .denomination-modal-table tbody{
+    width:100%; 
+    display: block; 
+    position:relative;
+    overflow-y:scroll;
+    font-size: var(--font14);
+    color:var(--text-black);
+    height: calc( 100vh - (var(--used-height) + 220px));
+  }
+  .denomination-modal-table tbody tr{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    height: var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .denomination-modal-table tbody tr.active{
+    background-color: var(--bluish-white);
+  }
+  .denomination-modal-table tbody tr.active .edit{
+    color: var(--white);  
+    background-color: var(--blue);
+  }
+  .denomination-modal-table tbody tr .remove{
+    color: var(--red);  
+    background-color: var(--redish-white);
+  }
+  .denomination-modal-table tbody tr .edit{
+    color: var(--blue);  
+    background-color: var(--bluish-white);
+  }
+  .denomination-modal-table tbody tr td{
+    display: flex;
+    align-items: center;
+    height: var(--table-height);
+  }
+  /* Start Table Foot Area */
+  .denomination-modal-table tfoot{ 
+    display: block;
+    width:100%;
+    font-size: var(--font14);
+  }
+  .denomination-modal-table tfoot tr{
+    height: var(--table-height);
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    border-top: 1px solid  var(--bluish-white);
+  }
+  .denomination-modal-table tfoot tr .notmatch{
+    color: var(--red);
+  }
+  .denomination-modal-table tfoot tr th{
+    height: var(--table-height);
+    display: flex;
+    align-items: center;
+  }
+  /* Start Table Alignment Area*/
+  .denomination-modal-table thead th:nth-child(1),
+  .denomination-modal-table tbody td:nth-child(1){
+    flex-basis:40%;
+    flex-grow:1;
+    display: flex;
+    justify-content: start;
+  }
+  .denomination-modal-table thead th:nth-child(2),
+  .denomination-modal-table tbody td:nth-child(2){
+    flex-basis: 25%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .denomination-modal-table thead th:nth-child(3),
+  .denomination-modal-table tbody td:nth-child(3){
+    flex-basis:25%;
+    flex-grow:1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .denomination-modal-table thead th:nth-child(4),
+  .denomination-modal-table tbody td:nth-child(4){
+    flex-basis:25%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .denomination-modal-table tfoot th:nth-child(1){
+    flex-basis:65%;
+  }
+  .denomination-modal-table tfoot th:nth-child(2){
+    flex-basis:25%;
+    flex-grow:1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .denomination-modal-table tfoot th:nth-child(3){
+    flex-basis:25%;
+    flex-grow:1;
+    display: flex;
+    justify-content: flex-end;
+  }
+/*--------- End Show Denomination Modal Table Area ---------*/
+
+
+@media screen and (max-width: 1440px) {
+  :root {
+    --table-height: 35px;
+    }
+  .cr-pending-table i,
+  .cr-inward-table i,
+  .cr-date-closing-table i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: var(--font16);
+    border-radius: 100px;
+    margin: 0px 5px;
+  }
+}
