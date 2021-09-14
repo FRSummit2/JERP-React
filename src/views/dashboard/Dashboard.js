@@ -9,6 +9,10 @@ import TitleBreadcrumb from '../common/TitleBreadcrumb.js';
 
 // function Dashboard(props) {
 class Dashboard extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {tb: "Dashboard"};
+    }
     // const user = getUser();
 
     // handle click event of logout button
@@ -139,7 +143,7 @@ class Dashboard extends React.Component {
         return (
             <div>
                 <CommonLayout />
-                <TitleBreadcrumb />
+                <TitleBreadcrumb titleBreadcrumb={this.state.tb}/>
                 {/* Welcome {user.name}!<br /><br /> */}
                 <div id="main-section" className="main-section">
                     {/* <input type="button" onClick={this.handleLogout} value="Logout" /> */}
