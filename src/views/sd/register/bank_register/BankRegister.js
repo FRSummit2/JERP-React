@@ -7,7 +7,8 @@ class BankRegister extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tb: "BankRegister"
+            tb: "BankRegister",
+            /*buttonPressed: ""*/
         };
     }
 
@@ -63,6 +64,30 @@ class BankRegister extends React.Component {
         { domination_type: '100', quantity: '300', amount: '30000.00' }
     ]
 
+    // https://programmingwithmosh.com/react/guide-to-learn-useeffect-hook-in-react/
+
+    componentDidMount() {
+        console.log(this.pending_data)
+        console.log(this.day_closing_data)
+        console.log(this.domination_data)
+    }
+
+    /*componentDidMount() {
+      console.log("Component did mount", this.state.buttonPressed)
+    }
+  
+    componentDidUpdate() {
+      console.log("Component did update", this.state.buttonPressed)
+    }
+  
+    onYesPress() {
+      this.setState({ buttonPressed: "Yes" });
+    }
+  
+    onNoPress() {
+      this.setState({ buttonPressed: "No" });
+    }*/
+
     render() {
         return (
             <div>
@@ -75,6 +100,10 @@ class BankRegister extends React.Component {
                             <div className="container-fluid">
                                 <div className="col-12 cash-register">
                                     <div className="row cash-register-tab">
+
+                                        {/* <button onClick={() => this.onYesPress()}>Yes</button>
+                                        <button onClick={() => this.onNoPress()}>No</button> */}
+
                                         <div className="col-12">
                                             <ul className="nav nav-tabs nav-justified" id="cash-register-tab-inner" role="tablist">
                                                 <li className="nav-item">
