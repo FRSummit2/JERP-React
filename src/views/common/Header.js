@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { getUser, getTokenExpiresTime, removeUserSession } from '../../Utils/Common';
 import group_logo from '../../assets/images/groups/nipro_jmi-pharma.png'
 import { useHistory } from "react-router"

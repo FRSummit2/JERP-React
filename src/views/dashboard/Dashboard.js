@@ -4,7 +4,8 @@ import React from 'react';
 import { Bar, Radar } from 'react-chartjs-2';
 import { NavLink } from "react-router-dom"
 
-import CommonLayout from '../common/CommonLayout';
+import CommonLayout from '../common/CommonLayout.js';
+import TitleBreadcrumb from '../common/TitleBreadcrumb.js';
 
 // function Dashboard(props) {
 class Dashboard extends React.Component {
@@ -138,6 +139,7 @@ class Dashboard extends React.Component {
         return (
             <div>
                 <CommonLayout />
+                <TitleBreadcrumb />
                 {/* Welcome {user.name}!<br /><br /> */}
                 <div id="main-section" className="main-section">
                     {/* <input type="button" onClick={this.handleLogout} value="Logout" /> */}
@@ -154,8 +156,20 @@ class Dashboard extends React.Component {
                         }
                     </div>
 
+                    <div className="dashboard-menu row">
+                        {
+                            this.menus.map((element, index) => (
+                                <div className="col-lg-3 col-md-4 col-sm-6 url-sec-dashboard" key={index}>
+                                    {/* <a className={index}> */}
+                                    <NavLink to={element.url}>{element.name}</NavLink>
+                                    {/* </a> */}
+                                </div>
+                            ))
+                        }
+                    </div>
+
                     {/* <div style={{marginTop: "20px"}}> */}
-                    <div className="row m-0 w-100">
+                    <div className="row m-0 w-100 hide">
                         <div className="col-lg-6 w-50 p-0" style={{ border: "1px solid #026CD1" }}>
                             <div className='header'>
                                 <h1 className='title'>Vertical Bar Chart</h1>

@@ -1,10 +1,102 @@
-import React from 'react';
-import CommonLayout from '../../../common/CommonLayout';
+import React, { useState, useEffect } from 'react';
+import CommonLayout from '../../../common/CommonLayout.js';
+import TitleBreadcrumb from '../../../common/TitleBreadcrumb.js';
 
 const CashRegister = () => {
+    /*constructor(props) {
+        super(props);
+        this.state = {message: 'Hello!'};
+        // This line is important!
+        this.handleClick = this.handleClick.bind(this);
+      }
+
+    const componentWillMount = () => {
+        console.log('componentWillMount')
+    }
+    const componentDidMount = () => {
+        console.log('componentDidMount')
+    }
+  
+    const componentDidUpdate = () => {
+      console.log('componentDidUpdate')
+    }*/
+
+    // https://stackoverflow.com/questions/44263915/how-to-specify-a-constructor-with-a-functional-component-fat-arrow-syntax
+
+    const [count, setCount] = useState(0);
+    const [tb] = useState('CashRegister');
+    const [pending_data] = useState([
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+        { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' }
+    ]);
+    // const [todos, setTodos] = useState([
+    //     {
+    //       id: 1,
+    //       title: 'This is first list'
+    //     },
+    //     {
+    //       id: 2,
+    //       title: 'This is second list'
+    //     },
+    //     {
+    //       id: 3,
+    //       title: 'This is third list'
+    //     },
+    // ]);
+
+    // By using this Hook, you tell React that your component needs to do something after render.
+    // React will remember the function you passed (we'll refer to it as our “effect”), and call it later after performing the DOM updates.
+    useEffect( () => {
+        console.log('useEffect')
+        console.log(count)
+        setCount(0)
+        console.log(count)
+      });
+
+    // let pending_data = [
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
+    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' }
+    // ]
+
     return (
         <div>
             <CommonLayout parentTextBoxValue={'Hello'} />
+            <TitleBreadcrumb titleBreadcrumb={ tb } />
+            {/* <TitleBreadcrumb todos={ todos } /> */}
             <div className="main-section">
                 <div className="layout-body">
                     <div className="layout-container">
@@ -34,7 +126,7 @@ const CashRegister = () => {
                                                 <div className="tab-content-header">
                                                     <h5>Pending (<span>00</span>)</h5>
                                                     <div className="row1">
-                                                        <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control"/></div>
+                                                        <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control" /></div>
                                                         <span className="filter_search"><i className="fa fa-filter"> </i> </span>
                                                         <span className="filter_calendar"><i className="fa fa-calendar-o"> </i> </span>
                                                         <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
@@ -51,16 +143,16 @@ const CashRegister = () => {
                                                                         <div className="dropdown-menu" aria-labelledby="pendingselection">
                                                                             <button className="dropdown-item" type="button">Select All</button>
                                                                             <button className="dropdown-item" type="button">Unselect All</button>
-                                                                            <hr/>
-                                                                            <button class ="dropdown-item" type ="button">Verify Selected</button>
-                                                                            <button class ="dropdown-item" type ="button">Cancel Selected</button>
+                                                                            <hr />
+                                                                            <button className="dropdown-item" type="button">Verify Selected</button>
+                                                                            <button className="dropdown-item" type="button">Cancel Selected</button>
                                                                         </div>
                                                                     </div>
                                                                 </th>
-                                                                <th>Transaction date</th>
+                                                                <th>Receive date</th>
                                                                 <th>Details</th>
-                                                                <th>Direction</th>
-                                                                <th>User</th>
+                                                                <th>TRANSACTION DATE</th>
+                                                                <th>Source</th>
                                                                 <th>Amount</th>
                                                                 <th> </th>
                                                             </tr>
@@ -68,16 +160,17 @@ const CashRegister = () => {
                                                         <tbody>
                                                             <tr>
                                                                 <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
+                                                                    {/* <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /> */}
+                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
                                                                 </td>
                                                                 <td>
                                                                     <p>02-Oct-2021</p>
                                                                 </td>
                                                                 <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
+                                                                    <p>DS_COLLECTION/1003</p>
                                                                 </td>
                                                                 <td>
-                                                                    <p>Inward</p>
+                                                                    <p>02-Oct-2021</p>
                                                                 </td>
                                                                 <td>
                                                                     <p>Mehedi Hassan</p>
@@ -90,356 +183,36 @@ const CashRegister = () => {
                                                                     <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel" aria-hidden="true"></i></a>
                                                                 </td>
                                                             </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
 
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Inward</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify"
-                                                                        aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel"
-                                                                        aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
+                                                            {
+                                                                pending_data.map( (data, index) => {
+                                                                    <tr key={ index }>
+                                                                        <td>
+                                                                            {/* <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /> */}
+                                                                            <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{ data.receive_date }</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{ data.details }</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{ data.transection_date }</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{ data.source }</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{ data.amount }</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify" aria-hidden="true"></i></a>
+                                                                            <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel" aria-hidden="true"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                })
+                                                            }
                                                         </tbody>
                                                         <tfoot>
                                                             <tr>
@@ -461,7 +234,7 @@ const CashRegister = () => {
                                                 <div className="tab-content-header">
                                                     <h5>Inward (<span>00</span>)</h5>
                                                     <div className="row1">
-                                                        <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control"/></div>
+                                                        <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control" /></div>
                                                         <span className="filter_search"><i className="fa fa-filter"> </i> </span>
                                                         <span className="filter_calendar active"><i className="fa fa-calendar-o"> </i> </span>
                                                         <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
@@ -683,7 +456,7 @@ const CashRegister = () => {
                                                 <div className="tab-content-header">
                                                     <h5>Outward (<span>00</span>)</h5>
                                                     <div className="row1">
-                                                        <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control"/></div>
+                                                        <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control" /></div>
                                                         <span className="filter_search"><i className="fa fa-filter"> </i> </span>
                                                         <span className="filter_calendar active"><i className="fa fa-calendar-o"> </i> </span>
                                                         <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
@@ -946,7 +719,7 @@ const CashRegister = () => {
                                                 <div className="tab-content-header">
                                                     <h5>Day Closing (<span>00</span>)</h5>
                                                     <div className="row1">
-                                                        <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control"/></div>
+                                                        <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control" /></div>
                                                         <span className="filter_search"><i className="fa fa-filter"> </i> </span>
                                                         <span className="filter_calendar active"><i className="fa fa-calendar-o"> </i> </span>
                                                         <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
@@ -1108,12 +881,12 @@ const CashRegister = () => {
                                                                                         </select>
                                                                                     </th>
                                                                                     <th>
-                                                                                        <input type="text" className="form-control-sm" id="product_group_1" placeholder="00"/>
+                                                                                        <input type="text" className="form-control-sm" id="product_group_1" placeholder="00" />
                                                                                     </th>
                                                                                     <th>
-                                                                                        <input type="text" className="form-control-sm" id="product_group_2" placeholder="00"/>
+                                                                                        <input type="text" className="form-control-sm" id="product_group_2" placeholder="00" />
                                                                                     </th>
-                                                                                    <th><button className="btn btn-primary btn-add" href="#" role="button">Add</button></th>
+                                                                                    <th><button className="btn btn-primary btn-add" href="/" role="button">Add</button></th>
                                                                                 </tr>
                                                                             </thead>
                                                                             <tbody>
@@ -1342,7 +1115,7 @@ const CashRegister = () => {
                                                                     </div>
                                                                 </div>
                                                                 <div className="modal-footer justify-content-center">
-                                                                    <a href="#"><button type="button" className="btn btn-primary btn-global">Save</button></a>
+                                                                    <a href="/"><button type="button" className="btn btn-primary btn-global">Save</button></a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1382,10 +1155,10 @@ const CashRegister = () => {
                                                                                         </select>
                                                                                     </td>
                                                                                     <td>
-                                                                                        <input type="text" className="form-control-sm" id="product_group_3" placeholder="00"/>
+                                                                                        <input type="text" className="form-control-sm" id="product_group_3" placeholder="00" />
                                                                                     </td>
                                                                                     <td>
-                                                                                        <input type="text" className="form-control-sm" id="product_group_4" placeholder="00"/>
+                                                                                        <input type="text" className="form-control-sm" id="product_group_4" placeholder="00" />
                                                                                     </td>
                                                                                     <td>
                                                                                         <i className="fa fa-pencil edit" aria-hidden="true"></i>
@@ -1628,7 +1401,8 @@ const CashRegister = () => {
                                                             <div className="row">
                                                                 <div className="col-lg-6 form-group">
                                                                     <label htmlFor="transfer-type">Transfer Type</label>
-                                                                    <select className="form-control" id="transfer-type" onChange="getOption(this.value)">
+                                                                    {/* <select className="form-control" id="transfer-type" onChange="getOption(this.value)"> */}
+                                                                    <select className="form-control" id="transfer-type">
                                                                         <option value="d-Cash">Cash</option>
                                                                         <option value="d-Bank">Bank</option>
                                                                     </select>
@@ -1652,12 +1426,12 @@ const CashRegister = () => {
 
                                                                 <div className="col-lg-6 form-group" >
                                                                     <label htmlFor="cash_amount">Amount</label>
-                                                                    <input type="text" className="form-control" id="cash_amount" placeholder="Enter Amount"/>
+                                                                    <input type="text" className="form-control" id="cash_amount" placeholder="Enter Amount" />
                                                                 </div>
                                                             </div>
 
                                                             <div className="modal-footer justify-content-center">
-                                                                <a href="#"><button type="button" className="btn btn-primary btn-global">Save</button></a>
+                                                                <a href="/"><button type="button" className="btn btn-primary btn-global">Save</button></a>
                                                             </div>
                                                         </div>
                                                     </div>
