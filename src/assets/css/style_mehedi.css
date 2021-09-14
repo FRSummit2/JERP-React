@@ -593,6 +593,7 @@ button:focus {
   flex-grow      : 1;
   display        : flex;
   justify-content: center;
+  min-width      : 68px;
 }
 
 .cr-pending-table thead th:nth-child(2),
@@ -608,22 +609,23 @@ button:focus {
   flex-basis     : 25%;
   flex-grow      : 1;
   display        : flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .cr-pending-table thead th:nth-child(4),
 .cr-pending-table tbody td:nth-child(4) {
-  flex-basis     : 15%;
+  flex-basis     : 18%;
   flex-grow      : 1;
   display        : flex;
   justify-content: center;
 }
+
 .cr-pending-table thead th:nth-child(5),
 .cr-pending-table tbody td:nth-child(5) {
-  flex-basis     : 20%;
+  flex-basis     : 17%;
   flex-grow      : 1;
   display        : flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .cr-pending-table thead th:nth-child(6),
@@ -774,17 +776,17 @@ button:focus {
 
 .cr-inward-table thead th:nth-child(2),
 .cr-inward-table tbody td:nth-child(2) {
-  flex-basis     : 35%;
+  flex-basis     : 30%;
   flex-grow      : 1;
   display        : flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .cr-inward-table thead th:nth-child(3),
 .cr-inward-table tbody td:nth-child(3),
 .cr-inward-table thead th:nth-child(4),
 .cr-inward-table tbody td:nth-child(4) {
-  flex-basis     : 15%;
+  flex-basis     : 20%;
   flex-grow      : 1;
   display        : flex;
   justify-content: center;
@@ -926,15 +928,15 @@ button:focus {
 
 .cr-outward-table thead th:nth-child(2),
 .cr-outward-table tbody td:nth-child(2) {
-  flex-basis     : 35%;
+  flex-basis     : 30%;
   flex-grow      : 1;
   display        : flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .cr-outward-table thead th:nth-child(3),
 .cr-outward-table tbody td:nth-child(3) {
-  flex-basis     : 15%;
+  flex-basis     : 20%;
   flex-grow      : 1;
   display        : flex;
   justify-content: center;

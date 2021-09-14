@@ -23,7 +23,7 @@ const CashRegister = () => {
 
     // https://stackoverflow.com/questions/44263915/how-to-specify-a-constructor-with-a-functional-component-fat-arrow-syntax
 
-    const [count, setCount] = useState(0);
+    // const [count, setCount] = useState(0);
     const [tb] = useState('CashRegister');
     const [pending_data] = useState([
         { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
@@ -46,56 +46,53 @@ const CashRegister = () => {
         { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
         { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' }
     ]);
-    // const [todos, setTodos] = useState([
-    //     {
-    //       id: 1,
-    //       title: 'This is first list'
-    //     },
-    //     {
-    //       id: 2,
-    //       title: 'This is second list'
-    //     },
-    //     {
-    //       id: 3,
-    //       title: 'This is third list'
-    //     },
-    // ]);
+
+    const [day_closing_data] = useState([
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' },
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' },
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' },
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' },
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' },
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' },
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' },
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' },
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' },
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' },
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' },
+        { date: '02-Oct-2021', opening: '30000', inward: '10000', outward: '20000', closing: '30561' }
+    ])
+
+    const [domination_data] = useState([
+        { domination_type: '1000', quantity: '30', amount: '30000.00' },
+        { domination_type: '1000', quantity: '30', amount: '30000.00' },
+        { domination_type: '1000', quantity: '30', amount: '30000.00' },
+        { domination_type: '500', quantity: '60', amount: '30000.00' },
+        { domination_type: '500', quantity: '60', amount: '30000.00' },
+        { domination_type: '500', quantity: '60', amount: '30000.00' },
+        { domination_type: '200', quantity: '150', amount: '30000.00' },
+        { domination_type: '200', quantity: '150', amount: '30000.00' },
+        { domination_type: '200', quantity: '150', amount: '30000.00' },
+        { domination_type: '100', quantity: '300', amount: '30000.00' },
+        { domination_type: '100', quantity: '300', amount: '30000.00' },
+        { domination_type: '100', quantity: '300', amount: '30000.00' }
+    ])
 
     // By using this Hook, you tell React that your component needs to do something after render.
     // React will remember the function you passed (we'll refer to it as our “effect”), and call it later after performing the DOM updates.
-    useEffect( () => {
+    useEffect(() => {
         console.log('useEffect')
-        console.log(count)
-        setCount(0)
-        console.log(count)
-      });
-
-    // let pending_data = [
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' },
-    //     { receive_date: '02-Oct-2021', details: 'DS_COLLECTION/1003', transection_date: '02-Oct-2021', source: 'Mehedi Hassan', amount: '30,561.00' }
-    // ]
+        // console.log(count)
+        // setCount(50)
+        // console.log(count)
+        console.log(pending_data)
+        console.log(day_closing_data)
+        console.log(domination_data)
+    });
 
     return (
         <div>
-            <CommonLayout parentTextBoxValue={'Hello'} />
-            <TitleBreadcrumb titleBreadcrumb={ tb } />
+            <CommonLayout />
+            <TitleBreadcrumb titleBreadcrumb={tb} />
             {/* <TitleBreadcrumb todos={ todos } /> */}
             <div className="main-section">
                 <div className="layout-body">
@@ -158,60 +155,33 @@ const CashRegister = () => {
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    {/* <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /> */}
-                                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>DS_COLLECTION/1003</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Mehedi Hassan</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify" aria-hidden="true"></i></a>
-                                                                    <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel" aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
                                                             {
-                                                                pending_data.map( (data, index) => {
-                                                                    <tr key={ index }>
+                                                                pending_data.map((data, index) => (
+                                                                    <tr key={index}>
                                                                         <td>
-                                                                            {/* <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /> */}
                                                                             <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
                                                                         </td>
                                                                         <td>
-                                                                            <p>{ data.receive_date }</p>
+                                                                            <p>{data.receive_date}</p>
                                                                         </td>
                                                                         <td>
-                                                                            <p>{ data.details }</p>
+                                                                            <p>{data.details}</p>
                                                                         </td>
                                                                         <td>
-                                                                            <p>{ data.transection_date }</p>
+                                                                            <p>{data.transection_date}</p>
                                                                         </td>
                                                                         <td>
-                                                                            <p>{ data.source }</p>
+                                                                            <p>{data.source}</p>
                                                                         </td>
                                                                         <td>
-                                                                            <p>{ data.amount }</p>
+                                                                            <p>{data.amount}</p>
                                                                         </td>
                                                                         <td>
-                                                                            <a title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify" aria-hidden="true"></i></a>
-                                                                            <a title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel" aria-hidden="true"></i></a>
+                                                                            <span title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify" aria-hidden="true"></i></span>
+                                                                            <span title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel" aria-hidden="true"></i></span>
                                                                         </td>
                                                                     </tr>
-                                                                })
+                                                                ))
                                                             }
                                                         </tbody>
                                                         <tfoot>
@@ -254,185 +224,31 @@ const CashRegister = () => {
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Invoice</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Invoice</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Invoice</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Invoice</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Invoice</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Invoice</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Invoice</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Invoice</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Invoice</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td>
-                                                                </td>
-                                                            </tr>
+                                                            {
+                                                                pending_data.map((data, index) => (
+                                                                    <tr key={index}>
+                                                                        <td>
+                                                                            <p>{data.receive_date}</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{data.details}</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{data.transection_date}</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{data.source}</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{data.amount}</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span title="Verify" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-check-circle-o verify" aria-hidden="true"></i></span>
+                                                                            <span title="Cancel" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-times-circle-o cancel" aria-hidden="true"></i></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                ))
+                                                            }
                                                         </tbody>
                                                         <tfoot>
                                                             <tr>
@@ -475,228 +291,25 @@ const CashRegister = () => {
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Cash withdrawal by CHQ 123654,Gulshan br</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>Bank</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561.00</p>
-                                                                </td>
-                                                                <td></td>
-                                                            </tr>
+                                                            {
+                                                                pending_data.map((data, index) => (
+                                                                    <tr key={index}>
+                                                                        <td>
+                                                                            <p>{data.receive_date}</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{data.details}</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{'BANK'}</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>{data.amount}</p>
+                                                                        </td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                ))
+                                                            }
                                                         </tbody>
                                                         <tfoot>
                                                             <tr>
@@ -739,103 +352,34 @@ const CashRegister = () => {
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>10,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>20,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561</p>
-                                                                </td>
-                                                                <td>
-                                                                    <a title="Add Denomination" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-plus add" data-toggle="modal"
-                                                                        data-target="#add-denomination-modal" aria-hidden="true"></i></a>
-
-                                                                    {/* <!-- <a title="Show Denomination" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-usd view" data-toggle="modal"
-                                                                        data-target="#show-denomination" aria-hidden="true"></i></a> --> */}
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>10,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>20,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561</p>
-                                                                </td>
-                                                                <td>
-                                                                    {/* <!-- <a title="Add Denomination" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-plus add" data-toggle="modal"
-                                                                        data-target="#add-denomination-modal" aria-hidden="true"></i></a> --> */}
-
-                                                                    <a title="Show Denomination" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-usd view" data-toggle="modal"
-                                                                        data-target="#show-denomination" aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>10,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>20,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561</p>
-                                                                </td>
-                                                                <td>
-                                                                    {/* <!-- <a title="Add Denomination" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-plus add" data-toggle="modal"
-                                                                        data-target="#add-denomination-modal" aria-hidden="true"></i></a> --> */}
-
-                                                                    <a title="Show Denomination" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-usd view" data-toggle="modal"
-                                                                        data-target="#show-denomination" aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <p>02-Oct-2021</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>10,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>20,000</p>
-                                                                </td>
-                                                                <td>
-                                                                    <p>30,561</p>
-                                                                </td>
-                                                                <td>
-                                                                    {/* <!-- <a title="Add Denomination" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-plus add" data-toggle="modal"
-                                                                        data-target="#add-denomination-modal" aria-hidden="true"></i></a> --> */}
-
-                                                                    <a title="Show Denomination" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-usd view" data-toggle="modal"
-                                                                        data-target="#show-denomination" aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-
+                                                            {
+                                                                day_closing_data.map((element, index) => (
+                                                                    <tr key={index}>
+                                                                        <td>
+                                                                            <p>02-Oct-2021</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>30,000</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>10,000</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>20,000</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>30,561</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            {
+                                                                                index % 2 === 0 ?
+                                                                                    <span title="Add Denomination" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-plus add" data-toggle="modal" data-target="#add-denomination-modal" aria-hidden="true"></i></span> :
+                                                                                    <span title="Show Denomination" data-toggle="tooltip" data-placement="bottom"><i className="fa fa-usd view" data-toggle="modal" data-target="#show-denomination" aria-hidden="true"></i></span>
+                                                                            }
+                                                                        </td>
+                                                                    </tr>
+                                                                ))
+                                                            }
                                                         </tbody>
                                                         <tfoot>
                                                             <tr>
@@ -853,11 +397,11 @@ const CashRegister = () => {
                                                     {/* <!------------ Start Add Denomition Modal------------> */}
                                                     <div className="modal" id="add-denomination-modal" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
                                                         aria-hidden="true">
-                                                        <div className="modal-dialog modal-lg modal-dialog-centered">
+                                                        <div className="modal-dialog modal-lg modal-dialog-centered max-w-700">
                                                             <div className="modal-content">
                                                                 <div className="modal-header">
                                                                     <h5 className="modal-title">Add Cash Denomination:<span>12/05/2021</span></h5>
-                                                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                                                    <button className="close" data-dismiss="modal" aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </div>
@@ -886,219 +430,28 @@ const CashRegister = () => {
                                                                                     <th>
                                                                                         <input type="text" className="form-control-sm" id="product_group_2" placeholder="00" />
                                                                                     </th>
-                                                                                    <th><button className="btn btn-primary btn-add" href="/" role="button">Add</button></th>
+                                                                                    <th><button className="btn btn-primary btn-add">Add</button></th>
                                                                                 </tr>
                                                                             </thead>
                                                                             <tbody>
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-trash remove" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
+                                                                                {
+                                                                                    domination_data.map((element, index) => (
+                                                                                        <tr key={index}>
+                                                                                            <td>
+                                                                                                <p>TK {element.domination_type}</p>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <p>{element.quantity}</p>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <p>{element.amount}</p>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <i className="fa fa-trash remove" aria-hidden="true"></i>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    ))
+                                                                                }
                                                                             </tbody>
                                                                             <tfoot>
                                                                                 <tr>
@@ -1164,201 +517,24 @@ const CashRegister = () => {
                                                                                         <i className="fa fa-pencil edit" aria-hidden="true"></i>
                                                                                     </td>
                                                                                 </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <p>TK 1,000</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>60</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <p>30,561.00</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <i className="fa fa-pencil edit" aria-hidden="true"></i>
-                                                                                    </td>
-                                                                                </tr>
+                                                                                {
+                                                                                    domination_data.map((element, index) => (
+                                                                                        <tr key={index}>
+                                                                                            <td>
+                                                                                                <p>TK {element.domination_type}</p>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <p>{element.quantity}</p>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <p>{element.amount}</p>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <i className="fa fa-pencil edit" aria-hidden="true"></i>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    ))
+                                                                                }
                                                                             </tbody>
                                                                             <tfoot>
                                                                                 <tr>
