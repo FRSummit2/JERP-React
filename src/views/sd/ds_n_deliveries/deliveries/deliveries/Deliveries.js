@@ -4,14 +4,14 @@ import TitleBreadcrumb from '../../../../common/TitleBreadcrumb.js';
 
 const Deliveries = () => {
     const [tb] = useState('Delivery Collection');
-    const [dataTableFlag] = useState('Delivery Collection');
-    
-    useEffect( () => {
+    const [dataTableFlag, setDataTableFlag] = useState(1);
+
+    useEffect(() => {
         console.log('initial')
     })
 
     const invoiceNoClickHandler = () => {
-        alert('data')
+        dataTableFlag ? setDataTableFlag(0) : setDataTableFlag(1)
     }
 
     return (
@@ -55,12 +55,12 @@ const Deliveries = () => {
                         {/* <!-- End Secondary Sidebar Area-->  */}
                     </div>
 
-                    <div className="layout-container">
+                    <div className="layout-container" style={{ width: '100%' }}>
                         <div className="container-fluid">
                             <div className="col-12 delivery_collection_area">
                                 <div className="row deCollection_header">
                                     <div className="col-12">
-                                        <h5>Invoice No: <span onClick={invoiceNoClickHandler} style={{cursor: 'pointer', textDecoration: 'underline'}}>102131</span></h5>
+                                        <h5>Invoice No: <span onClick={invoiceNoClickHandler} style={{ cursor: 'pointer', textDecoration: 'underline' }}>102131</span></h5>
                                     </div>
                                     <div className="col-lg-4 col-md-4 col-12">
                                         <p>Customer: <span className="customer-name">ABI Pharmacy and Diagnostic Center</span></p>
@@ -88,40 +88,154 @@ const Deliveries = () => {
                                     </div>
                                 </div>
 
-                                <div className="row d-flex justify-content-center">
-                                    <table className="col-12 delivery-collection-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Payment Mode</th>
-                                                <th>Description</th>
-                                                <th>Taka</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {
 
-                                                Array.from({ length: 20 }, (_, index) => (
-                                                    <tr key={index}>
-                                                        <td>
-                                                            <p>Cash {index + 1}</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Description Line Here</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>300.00</p>
-                                                        </td>
-                                                        <td>
-                                                            <span className="edit" href=""><i className="fa fa-pencil" title="Edit" data-toggle="tooltip" data-placement="bottom" aria-hidden="true"></i></span>
-                                                            <span className="remove" href=""><i className="fa fa-trash" title="Remove" data-toggle="tooltip" data-placement="bottom" aria-hidden="true"></i></span>
-                                                        </td>
-                                                    </tr>
-                                                ))
-                                            }
-                                        </tbody>
-                                    </table>
-                                </div>
+                                {
+                                    dataTableFlag ?
+                                        (
+                                            <div class="row delivery-collection-table">
+                                                <table class="col-12">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <th> <div>Trade Price <span>(With Vat)</span></div> </th>
+                                                            <th>Quantity</th>
+                                                            <th>Discount</th>
+                                                            <th>Bonus</th>
+                                                            <th>Total Price</th>
+                                                            <th> </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {
+                                                            Array.from({ length: 20 }, (_, index) => (
+                                                                <tr className={index === 1 ? 'active' : ''} key={index}>
+                                                                    <td>
+                                                                        <div class="product">
+                                                                            <p class="name">Ace® Power <span>500mg</span></p>
+                                                                            <p class="type">Paricatamole</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input class="form-control-sm" type="text" placeholder="00" value={300} readOnly />
+                                                                    </td>
+                                                                    <td>
+                                                                        <form>
+                                                                            <div class="quantity-input">
+                                                                                <input class='minus' type='button' value='-' field='quantity' />
+                                                                                <input class='quantity' type='text' name='quantity' placeholder="0" />
+                                                                                <input class='plus' type='button' value='+' field='quantity' />
+                                                                            </div>
+                                                                        </form>
+                                                                    </td>
+                                                                    <td>
+                                                                        <p>300</p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <p>10%</p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <p>1000.00</p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="hover-btns">
+                                                                            <a title="Edit" data-toggle="tooltip" data-placement="left"><span class="action-btn fa fa-pencil"></span></a>
+                                                                            <a title="Remove" data-toggle="tooltip" data-placement="left"><span class="action-btn remove fa fa-trash"></span></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            ))
+                                                        }
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th colSpan="3"><a class="btn-add-product" data-toggle="modal" data-target="#add-product-modal"><span class="material-icons font-18">add</span>Add Product</a></th>
+                                                            <th colSpan="2"> <p class="small-text">Subtotal</p> </th>
+                                                            <th> <p class="small-text">13,032.20</p> </th>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th colSpan="3"></th>
+                                                            <th colSpan="2"> <p class="small-text">(+) Vat</p> </th>
+                                                            <th> <p class="small-text">13,032.20</p> </th>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th colSpan="3"></th>
+                                                            <th colSpan="2"> <p class="small-text">Gross Total</p> </th>
+                                                            <th> <p class="small-text">13,032.20</p> </th>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th colSpan="3"></th>
+                                                            <th colSpan="2"> <p class="small-text">(-) Less discount on TP (2%)</p> </th>
+                                                            <th> <p class="small-text">13,032.20</p> </th>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th colSpan="3"></th>
+                                                            <th colSpan="2"> <p class="small-text">Special Discount</p> </th>
+                                                            <th> <p class="small-text">13,032.20</p> </th>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th colSpan="3"><a class="btn-add-atachment"><span class="material-icons font-18">attachment</span>Atachment</a></th>
+                                                            <th colSpan="2"><p class="grand-total">Grand Total</p></th>
+                                                            <th><p class="grand-total">14,505.55</p></th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        )
+                                        :
+                                        (
+                                            <div className="row d-flex justify-content-center">
+                                                <table className="col-12 delivery-collection-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Payment Mode</th>
+                                                            <th>Description</th>
+                                                            <th>Taka</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {
+
+                                                            Array.from({ length: 20 }, (_, index) => (
+                                                                <tr key={index}>
+                                                                    <td>
+                                                                        <p>Cash {index + 1}</p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <p>Description Line Here</p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <p>300.00</p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span className="edit" href=""><i className="fa fa-pencil" title="Edit" data-toggle="tooltip" data-placement="bottom" aria-hidden="true"></i></span>
+                                                                        <span className="remove" href=""><i className="fa fa-trash" title="Remove" data-toggle="tooltip" data-placement="bottom" aria-hidden="true"></i></span>
+                                                                    </td>
+                                                                </tr>
+                                                            ))
+                                                        }
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        )
+                                }
+
+
+
+
+
+
+
+
+
+
+
                                 <div className="row deCollection-footer">
                                     <span><button className="btn btn-primary btn-global btn-draft mx-2">Close</button></span>
                                     <span data-toggle="modal" data-target="#new-payment-modal"><button className="btn btn-primary btn-global mx-2">New Payment</button></span>
@@ -195,7 +309,7 @@ const Deliveries = () => {
                                                     {/* <!--Uploaded File--> */}
                                                     <div className="col-6">
                                                         <div className="uploaded-file">
-                                                            <img className="w-100" src="../../../../assets/images/products/documents.jpg" alt="document"/>
+                                                            <img className="w-100" src="../../../../assets/images/products/documents.jpg" alt="document" />
                                                             <div className="file-info">
                                                                 <p>File name Line Here</p>
                                                                 <div className="file-button">
@@ -209,7 +323,7 @@ const Deliveries = () => {
                                                     {/* <!--Uploaded File--> */}
                                                     <div className="col-6">
                                                         <div className="uploaded-file">
-                                                            <img className="w-100" src="./documents.jpg" alt="document"/>
+                                                            <img className="w-100" src="./documents.jpg" alt="document" />
                                                             <div className="file-info">
                                                                 <p>File name Line Here</p>
                                                                 <div className="file-button">
