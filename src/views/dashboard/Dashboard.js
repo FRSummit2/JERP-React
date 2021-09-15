@@ -10,8 +10,8 @@ import TitleBreadcrumb from '../common/TitleBreadcrumb.js';
 // function Dashboard(props) {
 class Dashboard extends React.Component {
     constructor(props) {
-      super(props);
-      this.state = {tb: "Dashboard"};
+        super(props);
+        this.state = { tb: "Dashboard" };
     }
     // const user = getUser();
 
@@ -143,7 +143,7 @@ class Dashboard extends React.Component {
         return (
             <div>
                 <CommonLayout />
-                <TitleBreadcrumb titleBreadcrumb={this.state.tb}/>
+                <TitleBreadcrumb titleBreadcrumb={this.state.tb} />
                 {/* Welcome {user.name}!<br /><br /> */}
                 <div id="main-section" className="main-section">
                     {/* <input type="button" onClick={this.handleLogout} value="Logout" /> */}
@@ -160,7 +160,7 @@ class Dashboard extends React.Component {
                         }
                     </div>
 
-                    <div className="dashboard-menu row">
+                    <div className="dashboard-menu row hide">
                         {
                             this.menus.map((element, index) => (
                                 <div className="col-lg-3 col-md-4 col-sm-6 url-sec-dashboard" key={index}>

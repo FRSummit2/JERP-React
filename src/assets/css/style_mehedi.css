@@ -252,10 +252,10 @@ button:focus {
 }
 
 .layout-container {
-  height: calc(100vh - var(--used-height));
-  ;
+  height          : calc(100vh - var(--used-height) + 28px);
   overflow-y      : auto;
   background-color: transparent;
+  width           : 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -1362,5 +1362,431 @@ button:focus {
     font-size      : var(--font16);
     border-radius  : 100px;
     margin         : 0px 5px;
+  }
+}
+
+
+/* 
+***************************************************************************
+***************************************************************************
+***************************************************************************
+***************************************************************************
+***************************************************************************
+***************************************************************************
+***************************************************************************
+***************************************************************************
+*/
+
+/*Start Secondary Sidebar Header Area*/
+.layout-sidebar.order {
+  min-width   : var(--sidebar-width);
+  width       : 100%;
+  border-right: 1px solid var(--border-color);
+}
+
+.layout-sidebar.order .header {
+  background-color: var(--white);
+  padding         : 15px 10px;
+}
+
+.layout-sidebar.order .header .row1 {
+  display        : flex;
+  justify-content: space-between;
+}
+
+.layout-sidebar.order .header .row1 .form-group {
+  position     : relative;
+  margin-bottom: 0px !important;
+  width        : 100%;
+}
+
+.layout-sidebar.order .header .row1 .form-group i {
+  position : absolute;
+  top      : 12px;
+  left     : 10px;
+  color    : #AAC0D9;
+  font-size: var(--font14);
+}
+
+.layout-sidebar.order .header .row1 .form-group input {
+  padding-left : 36px;
+  border-radius: 2px;
+  border       : 1px solid var(--border-color);
+}
+
+.layout-sidebar.order .header .row1 .form-group input::placeholder {
+  font-size: var(--font14);
+  color    : #AAC0D9;
+}
+
+.layout-sidebar.order .header .row1 .form-group input:focus {
+  border-color: var(--blue);
+  box-shadow  : none;
+}
+
+.layout-sidebar.order .header .row1 .filter_search {
+  color        : #AAC0D9;
+  font-size    : var(--font16);
+  text-align   : center;
+  padding      : 8px;
+  height       : 38px;
+  width        : 38px;
+  border-radius: 2px;
+  border       : 1px solid var(--border-color);
+  margin-left  : 10px;
+}
+
+.layout-sidebar.order .header .row1 .filter_search:hover {
+  color           : var(--white);
+  background-color: var(--blue);
+}
+
+/*End Secondary Sidebar Header Area*/
+
+/*Start Secondary Sidebar Content Area*/
+.layout-sidebar.order .content {
+  height    : calc(100vh - (var(--used-height) + 76px));
+  overflow-y: scroll;
+}
+
+.layout-sidebar.order .content .card_body {
+  padding         : 10px;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-between;
+  background-color: var(--white);
+  border-bottom   : 1px solid var(--border-color);
+}
+
+.layout-sidebar.order .content .card_body:hover,
+.layout-sidebar.order .content .card_body:active {
+  background-color: var(--bluish-white);
+}
+
+.layout-sidebar.order .content .card_body .row1,
+.layout-sidebar.order .content .card_body .row2,
+.layout-sidebar.order .content .card_body .row3 {
+  margin         : 1px 0px;
+  display        : flex;
+  justify-content: space-between;
+}
+
+.layout-sidebar.order .content .card_body .row1 h5 {
+  font-size    : var(--font14);
+  color        : var(--blue);
+  text-overflow: ellipsis;
+  width        : inherit;
+  white-space  : nowrap;
+}
+
+.layout-sidebar.order .content .card_body .row1 .status {
+  font-size  : var(--font14);
+  font-weight: 500;
+}
+
+.layout-sidebar.order .content .card_body .row1 .available {
+  color: var(--green) !important;
+}
+
+.layout-sidebar.order .content .card_body .row1 .occupied {
+  color: var(--yellow) !important;
+}
+
+.layout-sidebar.order .content .card_body .row1 .dcr_complete {
+  color: var(--blue) !important;
+}
+
+.layout-sidebar.order .content .card_body .row2 p {
+  font-size  : var(--font14);
+  color      : var(--text-black);
+  /* font-weight: 500; */
+}
+
+.layout-sidebar.order .content .card_body .row3 p {
+  font-size: var(--font14);
+  color    : #879097;
+}
+
+@media screen and (max-width: 768px) {
+  .layout-sidebar.order {
+    width: 100%;
+  }
+
+  .layout-sidebar.order .content {
+    height    : calc(230px - 68px);
+    overflow-y: scroll;
+  }
+}
+
+/*End Secondary Sidebar Content Area*/
+
+.delivery_collection_area {
+  position        : relative;
+  margin-top      : 15px;
+  min-height      : calc(100vh - (var(--used-height) - (-30px)));
+  background-color: var(--white);
+  box-shadow      : 0px 0px 8px #026CD11A;
+  border-radius   : 8px;
+  border          : 1px solid var(--border-color);
+  box-sizing      : border-box;
+}
+
+.delivery_collection_area .deCollection_header {
+  padding      : 10px 0px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.deCollection_header h5 {
+  font-size    : var(--font14);
+  color        : var(--text-label);
+  margin-bottom: 5px;
+  display      : flex;
+  align-items  : center;
+}
+
+.deCollection_header h5 span {
+  color      : var(--blue);
+  margin-left: 5px;
+}
+
+.deCollection_header p {
+  font-weight: 400;
+  font-size  : var(--font14);
+  color      : var(--text-black);
+}
+
+.deCollection_header p span {
+  font-size: var(--font14);
+  color    : var(--blue);
+}
+
+:root {
+  --table-height: 40px;
+}
+
+/*---------Start Collection Table 3 ---------*/
+.delivery-collection-table {
+  display       : block;
+  empty-cells   : show;
+  border-spacing: 0;
+  box-sizing    : border-box;
+}
+
+.delivery-collection-table tr {
+  width  : 100%;
+  display: flex;
+}
+
+.delivery-collection-table td,
+.delivery-collection-table th {
+  flex-grow: 1;
+  display  : block;
+  padding  : 0rem 1rem;
+}
+
+/* Start Table Head Area */
+.delivery-collection-table thead {
+  position: relative;
+  display : block;
+  width   : 100%;
+}
+
+.delivery-collection-table thead tr {
+  height        : var(--table-height);
+  font-size     : var(--font14);
+  text-transform: uppercase;
+  color         : var(--blue);
+  border-bottom : 1px solid var(--border-color);
+}
+
+.delivery-collection-table thead tr th {
+  height     : var(--table-height);
+  display    : flex;
+  align-items: center;
+}
+
+/* Start Table Body Area */
+.delivery-collection-table tbody {
+  width     : 100%;
+  display   : block;
+  position  : relative;
+  overflow-y: scroll;
+  font-size : var(--font14);
+  color     : var(--text-black);
+  height    : calc((100vh - 40vh) - (var(--used-height) + 18px));
+}
+
+.delivery-collection-table tbody tr {
+  width        : 100%;
+  display      : flex;
+  align-items  : center;
+  height       : var(--table-height);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.delivery-collection-table tbody tr td {
+  display    : flex;
+  align-items: center;
+  height     : var(--table-height);
+}
+
+/* Start Table Alignment Area*/
+.delivery-collection-table thead th:nth-child(1),
+.delivery-collection-table tbody td:nth-child(1) {
+  flex-basis     : 20%;
+  flex-grow      : 1;
+  display        : flex;
+  justify-content: flex-start;
+}
+
+.delivery-collection-table thead th:nth-child(2),
+.delivery-collection-table tbody td:nth-child(2) {
+  flex-basis: 40%;
+  flex-grow : 1;
+  display   : flex;
+}
+
+.delivery-collection-table thead th:nth-child(3),
+.delivery-collection-table tbody td:nth-child(3) {
+  flex-basis     : 20%;
+  flex-grow      : 1;
+  display        : flex;
+  justify-content: flex-end;
+}
+
+.delivery-collection-table thead th:nth-child(4),
+.delivery-collection-table tbody td:nth-child(4) {
+  flex-basis     : 20%;
+  flex-grow      : 1;
+  display        : flex;
+  justify-content: center;
+}
+
+/*---------End Collection Table 3 ---------*/
+.deCollection-footer {
+  position       : absolute;
+  bottom         : 0px;
+  width          : 100%;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  padding        : 10px 0px;
+}
+
+#new-payment-modal .modal-header .modal-title {
+  color    : var(--black) !important;
+  font-size: var(--font16) !important;
+}
+
+#new-payment-modal .uploaded-file {
+  position        : relative;
+  margin          : 10px 0px;
+  font-size       : var(--font14);
+  background-color: var(--bluish-white);
+  border-radius   : 2px;
+}
+
+#new-payment-modal .uploaded-file img {
+  height: 120px;
+}
+
+#new-payment-modal .uploaded-file .file-info {
+  position        : absolute;
+  width           : 100%;
+  top             : 0px;
+  padding         : 10px 10px;
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#new-payment-modal .uploaded-file .file-info p {
+  font-size: var(--font12);
+}
+
+#new-payment-modal .uploaded-file .file-button {
+  display    : flex;
+  align-items: center;
+}
+
+#new-payment-modal .uploaded-file .file-button .download {
+  font-size  : var(--font16);
+  color      : var(--white);
+  margin-left: 15px;
+}
+
+#new-payment-modal .uploaded-file .file-button .remove {
+  font-size  : var(--font16);
+  color      : var(--red);
+  margin-left: 15px;
+}
+
+.btn-draft {
+  background-color: var(--white) !important;
+  border          : 1px solid var(--text-black) !important;
+  color           : var(--text-black);
+}
+
+.btn-draft:hover {
+  background-color: var(--white) !important;
+  border          : 1px solid var(--text-black) !important;
+  color           : var(--text-black);
+}
+
+.green {
+  color: var(--green) !important;
+}
+
+.orange {
+  color: #FFB347 !important;
+}
+
+.gray {
+  color: #AEC1D0 !important;
+}
+
+.delivery-collection-table .edit {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  width           : 30px;
+  height          : 30px;
+  font-size       : var(--font12);
+  color           : var(--blue);
+  border-radius   : 100px;
+  background-color: var(--bluish-white);
+  margin          : 0px 5px;
+}
+
+.delivery-collection-table .remove {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  width           : 30px;
+  height          : 30px;
+  font-size       : var(--font12);
+  color           : var(--red);
+  border-radius   : 100px;
+  background-color: var(--redish-white);
+  margin          : 0px 5px;
+}
+
+@media screen and (max-width: 1440px) {
+  :root {
+    --table-height: 35px;
+  }
+
+  .delivery-collection-table i {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 25px;
+    height          : 25px;
+    font-size       : var(--font12);
+    color           : var(--white);
+    border-radius   : 100px;
+    background-color: var(--blue);
+    margin          : 0px 5px;
   }
 }

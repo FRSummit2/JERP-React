@@ -410,8 +410,8 @@ input:checked+.slider:before {
     --font10              : 10px;
     --table-height        : 40px;
     --navbar-height       : 74px;
-    --breadcrumb-height   : 86px;
-    --used-height         : calc(var(--navbar-height) + var(--breadcrumb-height) + 25px);
+    --breadcrumb-height   : 50px;
+    --used-height         : calc(var(--navbar-height) + var(--breadcrumb-height) + 32px);
     --layout-menubar-width: 74px;
     --sidebar-width       : 300px;
     --sidebar-width-extend: calc(var(--sidebar-width) + 100px);
