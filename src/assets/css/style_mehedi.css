@@ -1,18 +1,18 @@
 /*-------- Start Schroll Style --------*/
 ::-webkit-scrollbar {
-  width: 1px;
+    width: 1px;
 }
 
 ::-webkit-scrollbar-track {
-  background: none;
+    background: none;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--blue);
+    background: var(--blue);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--blue);
+    background: var(--blue);
 }
 
 /*-------- End Schroll Style --------*/
@@ -24,13 +24,13 @@ h4,
 h5,
 h6,
 p {
-  margin-top   : 0;
-  margin-bottom: 0;
+    margin-top   : 0;
+    margin-bottom: 0;
 }
 
 a:hover {
-  text-decoration: none;
-  color          : #000000;
+    text-decoration: none;
+    color          : #000000;
 }
 
 /*-------- Start Status Color --------*/
@@ -38,274 +38,274 @@ a:hover {
     color: var(--blue)!important;
 } */
 .available {
-  color: #28A411 !important;
+    color: #28A411 !important;
 }
 
 .occupied {
-  color: #FCC428 !important;
+    color: #FCC428 !important;
 }
 
 .dcr_complete {
-  color: var(--blue) !important;
+    color: var(--blue) !important;
 }
 
 /*-------- End Status Color --------*/
 
 /*-------- Start Form Style --------*/
 .form-group label {
-  color    : var(--blue);
-  font-size: var(--font14);
+    color    : var(--blue);
+    font-size: var(--font14);
 }
 
 .form-group input {
-  border-radius: 2px;
-  border       : 1px solid var(--border-color);
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
 }
 
 .form-group input::placeholder {
-  font-size: var(--font14);
-  color    : #AAC0D9;
+    font-size: var(--font14);
+    color    : #AAC0D9;
 }
 
 .form-group input:focus {
-  border-color: var(--blue) !important;
-  box-shadow  : none;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
 }
 
 .form-group textarea {
-  padding-left : 10px;
-  border-radius: 2px;
-  border       : 1px solid var(--border-color);
+    padding-left : 10px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
 }
 
 .form-group textarea::placeholder {
-  font-size: var(--font14);
-  color    : #AAC0D9;
+    font-size: var(--font14);
+    color    : #AAC0D9;
 }
 
 .form-group textarea:focus {
-  outline     : none !important;
-  border-color: var(--blue) !important;
-  box-shadow  : none;
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
 }
 
 .form-group select {
-  border-radius: 2px;
-  font-size    : var(--font14);
-  border       : 1px solid var(--border-color);
+    border-radius: 2px;
+    font-size    : var(--font14);
+    border       : 1px solid var(--border-color);
 }
 
 .form-group select::placeholder {
-  font-size: var(--font14);
-  color    : #AAC0D9;
+    font-size: var(--font14);
+    color    : #AAC0D9;
 }
 
 .form-group select:focus {
-  outline     : none !important;
-  border-color: var(--blue) !important;
-  box-shadow  : none;
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
 }
 
 /*-------- End Form Style --------*/
 
 /*-------- Start Button Style Area --------*/
 button:focus {
-  outline   : none !important;
-  box-shadow: none !important;
+    outline   : none !important;
+    box-shadow: none !important;
 }
 
 /* start jerp common button */
 .btn-global {
-  width           : 160px;
-  height          : 40px;
-  padding         : 0px 10px;
-  font-size       : var(--font14);
-  background-color: var(--blue);
-  border-radius   : 2px;
-  border          : none;
-  transition      : all 0.3s ease 0s;
+    width           : 160px;
+    height          : 40px;
+    padding         : 0px 10px;
+    font-size       : var(--font14);
+    background-color: var(--blue);
+    border-radius   : 2px;
+    border          : none;
+    transition      : all 0.3s ease 0s;
 
 }
 
 .btn-global:hover {
-  background-color: #0285ff;
+    background-color: #0285ff;
 }
 
 /* end jerp common button */
 /*-------- End Button Style Area --------*/
 :root {
-  --blue                : #026CD1;
-  --white               : #ffffff;
-  --ice-white           : #FBFCFE;
-  --bluish-white        : #E2EDFA;
-  --border-color        : #E2EDFA;
-  --red                 : #DF2A43;
-  --redish-white        : #F5BEC6;
-  --yellow              : #FCC428;
-  --yellowish-white     : #FFF7E3;
-  --green               : #28A411;
-  --gray                : #526471;
-  --text-red            : #DF2A43;
-  --text-black          : #36454F;
-  --text-label          : #36454F;
-  --font22              : 22px;
-  --font20              : 20px;
-  --font18              : 18px;
-  --font16              : 16px;
-  --font14              : 14px;
-  --font12              : 12px;
-  --font10              : 10px;
-  --navbar-height       : 74px;
-  --breadcrumb-height   : 86px;
-  --used-height         : calc(var(--navbar-height) + var(--breadcrumb-height) + 25px);
-  --layout-menubar-width: 74px;
-  --sidebar-width       : 300px;
-  --sidebar-width-extend: calc(var(--sidebar-width) + 100px);
-  ;
+    --blue                : #026CD1;
+    --white               : #ffffff;
+    --ice-white           : #FBFCFE;
+    --bluish-white        : #E2EDFA;
+    --border-color        : #E2EDFA;
+    --red                 : #DF2A43;
+    --redish-white        : #F5BEC6;
+    --yellow              : #FCC428;
+    --yellowish-white     : #FFF7E3;
+    --green               : #28A411;
+    --gray                : #526471;
+    --text-red            : #DF2A43;
+    --text-black          : #36454F;
+    --text-label          : #36454F;
+    --font22              : 22px;
+    --font20              : 20px;
+    --font18              : 18px;
+    --font16              : 16px;
+    --font14              : 14px;
+    --font12              : 12px;
+    --font10              : 10px;
+    --navbar-height       : 74px;
+    --breadcrumb-height   : 86px;
+    --used-height         : calc(var(--navbar-height) + var(--breadcrumb-height) + 25px);
+    --layout-menubar-width: 74px;
+    --sidebar-width       : 300px;
+    --sidebar-width-extend: calc(var(--sidebar-width) + 100px);
+    ;
 }
 
 @media screen and (max-width: 1440px) {
-  :root {
-    --font22              : 21px;
-    --font20              : 19px;
-    --font18              : 17px;
-    --font16              : 15px;
-    --font14              : 12px;
-    --font12              : 11px;
-    --font10              : 9px;
-    --navbar-height       : 64px;
-    --breadcrumb-height   : 66px;
-    --layout-menubar-width: 64px;
-    --sidebar-width       : 260px;
-  }
+    :root {
+        --font22              : 21px;
+        --font20              : 19px;
+        --font18              : 17px;
+        --font16              : 15px;
+        --font14              : 12px;
+        --font12              : 11px;
+        --font10              : 9px;
+        --navbar-height       : 64px;
+        --breadcrumb-height   : 66px;
+        --layout-menubar-width: 64px;
+        --sidebar-width       : 260px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-  :root {
-    --font22: 20px;
-    --font20: 18px;
-    --font18: 16px;
-    --font16: 14px;
-    --font14: 12px;
-    --font12: 10px;
-    --font10: 8px;
-  }
+    :root {
+        --font22: 20px;
+        --font20: 18px;
+        --font18: 16px;
+        --font16: 14px;
+        --font14: 12px;
+        --font12: 10px;
+        --font10: 8px;
+    }
 }
 
 /*-------- Start Layout Area --------*/
 .grid-container {
-  background-color     : transparent;
-  height               : 100vh;
-  display              : grid;
-  grid-template-rows   : var(--navbar-height) var(--breadcrumb-height) auto 25px;
-  grid-template-columns: var(--layout-menubar-width) auto;
+    background-color     : transparent;
+    height               : 100vh;
+    display              : grid;
+    grid-template-rows   : var(--navbar-height) var(--breadcrumb-height) auto 25px;
+    grid-template-columns: var(--layout-menubar-width) auto;
 }
 
 .layout-navbar {
-  grid-column     : 1/-1;
-  background-color: var(--ice-white);
-  box-shadow      : 0px 0px 5px #026CD129;
-  position        : sticky;
-  top             : 0;
-  z-index         : 1000;
+    grid-column     : 1/-1;
+    background-color: var(--ice-white);
+    box-shadow      : 0px 0px 5px #026CD129;
+    position        : sticky;
+    top             : 0;
+    z-index         : 1000;
 }
 
 .layout-menubar {
-  grid-row        : 2/4;
-  background-color: var(--ice-white);
-  box-shadow      : 1px 5px 5px #026CD129;
-  z-index         : 1001;
+    grid-row        : 2/4;
+    background-color: var(--ice-white);
+    box-shadow      : 1px 5px 5px #026CD129;
+    z-index         : 1001;
 }
 
 .layout-menubar:hover {
-  width: 300px;
+    width: 300px;
 }
 
 .layout-breadcrumb {
-  grid-column     : 2/-1;
-  display         : flex;
-  align-items     : center;
-  background-color: var(--white);
-  border-bottom   : 1px solid var(--border-color);
-  position        : sticky;
-  top             : var(--navbar-height);
-  z-index         : 2;
+    grid-column     : 2/-1;
+    display         : flex;
+    align-items     : center;
+    background-color: var(--white);
+    border-bottom   : 1px solid var(--border-color);
+    position        : sticky;
+    top             : var(--navbar-height);
+    z-index         : 2;
 }
 
 .layout-footer {
-  grid-row        : 4/-1;
-  grid-column     : 1/-1;
-  background-color: var(--blue);
-  z-index         : 1002;
-  position        : fixed;
-  bottom          : 0px;
-  width           : 100%;
+    grid-row        : 4/-1;
+    grid-column     : 1/-1;
+    background-color: var(--blue);
+    z-index         : 1002;
+    position        : fixed;
+    bottom          : 0px;
+    width           : 100%;
 }
 
 .layout-body {
-  display              : grid;
-  grid-template-columns: min-content auto;
+    display              : grid;
+    grid-template-columns: min-content auto;
 }
 
 .layout-sidebar {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .layout-container {
-  height             : calc(100vh - var(--used-height) + 28px);
-  overflow-y         : auto;
-  background-color   : transparent;
-  /* width           : 100%; */
+    height             : calc(100vh - var(--used-height) + 28px);
+    overflow-y         : auto;
+    background-color   : transparent;
+    /* width           : 100%; */
 }
 
 @media screen and (max-width: 768px) {
-  .grid-container {
-    display              : grid;
-    grid-template-rows   : var(--navbar-height) var(--breadcrumb-height) auto 25px;
-    grid-template-columns: auto;
-  }
+    .grid-container {
+        display              : grid;
+        grid-template-rows   : var(--navbar-height) var(--breadcrumb-height) auto 25px;
+        grid-template-columns: auto;
+    }
 
-  .layout-menubar {
-    display: none;
-  }
+    .layout-menubar {
+        display: none;
+    }
 
-  .layout-breadcrumb {
-    grid-column     : auto;
-    background-color: var(--white);
-    border-bottom   : 1px solid var(--border-color);
-  }
+    .layout-breadcrumb {
+        grid-column     : auto;
+        background-color: var(--white);
+        border-bottom   : 1px solid var(--border-color);
+    }
 
-  .layout-body {
-    display              : grid;
-    grid-template-columns: auto;
-    grid-auto-rows       : 230px auto;
-  }
+    .layout-body {
+        display              : grid;
+        grid-template-columns: auto;
+        grid-auto-rows       : 230px auto;
+    }
 
-  .layout-sidebar {
-    height          : 232px;
-    background-color: transparent;
-    padding-bottom  : 5px;
-    border-bottom   : 1px solid var(--border-color);
-  }
+    .layout-sidebar {
+        height          : 232px;
+        background-color: transparent;
+        padding-bottom  : 5px;
+        border-bottom   : 1px solid var(--border-color);
+    }
 
-  .layout-container {
-    background-color: transparent;
-  }
+    .layout-container {
+        background-color: transparent;
+    }
 }
 
 /*-------- End Layout Area --------*/
 
 /*-------- Start Breadcrumb Area --------*/
 .breadcrumb_area h5 {
-  font-size: var(--font20);
-  padding  : .2rem 1rem;
+    font-size: var(--font20);
+    padding  : .2rem 1rem;
 }
 
 .breadcrumb_area .breadcrumb {
-  font-size : var(--font12);
-  background: unset;
-  padding   : .2rem 1rem;
-  margin    : 0px;
+    font-size : var(--font12);
+    background: unset;
+    padding   : .2rem 1rem;
+    margin    : 0px;
 }
 
 /*-------- End Breadcrumb Area --------*/
@@ -332,796 +332,796 @@ button:focus {
 ********************************************************************************************
 */
 :root {
-  --table-height  : 40px;
-  --greenish-white: #B1ECB9;
+    --table-height  : 40px;
+    --greenish-white: #B1ECB9;
 }
 
 .cash-register {
-  margin-top        : 15px;
-  min-height        : calc(100vh - (var(--used-height) - (-30px)));
-  background-color  : var(--white);
-  -webkit-box-shadow: 0px 0px 8px #026CD11A;
-  box-shadow        : 0px 0px 8px #026CD11A;
-  border-radius     : 8px;
-  border            : 1px solid var(--border-color);
-  -webkit-box-sizing: border-box;
-  box-sizing        : border-box;
+    margin-top        : 15px;
+    min-height        : calc(100vh - (var(--used-height) - (-30px)));
+    background-color  : var(--white);
+    -webkit-box-shadow: 0px 0px 8px #026CD11A;
+    box-shadow        : 0px 0px 8px #026CD11A;
+    border-radius     : 8px;
+    border            : 1px solid var(--border-color);
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
 }
 
 .cash-register-tab .btn-active {
-  color           : var(--white) !important;
-  background-color: var(--blue) !important;
+    color           : var(--white) !important;
+    background-color: var(--blue) !important;
 }
 
 .cash-register-tab #cash-register-tab-inner {
-  margin       : 0px -15px;
-  border-bottom: none;
+    margin       : 0px -15px;
+    border-bottom: none;
 }
 
 .cash-register-tab #register-single-tab {
-  font-size    : var(--font14);
-  color        : var(--text-black);
-  font-weight  : 500;
-  border       : 0;
-  line-height  : unset;
-  border-bottom: 1px solid var(--border-color);
-  border-radius: 0px;
-  padding      : 15px 0px;
+    font-size    : var(--font14);
+    color        : var(--text-black);
+    font-weight  : 500;
+    border       : 0;
+    line-height  : unset;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0px;
+    padding      : 15px 0px;
 }
 
 .cash-register-tab #register-single-tab.active {
-  color   : var(--blue);
-  position: relative;
-  z-index : 9;
+    color   : var(--blue);
+    position: relative;
+    z-index : 9;
 }
 
 .cash-register-tab #register-single-tab.active::before {
-  content   : "";
-  background: var(--blue);
-  width     : 100%;
-  height    : 2px;
-  position  : absolute;
-  left      : 0;
-  bottom    : 0;
-  border    : 0;
+    content   : "";
+    background: var(--blue);
+    width     : 100%;
+    height    : 2px;
+    position  : absolute;
+    left      : 0;
+    bottom    : 0;
+    border    : 0;
 }
 
 .cash-register-tab #register-single-tab,
 .cash-register-tab #register-single-tab.active {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .cash-register-tab .tab-content .tab-content-header {
-  display          : -webkit-box;
-  display          : -ms-flexbox;
-  display          : flex;
-  -webkit-box-align: center;
-  -ms-flex-align   : center;
-  align-items      : center;
-  -webkit-box-pack : justify;
-  -ms-flex-pack    : justify;
-  justify-content  : space-between;
-  padding          : 5px 0px;
-  border-bottom    : 1px solid var(--border-color);
+    display          : -webkit-box;
+    display          : -ms-flexbox;
+    display          : flex;
+    -webkit-box-align: center;
+    -ms-flex-align   : center;
+    align-items      : center;
+    -webkit-box-pack : justify;
+    -ms-flex-pack    : justify;
+    justify-content  : space-between;
+    padding          : 5px 0px;
+    border-bottom    : 1px solid var(--border-color);
 }
 
 .cash-register-tab .tab-content .tab-content-header h5 {
-  font-size  : var(--font16);
-  color      : var(--text-label);
-  display    : flex;
-  align-items: center;
+    font-size  : var(--font16);
+    color      : var(--text-label);
+    display    : flex;
+    align-items: center;
 }
 
 .cash-register-tab .tab-content .tab-content-header h5 span {
-  font-size: var(--font16);
-  color    : var(--blue);
+    font-size: var(--font16);
+    color    : var(--blue);
 }
 
 .tab-content-header .row1 {
-  display    : flex;
-  align-items: center;
+    display    : flex;
+    align-items: center;
 }
 
 .tab-content-header .row1 .form-group {
-  position     : relative;
-  margin-bottom: 0px !important;
-  width        : 100%;
+    position     : relative;
+    margin-bottom: 0px !important;
+    width        : 100%;
 }
 
 .tab-content-header .row1 .form-group i {
-  position : absolute;
-  top      : 12px;
-  left     : 10px;
-  color    : #AAC0D9;
-  font-size: var(--font14);
+    position : absolute;
+    top      : 12px;
+    left     : 10px;
+    color    : #AAC0D9;
+    font-size: var(--font14);
 }
 
 .tab-content-header .row1 .form-group input {
-  padding-left : 36px;
-  border-radius: 2px;
-  border       : 1px solid var(--border-color);
+    padding-left : 36px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
 }
 
 .tab-content-header .row1 .form-group input::placeholder {
-  font-size: var(--font14);
-  color    : #AAC0D9;
+    font-size: var(--font14);
+    color    : #AAC0D9;
 }
 
 .tab-content-header .row1 .form-group input:focus {
-  border-color: var(--blue);
-  box-shadow  : none;
+    border-color: var(--blue);
+    box-shadow  : none;
 }
 
 .tab-content-header .row1 .filter_search,
 .tab-content-header .row1 .filter_calendar,
 .tab-content-header .row1 .transfer {
-  color        : #AAC0D9;
-  font-size    : var(--font16);
-  text-align   : center;
-  padding      : 8px;
-  height       : 38px;
-  width        : 38px;
-  border-radius: 2px;
-  border       : 1px solid var(--border-color);
-  margin-left  : 10px;
+    color        : #AAC0D9;
+    font-size    : var(--font16);
+    text-align   : center;
+    padding      : 8px;
+    height       : 38px;
+    width        : 38px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
+    margin-left  : 10px;
 }
 
 .tab-content-header .row1 .filter_search:hover,
 .tab-content-header .row1 .filter_calendar:hover,
 .tab-content-header .row1 .transfer:hover {
-  color           : var(--white);
-  background-color: var(--blue);
+    color           : var(--white);
+    background-color: var(--blue);
 }
 
 .tab-content-header .row1 .filter_search.active,
 .tab-content-header .row1 .filter_calendar.active,
 .tab-content-header .row1 .transfer.active {
-  color           : var(--white);
-  background-color: var(--blue);
+    color           : var(--white);
+    background-color: var(--blue);
 }
 
 #cr-transfer-modal .modal-footer {
-  padding-bottom: 0rem;
+    padding-bottom: 0rem;
 }
 
 /*--------- Start Cash Register Pending Table Area ---------*/
 .cr-pending-table {
-  display       : block;
-  empty-cells   : show;
-  border-spacing: 0;
-  box-sizing    : border-box;
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
 }
 
 .cr-pending-table tr {
-  width  : 100%;
-  display: flex;
+    width  : 100%;
+    display: flex;
 }
 
 .cr-pending-table td,
 .cr-pending-table th {
-  flex-grow: 1;
-  display  : block;
-  padding  : 0rem 1rem;
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
 }
 
 /* Start Table Head Area */
 .cr-pending-table thead {
-  position: relative;
-  display : block;
-  width   : 100%;
+    position: relative;
+    display : block;
+    width   : 100%;
 }
 
 .cr-pending-table thead tr {
-  height        : var(--table-height);
-  font-size     : var(--font14);
-  text-transform: uppercase;
-  color         : var(--blue);
-  border-bottom : 1px solid var(--border-color);
+    height        : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
 }
 
 .cr-pending-table thead tr th {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 /* Start Table Body Area */
 .cr-pending-table tbody {
-  width     : 100%;
-  display   : block;
-  position  : relative;
-  overflow-y: scroll;
-  font-size : var(--font14);
-  color     : var(--text-black);
-  height    : calc(100vh - (var(--used-height) + 220px));
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc(100vh - (var(--used-height) + 220px));
 }
 
 .cr-pending-table tbody tr {
-  width        : 100%;
-  display      : flex;
-  align-items  : center;
-  height       : var(--table-height);
-  border-bottom: 1px solid var(--border-color);
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    height       : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .cr-pending-table tbody tr td {
-  display    : flex;
-  align-items: center;
-  height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+    height     : var(--table-height);
 }
 
 /* Start Table Foot Area */
 .cr-pending-table tfoot {
-  display  : block;
-  width    : 100%;
-  font-size: var(--font14);
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
 }
 
 .cr-pending-table tfoot tr {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
-  color      : var(--blue);
-  border-top : 1px solid var(--bluish-white);
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+    color      : var(--blue);
+    border-top : 1px solid var(--bluish-white);
 }
 
 .cr-pending-table tfoot tr th {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 .cr-pending-table thead th:nth-child(1) span {
-  text-decoration: underline;
-  text-transform : capitalize;
+    text-decoration: underline;
+    text-transform : capitalize;
 }
 
 .cr-pending-table thead th:nth-child(1) .dropdown-item {
-  font-size: var(--font14);
+    font-size: var(--font14);
 }
 
 .cr-pending-table tbody td:nth-child(1) .form-check-input {
-  position   : unset;
-  margin-top : 0px;
-  margin-left: 0px;
+    position   : unset;
+    margin-top : 0px;
+    margin-left: 0px;
 }
 
 /* Start Table Alignment Area*/
 .cr-pending-table thead th:nth-child(1),
 .cr-pending-table tbody td:nth-child(1) {
-  flex-basis     : 5%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
-  min-width      : 68px;
+    flex-basis     : 5%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+    min-width      : 68px;
 }
 
 .cr-pending-table thead th:nth-child(2),
 .cr-pending-table tbody td:nth-child(2) {
-  flex-basis     : 15%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 .cr-pending-table thead th:nth-child(3),
 .cr-pending-table tbody td:nth-child(3) {
-  flex-basis     : 25%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-start;
+    flex-basis     : 25%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
 }
 
 .cr-pending-table thead th:nth-child(4),
 .cr-pending-table tbody td:nth-child(4) {
-  flex-basis     : 18%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 18%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 .cr-pending-table thead th:nth-child(5),
 .cr-pending-table tbody td:nth-child(5) {
-  flex-basis     : 17%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-start;
+    flex-basis     : 17%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
 }
 
 .cr-pending-table thead th:nth-child(6),
 .cr-pending-table tbody td:nth-child(6),
 .cr-pending-table thead th:nth-child(7),
 .cr-pending-table tbody td:nth-child(7) {
-  flex-basis     : 10%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .cr-pending-table tfoot th:nth-child(1) {
-  flex-basis: 80%;
+    flex-basis: 80%;
 }
 
 .cr-pending-table tfoot th:nth-child(2),
 .cr-pending-table tfoot th:nth-child(3) {
-  flex-basis     : 10%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .bulk-action {
-  display: flex;
+    display: flex;
 }
 
 .cr-pending-table i {
-  display        : flex;
-  justify-content: center;
-  align-items    : center;
-  width          : 30px;
-  height         : 30px;
-  font-size      : var(--font18);
-  border-radius  : 100px;
-  margin         : 0px 5px;
-  font-weight    : 200;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    width          : 30px;
+    height         : 30px;
+    font-size      : var(--font18);
+    border-radius  : 100px;
+    margin         : 0px 5px;
+    font-weight    : 200;
 }
 
 .cr-pending-table i.verify {
-  color           : var(--white);
-  background-color: var(--blue);
+    color           : var(--white);
+    background-color: var(--blue);
 }
 
 .cr-pending-table i.cancel {
-  color           : var(--red);
-  background-color: var(--redish-white);
+    color           : var(--red);
+    background-color: var(--redish-white);
 }
 
 /*--------- End Cash Register Pending Table Area ---------*/
 
 /*--------- Start Cash Register Inward Table Area ---------*/
 .cr-inward-table {
-  display       : block;
-  empty-cells   : show;
-  border-spacing: 0;
-  box-sizing    : border-box;
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
 }
 
 .cr-inward-table tr {
-  width  : 100%;
-  display: flex;
+    width  : 100%;
+    display: flex;
 }
 
 .cr-inward-table td,
 .cr-inward-table th {
-  flex-grow: 1;
-  display  : block;
-  padding  : 0rem 1rem;
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
 }
 
 /* Start Table Head Area */
 .cr-inward-table thead {
-  position: relative;
-  display : block;
-  width   : 100%;
+    position: relative;
+    display : block;
+    width   : 100%;
 }
 
 .cr-inward-table thead tr {
-  height        : var(--table-height);
-  font-size     : var(--font14);
-  text-transform: uppercase;
-  color         : var(--blue);
-  border-bottom : 1px solid var(--border-color);
+    height        : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
 }
 
 .cr-inward-table thead tr th {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 /* Start Table Body Area */
 .cr-inward-table tbody {
-  width     : 100%;
-  display   : block;
-  position  : relative;
-  overflow-y: scroll;
-  font-size : var(--font14);
-  color     : var(--text-black);
-  height    : calc(100vh - (var(--used-height) + 220px));
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc(100vh - (var(--used-height) + 220px));
 }
 
 .cr-inward-table tbody tr {
-  width        : 100%;
-  display      : flex;
-  align-items  : center;
-  height       : var(--table-height);
-  border-bottom: 1px solid var(--border-color);
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    height       : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .cr-inward-table tbody tr td {
-  display    : flex;
-  align-items: center;
-  height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+    height     : var(--table-height);
 }
 
 /* Start Table Foot Area */
 .cr-inward-table tfoot {
-  display  : block;
-  width    : 100%;
-  font-size: var(--font14);
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
 }
 
 .cr-inward-table tfoot tr {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
-  color      : var(--blue);
-  border-top : 1px solid var(--bluish-white);
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+    color      : var(--blue);
+    border-top : 1px solid var(--bluish-white);
 }
 
 .cr-inward-table tfoot tr th {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 /* Start Table Alignment Area*/
 .cr-inward-table thead th:nth-child(1),
 .cr-inward-table tbody td:nth-child(1) {
-  flex-basis     : 15%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-start;
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
 }
 
 .cr-inward-table thead th:nth-child(2),
 .cr-inward-table tbody td:nth-child(2) {
-  flex-basis     : 30%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-start;
+    flex-basis     : 30%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
 }
 
 .cr-inward-table thead th:nth-child(3),
 .cr-inward-table tbody td:nth-child(3),
 .cr-inward-table thead th:nth-child(4),
 .cr-inward-table tbody td:nth-child(4) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 .cr-inward-table thead th:nth-child(5),
 .cr-inward-table tbody td:nth-child(5),
 .cr-inward-table thead th:nth-child(6),
 .cr-inward-table tbody td:nth-child(6) {
-  flex-basis     : 15%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .cr-inward-table tfoot th:nth-child(1) {
-  flex-basis: 80%;
+    flex-basis: 80%;
 }
 
 .cr-inward-table tfoot th:nth-child(2),
 .cr-inward-table tfoot th:nth-child(3) {
-  flex-basis     : 15%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .cr-inward-table i {
-  display         : flex;
-  justify-content : center;
-  align-items     : center;
-  width           : 30px;
-  height          : 30px;
-  font-size       : var(--font18);
-  border-radius   : 100px;
-  margin          : 0px 5px;
-  font-weight     : 600;
-  color           : var(--blue);
-  background-color: var(--bluish-white);
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 30px;
+    height          : 30px;
+    font-size       : var(--font18);
+    border-radius   : 100px;
+    margin          : 0px 5px;
+    font-weight     : 600;
+    color           : var(--blue);
+    background-color: var(--bluish-white);
 }
 
 /*--------- End Cash Register Inward Table Area ---------*/
 
 /*--------- Start Cash Register Outward Table Area ---------*/
 .cr-outward-table {
-  display       : block;
-  empty-cells   : show;
-  border-spacing: 0;
-  box-sizing    : border-box;
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
 }
 
 .cr-outward-table tr {
-  width  : 100%;
-  display: flex;
+    width  : 100%;
+    display: flex;
 }
 
 .cr-outward-table td,
 .cr-outward-table th {
-  flex-grow: 1;
-  display  : block;
-  padding  : 0rem 1rem;
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
 }
 
 /* Start Table Head Area */
 .cr-outward-table thead {
-  position: relative;
-  display : block;
-  width   : 100%;
+    position: relative;
+    display : block;
+    width   : 100%;
 }
 
 .cr-outward-table thead tr {
-  height        : var(--table-height);
-  font-size     : var(--font14);
-  text-transform: uppercase;
-  color         : var(--blue);
-  border-bottom : 1px solid var(--border-color);
+    height        : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
 }
 
 .cr-outward-table thead tr th {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 /* Start Table Body Area */
 .cr-outward-table tbody {
-  width     : 100%;
-  display   : block;
-  position  : relative;
-  overflow-y: scroll;
-  font-size : var(--font14);
-  color     : var(--text-black);
-  height    : calc(100vh - (var(--used-height) + 220px));
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc(100vh - (var(--used-height) + 220px));
 }
 
 .cr-outward-table tbody tr {
-  width        : 100%;
-  display      : flex;
-  align-items  : center;
-  height       : var(--table-height);
-  border-bottom: 1px solid var(--border-color);
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    height       : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .cr-outward-table tbody tr td {
-  display    : flex;
-  align-items: center;
-  height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+    height     : var(--table-height);
 }
 
 /* Start Table Foot Area */
 .cr-outward-table tfoot {
-  display  : block;
-  width    : 100%;
-  font-size: var(--font14);
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
 }
 
 .cr-outward-table tfoot tr {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
-  color      : var(--blue);
-  border-top : 1px solid var(--bluish-white);
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+    color      : var(--blue);
+    border-top : 1px solid var(--bluish-white);
 }
 
 .cr-outward-table tfoot tr th {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 /* Start Table Alignment Area*/
 .cr-outward-table thead th:nth-child(1),
 .cr-outward-table tbody td:nth-child(1) {
-  flex-basis     : 15%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-start;
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
 }
 
 .cr-outward-table thead th:nth-child(2),
 .cr-outward-table tbody td:nth-child(2) {
-  flex-basis     : 30%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-start;
+    flex-basis     : 30%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
 }
 
 .cr-outward-table thead th:nth-child(3),
 .cr-outward-table tbody td:nth-child(3) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 .cr-outward-table thead th:nth-child(4),
 .cr-outward-table tbody td:nth-child(4),
 .cr-outward-table thead th:nth-child(5),
 .cr-outward-table tbody td:nth-child(5) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .cr-outward-table tfoot th:nth-child(1) {
-  flex-basis: 65%;
+    flex-basis: 65%;
 }
 
 .cr-outward-table tfoot th:nth-child(2),
 .cr-outward-table tfoot th:nth-child(3) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 /*--------- End Cash Register Outward Table Area ---------*/
 
 /*--------- Start Cash Register Day Closing Area ---------*/
 .cr-date-closing-table {
-  display       : block;
-  empty-cells   : show;
-  border-spacing: 0;
-  box-sizing    : border-box;
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
 }
 
 .cr-date-closing-table tr {
-  width  : 100%;
-  display: flex;
+    width  : 100%;
+    display: flex;
 }
 
 .cr-date-closing-table td,
 .cr-date-closing-table th {
-  flex-grow: 1;
-  display  : block;
-  padding  : 0rem 1rem;
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
 }
 
 /* Start Table Head Area */
 .cr-date-closing-table thead {
-  position: relative;
-  display : block;
-  width   : 100%;
+    position: relative;
+    display : block;
+    width   : 100%;
 }
 
 .cr-date-closing-table thead tr {
-  height        : var(--table-height);
-  font-size     : var(--font14);
-  text-transform: uppercase;
-  color         : var(--blue);
-  border-bottom : 1px solid var(--border-color);
+    height        : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
 }
 
 .cr-date-closing-table thead tr th {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 /* Start Table Body Area */
 .cr-date-closing-table tbody {
-  width     : 100%;
-  display   : block;
-  position  : relative;
-  overflow-y: scroll;
-  font-size : var(--font14);
-  color     : var(--text-black);
-  height    : calc(100vh - (var(--used-height) + 220px));
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc(100vh - (var(--used-height) + 220px));
 }
 
 .cr-date-closing-table tbody tr {
-  width        : 100%;
-  display      : flex;
-  align-items  : center;
-  height       : var(--table-height);
-  border-bottom: 1px solid var(--border-color);
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    height       : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .cr-date-closing-table tbody tr td {
-  display    : flex;
-  align-items: center;
-  height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+    height     : var(--table-height);
 }
 
 /* Start Table Foot Area */
 .cr-date-closing-table tfoot {
-  display  : block;
-  width    : 100%;
-  font-size: var(--font14);
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
 }
 
 .cr-date-closing-table tfoot tr {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
-  color      : var(--blue);
-  border-top : 1px solid var(--bluish-white);
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+    color      : var(--blue);
+    border-top : 1px solid var(--bluish-white);
 }
 
 .cr-date-closing-table tfoot tr th {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 /* Start Table Alignment Area*/
 .cr-date-closing-table thead th:nth-child(1),
 .cr-date-closing-table tbody td:nth-child(1) {
-  flex-basis     : 15%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-start;
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
 }
 
 .cr-date-closing-table thead th:nth-child(2),
 .cr-date-closing-table tbody td:nth-child(2) {
-  flex-basis     : 35%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 35%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 .cr-date-closing-table thead th:nth-child(3),
 .cr-date-closing-table tbody td:nth-child(3),
 .cr-date-closing-table thead th:nth-child(4),
 .cr-date-closing-table tbody td:nth-child(4) {
-  flex-basis     : 15%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 .cr-date-closing-table thead th:nth-child(5),
 .cr-date-closing-table tbody td:nth-child(5),
 .cr-date-closing-table thead th:nth-child(6),
 .cr-date-closing-table tbody td:nth-child(6) {
-  flex-basis     : 15%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .cr-date-closing-table tfoot th:nth-child(1) {
-  flex-basis: 80%;
+    flex-basis: 80%;
 }
 
 .cr-date-closing-table tfoot th:nth-child(2),
 .cr-date-closing-table tfoot th:nth-child(3) {
-  flex-basis     : 15%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .cr-date-closing-table i {
-  display        : flex;
-  justify-content: center;
-  align-items    : center;
-  width          : 30px;
-  height         : 30px;
-  font-size      : var(--font16);
-  border-radius  : 100px;
-  margin         : 0px 5px;
-  font-weight    : 200;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    width          : 30px;
+    height         : 30px;
+    font-size      : var(--font16);
+    border-radius  : 100px;
+    margin         : 0px 5px;
+    font-weight    : 200;
 }
 
 .cr-date-closing-table i.add {
-  color           : var(--white);
-  background-color: var(--blue);
+    color           : var(--white);
+    background-color: var(--blue);
 }
 
 .cr-date-closing-table i.view {
-  color           : var(--green);
-  background-color: var(--greenish-white);
+    color           : var(--green);
+    background-color: var(--greenish-white);
 }
 
 /*--------- End Cash Register Day Closing Area ---------*/
@@ -1130,239 +1130,239 @@ button:focus {
 
 /*--------- Start Show Denomination Modal Table Area ---------*/
 .modal-header .modal-title {
-  color    : var(--black) !important;
-  font-size: var(--font16) !important;
+    color    : var(--black) !important;
+    font-size: var(--font16) !important;
 }
 
 .modal-header .modal-title span {
-  font-size  : var(--font16);
-  color      : var(--blue);
-  margin-left: 5px;
+    font-size  : var(--font16);
+    color      : var(--blue);
+    margin-left: 5px;
 }
 
 #add-denomination-modal .modal-body,
 #show-denomination .modal-body {
-  padding: 0rem 1rem;
+    padding: 0rem 1rem;
 }
 
 .denomination-modal-table {
-  display       : block;
-  empty-cells   : show;
-  border-spacing: 0;
-  box-sizing    : border-box;
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
 }
 
 .denomination-modal-table tr {
-  width  : 100%;
-  display: flex;
+    width  : 100%;
+    display: flex;
 }
 
 .denomination-modal-table td,
 .denomination-modal-table th {
-  flex-grow: 1;
-  display  : block;
-  padding  : 0rem 1rem;
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
 }
 
 /* Start Table Head Area */
 .denomination-modal-table thead {
-  position: relative;
-  display : block;
-  width   : 100%;
+    position: relative;
+    display : block;
+    width   : 100%;
 }
 
 .denomination-modal-table thead tr {
-  height        : var(--table-height);
-  font-size     : var(--font14);
-  text-transform: uppercase;
-  color         : var(--blue);
-  border-bottom : 1px solid var(--border-color);
+    height        : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
 }
 
 .denomination-modal-table thead tr th {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 .denomination-modal-table thead tr:nth-child(2) {
-  background-color: var(--bluish-white);
-  display         : flex;
-  align-items     : center;
-  height          : 50px;
+    background-color: var(--bluish-white);
+    display         : flex;
+    align-items     : center;
+    height          : 50px;
 }
 
 .denomination-modal-table .form-control-sm {
-  border-radius: 2px;
-  font-size    : var(--font14);
-  border       : 1px solid var(--border-color);
-  height       : 30px !important;
-  width        : 100px;
+    border-radius: 2px;
+    font-size    : var(--font14);
+    border       : 1px solid var(--border-color);
+    height       : 30px !important;
+    width        : 100px;
 }
 
 .denomination-modal-table .form-control-sm:placeholder {
-  font-size: var(--font14);
-  color    : #AAC0D9;
+    font-size: var(--font14);
+    color    : #AAC0D9;
 }
 
 .denomination-modal-table .form-control-sm:focus {
-  outline     : none !important;
-  border-color: var(--blue) !important;
-  box-shadow  : none;
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
 }
 
 .denomination-modal-table .btn-add {
-  width           : 100px;
-  height          : 30px;
-  padding         : 0px 10px;
-  font-size       : var(--font14);
-  color           : var(--white);
-  background-color: var(--blue);
-  border-radius   : 100px;
-  font-weight     : 600;
-  border          : none;
+    width           : 100px;
+    height          : 30px;
+    padding         : 0px 10px;
+    font-size       : var(--font14);
+    color           : var(--white);
+    background-color: var(--blue);
+    border-radius   : 100px;
+    font-weight     : 600;
+    border          : none;
 }
 
 /* Start Table Body Area */
 .denomination-modal-table tbody {
-  width     : 100%;
-  display   : block;
-  position  : relative;
-  overflow-y: scroll;
-  font-size : var(--font14);
-  color     : var(--text-black);
-  height    : calc(100vh - (var(--used-height) + 220px));
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc(100vh - (var(--used-height) + 220px));
 }
 
 .denomination-modal-table tbody tr {
-  width        : 100%;
-  display      : flex;
-  align-items  : center;
-  height       : var(--table-height);
-  border-bottom: 1px solid var(--border-color);
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    height       : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .denomination-modal-table tbody tr.active {
-  background-color: var(--bluish-white);
+    background-color: var(--bluish-white);
 }
 
 .denomination-modal-table tbody tr.active .edit {
-  color           : var(--white);
-  background-color: var(--blue);
+    color           : var(--white);
+    background-color: var(--blue);
 }
 
 .denomination-modal-table tbody tr .remove {
-  color           : var(--red);
-  background-color: var(--redish-white);
+    color           : var(--red);
+    background-color: var(--redish-white);
 }
 
 .denomination-modal-table tbody tr .edit {
-  color           : var(--blue);
-  background-color: var(--bluish-white);
+    color           : var(--blue);
+    background-color: var(--bluish-white);
 }
 
 .denomination-modal-table tbody tr td {
-  display    : flex;
-  align-items: center;
-  height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+    height     : var(--table-height);
 }
 
 /* Start Table Foot Area */
 .denomination-modal-table tfoot {
-  display  : block;
-  width    : 100%;
-  font-size: var(--font14);
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
 }
 
 .denomination-modal-table tfoot tr {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
-  color      : var(--blue);
-  border-top : 1px solid var(--bluish-white);
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+    color      : var(--blue);
+    border-top : 1px solid var(--bluish-white);
 }
 
 .denomination-modal-table tfoot tr .notmatch {
-  color: var(--red);
+    color: var(--red);
 }
 
 .denomination-modal-table tfoot tr th {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 /* Start Table Alignment Area*/
 .denomination-modal-table thead th:nth-child(1),
 .denomination-modal-table tbody td:nth-child(1) {
-  flex-basis     : 40%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-start;
+    flex-basis     : 40%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
 }
 
 .denomination-modal-table thead th:nth-child(2),
 .denomination-modal-table tbody td:nth-child(2) {
-  flex-basis     : 25%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 25%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 .denomination-modal-table thead th:nth-child(3),
 .denomination-modal-table tbody td:nth-child(3) {
-  flex-basis     : 25%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 25%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .denomination-modal-table thead th:nth-child(4),
 .denomination-modal-table tbody td:nth-child(4) {
-  flex-basis     : 25%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 25%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 .denomination-modal-table tfoot th:nth-child(1) {
-  flex-basis: 65%;
+    flex-basis: 65%;
 }
 
 .denomination-modal-table tfoot th:nth-child(2) {
-  flex-basis     : 25%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 25%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .denomination-modal-table tfoot th:nth-child(3) {
-  flex-basis     : 25%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 25%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 /*--------- End Show Denomination Modal Table Area ---------*/
 
 
 @media screen and (max-width: 1440px) {
-  :root {
-    --table-height: 35px;
-  }
+    :root {
+        --table-height: 35px;
+    }
 
-  .cr-pending-table i,
-  .cr-inward-table i,
-  .cr-date-closing-table i {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-    width          : 25px;
-    height         : 25px;
-    font-size      : var(--font16);
-    border-radius  : 100px;
-    margin         : 0px 5px;
-  }
+    .cr-pending-table i,
+    .cr-inward-table i,
+    .cr-date-closing-table i {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        width          : 25px;
+        height         : 25px;
+        font-size      : var(--font16);
+        border-radius  : 100px;
+        margin         : 0px 5px;
+    }
 }
 
 
@@ -1379,416 +1379,416 @@ button:focus {
 
 /*Start Secondary Sidebar Header Area*/
 .layout-sidebar.order {
-  min-width   : var(--sidebar-width);
-  width       : 100%;
-  border-right: 1px solid var(--border-color);
+    min-width   : var(--sidebar-width);
+    width       : 100%;
+    border-right: 1px solid var(--border-color);
 }
 
 .layout-sidebar.order .header {
-  background-color: var(--white);
-  padding         : 15px 10px;
+    background-color: var(--white);
+    padding         : 15px 10px;
 }
 
 .layout-sidebar.order .header .row1 {
-  display        : flex;
-  justify-content: space-between;
+    display        : flex;
+    justify-content: space-between;
 }
 
 .layout-sidebar.order .header .row1 .form-group {
-  position     : relative;
-  margin-bottom: 0px !important;
-  width        : 100%;
+    position     : relative;
+    margin-bottom: 0px !important;
+    width        : 100%;
 }
 
 .layout-sidebar.order .header .row1 .form-group i {
-  position : absolute;
-  top      : 12px;
-  left     : 10px;
-  color    : #AAC0D9;
-  font-size: var(--font14);
+    position : absolute;
+    top      : 12px;
+    left     : 10px;
+    color    : #AAC0D9;
+    font-size: var(--font14);
 }
 
 .layout-sidebar.order .header .row1 .form-group input {
-  padding-left : 36px;
-  border-radius: 2px;
-  border       : 1px solid var(--border-color);
+    padding-left : 36px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
 }
 
 .layout-sidebar.order .header .row1 .form-group input::placeholder {
-  font-size: var(--font14);
-  color    : #AAC0D9;
+    font-size: var(--font14);
+    color    : #AAC0D9;
 }
 
 .layout-sidebar.order .header .row1 .form-group input:focus {
-  border-color: var(--blue);
-  box-shadow  : none;
+    border-color: var(--blue);
+    box-shadow  : none;
 }
 
 .layout-sidebar.order .header .row1 .filter_search {
-  color        : #AAC0D9;
-  font-size    : var(--font16);
-  text-align   : center;
-  padding      : 8px;
-  height       : 38px;
-  width        : 38px;
-  border-radius: 2px;
-  border       : 1px solid var(--border-color);
-  margin-left  : 10px;
+    color        : #AAC0D9;
+    font-size    : var(--font16);
+    text-align   : center;
+    padding      : 8px;
+    height       : 38px;
+    width        : 38px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
+    margin-left  : 10px;
 }
 
 .layout-sidebar.order .header .row1 .filter_search:hover {
-  color           : var(--white);
-  background-color: var(--blue);
+    color           : var(--white);
+    background-color: var(--blue);
 }
 
 /*End Secondary Sidebar Header Area*/
 
 /*Start Secondary Sidebar Content Area*/
 .layout-sidebar.order .content {
-  height    : calc(100vh - (var(--used-height) + 76px));
-  overflow-y: scroll;
+    height    : calc(100vh - (var(--used-height) + 76px));
+    overflow-y: scroll;
 }
 
 .layout-sidebar.order .content .card_body {
-  padding         : 10px;
-  display         : flex;
-  flex-direction  : column;
-  justify-content : space-between;
-  background-color: var(--white);
-  border-bottom   : 1px solid var(--border-color);
+    padding         : 10px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    background-color: var(--white);
+    border-bottom   : 1px solid var(--border-color);
 }
 
 .layout-sidebar.order .content .card_body:hover,
 .layout-sidebar.order .content .card_body:active {
-  background-color: var(--bluish-white);
+    background-color: var(--bluish-white);
 }
 
 .layout-sidebar.order .content .card_body .row1,
 .layout-sidebar.order .content .card_body .row2,
 .layout-sidebar.order .content .card_body .row3 {
-  margin         : 1px 0px;
-  display        : flex;
-  justify-content: space-between;
+    margin         : 1px 0px;
+    display        : flex;
+    justify-content: space-between;
 }
 
 .layout-sidebar.order .content .card_body .row1 h5 {
-  font-size    : var(--font14);
-  color        : var(--blue);
-  text-overflow: ellipsis;
-  width        : inherit;
-  white-space  : nowrap;
+    font-size    : var(--font14);
+    color        : var(--blue);
+    text-overflow: ellipsis;
+    width        : inherit;
+    white-space  : nowrap;
 }
 
 .layout-sidebar.order .content .card_body .row1 .status {
-  font-size  : var(--font14);
-  font-weight: 500;
+    font-size  : var(--font14);
+    font-weight: 500;
 }
 
 .layout-sidebar.order .content .card_body .row1 .available {
-  color: var(--green) !important;
+    color: var(--green) !important;
 }
 
 .layout-sidebar.order .content .card_body .row1 .occupied {
-  color: var(--yellow) !important;
+    color: var(--yellow) !important;
 }
 
 .layout-sidebar.order .content .card_body .row1 .dcr_complete {
-  color: var(--blue) !important;
+    color: var(--blue) !important;
 }
 
 .layout-sidebar.order .content .card_body .row2 p {
-  font-size     : var(--font14);
-  color         : var(--text-black);
-  /* font-weight: 500; */
+    font-size     : var(--font14);
+    color         : var(--text-black);
+    /* font-weight: 500; */
 }
 
 .layout-sidebar.order .content .card_body .row3 p {
-  font-size: var(--font14);
-  color    : #879097;
+    font-size: var(--font14);
+    color    : #879097;
 }
 
 @media screen and (max-width: 768px) {
-  .layout-sidebar.order {
-    width: 100%;
-  }
+    .layout-sidebar.order {
+        width: 100%;
+    }
 
-  .layout-sidebar.order .content {
-    height    : calc(230px - 68px);
-    overflow-y: scroll;
-  }
+    .layout-sidebar.order .content {
+        height    : calc(230px - 68px);
+        overflow-y: scroll;
+    }
 }
 
 /*End Secondary Sidebar Content Area*/
 
 .delivery_collection_area {
-  position        : relative;
-  margin-top      : 15px;
-  min-height      : calc(100vh - (var(--used-height) - (-30px)));
-  background-color: var(--white);
-  box-shadow      : 0px 0px 8px #026CD11A;
-  border-radius   : 8px;
-  border          : 1px solid var(--border-color);
-  box-sizing      : border-box;
+    position        : relative;
+    margin-top      : 15px;
+    min-height      : calc(100vh - (var(--used-height) - (-30px)));
+    background-color: var(--white);
+    box-shadow      : 0px 0px 8px #026CD11A;
+    border-radius   : 8px;
+    border          : 1px solid var(--border-color);
+    box-sizing      : border-box;
 }
 
 .delivery_collection_area .deCollection_header {
-  padding      : 10px 0px;
-  border-bottom: 1px solid var(--border-color);
+    padding      : 10px 0px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .deCollection_header h5 {
-  font-size    : var(--font14);
-  color        : var(--text-label);
-  margin-bottom: 5px;
-  display      : flex;
-  align-items  : center;
+    font-size    : var(--font14);
+    color        : var(--text-label);
+    margin-bottom: 5px;
+    display      : flex;
+    align-items  : center;
 }
 
 .deCollection_header h5 span {
-  color      : var(--blue);
-  margin-left: 5px;
+    color      : var(--blue);
+    margin-left: 5px;
 }
 
 .deCollection_header p {
-  font-weight: 400;
-  font-size  : var(--font14);
-  color      : var(--text-black);
+    font-weight: 400;
+    font-size  : var(--font14);
+    color      : var(--text-black);
 }
 
 .deCollection_header p span {
-  font-size: var(--font14);
-  color    : var(--blue);
+    font-size: var(--font14);
+    color    : var(--blue);
 }
 
 :root {
-  --table-height: 40px;
+    --table-height: 40px;
 }
 
 /*---------Start Collection Table 3 ---------*/
 .delivery-collection-table {
-  display       : block;
-  empty-cells   : show;
-  border-spacing: 0;
-  box-sizing    : border-box;
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
 }
 
 .delivery-collection-table tr {
-  width  : 100%;
-  display: flex;
+    width  : 100%;
+    display: flex;
 }
 
 .delivery-collection-table td,
 .delivery-collection-table th {
-  flex-grow: 1;
-  display  : block;
-  padding  : 0rem 1rem;
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
 }
 
 /* Start Table Head Area */
 .delivery-collection-table thead {
-  position: relative;
-  display : block;
-  width   : 100%;
+    position: relative;
+    display : block;
+    width   : 100%;
 }
 
 .delivery-collection-table thead tr {
-  height        : var(--table-height);
-  font-size     : var(--font14);
-  text-transform: uppercase;
-  color         : var(--blue);
-  border-bottom : 1px solid var(--border-color);
+    height        : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
 }
 
 .delivery-collection-table thead tr th {
-  height     : var(--table-height);
-  display    : flex;
-  align-items: center;
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 /* Start Table Body Area */
 .delivery-collection-table tbody {
-  width     : 100%;
-  display   : block;
-  position  : relative;
-  overflow-y: scroll;
-  font-size : var(--font14);
-  color     : var(--text-black);
-  height    : calc((100vh - 40vh) - (var(--used-height) + 18px));
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc((100vh - 40vh) - (var(--used-height) + 18px));
 }
 
 .delivery-collection-table tbody tr {
-  width        : 100%;
-  display      : flex;
-  align-items  : center;
-  height       : var(--table-height);
-  border-bottom: 1px solid var(--border-color);
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    height       : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .delivery-collection-table tbody tr td {
-  display    : flex;
-  align-items: center;
-  height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+    height     : var(--table-height);
 }
 
 /* Start Table Alignment Area*/
 .delivery-collection-table thead th:nth-child(1),
 .delivery-collection-table tbody td:nth-child(1) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-start;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
 }
 
 .delivery-collection-table thead th:nth-child(2),
 .delivery-collection-table tbody td:nth-child(2) {
-  flex-basis: 40%;
-  flex-grow : 1;
-  display   : flex;
+    flex-basis: 40%;
+    flex-grow : 1;
+    display   : flex;
 }
 
 .delivery-collection-table thead th:nth-child(3),
 .delivery-collection-table tbody td:nth-child(3) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .delivery-collection-table thead th:nth-child(4),
 .delivery-collection-table tbody td:nth-child(4) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 /*---------End Collection Table 3 ---------*/
 .deCollection-footer {
-  position       : absolute;
-  bottom         : 0px;
-  width          : 100%;
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
-  padding        : 10px 0px;
+    position       : absolute;
+    bottom         : 0px;
+    width          : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    padding        : 10px 0px;
 }
 
 #new-payment-modal .modal-header .modal-title {
-  color    : var(--black) !important;
-  font-size: var(--font16) !important;
+    color    : var(--black) !important;
+    font-size: var(--font16) !important;
 }
 
 #new-payment-modal .uploaded-file {
-  position        : relative;
-  margin          : 10px 0px;
-  font-size       : var(--font14);
-  background-color: var(--bluish-white);
-  border-radius   : 2px;
+    position        : relative;
+    margin          : 10px 0px;
+    font-size       : var(--font14);
+    background-color: var(--bluish-white);
+    border-radius   : 2px;
 }
 
 #new-payment-modal .uploaded-file img {
-  height: 120px;
+    height: 120px;
 }
 
 #new-payment-modal .uploaded-file .file-info {
-  position        : absolute;
-  width           : 100%;
-  top             : 0px;
-  padding         : 10px 10px;
-  display         : flex;
-  align-items     : center;
-  justify-content : space-between;
-  background-color: rgba(0, 0, 0, 0.2);
+    position        : absolute;
+    width           : 100%;
+    top             : 0px;
+    padding         : 10px 10px;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 #new-payment-modal .uploaded-file .file-info p {
-  font-size: var(--font12);
+    font-size: var(--font12);
 }
 
 #new-payment-modal .uploaded-file .file-button {
-  display    : flex;
-  align-items: center;
+    display    : flex;
+    align-items: center;
 }
 
 #new-payment-modal .uploaded-file .file-button .download {
-  font-size  : var(--font16);
-  color      : var(--white);
-  margin-left: 15px;
+    font-size  : var(--font16);
+    color      : var(--white);
+    margin-left: 15px;
 }
 
 #new-payment-modal .uploaded-file .file-button .remove {
-  font-size  : var(--font16);
-  color      : var(--red);
-  margin-left: 15px;
+    font-size  : var(--font16);
+    color      : var(--red);
+    margin-left: 15px;
 }
 
 .btn-draft {
-  background-color: var(--white) !important;
-  border          : 1px solid var(--text-black) !important;
-  color           : var(--text-black);
+    background-color: var(--white) !important;
+    border          : 1px solid var(--text-black) !important;
+    color           : var(--text-black);
 }
 
 .btn-draft:hover {
-  background-color: var(--white) !important;
-  border          : 1px solid var(--text-black) !important;
-  color           : var(--text-black);
+    background-color: var(--white) !important;
+    border          : 1px solid var(--text-black) !important;
+    color           : var(--text-black);
 }
 
 .green {
-  color: var(--green) !important;
+    color: var(--green) !important;
 }
 
 .orange {
-  color: #FFB347 !important;
+    color: #FFB347 !important;
 }
 
 .gray {
-  color: #AEC1D0 !important;
+    color: #AEC1D0 !important;
 }
 
 .delivery-collection-table .edit {
-  display         : flex;
-  justify-content : center;
-  align-items     : center;
-  width           : 30px;
-  height          : 30px;
-  font-size       : var(--font12);
-  color           : var(--blue);
-  border-radius   : 100px;
-  background-color: var(--bluish-white);
-  margin          : 0px 5px;
-}
-
-.delivery-collection-table .remove {
-  display         : flex;
-  justify-content : center;
-  align-items     : center;
-  width           : 30px;
-  height          : 30px;
-  font-size       : var(--font12);
-  color           : var(--red);
-  border-radius   : 100px;
-  background-color: var(--redish-white);
-  margin          : 0px 5px;
-}
-
-@media screen and (max-width: 1440px) {
-  :root {
-    --table-height: 35px;
-  }
-
-  .delivery-collection-table i {
     display         : flex;
     justify-content : center;
     align-items     : center;
-    width           : 25px;
-    height          : 25px;
+    width           : 30px;
+    height          : 30px;
     font-size       : var(--font12);
-    color           : var(--white);
+    color           : var(--blue);
     border-radius   : 100px;
-    background-color: var(--blue);
+    background-color: var(--bluish-white);
     margin          : 0px 5px;
-  }
+}
+
+.delivery-collection-table .remove {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 30px;
+    height          : 30px;
+    font-size       : var(--font12);
+    color           : var(--red);
+    border-radius   : 100px;
+    background-color: var(--redish-white);
+    margin          : 0px 5px;
+}
+
+@media screen and (max-width: 1440px) {
+    :root {
+        --table-height: 35px;
+    }
+
+    .delivery-collection-table i {
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        width           : 25px;
+        height          : 25px;
+        font-size       : var(--font12);
+        color           : var(--white);
+        border-radius   : 100px;
+        background-color: var(--blue);
+        margin          : 0px 5px;
+    }
 }
 
 /* 
@@ -1805,1042 +1805,1043 @@ button:focus {
 */
 
 :root {
-  --table-height: 40px;
+    --table-height: 40px;
 }
 
 /*Start Secondary Sidebar Header Area*/
 .layout-sidebar.delivery-collection {
-  min-width   : var(--sidebar-width);
-  width       : 100%;
-  border-right: 1px solid var(--border-color);
+    min-width   : var(--sidebar-width);
+    width       : 100%;
+    border-right: 1px solid var(--border-color);
 }
 
 .layout-sidebar.delivery-collection .header {
-  background-color: var(--white);
-  padding         : 15px 10px;
+    background-color: var(--white);
+    padding         : 15px 10px;
 }
 
 .layout-sidebar.delivery-collection .header .row1 {
-  display        : flex;
-  justify-content: space-between;
+    display        : flex;
+    justify-content: space-between;
 }
 
 .layout-sidebar.delivery-collection .header .row2 {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .layout-sidebar.delivery-collection .header .row2 h5 {
-  color    : var(--text-label);
-  font-size: var(--font14);
+    color    : var(--text-label);
+    font-size: var(--font14);
 }
 
 .layout-sidebar.delivery-collection .header .row2 span {
-  color: var(--blue);
+    color: var(--blue);
 }
 
 .layout-sidebar.delivery-collection .header .row1 .form-group {
-  position     : relative;
-  margin-bottom: 0px !important;
-  width        : 100%;
+    position     : relative;
+    margin-bottom: 0px !important;
+    width        : 100%;
 }
 
 .layout-sidebar.delivery-collection .header .row1 .form-group span {
-  position : absolute;
-  top      : 12px;
-  left     : 10px;
-  color    : #AAC0D9;
-  font-size: var(--font14);
+    position : absolute;
+    top      : 12px;
+    left     : 10px;
+    color    : #AAC0D9;
+    font-size: var(--font14);
 }
 
 .layout-sidebar.delivery-collection .header .row1 .form-group input {
-  padding-left : 36px;
-  border-radius: 2px;
-  border       : 1px solid var(--border-color);
+    padding-left : 36px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
 }
 
 .layout-sidebar.delivery-collection .header .row1 .form-group input::placeholder {
-  font-size: var(--font14);
-  color    : #AAC0D9;
+    font-size: var(--font14);
+    color    : #AAC0D9;
 }
 
 .layout-sidebar.delivery-collection .header .row1 .form-group input:focus {
-  border-color: var(--blue);
-  box-shadow  : none;
+    border-color: var(--blue);
+    box-shadow  : none;
 }
 
 .layout-sidebar.delivery-collection .header .row1 .filter_search {
-  color        : #AAC0D9;
-  font-size    : var(--font16);
-  text-align   : center;
-  padding      : 8px;
-  height       : 38px;
-  width        : 38px;
-  border-radius: 2px;
-  border       : 1px solid var(--border-color);
-  margin-left  : 10px;
+    color        : #AAC0D9;
+    font-size    : var(--font16);
+    text-align   : center;
+    padding      : 8px;
+    height       : 38px;
+    width        : 38px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
+    margin-left  : 10px;
 }
 
 .layout-sidebar.delivery-collection .header .row1 .filter_search:hover {
-  color           : var(--white);
-  background-color: var(--blue);
+    color           : var(--white);
+    background-color: var(--blue);
 }
 
 /*End Secondary Sidebar Header Area*/
 
 /*Start Secondary Sidebar Content Area*/
 .layout-sidebar.delivery-collection .content {
-  height    : calc(100vh - (var(--used-height) + 68px + 25px));
-  overflow-y: scroll;
+    height    : calc(100vh - (var(--used-height) + 68px + 25px));
+    overflow-y: scroll;
 }
 
 .layout-sidebar.delivery-collection .credit {
-  color: var(--green) !important;
+    color: var(--green) !important;
 }
 
 .layout-sidebar.delivery-collection .cash {
-  color: var(--red) !important;
+    color: var(--red) !important;
 }
 
 .layout-sidebar.delivery-collection .content .card_body {
-  padding         : 10px;
-  display         : flex;
-  flex-direction  : column;
-  justify-content : space-between;
-  background-color: var(--white);
-  border-bottom   : 1px solid var(--border-color);
+    padding         : 10px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    background-color: var(--white);
+    border-bottom   : 1px solid var(--border-color);
 }
 
 .layout-sidebar.delivery-collection .content .card_body:hover,
 .layout-sidebar.delivery-collection .content .card_body:active {
-  background-color: var(--bluish-white);
+    background-color: var(--bluish-white);
 }
 
 .layout-sidebar.delivery-collection .content .card_body .row1,
 .layout-sidebar.delivery-collection .content .card_body .row2,
 .layout-sidebar.delivery-collection .content .card_body .row3 {
-  margin         : 1px 0px;
-  display        : flex;
-  justify-content: space-between;
+    margin         : 1px 0px;
+    display        : flex;
+    justify-content: space-between;
 }
 
 .layout-sidebar.delivery-collection .content .card_body .row1 h5 {
-  font-size    : var(--font14);
-  color        : var(--blue);
-  text-overflow: ellipsis;
-  width        : inherit;
-  white-space  : nowrap;
+    font-size    : var(--font14);
+    color        : var(--blue);
+    text-overflow: ellipsis;
+    width        : inherit;
+    white-space  : nowrap;
 }
 
 .layout-sidebar.delivery-collection .content .card_body .row1 p {
-  text-align : center;
-  font-weight: 500;
-  font-size  : var(--font14);
-  color      : var(--text-black);
+    text-align : center;
+    font-weight: 500;
+    font-size  : var(--font14);
+    color      : var(--text-black);
 }
 
 .layout-sidebar.delivery-collection .content .card_body .row2 p {
-  font-size  : var(--font14);
-  color      : var(--text-black);
-  font-weight: 500;
+    font-size  : var(--font14);
+    color      : var(--text-black);
+    font-weight: 500;
 }
 
 .layout-sidebar.delivery-collection .content .card_body .row3 p {
-  font-size: var(--font14);
-  color    : #879097;
+    font-size: var(--font14);
+    color    : #879097;
 }
 
 @media screen and (max-width: 768px) {
-  .layout-sidebar.delivery-collection {
-    width: 100%;
-  }
+    .layout-sidebar.delivery-collection {
+        width: 100%;
+    }
 
-  .layout-sidebar.delivery-collection .content {
-    height    : calc(230px - (68px + 25px));
-    overflow-y: scroll;
-  }
+    .layout-sidebar.delivery-collection .content {
+        height    : calc(230px - (68px + 25px));
+        overflow-y: scroll;
+    }
 }
 
 /*End Secondary Sidebar Content Area*/
 
 .delivery-collection-area {
-  margin-top      : 15px;
-  min-height      : calc(100vh - (var(--used-height) - (-30px)));
-  background-color: var(--white);
-  box-shadow      : 0px 0px 8px #026CD11A;
-  border-radius   : 8px;
-  border          : 1px solid var(--border-color);
-  box-sizing      : border-box;
+    margin-top      : 15px;
+    min-height      : calc(100vh - (var(--used-height) - (-30px)));
+    background-color: var(--white);
+    box-shadow      : 0px 0px 8px #026CD11A;
+    border-radius   : 8px;
+    border          : 1px solid var(--border-color);
+    box-sizing      : border-box;
 }
 
 .delivery-collection-area .delivery-collection-header {
-  padding      : 10px 0px;
-  border-bottom: 1px solid var(--border-color);
+    padding      : 10px 0px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .delivery-collection-area .delivery-collection-header h5 {
-  font-size    : var(--font16);
-  color        : var(--text-label);
-  margin-bottom: 5px;
-  display      : flex;
-  align-items  : center;
+    font-size    : var(--font16);
+    color        : var(--text-label);
+    margin-bottom: 5px;
+    display      : flex;
+    align-items  : center;
 }
 
 .delivery-collection-area .delivery-collection-header h5 .order-id {
-  font-size  : var(--font16);
-  color      : var(--blue);
-  margin-left: 5px;
+    font-size  : var(--font16);
+    color      : var(--blue);
+    margin-left: 5px;
 }
 
 .delivery-collection-area .delivery-collection-header h5 .form-control-sm {
-  border-radius: 2px;
-  font-size    : var(--font12);
-  border       : 1px solid var(--border-color);
-  width        : 160px;
-  height       : 25px !important;
-  margin       : 0px 5px;
+    border-radius: 2px;
+    font-size    : var(--font12);
+    border       : 1px solid var(--border-color);
+    width        : 160px;
+    height       : 25px !important;
+    margin       : 0px 5px;
 }
 
 .delivery-collection-area .delivery-collection-header p {
-  font-weight: 400;
-  font-size  : var(--font14);
-  color      : var(--text-black);
+    font-weight: 400;
+    font-size  : var(--font14);
+    color      : var(--text-black);
 }
 
 .delivery-collection-area .delivery-collection-header p span {
-  font-size: var(--font14);
-  color    : var(--blue);
+    font-size: var(--font14);
+    color    : var(--blue);
 }
 
 .delivery-collection-area .delivery-collection-header .form-group {
-  display        : flex;
-  align-items    : center;
-  justify-content: space-between;
-  margin-bottom  : 0rem;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    margin-bottom  : 0rem;
 }
 
 .delivery-collection-area .delivery-collection-header .form-group label {
-  font-weight  : 400;
-  font-size    : var(--font14);
-  color        : var(--text-black);
-  margin-bottom: 0rem;
+    font-weight  : 400;
+    font-size    : var(--font14);
+    color        : var(--text-black);
+    margin-bottom: 0rem;
 }
 
 .delivery-collection-area .delivery-collection-header .form-control-sm {
-  text-align   : left;
-  padding      : 0rem .5rem;
-  width        : 65%;
-  border-radius: 2px;
-  font-size    : var(--font12);
-  border       : 1px solid var(--border-color);
-  height       : 25px !important;
-  margin-left  : 5px;
+    text-align   : left;
+    padding      : 0rem .5rem;
+    width        : 65%;
+    border-radius: 2px;
+    font-size    : var(--font12);
+    border       : 1px solid var(--border-color);
+    height       : 25px !important;
+    margin-left  : 5px;
 }
 
 .delivery-collection-area .delivery-collection-header .form-control-sm:focus {
-  outline     : none !important;
-  border-color: var(--blue) !important;
-  box-shadow  : none;
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
 }
 
 /*---------Start Third Party Order Table ---------*/
 .delivery-collection-table {
-  display       : block;
-  empty-cells   : show;
-  border-spacing: 0;
-  box-sizing    : border-box;
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
 }
 
 .delivery-collection-table tr {
-  width  : 100%;
-  display: flex;
+    width  : 100%;
+    display: flex;
 }
 
 .delivery-collection-table td,
 .delivery-collection-table th {
-  flex-grow: 1;
-  display  : block;
-  padding  : 0rem 1rem;
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
 }
 
 /* Start Table Head Area */
 .delivery-collection-table thead {
-  position: relative;
-  display : block;
-  width   : 100%;
+    position: relative;
+    display : block;
+    width   : 100%;
 }
 
 .delivery-collection-table thead tr {
-  min-height    : var(--table-height);
-  font-size     : var(--font14);
-  text-transform: uppercase;
-  color         : var(--blue);
-  border-bottom : 1px solid var(--border-color);
+    min-height    : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
 }
 
 .delivery-collection-table thead tr th {
-  min-height : var(--table-height);
-  display    : flex;
-  align-items: center;
+    min-height : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 /* Start Table Body Area */
 .delivery-collection-table tbody {
-  width     : 100%;
-  display   : block;
-  position  : relative;
-  overflow-y: scroll;
-  font-size : var(--font14);
-  color     : var(--text-black);
-  height    : calc((100vh - 50vh) - (var(--used-height) + 23px));
+    width        : 100%;
+    display      : block;
+    position     : relative;
+    overflow-y   : scroll;
+    font-size    : var(--font14);
+    color        : var(--text-black);
+    height       : calc((100vh - 50vh) - (var(--used-height) + 23px));
+    border-bottom: 1px solid var(--border-color);
 }
 
 .delivery-collection-table tbody .product .name {
-  font-size: var(--font14);
-  color    : var(--blue);
+    font-size: var(--font14);
+    color    : var(--blue);
 }
 
 .delivery-collection-table tbody .product .name span {
-  font-size: var(--font14);
-  color    : var(--text-black);
+    font-size: var(--font14);
+    color    : var(--text-black);
 }
 
 .delivery-collection-table tbody .product .type {
-  font-size  : var(--font14);
-  color      : var(--text-black);
-  font-weight: 400;
+    font-size  : var(--font14);
+    color      : var(--text-black);
+    font-weight: 400;
 }
 
 .delivery-collection-table tbody tr {
-  position     : relative;
-  width        : 100%;
-  display      : flex;
-  align-items  : center;
-  min-height   : var(--table-height);
-  border-bottom: 1px solid var(--border-color);
+    position     : relative;
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    min-height   : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .delivery-collection-table tbody tr td {
-  display    : flex;
-  align-items: center;
-  min-height : var(--table-height);
+    display    : flex;
+    align-items: center;
+    min-height : var(--table-height);
 }
 
 /* Start Table Foot Area */
 .delivery-collection-table tfoot {
-  display  : block;
-  width    : 100%;
-  font-size: var(--font14);
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
 }
 
 .delivery-collection-table tfoot tr {
-  /* min-height: 30px; */
-  display    : flex;
-  align-items: center;
-  color      : var(--text-black);
+    /* min-height: 30px; */
+    display    : flex;
+    align-items: center;
+    color      : var(--text-black);
 }
 
 .delivery-collection-table tfoot tr:last-child {
-  min-height : 30px;
-  display    : flex;
-  align-items: center;
-  color      : var(--blue);
-  border-top : 1px solid var(--bluish-white);
+    min-height : 30px;
+    display    : flex;
+    align-items: center;
+    color      : var(--blue);
+    border-top : 1px solid var(--bluish-white);
 }
 
 .delivery-collection-table tfoot tr th {
-  /* min-height: 30px; */
-  /* min-height: auto; */
-  display    : flex;
-  align-items: center;
+    /* min-height: 30px; */
+    /* min-height: auto; */
+    display    : flex;
+    align-items: center;
 }
 
 .delivery-collection-table tfoot tr th .small-text {
-  font-weight: 500;
-  font-size  : var(--font12);
+    font-weight: 500;
+    font-size  : var(--font12);
 }
 
 .delivery-collection-table tfoot tr th .grand-total {
-  font-weight: 600;
-  font-size  : var(--font14);
+    font-weight: 600;
+    font-size  : var(--font14);
 }
 
 .delivery-collection-table thead th:nth-child(2) div {
-  display       : flex;
-  flex-direction: column;
-  align-items   : center;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
 }
 
 .delivery-collection-table thead th:nth-child(2) span {
-  font-size: var(--font10);
+    font-size: var(--font10);
 }
 
 /* Start Table Alignment Area*/
 .delivery-collection-table thead th:nth-child(1),
 .delivery-collection-table tbody td:nth-child(1) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: start;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: start;
 }
 
 .delivery-collection-table thead th:nth-child(2),
 .delivery-collection-table tbody td:nth-child(2),
 .delivery-collection-table thead th:nth-child(3),
 .delivery-collection-table tbody td:nth-child(3) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 .delivery-collection-table thead th:nth-child(4),
 .delivery-collection-table tbody td:nth-child(4),
 .delivery-collection-table thead th:nth-child(5),
 .delivery-collection-table tbody td:nth-child(5) {
-  flex-basis     : 10%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 .delivery-collection-table thead th:nth-child(6),
 .delivery-collection-table tbody td:nth-child(6) {
-  flex-basis     : 10%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .delivery-collection-table thead th:nth-child(7),
 .delivery-collection-table tbody td:nth-child(7) {
-  flex-basis     : 10%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .delivery-collection-table tfoot th:nth-child(1) {
-  flex-basis: 50%;
+    flex-basis: 50%;
 }
 
 .delivery-collection-table tfoot th:nth-child(2) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .delivery-collection-table tfoot th:nth-child(3) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .delivery-collection-table tfoot th:nth-child(4) {
-  flex-basis     : 10%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 /* StartTable Input Area */
 .delivery-collection-table .quantity-input {
-  display         : flex;
-  width           : 110px;
-  height          : 30px;
-  border-radius   : 2px;
-  background-color: var(--white);
+    display         : flex;
+    width           : 110px;
+    height          : 30px;
+    border-radius   : 2px;
+    background-color: var(--white);
 }
 
 .delivery-collection-table .quantity-input .quantity {
-  width       : 60px;
-  height      : 30px;
-  margin      : 0;
-  text-align  : center;
-  background  : transparent;
-  border      : 1px solid var(--border-color);
-  border-right: none;
-  border-left : none;
+    width       : 60px;
+    height      : 30px;
+    margin      : 0;
+    text-align  : center;
+    background  : transparent;
+    border      : 1px solid var(--border-color);
+    border-right: none;
+    border-left : none;
 }
 
 .delivery-collection-table .quantity-input .quantity::placeholder {
-  color: var(--border-color);
+    color: var(--border-color);
 }
 
 .delivery-collection-table .quantity-input .minus {
-  width           : 25px;
-  height          : 30px;
-  font-weight     : 700;
-  margin          : 0px;
-  padding         : 0px;
-  font-size       : var(--font18);
-  color           : var(--text-black);
-  background-color: transparent;
-  border-radius   : 2px 0px 0px 2px;
-  border          : 1px solid var(--border-color);
-  border-right    : none;
+    width           : 25px;
+    height          : 30px;
+    font-weight     : 700;
+    margin          : 0px;
+    padding         : 0px;
+    font-size       : var(--font18);
+    color           : var(--text-black);
+    background-color: transparent;
+    border-radius   : 2px 0px 0px 2px;
+    border          : 1px solid var(--border-color);
+    border-right    : none;
 }
 
 .delivery-collection-table .quantity-input .plus {
-  width           : 25px;
-  height          : 30px;
-  font-weight     : 700;
-  font-size       : var(--font18);
-  color           : var(--text-black);
-  background-color: transparent;
-  border-radius   : 0px 2px 2px 0px;
-  border          : 1px solid var(--border-color);
-  border-left     : none;
+    width           : 25px;
+    height          : 30px;
+    font-weight     : 700;
+    font-size       : var(--font18);
+    color           : var(--text-black);
+    background-color: transparent;
+    border-radius   : 0px 2px 2px 0px;
+    border          : 1px solid var(--border-color);
+    border-left     : none;
 }
 
 .delivery-collection-table .quantity-input .quantity:focus {
-  color       : var(--blue);
-  outline     : none !important;
-  border-color: var(--blue) !important;
-  box-shadow  : none;
-  border-left : 1px solid var(--blue);
-  border-right: 1px solid var(--blue);
+    color       : var(--blue);
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
+    border-left : 1px solid var(--blue);
+    border-right: 1px solid var(--blue);
 }
 
 .delivery-collection-table .quantity-input .minus:hover,
 .delivery-collection-table .quantity-input .plus:hover {
-  color           : var(--white);
-  outline         : none !important;
-  box-shadow      : none;
-  background-color: var(--blue);
+    color           : var(--white);
+    outline         : none !important;
+    box-shadow      : none;
+    background-color: var(--blue);
 }
 
 .delivery-collection-table .quantity-input .minus:focus,
 .delivery-collection-table .quantity-input .plus:focus {
-  color           : var(--white);
-  outline         : none !important;
-  box-shadow      : none;
-  background-color: var(--blue);
+    color           : var(--white);
+    outline         : none !important;
+    box-shadow      : none;
+    background-color: var(--blue);
 }
 
 input[type="button"] {
-  cursor: pointer
+    cursor: pointer
 }
 
 .delivery-collection-table .form-control-sm {
-  text-align   : center;
-  border-radius: 2px;
-  font-size    : var(--font14);
-  border       : 1px solid var(--border-color);
-  width        : 110px;
-  height       : 30px !important;
+    text-align   : center;
+    border-radius: 2px;
+    font-size    : var(--font14);
+    border       : 1px solid var(--border-color);
+    width        : 110px;
+    height       : 30px !important;
 }
 
 .delivery-collection-table .form-control-sm:placeholder {
-  font-size: var(--font14);
-  color    : #AAC0D9;
+    font-size: var(--font14);
+    color    : #AAC0D9;
 }
 
 .delivery-collection-table .form-control-sm:focus {
-  outline     : none !important;
-  border-color: var(--blue) !important;
-  box-shadow  : none;
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
 }
 
 /* End Table Input Area */
 
 /*>> Start Table Hover Button Component <<*/
 .delivery-collection-table tbody tr:hover {
-  background-color: var(--bluish-white);
-  cursor          : pointer;
+    background-color: var(--bluish-white);
+    cursor          : pointer;
 }
 
 .delivery-collection-table tbody tr .hover-btns {
-  display           : flex;
-  align-items       : center;
-  justify-content   : center;
-  height            : 100%;
-  position          : absolute;
-  right             : 0;
-  background        : rgba(255, 255, 255, 0);
-  -webkit-transition: all .1s;
-  transition        : all .1s;
-  padding           : 0px 15px;
+    display           : flex;
+    align-items       : center;
+    justify-content   : center;
+    height            : 100%;
+    position          : absolute;
+    right             : 0;
+    background        : rgba(255, 255, 255, 0);
+    -webkit-transition: all .1s;
+    transition        : all .1s;
+    padding           : 0px 15px;
 }
 
 .delivery-collection-table tbody tr .hover-btns::before {
-  width             : 100px;
-  height            : 100%;
-  margin-left       : -100px;
-  position          : absolute;
-  top               : 0;
-  left              : 0;
-  opacity           : 0;
-  content           : "";
-  -webkit-transition: all .1s;
-  transition        : all .1s;
-  background-image  : -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#E2EDFA));
-  background-image  : linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #E2EDFA 100%);
+    width             : 100px;
+    height            : 100%;
+    margin-left       : -100px;
+    position          : absolute;
+    top               : 0;
+    left              : 0;
+    opacity           : 0;
+    content           : "";
+    -webkit-transition: all .1s;
+    transition        : all .1s;
+    background-image  : -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#E2EDFA));
+    background-image  : linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #E2EDFA 100%);
 }
 
 /*----- Start Active State -----*/
 .delivery-collection-table tbody tr.active {
-  background-color: var(--bluish-white);
-  cursor          : pointer;
+    background-color: var(--bluish-white);
+    cursor          : pointer;
 }
 
 .delivery-collection-table tbody tr.active .hover-btns::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .delivery-collection-table tbody tr.active .hover-btns {
-  height          : 100%;
-  background-color: var(--bluish-white);
+    height          : 100%;
+    background-color: var(--bluish-white);
 }
 
 .delivery-collection-table tbody tr.active .hover-btns span {
-  opacity: 1;
+    opacity: 1;
 }
 
 /*----- Start Hover State -----*/
 .delivery-collection-table tbody tr:hover .hover-btns {
-  height          : 100%;
-  background-color: var(--bluish-white);
+    height          : 100%;
+    background-color: var(--bluish-white);
 }
 
 .delivery-collection-table tbody tr:hover .hover-btns::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .delivery-collection-table tbody tr:hover .hover-btns span {
-  opacity: 1;
+    opacity: 1;
 }
 
 /*----- Start Button Style -----*/
 .delivery-collection-table tbody tr .hover-btns .action-btn {
-  opacity           : 0;
-  -webkit-transition: all .2s;
-  transition        : all .2s;
-  /* Button Style */
-  display           : flex;
-  align-items       : center;
-  justify-content   : center;
-  width             : 30px;
-  height            : 30px;
-  margin            : 0px 5px;
-  border-radius     : 100px;
-  font-weight       : 200;
-  color             : var(--blue);
-  font-size         : var(--font16);
-  background-color  : var(--white);
+    opacity           : 0;
+    -webkit-transition: all .2s;
+    transition        : all .2s;
+    /* Button Style */
+    display           : flex;
+    align-items       : center;
+    justify-content   : center;
+    width             : 30px;
+    height            : 30px;
+    margin            : 0px 5px;
+    border-radius     : 100px;
+    font-weight       : 200;
+    color             : var(--blue);
+    font-size         : var(--font16);
+    background-color  : var(--white);
 }
 
 .delivery-collection-table tbody tr .hover-btns .action-btn.active {
-  color           : var(--white);
-  font-size       : var(--font16);
-  background-color: var(--blue);
+    color           : var(--white);
+    font-size       : var(--font16);
+    background-color: var(--blue);
 }
 
 .delivery-collection-table tbody tr .hover-btns .action-btn.remove {
-  color           : var(--red);
-  font-size       : var(--font16);
-  background-color: var(--redish-white);
+    color           : var(--red);
+    font-size       : var(--font16);
+    background-color: var(--redish-white);
 }
 
 /*>> End Table Hover Button Component <<*/
 /*---------End Collection Table 3 ---------*/
 .btn-add-product,
 .btn-add-atachment {
-  font-size  : var(--font14);
-  display    : flex;
-  align-items: center;
-  padding    : 0 5px;
-  color      : var(--blue) !important;
-  cursor     : pointer;
+    font-size  : var(--font14);
+    display    : flex;
+    align-items: center;
+    padding    : 0 5px;
+    color      : var(--blue) !important;
+    cursor     : pointer;
 }
 
 .btn-add-product span,
 .btn-add-atachment span {
-  margin-right    : 5px;
-  /* padding      : 2px;
-  border-radius   : 100px;
-  background-color: var(--bluish-white); */
+    margin-right    : 5px;
+    /* padding      : 2px;
+  border-radius     : 100px;
+  background-color  : var(--bluish-white); */
 }
 
 .btn-add-product:hover,
 .btn-add-atachment:hover {
-  color: #0153a0 !important;
+    color: #0153a0 !important;
 }
 
 .delivery-collection-footer {
-  position       : absolute;
-  bottom         : 0px;
-  width          : 100%;
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
-  padding        : 10px 0px;
+    position       : absolute;
+    bottom         : 0px;
+    width          : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    padding        : 10px 0px;
 }
 
 .delivery-collection-footer .btn-discard {
-  background-color: var(--white) !important;
-  border          : 1px solid var(--red) !important;
-  color           : var(--red);
+    background-color: var(--white) !important;
+    border          : 1px solid var(--red) !important;
+    color           : var(--red);
 }
 
 .delivery-collection-footer .btn-discard:hover {
-  background-color: var(--white) !important;
-  border          : 1px solid var(--red) !important;
-  color           : var(--red);
+    background-color: var(--white) !important;
+    border          : 1px solid var(--red) !important;
+    color           : var(--red);
 }
 
 @media screen and (max-width: 1440px) {
-  :root {
-    --table-height: 35px;
-  }
+    :root {
+        --table-height: 35px;
+    }
 }
 
 
 
 /*--------- Start Add Product Modal ---------*/
 #add-product-modal .modal-dialog {
-  max-width: 80% !important;
-  width    : 1000px;
-  height   : 100%;
-  padding  : 0;
-  margin   : auto;
+    max-width: 80% !important;
+    width    : 1000px;
+    height   : 100%;
+    padding  : 0;
+    margin   : auto;
 }
 
 #add-product-modal .modal-header .modal-title {
-  color    : var(--black) !important;
-  font-size: var(--font16) !important;
+    color    : var(--black) !important;
+    font-size: var(--font16) !important;
 }
 
 #add-product-modal .modal-header .modal-title span {
-  font-size  : var(--font16);
-  color      : var(--blue);
-  margin-left: 5px;
+    font-size  : var(--font16);
+    color      : var(--blue);
+    margin-left: 5px;
 }
 
 #add-product-modal .modal-header button span {
-  height         : 35px;
-  width          : 35px;
-  border-radius  : 100px;
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
-  padding-bottom : 4px;
+    height         : 35px;
+    width          : 35px;
+    border-radius  : 100px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    padding-bottom : 4px;
 }
 
 #add-product-modal .modal-header button span:hover {
-  background-color: var(--bluish-white);
+    background-color: var(--bluish-white);
 }
 
 #add-product-modal .modal-body {
-  padding: 0px 30px 0px 0px;
+    padding: 0px 30px 0px 0px;
 }
 
 #add-product-modal .input-group-text {
-  display          : -webkit-box;
-  display          : -ms-flexbox;
-  display          : flex;
-  -webkit-box-align: center;
-  -ms-flex-align   : center;
-  align-items      : center;
-  padding          : .375rem .75rem;
-  margin-bottom    : 0;
-  font-size        : var(--font14);
-  font-weight      : 400;
-  line-height      : 1.5;
-  color            : var(--text-label);
-  text-align       : center;
-  white-space      : nowrap;
-  background-color : transparent;
-  border           : 1px solid var(--border-color);
-  border-radius    : 0px 2px 2px 0px;
+    display          : -webkit-box;
+    display          : -ms-flexbox;
+    display          : flex;
+    -webkit-box-align: center;
+    -ms-flex-align   : center;
+    align-items      : center;
+    padding          : .375rem .75rem;
+    margin-bottom    : 0;
+    font-size        : var(--font14);
+    font-weight      : 400;
+    line-height      : 1.5;
+    color            : var(--text-label);
+    text-align       : center;
+    white-space      : nowrap;
+    background-color : transparent;
+    border           : 1px solid var(--border-color);
+    border-radius    : 0px 2px 2px 0px;
 }
 
 /*Start Left Sidebar Product List Area*/
 #add-product-modal .leftsidebar-productlist {
-  width       : 100%;
-  border-right: 1px solid var(--border-color);
+    width       : 100%;
+    border-right: 1px solid var(--border-color);
 }
 
 #add-product-modal .leftsidebar-productlist .header {
-  background-color: var(--white);
-  padding         : 15px 10px;
+    background-color: var(--white);
+    padding         : 15px 10px;
 }
 
 #add-product-modal .leftsidebar-productlist .header .row1 {
-  display        : flex;
-  justify-content: space-between;
+    display        : flex;
+    justify-content: space-between;
 }
 
 #add-product-modal .leftsidebar-productlist .header .row1 .form-group {
-  position     : relative;
-  margin-bottom: 0px !important;
-  width        : 100%;
+    position     : relative;
+    margin-bottom: 0px !important;
+    width        : 100%;
 }
 
 #add-product-modal .leftsidebar-productlist .header .row1 .form-group i {
-  position : absolute;
-  top      : 12px;
-  left     : 10px;
-  color    : #AAC0D9;
-  font-size: var(--font14);
+    position : absolute;
+    top      : 12px;
+    left     : 10px;
+    color    : #AAC0D9;
+    font-size: var(--font14);
 }
 
 #add-product-modal .leftsidebar-productlist .header .row1 .form-group input {
-  padding-left : 36px;
-  border-radius: 2px;
-  border       : 1px solid var(--border-color);
+    padding-left : 36px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
 }
 
 #add-product-modal .leftsidebar-productlist .header .row1 .form-group input::placeholder {
-  font-size: var(--font14);
-  color    : #AAC0D9;
+    font-size: var(--font14);
+    color    : #AAC0D9;
 }
 
 #add-product-modal .leftsidebar-productlist .header .row1 .form-group input:focus {
-  border-color: var(--blue);
-  box-shadow  : none;
+    border-color: var(--blue);
+    box-shadow  : none;
 }
 
 /*Start Secondary Sidebar Content Area*/
 #add-product-modal .leftsidebar-productlist .content {
-  height    : 350px;
-  overflow-y: scroll;
+    height    : 350px;
+    overflow-y: scroll;
 }
 
 #add-product-modal .leftsidebar-productlist .content .card_body {
-  padding         : 10px;
-  display         : flex;
-  flex-direction  : column;
-  justify-content : space-between;
-  background-color: var(--white);
-  border-bottom   : 1px solid var(--border-color);
+    padding         : 10px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    background-color: var(--white);
+    border-bottom   : 1px solid var(--border-color);
 }
 
 #add-product-modal .leftsidebar-productlist .content .card_body:hover,
 #add-product-modal .leftsidebar-productlist .content .card_body.active {
-  background-color: var(--bluish-white);
+    background-color: var(--bluish-white);
 }
 
 #add-product-modal .leftsidebar-productlist .content .card_body .row1,
 #add-product-modal .leftsidebar-productlist .content .card_body .row2 {
-  margin         : 1px 0px;
-  display        : flex;
-  justify-content: space-between;
+    margin         : 1px 0px;
+    display        : flex;
+    justify-content: space-between;
 }
 
 #add-product-modal .leftsidebar-productlist .content .card_body .row1 h5 {
-  font-size    : var(--font14);
-  color        : var(--blue);
-  text-overflow: ellipsis;
-  width        : inherit;
-  white-space  : nowrap;
+    font-size    : var(--font14);
+    color        : var(--blue);
+    text-overflow: ellipsis;
+    width        : inherit;
+    white-space  : nowrap;
 }
 
 #add-product-modal .leftsidebar-productlist .content .card_body .row2 p {
-  font-size: var(--font12);
-  color    : var(--text-black);
+    font-size: var(--font12);
+    color    : var(--text-black);
 }
 
 /* Start Modal Table Area */
 .addproduct-modal-table {
-  display       : block;
-  empty-cells   : show;
-  border-spacing: 0;
-  box-sizing    : border-box;
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
 }
 
 .addproduct-modal-table tr {
-  width  : 100%;
-  display: flex;
+    width  : 100%;
+    display: flex;
 }
 
 .addproduct-modal-table td,
 .addproduct-modal-table th {
-  flex-grow: 1;
-  display  : block;
-  padding  : 0rem 1rem;
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
 }
 
 /* Start Table Head Area */
 .addproduct-modal-table thead {
-  position: relative;
-  display : block;
-  width   : 100%;
+    position: relative;
+    display : block;
+    width   : 100%;
 }
 
 .addproduct-modal-table thead tr {
-  min-height    : var(--table-height);
-  font-size     : var(--font14);
-  text-transform: uppercase;
-  color         : var(--blue);
-  border-bottom : 1px solid var(--border-color);
+    min-height    : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
 }
 
 .addproduct-modal-table thead tr th {
-  min-height : var(--table-height);
-  display    : flex;
-  align-items: center;
+    min-height : var(--table-height);
+    display    : flex;
+    align-items: center;
 }
 
 /* Start Table Body Area */
 .addproduct-modal-table tbody {
-  width     : 100%;
-  display   : block;
-  position  : relative;
-  overflow-y: scroll;
-  font-size : var(--font14);
-  color     : var(--text-black);
-  height    : 378px;
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : 378px;
 }
 
 .addproduct-modal-table tbody .product .name {
-  font-size  : var(--font14);
-  font-weight: 500;
-  color      : var(--blue);
+    font-size  : var(--font14);
+    font-weight: 500;
+    color      : var(--blue);
 }
 
 .addproduct-modal-table tbody .product .type {
-  font-size  : var(--font12);
-  color      : var(--text-black);
-  font-weight: 400;
+    font-size  : var(--font12);
+    color      : var(--text-black);
+    font-weight: 400;
 }
 
 .addproduct-modal-table tbody tr {
-  position     : relative;
-  width        : 100%;
-  display      : flex;
-  align-items  : center;
-  min-height   : var(--table-height);
-  border-bottom: 1px solid var(--border-color);
+    position     : relative;
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    min-height   : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .addproduct-modal-table tbody tr td {
-  display    : flex;
-  align-items: center;
-  min-height : var(--table-height);
+    display    : flex;
+    align-items: center;
+    min-height : var(--table-height);
 }
 
 /* Start Table Alignment Area*/
 .addproduct-modal-table thead th:nth-child(1),
 .addproduct-modal-table tbody td:nth-child(1) {
-  flex-basis     : 40%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: start;
+    flex-basis     : 40%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: start;
 }
 
 .addproduct-modal-table thead th:nth-child(2),
 .addproduct-modal-table tbody td:nth-child(2) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: center;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
 }
 
 .addproduct-modal-table thead th:nth-child(3),
 .addproduct-modal-table tbody td:nth-child(3) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 .addproduct-modal-table thead th:nth-child(4),
 .addproduct-modal-table tbody td:nth-child(4) {
-  flex-basis     : 20%;
-  flex-grow      : 1;
-  display        : flex;
-  justify-content: flex-end;
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
 }
 
 /* StartTable Input Area */
 .addproduct-modal-table .quantity-input {
-  display         : flex;
-  width           : 110px;
-  height          : 30px;
-  border-radius   : 2px;
-  background-color: var(--white);
+    display         : flex;
+    width           : 110px;
+    height          : 30px;
+    border-radius   : 2px;
+    background-color: var(--white);
 }
 
 .addproduct-modal-table .quantity-input .quantity {
-  width       : 60px;
-  height      : 30px;
-  margin      : 0;
-  text-align  : center;
-  background  : transparent;
-  border      : 1px solid var(--border-color);
-  border-right: none;
-  border-left : none;
+    width       : 60px;
+    height      : 30px;
+    margin      : 0;
+    text-align  : center;
+    background  : transparent;
+    border      : 1px solid var(--border-color);
+    border-right: none;
+    border-left : none;
 }
 
 .addproduct-modal-table .quantity-input .quantity::placeholder {
-  color: var(--border-color);
+    color: var(--border-color);
 }
 
 .addproduct-modal-table .quantity-input .minus {
-  width           : 25px;
-  height          : 30px;
-  font-weight     : 700;
-  margin          : 0px;
-  padding         : 0px;
-  font-size       : var(--font18);
-  color           : var(--text-black);
-  background-color: transparent;
-  border-radius   : 2px 0px 0px 2px;
-  border          : 1px solid var(--border-color);
-  border-right    : none;
+    width           : 25px;
+    height          : 30px;
+    font-weight     : 700;
+    margin          : 0px;
+    padding         : 0px;
+    font-size       : var(--font18);
+    color           : var(--text-black);
+    background-color: transparent;
+    border-radius   : 2px 0px 0px 2px;
+    border          : 1px solid var(--border-color);
+    border-right    : none;
 }
 
 .addproduct-modal-table .quantity-input .plus {
-  width           : 25px;
-  height          : 30px;
-  font-weight     : 700;
-  font-size       : var(--font18);
-  color           : var(--text-black);
-  background-color: transparent;
-  border-radius   : 0px 2px 2px 0px;
-  border          : 1px solid var(--border-color);
-  border-left     : none;
+    width           : 25px;
+    height          : 30px;
+    font-weight     : 700;
+    font-size       : var(--font18);
+    color           : var(--text-black);
+    background-color: transparent;
+    border-radius   : 0px 2px 2px 0px;
+    border          : 1px solid var(--border-color);
+    border-left     : none;
 }
 
 .addproduct-modal-table .quantity-input .quantity:focus {
-  color       : var(--blue);
-  outline     : none !important;
-  border-color: var(--blue) !important;
-  box-shadow  : none;
-  border-left : 1px solid var(--blue);
-  border-right: 1px solid var(--blue);
+    color       : var(--blue);
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
+    border-left : 1px solid var(--blue);
+    border-right: 1px solid var(--blue);
 }
 
 .addproduct-modal-table .quantity-input .minus:hover,
 .addproduct-modal-table .quantity-input .plus:hover {
-  color           : var(--white);
-  outline         : none !important;
-  box-shadow      : none;
-  background-color: var(--blue);
+    color           : var(--white);
+    outline         : none !important;
+    box-shadow      : none;
+    background-color: var(--blue);
 }
 
 .addproduct-modal-table .quantity-input .minus:focus,
 .addproduct-modal-table .quantity-input .plus:focus {
-  color           : var(--white);
-  outline         : none !important;
-  box-shadow      : none;
-  background-color: var(--blue);
+    color           : var(--white);
+    outline         : none !important;
+    box-shadow      : none;
+    background-color: var(--blue);
 }
 
 .addproduct-modal-table tbody tr span.remove {
-  display         : flex;
-  align-items     : center;
-  justify-content : center;
-  width           : 30px;
-  height          : 30px;
-  margin          : 0px 5px;
-  border-radius   : 100px;
-  font-weight     : 200;
-  color           : var(--red);
-  font-size       : var(--font16);
-  background-color: var(--redish-white);
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    width           : 30px;
+    height          : 30px;
+    margin          : 0px 5px;
+    border-radius   : 100px;
+    font-weight     : 200;
+    color           : var(--red);
+    font-size       : var(--font16);
+    background-color: var(--redish-white);
 }
 
 /*--------- End Add Product Modal ---------*/
@@ -2848,99 +2849,99 @@ input[type="button"] {
 
 /*--------- Start Popup Modal Area ---------*/
 #popup-modal .modal-dialog {
-  width: 400px;
+    width: 400px;
 }
 
 #popup-modal .modal-body {
-  height: 220px;
+    height: 220px;
 }
 
 #popup-modal .modal-body .close {
-  position   : absolute;
-  top        : 15px;
-  right      : 15px;
-  font-size  : 1.5rem;
-  font-weight: 700;
-  line-height: .5;
-  color      : #000;
-  text-shadow: 0 1px 0 #fff;
-  opacity    : .5;
+    position   : absolute;
+    top        : 15px;
+    right      : 15px;
+    font-size  : 1.5rem;
+    font-weight: 700;
+    line-height: .5;
+    color      : #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity    : .5;
 }
 
 #popup-modal .modal-body .popup-content {
-  display        : flex;
-  flex-direction : column;
-  align-items    : center;
-  justify-content: space-between;
-  height         : 100%;
-  padding-top    : 5px;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: space-between;
+    height         : 100%;
+    padding-top    : 5px;
 }
 
 #popup-modal .modal-body .popup-content .icon {
-  display         : flex;
-  align-items     : center;
-  justify-content : center;
-  font-size       : 3rem;
-  color           : var(--blue);
-  background-color: var(--bluish-white);
-  width           : 65px;
-  height          : 65px;
-  border-radius   : 100px;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    font-size       : 3rem;
+    color           : var(--blue);
+    background-color: var(--bluish-white);
+    width           : 65px;
+    height          : 65px;
+    border-radius   : 100px;
 }
 
 #popup-modal .modal-body .popup-content .context {
-  display        : flex;
-  flex-direction : column;
-  align-items    : center;
-  justify-content: space-between;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: space-between;
 }
 
 #popup-modal .modal-body .popup-content .context h5 {
-  color    : var(--text-black);
-  font-size: var(--font18);
+    color    : var(--text-black);
+    font-size: var(--font18);
 }
 
 #popup-modal .modal-body .popup-content .context p {
-  opacity    : .7;
-  text-align : center;
-  color      : var(--text-black);
-  font-weight: 500;
-  font-size  : 14px;
+    opacity    : .7;
+    text-align : center;
+    color      : var(--text-black);
+    font-weight: 500;
+    font-size  : 14px;
 }
 
 #popup-modal .modal-body .popup-content .btns-group {
-  display        : flex;
-  align-items    : center;
-  justify-content: space-between;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
 }
 
 #popup-modal .modal-body .popup-content .btns-group button {
-  width           : 150px;
-  height          : 40px;
-  margin          : 0px 10px;
-  font-size       : var(--font14);
-  text-transform  : uppercase;
-  font-weight     : 500;
-  border-radius   : 2px;
-  border          : none;
-  transition      : all 0.3s ease 0s;
-  background-color: transparent !important;
+    width           : 150px;
+    height          : 40px;
+    margin          : 0px 10px;
+    font-size       : var(--font14);
+    text-transform  : uppercase;
+    font-weight     : 500;
+    border-radius   : 2px;
+    border          : none;
+    transition      : all 0.3s ease 0s;
+    background-color: transparent !important;
 }
 
 #popup-modal .modal-body .popup-content .btns-group button span {
-  color: var(--text-black);
+    color: var(--text-black);
 }
 
 #popup-modal .modal-body .popup-content .btns-group .btn-discard {
-  color              : var(--red);
-  /* background-color: var(--white)!important;
-  border             : 1px solid var(--red)!important; */
+    color              : var(--red);
+    /* background-color: var(--white)!important;
+  border               : 1px solid var(--red)!important; */
 }
 
 #popup-modal .modal-body .popup-content .btns-group .btn-continue {
-  color              : var(--blue);
-  /* background-color: var(--blue)!important;
-  border             : 1px solid var(--blue)!important; */
+    color              : var(--blue);
+    /* background-color: var(--blue)!important;
+  border               : 1px solid var(--blue)!important; */
 }
 
 /*--------- End Popup Modal Area ---------*/
