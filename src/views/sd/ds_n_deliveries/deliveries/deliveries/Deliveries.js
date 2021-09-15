@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { confirmAlert } from 'react-confirm-alert';
 import CommonLayout from '../../../../common/CommonLayout.js';
 import TitleBreadcrumb from '../../../../common/TitleBreadcrumb.js';
+// import SuccessModal from '../../../../helpers/modals/success.js';
 
 const Deliveries = () => {
     const [tb] = useState('Delivery Collection');
     const [dataTableFlag, setDataTableFlag] = useState(1);
+
 
     useEffect(() => {
         console.log('initial')
@@ -14,11 +17,68 @@ const Deliveries = () => {
         dataTableFlag ? setDataTableFlag(0) : setDataTableFlag(1)
     }
 
+    const proceedDeliveryClickHandler = () => {
+        confirmAlert({
+            title: 'Are you sure?',
+            message: 'You want to proceed.',
+            buttons: [
+                {
+                    label: 'Yes',
+                    onClick: () => {
+                        dataTableFlag ? setDataTableFlag(0) : setDataTableFlag(1)
+                    }
+                },
+                {
+                    label: 'No',
+                    onClick: () => {
+                        console.log('No')
+                    }
+                }
+            ]
+        });
+    }
+
+    const paymentModalSelectOptionOnChangeEvent = (event) => {
+        console.log(event.target.value)
+        let status = event.target.value
+
+        if (status == "CASH") {
+            // document.getElementById('d-Cash').show();
+            document.getElementById('d-Challan').style.display = 'none'
+            document.getElementById('d-EFTN').style.display = 'none'
+            document.getElementById('d-Chaque').style.display = 'none'
+        } else if (status == "CHALLAN") {
+            // document.getElementById('#d-Cash').hide();
+            document.getElementById('d-Challan').style.display = 'flex'
+            document.getElementById('d-EFTN').style.display = 'none'
+            document.getElementById('d-Chaque').style.display = 'none'
+        } else if (status == "EFTN") {
+            // document.getElementById('#d-Cash').hide();
+            document.getElementById('d-Challan').style.display = 'none'
+            document.getElementById('d-EFTN').style.display = 'flex'
+            document.getElementById('d-Chaque').style.display = 'none'
+        } else if (status == "CHAQUE") {
+            // document.getElementById('#d-Cash').hide();
+            document.getElementById('d-Challan').style.display = 'none'
+            document.getElementById('d-EFTN').style.display = 'none'
+            document.getElementById('d-Chaque').style.display = 'flex'
+        } else {
+            // document.getElementById('#d-Cash').hide();
+            document.getElementById('d-Challan').style.display = 'none'
+            document.getElementById('d-EFTN').style.display = 'none'
+            document.getElementById('d-Chaque').style.display = 'none'
+        }
+    }
+
+    // const QuipComponent = props => (<p>{props.quip}</p>)
+
     return (
         <div>
             <CommonLayout />
             <TitleBreadcrumb titleBreadcrumb={tb} />
             <div id="main-section" className="main-section">
+                {/* <QuipComponent quip="Don't believe everything you think." /> */}
+                {/* <SuccessModal /> */}
                 <div className="layout-body">
 
                     <div className="layout-sidebar order">
@@ -92,154 +152,154 @@ const Deliveries = () => {
                                 {
                                     dataTableFlag ?
                                         (
-                                            <div class="row delivery-collection-table">
-                                                <table class="col-12">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Name</th>
-                                                            <th> <div>Trade Price <span>(With Vat)</span></div> </th>
-                                                            <th>Quantity</th>
-                                                            <th>Discount</th>
-                                                            <th>Bonus</th>
-                                                            <th>Total Price</th>
-                                                            <th> </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        {
-                                                            Array.from({ length: 20 }, (_, index) => (
-                                                                <tr className={index === 1 ? 'active' : ''} key={index}>
-                                                                    <td>
-                                                                        <div class="product">
-                                                                            <p class="name">Ace® Power <span>500mg</span></p>
-                                                                            <p class="type">Paricatamole</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <input class="form-control-sm" type="text" placeholder="00" value={300} readOnly />
-                                                                    </td>
-                                                                    <td>
-                                                                        <form>
-                                                                            <div class="quantity-input">
-                                                                                <input class='minus' type='button' value='-' field='quantity' />
-                                                                                <input class='quantity' type='text' name='quantity' placeholder="0" />
-                                                                                <input class='plus' type='button' value='+' field='quantity' />
+                                            <div>
+                                                <div className="row delivery-collection-table">
+                                                    <table className="col-12">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Name</th>
+                                                                <th> <div>Trade Price <span>(With Vat)</span></div> </th>
+                                                                <th>Quantity</th>
+                                                                <th>Discount</th>
+                                                                <th>Bonus</th>
+                                                                <th>Total Price</th>
+                                                                <th> </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {
+                                                                Array.from({ length: 20 }, (_, index) => (
+                                                                    <tr className={index === 1 ? 'active' : ''} key={index}>
+                                                                        <td>
+                                                                            <div className="product">
+                                                                                <p className="name">Ace® Power <span>500mg</span></p>
+                                                                                <p className="type">Paricatamole</p>
                                                                             </div>
-                                                                        </form>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>300</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>10%</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>1000.00</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="hover-btns">
-                                                                            <a title="Edit" data-toggle="tooltip" data-placement="left"><span class="action-btn fa fa-pencil"></span></a>
-                                                                            <a title="Remove" data-toggle="tooltip" data-placement="left"><span class="action-btn remove fa fa-trash"></span></a>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                            ))
-                                                        }
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr>
-                                                            <th colSpan="3"><a class="btn-add-product" data-toggle="modal" data-target="#add-product-modal"><span class="material-icons font-18">add</span>Add Product</a></th>
-                                                            <th colSpan="2"> <p class="small-text">Subtotal</p> </th>
-                                                            <th> <p class="small-text">13,032.20</p> </th>
-                                                            <th></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th colSpan="3"></th>
-                                                            <th colSpan="2"> <p class="small-text">(+) Vat</p> </th>
-                                                            <th> <p class="small-text">13,032.20</p> </th>
-                                                            <th></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th colSpan="3"></th>
-                                                            <th colSpan="2"> <p class="small-text">Gross Total</p> </th>
-                                                            <th> <p class="small-text">13,032.20</p> </th>
-                                                            <th></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th colSpan="3"></th>
-                                                            <th colSpan="2"> <p class="small-text">(-) Less discount on TP (2%)</p> </th>
-                                                            <th> <p class="small-text">13,032.20</p> </th>
-                                                            <th></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th colSpan="3"></th>
-                                                            <th colSpan="2"> <p class="small-text">Special Discount</p> </th>
-                                                            <th> <p class="small-text">13,032.20</p> </th>
-                                                            <th></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th colSpan="3"><a class="btn-add-atachment"><span class="material-icons font-18">attachment</span>Atachment</a></th>
-                                                            <th colSpan="2"><p class="grand-total">Grand Total</p></th>
-                                                            <th><p class="grand-total">14,505.55</p></th>
-                                                            <th></th>
-                                                        </tr>
-                                                    </tfoot>
-                                                </table>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input className="form-control-sm" type="text" placeholder="00" value={300} readOnly />
+                                                                        </td>
+                                                                        <td>
+                                                                            <form>
+                                                                                <div className="quantity-input">
+                                                                                    <input className='minus' type='button' value='-' field='quantity' />
+                                                                                    <input className='quantity' type='text' name='quantity' placeholder="0" />
+                                                                                    <input className='plus' type='button' value='+' field='quantity' />
+                                                                                </div>
+                                                                            </form>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>300</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>10%</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>1000.00</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div className="hover-btns">
+                                                                                <span className="edit action-btn"><span className="material-icons edit" title="Edit" data-toggle="tooltip"> edit </span></span>
+                                                                                <span className="remove action-btn"><span className="material-icons delete_outline" title="Remove" data-toggle="tooltip"> delete_outline </span></span>
+                                                                                {/* <a title="Edit" data-toggle="tooltip" data-placement="left"><span className="action-btn fa fa-pencil"></span></a>
+                                                                                <a title="Remove" data-toggle="tooltip" data-placement="left"><span className="action-btn remove fa fa-trash"></span></a> */}
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                ))
+                                                            }
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <th colSpan="2"><a className="btn-add-product" data-toggle="modal" data-target="#add-product-modal"><span className="material-icons font-18">add</span>Add Product</a></th>
+                                                                <th colSpan="3"> <p className="small-text">Subtotal</p> </th>
+                                                                <th> <p className="small-text">13,032.20</p> </th>
+                                                                <th></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th colSpan="2"></th>
+                                                                <th colSpan="3"> <p className="small-text">(+) Vat</p> </th>
+                                                                <th> <p className="small-text">13,032.20</p> </th>
+                                                                <th></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th colSpan="2"></th>
+                                                                <th colSpan="3"> <p className="small-text">Gross Total</p> </th>
+                                                                <th> <p className="small-text">13,032.20</p> </th>
+                                                                <th></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th colSpan="2"></th>
+                                                                <th colSpan="3"> <p className="small-text">(-) Less discount on TP (2%)</p> </th>
+                                                                <th> <p className="small-text">13,032.20</p> </th>
+                                                                <th></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th colSpan="2"></th>
+                                                                <th colSpan="3"> <p className="small-text">Special Discount</p> </th>
+                                                                <th> <p className="small-text">13,032.20</p> </th>
+                                                                <th></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th colSpan="2"><a className="btn-add-atachment"><span className="material-icons font-18">attachment</span>Atachment</a></th>
+                                                                <th colSpan="3"><p className="grand-total">Grand Total</p></th>
+                                                                <th><p className="grand-total">14,505.55</p></th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                                <div className="row deCollection-footer">
+                                                    <span><button className="btn btn-primary btn-global btn-draft mx-2">Cancel</button></span>
+                                                    <span data-toggle="modal"><button className="btn btn-primary btn-global mx-2" onClick={proceedDeliveryClickHandler}>Proceed</button></span>
+                                                </div>
                                             </div>
                                         )
                                         :
                                         (
-                                            <div className="row d-flex justify-content-center">
-                                                <table className="col-12 delivery-collection-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Payment Mode</th>
-                                                            <th>Description</th>
-                                                            <th>Taka</th>
-                                                            <th>Action</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        {
+                                            <div>
+                                                <div className="row d-flex justify-content-center">
+                                                    <table className="col-12 delivery-collection-table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Payment Mode</th>
+                                                                <th>Description</th>
+                                                                <th>Taka</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {
 
-                                                            Array.from({ length: 20 }, (_, index) => (
-                                                                <tr key={index}>
-                                                                    <td>
-                                                                        <p>Cash {index + 1}</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>Description Line Here</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>300.00</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <span className="edit" href=""><i className="fa fa-pencil" title="Edit" data-toggle="tooltip" data-placement="bottom" aria-hidden="true"></i></span>
-                                                                        <span className="remove" href=""><i className="fa fa-trash" title="Remove" data-toggle="tooltip" data-placement="bottom" aria-hidden="true"></i></span>
-                                                                    </td>
-                                                                </tr>
-                                                            ))
-                                                        }
-                                                    </tbody>
-                                                </table>
+                                                                Array.from({ length: 20 }, (_, index) => (
+                                                                    <tr key={index}>
+                                                                        <td>
+                                                                            <p>Cash {index + 1}</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>Description Line Here</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>300.00</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span className="edit action-btn"><span className="material-icons edit" title="Edit" data-toggle="tooltip"> edit </span></span>
+                                                                            <span className="remove action-btn"><span className="material-icons delete_outline" title="Remove" data-toggle="tooltip"> delete_outline </span></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                ))
+                                                            }
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div className="row deCollection-footer">
+                                                    <span><button className="btn btn-primary btn-global btn-draft mx-2">Close</button></span>
+                                                    <span data-toggle="modal" data-target="#new-payment-modal"><button className="btn btn-primary btn-global mx-2">New Payment</button></span>
+                                                </div>
                                             </div>
                                         )
                                 }
 
-
-
-
-
-
-
-
-
-
-
-                                <div className="row deCollection-footer">
-                                    <span><button className="btn btn-primary btn-global btn-draft mx-2">Close</button></span>
-                                    <span data-toggle="modal" data-target="#new-payment-modal"><button className="btn btn-primary btn-global mx-2">New Payment</button></span>
-                                </div>
 
                                 {/* <!------------ Start Add New Payment Modal------------> */}
                                 <div className="modal" id="new-payment-modal" tabIndex="-1" role="dialog" aria-labelledby="AddCollection"
@@ -257,11 +317,11 @@ const Deliveries = () => {
                                                     <div className="col-lg-6 form-group">
                                                         <label htmlFor="payment_mode">Payment Mode</label>
                                                         {/* <select className="form-control" id="payment_mode" onChange="getOption(this.value)"> */}
-                                                        <select className="form-control" id="payment_mode">
-                                                            <option value="d-Cash">Cash</option>
-                                                            <option value="d-Challan">Challan</option>
-                                                            <option value="d-EFTN">EFTN</option>
-                                                            <option value="d-Chaque">Chaque</option>
+                                                        <select className="form-control" id="payment_mode" onChange={paymentModalSelectOptionOnChangeEvent}>
+                                                            <option value={'CASH'} defaultValue>Cash</option>
+                                                            <option value={'CHALLAN'}>Challan</option>
+                                                            <option value={"EFTN"}>EFTN</option>
+                                                            <option value={'CHAQUE'}>Chaque</option>
                                                         </select>
                                                     </div>
 
@@ -431,5 +491,17 @@ const Deliveries = () => {
         </div>
     );
 }
+
+// const useFormInput = initialValue => {
+//     const [value, setValue] = useState(initialValue);
+
+//     const handleChange = e => {
+//         setValue(e.target.value);
+//     }
+//     return {
+//         value,
+//         onChange: handleChange
+//     }
+// }
 
 export default Deliveries;

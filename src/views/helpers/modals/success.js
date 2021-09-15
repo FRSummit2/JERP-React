@@ -1,91 +1,43 @@
-// npm install react-confirm-alert --save
-// https://www.npmjs.com/package/react-confirm-alert
+import React from "react";
 
-import { confirmAlert } from 'react-confirm-alert'; // Import
-import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
-// import { useState } from 'react'
-
-// export const SuccessModal = ({ handleClose, show, children }) => {
-  export const SuccessModal = async (title, message) => {
-    // submit = () => {
-      // let ret_val = 'false'
-
-      confirmAlert({
-        title: title,
-        message: message,
-        buttons: [
-          {
-            label: 'Yes',
-            onClick: () => {
-              // ret_val = 'true'
-              // return setSuccessModalResponse(true)
-              console.log('Yes')
-              confirm()
-            }
-          },
-          {
-            label: 'No',
-            onClick: () => {
-              // ret_val = 'false'
-              // return setSuccessModalResponse(false)
-              console.log('No')
-              cancel()
-            }
-          }
-        ]
-      });
-
-    //   return 100
-    // };
-    // const showHideClassName = show ? "modal display-block" : "modal display-none";
-  
-    // return (
-    //   <div className={showHideClassName}>
-    //     <section className="modal-main">
-    //       {children}
-    //       <button type="button" onClick={handleClose}>
-    //         Close
-    //       </button>
-    //     </section>
-    //   </div>
-    // );
-};
-
-const confirm = async () => {
-    console.log('confirm')
-    return 1
-}
-
-const cancel = async () => {
-    console.log('cancel')
-    return 0
-}
-
-/*
 class SuccessModal extends React.Component {
-    submit = () => {
-      confirmAlert({
-        title: 'Confirm to submit',
-        message: 'Are you sure to do this.',
-        buttons: [
-          {
-            label: 'Yes',
-            onClick: () => alert('Click Yes')
-          },
-          {
-            label: 'No',
-            onClick: () => alert('Click No')
-          }
-        ]
-      });
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            tb: "BankRegister",
+            /*buttonPressed: ""*/
+        };
+    }
 
     render() {
-      return (
-        <div className='container'>
-          <button onClick={this.submit}>Confirm dialog</button>
-        </div>
-      );
+        return (
+            <div className="modal fade" id="confirmation-modal" tabIndex="-1" role="dialog" aria-labelledby="popupmodal" aria-hidden="true">
+                <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                        <div className="modal-body">
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div className="popup-content">
+                                <div className="icon">
+                                    <span className="material-icons">help</span>
+                                </div>
+                                <div className="context">
+                                    <h5>Are you Sure?</h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                                </div>
+                                <div className="btns-group">
+                                    <button type="button" className="btn btn-primary btn-discard" data-dismiss="modal" aria-label="Close">Discard</button>
+                                    <span>|</span>
+                                    <button type="button" className="btn btn-primary btn-continue">Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
     }
 }
-*/
+
+export default SuccessModal;

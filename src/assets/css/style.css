@@ -2,6 +2,9 @@
 .react-confirm-alert-body {
     text-align: center !important;
 }
+.react-confirm-alert-overlay {
+    background: rgb(0 0 0 / 60%) !important;
+}
 
 .react-confirm-alert-button-group {
     justify-content: space-evenly !important;
@@ -157,3 +160,23 @@
 }
 
 /* FONT - ENDS */
+
+/* ICON */
+.material-icons {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 30px !important;
+    height: 30px !important;
+    margin: 0 !important;
+    font-size: 19px !important;
+}
+.material-icons.edit {
+    border: 1px solid #026CD1;
+    border-radius: 50% !important;
+}
+.material-icons.delete_outline {
+    border: 1px solid var(--red);
+    border-radius: 50% !important;
+}
+/* ICON */
