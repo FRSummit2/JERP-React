@@ -58,10 +58,10 @@ body {
 
 #master-layout .header-section .header-inner .header-left-section .hamburger-menu-section {
     margin       : 0 auto;
-    width        : 35px;
+    /* width        : 35px; */
     text-align   : center;
-    background   : #e2edfa;
-    height       : 35px;
+    /* background   : #e2edfa; */
+    /* height       : 35px; */
     border-radius: 50%
 }
 

@@ -370,7 +370,7 @@ class Deliveries extends React.Component {
                                                             </tbody>
                                                             <tfoot>
                                                                 <tr>
-                                                                    <th colSpan="2"><span className="btn-add-product" data-toggle="modal" data-target="#add-product-modal"><span className="material-icons font-18">add</span>Add Product</span></th>
+                                                                    <th colSpan="2"><span className="btn-add-product" data-toggle="modal" data-target="#add-product-modal"><span className="material-icons font-18 add">add</span>Add Product</span></th>
                                                                     <th colSpan="3"> <p className="small-text">Subtotal</p> </th>
                                                                     <th> <p className="small-text">13,032.20</p> </th>
                                                                     <th></th>
@@ -400,7 +400,7 @@ class Deliveries extends React.Component {
                                                                     <th></th>
                                                                 </tr>
                                                                 <tr>
-                                                                    <th colSpan="2"><span className="btn-add-atachment"><span className="material-icons font-18">attachment</span>Atachment</span></th>
+                                                                    <th colSpan="2"><span className="btn-add-atachment"><span className="material-icons attachment font-18">attachment</span>Atachment</span></th>
                                                                     <th colSpan="3"><p className="grand-total">Grand Total</p></th>
                                                                     <th><p className="grand-total">14,505.55</p></th>
                                                                     <th></th>
@@ -427,7 +427,7 @@ class Deliveries extends React.Component {
                                                                     <th>Action</th>
                                                                 </tr>
                                                             </thead>
-                                                            <tbody>
+                                                            <tbody> 
                                                                 {
 
                                                                     Array.from({ length: 20 }, (_, index) => (

@@ -87,6 +87,7 @@ class Dashboard extends React.Component {
         { name: 'Delivery Schedule', url: '/features/local_sales/dp-ds' },
         { name: 'Delivery Preparation', url: '/features/local_sales/delivery-preparation' },
         { name: 'Collection', url: '/features/local_sales/collection' },
+        { name: 'Collection 2', url: '/features/local_sales/collection2' },
         { name: 'Employee List', url: '/features/configuration/employee' },
         { name: 'Balance Sheet', url: '/features/local_sales/balance-sheet' },
         { name: 'Stock Position', url: '/features/reports/stock-report' },

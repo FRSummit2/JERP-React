@@ -3434,3 +3434,838 @@ input[type="button"] {
         transform        : rotate(360deg);
     }
 }
+
+
+
+
+
+/* 
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+*/
+
+/*Start Secondary Sidebar Header Area*/
+.layout-sidebar.collection {
+    position    : relative;
+    min-width   : var(--sidebar-width);
+    width       : 100%;
+    border-right: 1px solid var(--border-color);
+}
+
+/* Start Collection Filter Modal */
+#CollectionFilter {
+    width   : 280px;
+    margin  : 0px 10px;
+    position: absolute;
+    top     : 30px;
+    left    : 235px;
+    z-index : 1010;
+}
+
+#collection-modalContent {
+    box-shadow: 0px 0px 8px #026CD11A;
+    border    : 1px solid var(--border-color);
+}
+
+#collection-modalContent .modal-header,
+#collection-modalContent .modal-body,
+#collection-modalContent .modal-footer {
+    padding     : .5rem 1rem;
+    border-color: var(--border-color);
+}
+
+#collection-modalContent .modal-header .modal-title {
+    color    : var(--black) !important;
+    font-size: var(--font16) !important;
+}
+
+#CollectionFilter .form-check label {
+    display    : flex;
+    align-items: center;
+}
+
+#CollectionFilter .form-check label {
+    color      : var(--black);
+    font-size  : var(--font14);
+    font-weight: 500;
+    margin-top : 5px;
+}
+
+#CollectionFilter .btn-filterSerach {
+    width: 100%;
+}
+
+#CollectionFilter .form-group #date_range {
+    padding-left: 10px;
+}
+
+/* End Collection Filter Modal */
+
+.layout-sidebar.collection .header {
+    background-color: var(--white);
+    padding         : 15px 10px;
+}
+
+.layout-sidebar.collection .header .row1 {
+    display        : flex;
+    justify-content: space-between;
+}
+
+.layout-sidebar.collection .header .row1 .form-group {
+    position     : relative;
+    margin-bottom: 0px !important;
+    width        : 100%;
+}
+
+.layout-sidebar.collection .header .row1 .form-group i {
+    position : absolute;
+    top      : 12px;
+    left     : 10px;
+    color    : #AAC0D9;
+    font-size: var(--font14);
+}
+
+.layout-sidebar.collection .header .row1 .form-group input {
+    padding-left : 36px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
+}
+
+.layout-sidebar.collection .header .row1 .form-group input::placeholder {
+    font-size: var(--font14);
+    color    : #AAC0D9;
+}
+
+.layout-sidebar.collection .header .row1 .form-group input:focus {
+    border-color: var(--blue);
+    box-shadow  : none;
+}
+
+.layout-sidebar.collection .header .row1 .filter_search {
+    color        : #AAC0D9;
+    font-size    : var(--font16);
+    text-align   : center;
+    padding      : 8px;
+    height       : 38px;
+    width        : 38px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
+    margin-left  : 10px;
+}
+
+.layout-sidebar.collection .header .row1 .filter_search:hover {
+    color           : var(--white);
+    background-color: var(--blue);
+}
+
+/*End Secondary Sidebar Header Area*/
+
+/*Start Secondary Sidebar Content Area*/
+.layout-sidebar.collection .content {
+    height    : calc(100vh - (var(--used-height) + 68px));
+    overflow-y: scroll;
+}
+
+.layout-sidebar.collection .content .card_body {
+    padding         : 10px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    background-color: var(--white);
+    border-bottom   : 1px solid var(--border-color);
+}
+
+.layout-sidebar.collection .content .card_body:hover,
+.layout-sidebar.collection .content .card_body:active {
+    background-color: var(--bluish-white);
+}
+
+.layout-sidebar.collection .content .card_body .row1,
+.layout-sidebar.collection .content .card_body .row2,
+.layout-sidebar.collection .content .card_body .row3 {
+    margin         : 1px 0px;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.layout-sidebar.collection .content .card_body .row1 h5 {
+    font-size    : var(--font14);
+    color        : var(--text-black);
+    text-overflow: ellipsis;
+    width        : inherit;
+    white-space  : nowrap;
+}
+
+.layout-sidebar.collection .content .card_body .row1 .date {
+    font-size: var(--font14);
+    color    : var(--text-black);
+}
+
+.layout-sidebar.collection .content .card_body .row2 p {
+    font-size  : var(--font14);
+    color      : var(--text-black);
+    font-weight: 500;
+}
+
+.layout-sidebar.collection .content .card_body .row3 p {
+    font-size: var(--font14);
+    color    : #879097;
+}
+
+@media screen and (max-width: 768px) {
+    .layout-sidebar.collection {
+        width: 100%;
+    }
+
+    .layout-sidebar.collection .content {
+        height    : calc(230px - 68px);
+        overflow-y: scroll;
+    }
+}
+
+/*End Secondary Sidebar Content Area*/
+:root {
+    --table-height: 40px;
+}
+
+.collection_area {
+    margin-top: 15px;
+    min-height: calc(100vh - (var(--used-height) - (-30px)));
+}
+
+.collection_area thead tr:nth-child(1) th h5 {
+    font-size  : var(--font14);
+    color      : var(--text-label);
+    font-weight: 700;
+}
+
+.collection_area thead tr:nth-child(1) th h5 span {
+    color: var(--blue);
+}
+
+.collection_area tbody tr:hover {
+    background-color: var(--bluish-white);
+}
+
+.collection_area tbody tr.active {
+    color           : var(--blue);
+    background-color: var(--bluish-white);
+}
+
+/*---------Start Collection Table 1 ---------*/
+.collection-table-1 {
+    display         : block;
+    empty-cells     : show;
+    border-spacing  : 0;
+    background-color: var(--white);
+    box-shadow      : 0px 0px 8px #026CD11A;
+    border-radius   : 8px;
+    border          : 1px solid var(--border-color);
+    box-sizing      : border-box;
+}
+
+.collection-table-1 tr {
+    width  : 100%;
+    display: flex;
+}
+
+.collection-table-1 td,
+.collection-table-1 th {
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
+}
+
+/* Start Table Head Area */
+.collection-table-1 thead {
+    position: relative;
+    display : block;
+    width   : 100%;
+}
+
+.collection-table-1 thead tr:nth-child(1) {
+    height         : 40px;
+    font-size      : var(--font14);
+    border-radius  : 8px 8px 0px 0px;
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-start;
+}
+
+.collection-table-1 thead tr:nth-child(1) th {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.collection-table-1 thead tr:nth-child(1) th .about-color {
+    display    : flex;
+    align-items: center;
+}
+
+.collection-table-1 thead tr:nth-child(1) th .about-color p {
+    font-size  : 12px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.collection-table-1 thead tr:nth-child(1) th .about-color p span {
+    margin-right: 5px;
+}
+
+.collection-table-1 thead tr:nth-child(2) {
+    height        : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
+}
+
+.collection-table-1 thead tr:nth-child(2) th {
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Body Area */
+.collection-table-1 tbody {
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc(100vh - (var(--used-height) + 32px + (var(--table-height) * 3)));
+}
+
+.collection-table-1 tbody tr {
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    height       : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.collection-table-1 tbody tr td {
+    display    : flex;
+    align-items: center;
+    height     : var(--table-height);
+}
+
+/* Start Table Foot Area */
+.collection-table-1 tfoot {
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
+}
+
+.collection-table-1 tfoot tr {
+    height          : var(--table-height);
+    display         : flex;
+    align-items     : center;
+    color           : var(--blue);
+    border-radius   : 0px 0px 8px 8px;
+    background-color: var(--bluish-white);
+}
+
+.collection-table-1 tfoot tr th {
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Alignment Area*/
+.collection-table-1 thead tr:nth-child(2) th:nth-child(1),
+.collection-table-1 tbody td:nth-child(1),
+.collection-table-1 tfoot th:nth-child(1) {
+    flex-basis     : 60%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
+}
+
+.collection-table-1 thead tr:nth-child(2) th:nth-child(2),
+.collection-table-1 tbody td:nth-child(2),
+.collection-table-1 tfoot th:nth-child(2) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.collection-table-1 thead tr:nth-child(2) th:nth-child(3),
+.collection-table-1 tbody td:nth-child(3) {
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.collection-table-1 tfoot th:nth-child(3) {
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+/*---------End Collection Table 1 ---------*/
+
+/*---------Start Collection Table 2 ---------*/
+.collection-table-2 {
+    display         : block;
+    empty-cells     : show;
+    border-spacing  : 0;
+    background-color: var(--white);
+    box-shadow      : 0px 0px 8px #026CD11A;
+    border-radius   : 8px;
+    border          : 1px solid var(--border-color);
+    box-sizing      : border-box;
+}
+
+.collection-table-2 tr {
+    width  : 100%;
+    display: flex;
+}
+
+.collection-table-2 td,
+.collection-table-2 th {
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
+}
+
+/* Start Table Head Area */
+.collection-table-2 thead {
+    position: relative;
+    display : block;
+    width   : 100%;
+}
+
+.collection-table-2 thead tr:nth-child(1) {
+    height         : 40px;
+    font-size      : var(--font14);
+    border-radius  : 8px 8px 0px 0px;
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-start;
+}
+
+.collection-table-2 thead tr:nth-child(2) {
+    height        : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
+}
+
+.collection-table-2 thead tr:nth-child(2) th {
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Body Area */
+.collection-table-2 tbody {
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc((100vh - 50vh) - (var(--used-height) + (var(--table-height) * 2)));
+}
+
+.collection-table-2 tbody tr {
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    height       : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.collection-table-2 tbody tr td {
+    display    : flex;
+    align-items: center;
+    height     : var(--table-height);
+}
+
+/* Start Table Foot Area */
+.collection-table-2 tfoot {
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
+}
+
+.collection-table-2 tfoot tr {
+    height          : var(--table-height);
+    display         : flex;
+    align-items     : center;
+    color           : var(--blue);
+    border-radius   : 0px 0px 8px 8px;
+    background-color: var(--bluish-white);
+}
+
+.collection-table-2 tfoot tr th {
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Alignment Area*/
+.collection-table-2 thead tr:nth-child(2) th:nth-child(1),
+.collection-table-2 tbody td:nth-child(1),
+.collection-table-2 tfoot th:nth-child(1) {
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
+}
+
+.collection-table-2 thead tr:nth-child(2) th:nth-child(2),
+.collection-table-2 tbody td:nth-child(2),
+.collection-table-2 tfoot th:nth-child(2) {
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.collection-table-2 thead tr:nth-child(2) th:nth-child(3),
+.collection-table-2 tbody td:nth-child(3),
+.collection-table-2 thead tr:nth-child(2) th:nth-child(4),
+.collection-table-2 tbody td:nth-child(4) {
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.collection-table-2 tfoot th:nth-child(3),
+.collection-table-2 tfoot th:nth-child(4) {
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.collection-table-2 thead tr:nth-child(2) th:nth-child(5),
+.collection-table-2 tbody td:nth-child(5),
+.collection-table-2 tfoot th:nth-child(5) {
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.collection-table-2 thead tr:nth-child(2) th:nth-child(6),
+.collection-table-2 tbody td:nth-child(6),
+.collection-table-2 tfoot th:nth-child(6) {
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+/*---------End Collection Table 2 ---------*/
+
+/*---------Start Collection Table 3 ---------*/
+.collection-table-3 {
+    margin-top      : 15px;
+    display         : block;
+    empty-cells     : show;
+    border-spacing  : 0;
+    background-color: var(--white);
+    box-shadow      : 0px 0px 8px #026CD11A;
+    border-radius   : 8px;
+    border          : 1px solid var(--border-color);
+    box-sizing      : border-box;
+}
+
+.collection-table-3 tr {
+    width  : 100%;
+    display: flex;
+}
+
+.collection-table-3 td,
+.collection-table-3 th {
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
+}
+
+/* Start Table Head Area */
+.collection-table-3 thead {
+    position: relative;
+    display : block;
+    width   : 100%;
+}
+
+.collection-table-3 thead tr:nth-child(1) {
+    height         : 40px;
+    font-size      : var(--font14);
+    border-radius  : 8px 8px 0px 0px;
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-start;
+}
+
+.collection-table-3 thead tr:nth-child(2) {
+    height        : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
+}
+
+.collection-table-3 thead tr:nth-child(2) th {
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Body Area */
+.collection-table-3 tbody {
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc((100vh - 50vh) - (var(--used-height) + 23px));
+}
+
+.collection-table-3 tbody tr {
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    height       : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.collection-table-3 tbody tr td {
+    display    : flex;
+    align-items: center;
+    height     : var(--table-height);
+}
+
+.collection-table-3 tbody td:nth-child(1) {
+    display    : flex;
+    align-items: center;
+}
+
+.collection-table-3 tbody td:nth-child(1) p {
+    display    : flex;
+    align-items: center;
+    position   : relative;
+}
+
+.collection-table-3 tbody td:nth-child(1) p span {
+    position   : absolute;
+    margin     : auto;
+    left       : -5px;
+    font-size  : 7px;
+    margin-left: -5px;
+    color      : var(--blue);
+}
+
+/* Start Table Foot Area */
+.collection-table-3 tfoot {
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
+}
+
+.collection-table-3 tfoot tr {
+    height          : var(--table-height);
+    display         : flex;
+    align-items     : center;
+    color           : var(--blue);
+    border-radius   : 0px 0px 8px 8px;
+    background-color: var(--bluish-white);
+}
+
+.collection-table-3 tfoot tr th {
+    height     : var(--table-height);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Alignment Area*/
+.collection-table-3 thead tr:nth-child(2) th:nth-child(1),
+.collection-table-3 tbody td:nth-child(1),
+.collection-table-3 tfoot th:nth-child(1) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
+}
+
+.collection-table-3 thead tr:nth-child(2) th:nth-child(2),
+.collection-table-3 tbody td:nth-child(2),
+.collection-table-3 tfoot th:nth-child(2) {
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.collection-table-3 thead tr:nth-child(2) th:nth-child(3),
+.collection-table-3 tbody td:nth-child(3),
+.collection-table-3 thead tr:nth-child(2) th:nth-child(4),
+.collection-table-3 tbody td:nth-child(4) {
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.collection-table-3 tfoot th:nth-child(3),
+.collection-table-3 tfoot th:nth-child(4) {
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.collection-table-3 thead tr:nth-child(2) th:nth-last-child(-n+4),
+.collection-table-3 tbody td:nth-last-child(-n+4),
+.collection-table-3 tfoot th:nth-last-child(-n+4) {
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+/*---------End Collection Table 3 ---------*/
+
+.green {
+    color: var(--green) !important;
+}
+
+.orange {
+    color: #FFB347 !important;
+}
+
+.gray {
+    color: #AEC1D0 !important;
+}
+
+.collection-table-2 i,
+.collection-table-3 i {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 30px;
+    height          : 30px;
+    font-size       : var(--font12);
+    color           : var(--white);
+    border-radius   : 100px;
+    background-color: var(--blue);
+    margin          : 0px 5px;
+}
+
+#add-collection-modal .modal-header .modal-title,
+#edit-collection-modal .modal-header .modal-title {
+    color    : var(--black) !important;
+    font-size: var(--font16) !important;
+}
+
+#edit-collection-modal .modal-header .modal-title span {
+    color    : var(--blue) !important;
+    font-size: var(--font16) !important;
+}
+
+#add-collection-modal .modal-body,
+#edit-collection-modal .modal-body {
+    min-height: 250px;
+}
+
+#edit-collection-modal .input-group-text {
+    display          : -webkit-box;
+    display          : -ms-flexbox;
+    display          : flex;
+    -webkit-box-align: center;
+    -ms-flex-align   : center;
+    align-items      : center;
+    padding          : .375rem .75rem;
+    margin-bottom    : 0;
+    font-size        : var(--font16);
+    font-weight      : 400;
+    line-height      : 1.5;
+    color            : var(--red);
+    text-align       : center;
+    white-space      : nowrap;
+    background-color : var(--redish-white);
+    border           : 1px solid var(--border-color);
+    border-radius    : 0px 2px 2px 0px;
+}
+
+@media screen and (max-width: 1440px) {
+    :root {
+        --table-height: 35px;
+    }
+
+    .collection-table-1 thead tr:nth-child(1) th .about-color p {
+        font-size  : 10px;
+        font-weight: 500;
+    }
+
+    .collection-table-1 thead tr:nth-child(2),
+    .collection-table-2 thead tr:nth-child(2),
+    .collection-table-3 thead tr:nth-child(2) {
+        font-size: 10px;
+    }
+
+    .collection-table-1 tbody,
+    .collection-table-2 tbody {
+        font-size: 11px;
+    }
+
+    .collection-table-3 tbody {
+        font-size: 11px;
+        height   : calc((100vh - 50vh) - (var(--used-height) + 40px));
+    }
+
+    .collection-table-3 thead tr:nth-child(2) th:nth-child(1) {
+        flex-basis: 16.5% !important;
+    }
+
+    .collection-table-3 thead tr:nth-child(2) th:nth-child(2) {
+        flex-basis: 12.5%;
+    }
+
+    .collection-table-1 tfoot,
+    .collection-table-2 tfoot,
+    .collection-table-3 tfoot {
+        display  : block;
+        width    : 100%;
+        font-size: 11px;
+    }
+
+    .collection-table-2 i,
+    .collection-table-3 i {
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        width           : 25px;
+        height          : 25px;
+        font-size       : var(--font12);
+        color           : var(--white);
+        border-radius   : 100px;
+        background-color: var(--blue);
+        margin          : 0px 5px;
+    }
+}

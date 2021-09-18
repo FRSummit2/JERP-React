@@ -130,7 +130,7 @@ class EftnRegister extends React.Component {
                                                             <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control" /></div>
                                                             <span className="filter_search"><i className="fa fa-filter"> </i> </span>
                                                             <span className="filter_calendar"><i className="fa fa-calendar-o"> </i> </span>
-                                                            <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
+                                                            <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons compare_arrows" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
                                                         </div>
                                                     </div>
 
@@ -211,7 +211,7 @@ class EftnRegister extends React.Component {
                                                             <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control" /></div>
                                                             <span className="filter_search"><i className="fa fa-filter"> </i> </span>
                                                             <span className="filter_calendar active"><i className="fa fa-calendar-o"> </i> </span>
-                                                            <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
+                                                            <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons compare_arrows" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
                                                         </div>
                                                     </div>
 
@@ -279,7 +279,7 @@ class EftnRegister extends React.Component {
                                                             <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control" /></div>
                                                             <span className="filter_search"><i className="fa fa-filter"> </i> </span>
                                                             <span className="filter_calendar active"><i className="fa fa-calendar-o"> </i> </span>
-                                                            <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
+                                                            <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons compare_arrows" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
                                                         </div>
                                                     </div>
 
@@ -339,7 +339,7 @@ class EftnRegister extends React.Component {
                                                             <div className="form-group"><i className="fa fa-search"> </i><input type="text" placeholder="Search by Name, ID No" className="form-control" /></div>
                                                             <span className="filter_search"><i className="fa fa-filter"> </i> </span>
                                                             <span className="filter_calendar active"><i className="fa fa-calendar-o"> </i> </span>
-                                                            <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
+                                                            <span className="transfer" data-toggle="modal" data-target="#cr-transfer-modal" ><i className="material-icons compare_arrows" data-toggle="tooltip" data-placement="bottom" title="Transfer" aria-hidden="true">compare_arrows</i>  </span>
                                                         </div>
                                                     </div>
 

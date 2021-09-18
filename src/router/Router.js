@@ -30,6 +30,7 @@ import CustomerPayment from '../views/sd/ds_n_deliveries/deliveries/customer_pay
 import DeliverySchedule from '../views/sd/ds_n_deliveries/dp_ds/ds/DeliverySchedule'
 import DeliveryPreparation from '../views/sd/ds_n_deliveries/dp_ds/dp/DeliveryPreparation'
 import Collection from '../views/sd/ds_n_deliveries/deliveries/collection/Collection'
+import Collection2 from '../views/sd/ds_n_deliveries/deliveries/collection/Collection2'
 import DeliveryGRN from '../views/sd/ds_n_deliveries/deliveries/grn/GRN'
 import GRN from '../views/sd/ds_n_deliveries/deliveries/grn/GRN'
 
@@ -103,6 +104,7 @@ const Router = () => {
         <PrivateRoute path="/features/local_sales/dp-ds" component={DeliverySchedule} />
         <PrivateRoute path="/features/local_sales/delivery-preparation" component={DeliveryPreparation} />
         <PrivateRoute path="/features/local_sales/collection" component={Collection} />
+        <PrivateRoute path="/features/local_sales/collection2" component={Collection2} />
         <PrivateRoute path="/features/local_sales/delivery_grn" component={DeliveryGRN} />
         <PrivateRoute path="/features/inventory/grn" component={GRN} />
         

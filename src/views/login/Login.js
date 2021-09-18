@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { setUserSession } from '../../Utils/Common';
 import jmi_erp_logo from '../../assets/images/JMI-ERP-Logo.svg';
 import mononsoft_logo from '../../assets/images/mononsoft-logo.svg';
@@ -10,7 +10,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 // import { SuccessModal } from '../helpers/modals/success'
 
-function Login(props) {
+const Login = (props) => {
     // const [loading, setLoading] = useState(false);
     const username = useFormInput('');
     const password = useFormInput('');
@@ -31,6 +31,12 @@ function Login(props) {
     //         else setError("Something went wrong. Please try again later.");
     //     });
     // }
+
+    useEffect( props => {
+        console.log('use effect')
+        console.log(props)
+        sessionStorage.removeItem('jerp_user_details');
+    })
 
     const handleLoginJerp = async () => {
         console.log(username)

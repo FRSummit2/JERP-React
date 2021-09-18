@@ -20,7 +20,7 @@ class SuccessModal extends React.Component {
                             </button>
                             <div className="popup-content">
                                 <div className="icon">
-                                    <span className="material-icons">help</span>
+                                    <span className="material-icons help">help</span>
                                 </div>
                                 <div className="context">
                                     <h5>Are you Sure?</h5>

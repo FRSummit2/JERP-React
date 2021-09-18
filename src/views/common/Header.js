@@ -44,8 +44,8 @@ const Header = (props) => {
                         <span className="hamburger" onClick={ hamburgerToggleEvent } title="Menu">
                             {
                                 sidenav ?
-                                    <span className="material-icons">close</span> :
-                                    <span className="material-icons">menu</span>
+                                    <span className="material-icons close">close</span> :
+                                    <span className="material-icons menu">menu</span>
                             }
                         </span>
                     </div>

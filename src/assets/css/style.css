@@ -2,6 +2,7 @@
 .react-confirm-alert-body {
     text-align: center !important;
 }
+
 .react-confirm-alert-overlay {
     background: rgb(0 0 0 / 60%) !important;
 }
@@ -115,9 +116,11 @@
 .font-10 {
     font-size: 10px;
 }
+
 .font-12 {
     font-size: 12px;
 }
+
 .font-18 {
     font-size: 18px;
 }
@@ -162,21 +165,29 @@
 /* FONT - ENDS */
 
 /* ICON */
-.material-icons {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 30px !important;
-    height: 30px !important;
-    margin: 0 !important;
-    font-size: 19px !important;
-}
-.material-icons.edit {
-    border: 1px solid #026CD1;
-    border-radius: 50% !important;
-}
+.material-icons.add,
+.material-icons.edit,
+.material-icons.delete,
 .material-icons.delete_outline {
-    border: 1px solid var(--red);
+    display        : flex !important;
+    justify-content: center !important;
+    align-items    : center !important;
+    width          : 30px !important;
+    height         : 30px !important;
+    margin         : 0 !important;
+    font-size      : 19px !important;
+}
+
+.material-icons.edit {
+    font-size    : 24px !important;
+    border       : 1px solid #026CD1;
     border-radius: 50% !important;
 }
+
+.material-icons.delete_outline {
+    font-size    : 24px !important;
+    border       : 1px solid var(--red);
+    border-radius: 50% !important;
+}
+
 /* ICON */
