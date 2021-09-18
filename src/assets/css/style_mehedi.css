@@ -1456,6 +1456,7 @@ button:focus {
     justify-content : space-between;
     background-color: var(--white);
     border-bottom   : 1px solid var(--border-color);
+    cursor          : pointer;
 }
 
 .layout-sidebar.order .content .card_body:hover,
@@ -2181,7 +2182,7 @@ button:focus {
     flex-basis     : 20%;
     flex-grow      : 1;
     display        : flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .delivery-collection-table thead th:nth-child(2),
@@ -2616,6 +2617,7 @@ input[type="button"] {
     justify-content : space-between;
     background-color: var(--white);
     border-bottom   : 1px solid var(--border-color);
+    cursor          : pointer;
 }
 
 #add-product-modal .leftsidebar-productlist .content .card_body:hover,
@@ -2728,7 +2730,7 @@ input[type="button"] {
     flex-basis     : 40%;
     flex-grow      : 1;
     display        : flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .addproduct-modal-table thead th:nth-child(2),
@@ -2973,409 +2975,462 @@ input[type="button"] {
 *****************************************************************************
 */
 /*--------- Start Confirmation Popup Modal Area ---------*/
-#confirmation-modal .modal-dialog{
+#confirmation-modal .modal-dialog {
     width: 400px;
-  }
-  #confirmation-modal .modal-body {
+}
+
+#confirmation-modal .modal-body {
     height: 220px;
-  }
-  #confirmation-modal .modal-body .close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
+}
+
+#confirmation-modal .modal-body .close {
+    position   : absolute;
+    top        : 15px;
+    right      : 15px;
+    font-size  : 1.5rem;
     font-weight: 700;
     line-height: .5;
-    color: #000;
+    color      : #000;
     text-shadow: 0 1px 0 #fff;
-    opacity: .5;
-  }
-  #confirmation-modal .modal-body .popup-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    opacity    : .5;
+}
+
+#confirmation-modal .modal-body .popup-content {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: space-between;
-    height: 100%;
-    padding-top:5px;
-  }
-  #confirmation-modal .modal-body .popup-content .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: var(--blue);
-    background-color:var(--bluish-white);
-    width: 65px;
-    height: 65px;
-    border-radius: 100px;
-  }
-  #confirmation-modal .modal-body .popup-content .icon .material-icons {
+    height         : 100%;
+    padding-top    : 5px;
+}
+
+#confirmation-modal .modal-body .popup-content .icon {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    font-size       : 3rem;
+    color           : var(--blue);
+    background-color: var(--bluish-white);
+    width           : 65px;
+    height          : 65px;
+    border-radius   : 100px;
+}
+
+#confirmation-modal .modal-body .popup-content .icon .material-icons {
     font-family: 'Material Icons';
-    font-size: 3rem;
-  }
-  #confirmation-modal .modal-body .popup-content .context{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size  : 3rem;
+}
+
+#confirmation-modal .modal-body .popup-content .context {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: space-between;
-  }
-  #confirmation-modal .modal-body .popup-content .context h5 {
-    color: var(--text-black);
+}
+
+#confirmation-modal .modal-body .popup-content .context h5 {
+    color    : var(--text-black);
     font-size: var(--font18);
-  }
-  #confirmation-modal .modal-body .popup-content .context p {
-    opacity: .7;
-    text-align: center;
-    color: var(--text-black);
+}
+
+#confirmation-modal .modal-body .popup-content .context p {
+    opacity    : .7;
+    text-align : center;
+    color      : var(--text-black);
     font-weight: 500;
-    font-size: 14px;
-  }
-  #confirmation-modal .modal-body .popup-content .btns-group{
-    display: flex;
-    align-items: center;
+    font-size  : 14px;
+}
+
+#confirmation-modal .modal-body .popup-content .btns-group {
+    display        : flex;
+    align-items    : center;
     justify-content: space-between;
-  }
-  #confirmation-modal .modal-body .popup-content .btns-group button{
-    width: 150px;
-    height: 40px;
-    margin: 0px 10px;
-    font-size:var(--font14);
-    text-transform: uppercase;
-    font-weight: 500;
-    border-radius: 2px;
-    border:none;
-    transition: all 0.3s ease 0s;
-    background-color: transparent!important;
-    }
-  #confirmation-modal .modal-body .popup-content .btns-group button span{
+}
+
+#confirmation-modal .modal-body .popup-content .btns-group button {
+    width           : 150px;
+    height          : 40px;
+    margin          : 0px 10px;
+    font-size       : var(--font14);
+    text-transform  : uppercase;
+    font-weight     : 500;
+    border-radius   : 2px;
+    border          : none;
+    transition      : all 0.3s ease 0s;
+    background-color: transparent !important;
+}
+
+#confirmation-modal .modal-body .popup-content .btns-group button span {
     color: var(--text-black);
-  }
-  #confirmation-modal .modal-body .popup-content .btns-group .btn-discard{
-    color: var(--red);
+}
+
+#confirmation-modal .modal-body .popup-content .btns-group .btn-discard {
+    color              : var(--red);
     /* background-color: var(--white)!important;
-    border: 1px solid var(--red)!important; */
-  }
-  #confirmation-modal .modal-body .popup-content .btns-group .btn-continue{
-    color: var(--blue);
+    border             : 1px solid var(--red)!important; */
+}
+
+#confirmation-modal .modal-body .popup-content .btns-group .btn-continue {
+    color              : var(--blue);
     /* background-color: var(--blue)!important;
-    border: 1px solid var(--blue)!important; */
-  }
-  /*--------- End Confirmation Popup Modal Area ---------*/
-  
-  /*--------- Start Success Popup Modal Area ---------*/
-  #success-popup-modal .modal-dialog{
+    border             : 1px solid var(--blue)!important; */
+}
+
+/*--------- End Confirmation Popup Modal Area ---------*/
+
+/*--------- Start Success Popup Modal Area ---------*/
+#success-popup-modal .modal-dialog {
     width: 400px;
-  }
-  #success-popup-modal .modal-body {
+}
+
+#success-popup-modal .modal-body {
     height: 220px;
-  }
-  #success-popup-modal .modal-body .close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
+}
+
+#success-popup-modal .modal-body .close {
+    position   : absolute;
+    top        : 15px;
+    right      : 15px;
+    font-size  : 1.5rem;
     font-weight: 700;
     line-height: .5;
-    color: #000;
+    color      : #000;
     text-shadow: 0 1px 0 #fff;
-    opacity: .5;
-  }
-  #success-popup-modal .modal-body .popup-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    opacity    : .5;
+}
+
+#success-popup-modal .modal-body .popup-content {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: space-between;
-    height: 100%;
-    padding-top:5px;
-  }
-  #success-popup-modal .modal-body .popup-content .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: var(--green);
-    background-color:var(--greenish-white);
-    width: 65px;
-    height: 65px;
-    border-radius: 100px;
-  }
-  #success-popup-modal .modal-body .popup-content .icon .material-icons {
+    height         : 100%;
+    padding-top    : 5px;
+}
+
+#success-popup-modal .modal-body .popup-content .icon {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    font-size       : 3rem;
+    color           : var(--green);
+    background-color: var(--greenish-white);
+    width           : 65px;
+    height          : 65px;
+    border-radius   : 100px;
+}
+
+#success-popup-modal .modal-body .popup-content .icon .material-icons {
     font-family: 'Material Icons';
-    font-size: 3rem;
-  }
-  #success-popup-modal .modal-body .popup-content .context{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size  : 3rem;
+}
+
+#success-popup-modal .modal-body .popup-content .context {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: space-between;
-  }
-  #success-popup-modal .modal-body .popup-content .context h5 {
-    color: var(--text-black);
+}
+
+#success-popup-modal .modal-body .popup-content .context h5 {
+    color    : var(--text-black);
     font-size: var(--font18);
-  }
-  #success-popup-modal .modal-body .popup-content .context p {
-    opacity: .7;
-    text-align: center;
-    color: var(--text-black);
+}
+
+#success-popup-modal .modal-body .popup-content .context p {
+    opacity    : .7;
+    text-align : center;
+    color      : var(--text-black);
     font-weight: 500;
-    font-size: 14px;
-  }
-  #success-popup-modal .modal-body .popup-content .btns-group{
-    display: flex;
-    align-items: center;
+    font-size  : 14px;
+}
+
+#success-popup-modal .modal-body .popup-content .btns-group {
+    display        : flex;
+    align-items    : center;
     justify-content: space-between;
-  }
-  #success-popup-modal .modal-body .popup-content .btns-group button{
-    width: 150px;
-    height: 40px;
-    margin: 0px 10px;
-    font-size:var(--font14);
-    text-transform: uppercase;
-    font-weight: 500;
-    border-radius: 2px;
-    border:none;
-    transition: all 0.3s ease 0s;
-    background-color: transparent!important;
-    }
-  #success-popup-modal .modal-body .popup-content .btns-group button span{
+}
+
+#success-popup-modal .modal-body .popup-content .btns-group button {
+    width           : 150px;
+    height          : 40px;
+    margin          : 0px 10px;
+    font-size       : var(--font14);
+    text-transform  : uppercase;
+    font-weight     : 500;
+    border-radius   : 2px;
+    border          : none;
+    transition      : all 0.3s ease 0s;
+    background-color: transparent !important;
+}
+
+#success-popup-modal .modal-body .popup-content .btns-group button span {
     color: var(--text-black);
-  }
-  #success-popup-modal .modal-body .popup-content .btns-group .btn-discard{
-    color: var(--red);
+}
+
+#success-popup-modal .modal-body .popup-content .btns-group .btn-discard {
+    color              : var(--red);
     /* background-color: var(--white)!important;
-    border: 1px solid var(--red)!important; */
-  }
-  #success-popup-modal .modal-body .popup-content .btns-group .btn-continue{
-    color: var(--green);
+    border             : 1px solid var(--red)!important; */
+}
+
+#success-popup-modal .modal-body .popup-content .btns-group .btn-continue {
+    color              : var(--green);
     /* background-color: var(--blue)!important;
-    border: 1px solid var(--blue)!important; */
-  }
-  /*--------- End Success Popup Modal Area ---------*/
-  
-  
-  /*--------- Start Error Popup Modal Area ---------*/
-  #error-popup-modal .modal-dialog{
+    border             : 1px solid var(--blue)!important; */
+}
+
+/*--------- End Success Popup Modal Area ---------*/
+
+
+/*--------- Start Error Popup Modal Area ---------*/
+#error-popup-modal .modal-dialog {
     width: 400px;
-  }
-  #error-popup-modal .modal-body {
+}
+
+#error-popup-modal .modal-body {
     height: 220px;
-  }
-  #error-popup-modal .modal-body .close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
+}
+
+#error-popup-modal .modal-body .close {
+    position   : absolute;
+    top        : 15px;
+    right      : 15px;
+    font-size  : 1.5rem;
     font-weight: 700;
     line-height: .5;
-    color: #000;
+    color      : #000;
     text-shadow: 0 1px 0 #fff;
-    opacity: .5;
-  }
-  #error-popup-modal .modal-body .popup-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    opacity    : .5;
+}
+
+#error-popup-modal .modal-body .popup-content {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: space-between;
-    height: 100%;
-    padding-top:5px;
-  }
-  #error-popup-modal .modal-body .popup-content .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: var(--red);
-    background-color:var(--redish-white);
-    width: 65px;
-    height: 65px;
-    border-radius: 100px;
-  }
-  #error-popup-modal .modal-body .popup-content .icon .material-icons {
+    height         : 100%;
+    padding-top    : 5px;
+}
+
+#error-popup-modal .modal-body .popup-content .icon {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    font-size       : 3rem;
+    color           : var(--red);
+    background-color: var(--redish-white);
+    width           : 65px;
+    height          : 65px;
+    border-radius   : 100px;
+}
+
+#error-popup-modal .modal-body .popup-content .icon .material-icons {
     font-family: 'Material Icons';
-    font-size: 3rem;
-  }
-  #error-popup-modal .modal-body .popup-content .context{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size  : 3rem;
+}
+
+#error-popup-modal .modal-body .popup-content .context {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: space-between;
-  }
-  #error-popup-modal .modal-body .popup-content .context h5 {
-    color: var(--text-black);
+}
+
+#error-popup-modal .modal-body .popup-content .context h5 {
+    color    : var(--text-black);
     font-size: var(--font18);
-  }
-  #error-popup-modal .modal-body .popup-content .context p {
-    opacity: .7;
-    text-align: center;
-    color: var(--text-black);
+}
+
+#error-popup-modal .modal-body .popup-content .context p {
+    opacity    : .7;
+    text-align : center;
+    color      : var(--text-black);
     font-weight: 500;
-    font-size: 14px;
-  }
-  #error-popup-modal .modal-body .popup-content .btns-group{
-    display: flex;
-    align-items: center;
+    font-size  : 14px;
+}
+
+#error-popup-modal .modal-body .popup-content .btns-group {
+    display        : flex;
+    align-items    : center;
     justify-content: space-between;
-  }
-  #error-popup-modal .modal-body .popup-content .btns-group button{
-    width: 150px;
-    height: 40px;
-    margin: 0px 10px;
-    font-size:var(--font14);
-    text-transform: uppercase;
-    font-weight: 500;
-    border-radius: 2px;
-    border:none;
-    transition: all 0.3s ease 0s;
-    background-color: transparent!important;
-    }
-  #error-popup-modal .modal-body .popup-content .btns-group button span{
+}
+
+#error-popup-modal .modal-body .popup-content .btns-group button {
+    width           : 150px;
+    height          : 40px;
+    margin          : 0px 10px;
+    font-size       : var(--font14);
+    text-transform  : uppercase;
+    font-weight     : 500;
+    border-radius   : 2px;
+    border          : none;
+    transition      : all 0.3s ease 0s;
+    background-color: transparent !important;
+}
+
+#error-popup-modal .modal-body .popup-content .btns-group button span {
     color: var(--text-black);
-  }
-  #error-popup-modal .modal-body .popup-content .btns-group .btn-discard{
-    color: var(--red);
+}
+
+#error-popup-modal .modal-body .popup-content .btns-group .btn-discard {
+    color              : var(--red);
     /* background-color: var(--white)!important;
-    border: 1px solid var(--red)!important; */
-  }
-  #error-popup-modal .modal-body .popup-content .btns-group .btn-continue{
-    color: var(--red);
+    border             : 1px solid var(--red)!important; */
+}
+
+#error-popup-modal .modal-body .popup-content .btns-group .btn-continue {
+    color              : var(--red);
     /* background-color: var(--blue)!important;
-    border: 1px solid var(--blue)!important; */
-  }
-  /*--------- End Error Popup Modal Area ---------*/
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /*--------- Start Error Popup Modal Area ---------*/
-  #progress-bar-modal .modal-dialog{
+    border             : 1px solid var(--blue)!important; */
+}
+
+/*--------- End Error Popup Modal Area ---------*/
+
+
+
+
+
+
+
+
+
+/*--------- Start Error Popup Modal Area ---------*/
+#progress-bar-modal .modal-dialog {
     width: 400px;
-  }
-  #progress-bar-modal .modal-body {
+}
+
+#progress-bar-modal .modal-body {
     height: 220px;
-  }
-  #progress-bar-modal .modal-body .close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
+}
+
+#progress-bar-modal .modal-body .close {
+    position   : absolute;
+    top        : 15px;
+    right      : 15px;
+    font-size  : 1.5rem;
     font-weight: 700;
     line-height: .5;
-    color: #000;
+    color      : #000;
     text-shadow: 0 1px 0 #fff;
-    opacity: .5;
-  }
-  #progress-bar-modal .modal-body .popup-content {
-    display: flex;
+    opacity    : .5;
+}
+
+#progress-bar-modal .modal-body .popup-content {
+    display       : flex;
     flex-direction: column;
-    align-items: center;
-    height: 100%;
-    padding-top:15px;
-  }
-  #progress-bar-modal .modal-body .popup-content .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    background-color:var(--bluish-white);
-    width: 65px;
-    height: 65px;
-    border-radius: 100px;
-  }
-  #progress-bar-modal .modal-body .popup-content .icon .material-icons {
+    align-items   : center;
+    height        : 100%;
+    padding-top   : 15px;
+}
+
+#progress-bar-modal .modal-body .popup-content .icon {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    font-size       : 3rem;
+    background-color: var(--bluish-white);
+    width           : 65px;
+    height          : 65px;
+    border-radius   : 100px;
+}
+
+#progress-bar-modal .modal-body .popup-content .icon .material-icons {
     font-family: 'Material Icons';
-    font-size: 3rem;
-  }
-  #progress-bar-modal .modal-body .popup-content .context{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size  : 3rem;
+}
+
+#progress-bar-modal .modal-body .popup-content .context {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: space-between;
-    margin-top: 15px;
-  }
-  #progress-bar-modal .modal-body .popup-content .context h5 {
-    color: var(--text-black);
+    margin-top     : 15px;
+}
+
+#progress-bar-modal .modal-body .popup-content .context h5 {
+    color    : var(--text-black);
     font-size: var(--font18);
-  }
-  #progress-bar-modal .modal-body .popup-content .context p {
-    opacity: .7;
-    text-align: center;
-    color: var(--text-black);
+}
+
+#progress-bar-modal .modal-body .popup-content .context p {
+    opacity    : .7;
+    text-align : center;
+    color      : var(--text-black);
     font-weight: 500;
-    font-size: 14px;
-  }
-  #progress-bar-modal .modal-body .popup-content .btns-group{
-    display: flex;
-    align-items: center;
+    font-size  : 14px;
+}
+
+#progress-bar-modal .modal-body .popup-content .btns-group {
+    display        : flex;
+    align-items    : center;
     justify-content: space-between;
-  }
-  #progress-bar-modal .modal-body .popup-content .btns-group button{
-    width: 150px;
-    height: 40px;
-    margin: 0px 10px;
-    font-size:var(--font14);
-    text-transform: uppercase;
-    font-weight: 500;
-    border-radius: 2px;
-    border:none;
-    transition: all 0.3s ease 0s;
-    background-color: transparent!important;
-    }
-  #progress-bar-modal .modal-body .popup-content .btns-group button span{
+}
+
+#progress-bar-modal .modal-body .popup-content .btns-group button {
+    width           : 150px;
+    height          : 40px;
+    margin          : 0px 10px;
+    font-size       : var(--font14);
+    text-transform  : uppercase;
+    font-weight     : 500;
+    border-radius   : 2px;
+    border          : none;
+    transition      : all 0.3s ease 0s;
+    background-color: transparent !important;
+}
+
+#progress-bar-modal .modal-body .popup-content .btns-group button span {
     color: var(--text-black);
-  }
-  #progress-bar-modal .modal-body .popup-content .btns-group .btn-discard{
-    color: var(--red);
+}
+
+#progress-bar-modal .modal-body .popup-content .btns-group .btn-discard {
+    color              : var(--red);
     /* background-color: var(--white)!important;
-    border: 1px solid var(--red)!important; */
-  }
-  #progress-bar-modal .modal-body .popup-content .btns-group .btn-continue{
-    color: var(--red);
+    border             : 1px solid var(--red)!important; */
+}
+
+#progress-bar-modal .modal-body .popup-content .btns-group .btn-continue {
+    color              : var(--red);
     /* background-color: var(--blue)!important;
-    border: 1px solid var(--blue)!important; */
-  }
-  /*--------- End Error Popup Modal Area ---------*/
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .loader {
+    border             : 1px solid var(--blue)!important; */
+}
+
+/*--------- End Error Popup Modal Area ---------*/
+
+
+
+
+
+
+
+
+
+
+
+
+.loader {
     -webkit-animation: spin 1s linear infinite;
-            animation: spin 1s linear infinite;
-    border: 5px solid var(--white);
-    border-top: 5px solid var(--blue);
-    border-radius: 50%;
-    height: 45px;
-    width: 45px;
-  }
-  
-  @-webkit-keyframes spin {
+    animation        : spin 1s linear infinite;
+    border           : 5px solid var(--white);
+    border-top       : 5px solid var(--blue);
+    border-radius    : 50%;
+    height           : 45px;
+    width            : 45px;
+}
+
+@-webkit-keyframes spin {
     to {
-      border-top-color: var(--blue);
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
+        border-top-color : var(--blue);
+        -webkit-transform: rotate(360deg);
+        transform        : rotate(360deg);
     }
-  }
-  
-  @keyframes spin {
+}
+
+@keyframes spin {
     to {
-      border-top-color:  var(--blue);
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
+        border-top-color : var(--blue);
+        -webkit-transform: rotate(360deg);
+        transform        : rotate(360deg);
     }
-  }
-  
-  
-  
+}
