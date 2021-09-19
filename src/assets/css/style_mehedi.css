@@ -5730,977 +5730,2103 @@ input[type="button"] {
 **********************************************************************
 */
 
-:root{
+:root {
     --table-height: 40px;
-  }
-  /*Start Secondary Sidebar Header Area*/
-  .layout-sidebar.ThirdPartyTender{
-    min-width: var(--sidebar-width);
-    width: 100%;
-    border-right: 1px solid  var(--border-color);
-  }
-  .layout-sidebar.ThirdPartyTender .header{
+}
+
+/*Start Secondary Sidebar Header Area*/
+.layout-sidebar.ThirdPartyTender {
+    min-width   : var(--sidebar-width);
+    width       : 100%;
+    border-right: 1px solid var(--border-color);
+}
+
+.layout-sidebar.ThirdPartyTender .header {
     background-color: var(--white);
-    padding: 15px 10px;
-  }
-  .layout-sidebar.ThirdPartyTender .header .row1{
-    display: flex;
-    justify-content:space-between; 
-  }
-  .layout-sidebar.ThirdPartyTender .header .row2{
-    margin-top: 10px;
-  }
-  .layout-sidebar.ThirdPartyTender .header .row2 h5{
-    color: var(--text-label);
-    font-size: var(--font14);
-  }
-  .layout-sidebar.ThirdPartyTender .header .row2 span{
-    color: var(--blue);
-  }
-  .layout-sidebar.ThirdPartyTender .header .row1 .form-group {
-    position: relative;
-    margin-bottom: 0px!important;
-    width: 100%;
-  }
-  .layout-sidebar.ThirdPartyTender .header .row1 .form-group span{
-    position: absolute; 
-    top: 12px; 
-    left:10px; 
-    color: #AAC0D9;
-    font-size: var(--font14);
-    }
-  .layout-sidebar.ThirdPartyTender .header .row1 .form-group input{
-    padding-left: 36px;
-    border-radius: 2px;
-    border: 1px solid var(--border-color);
-  }
-  .layout-sidebar.ThirdPartyTender .header .row1 .form-group input::placeholder{
-    font-size: var(--font14) ;
-    color: #AAC0D9;
-  }
-  .layout-sidebar.ThirdPartyTender .header .row1 .form-group input:focus{
-    border-color: var(--blue);
-    box-shadow: none;
-  }
-  .layout-sidebar.ThirdPartyTender .header .row1 .filter_search{
-    color: #AAC0D9;
-    font-size: var(--font16);
-    text-align: center;
-    padding: 8px;
-    height: 38px;
-    width: 38px;
-    border-radius: 2px;
-    border: 1px solid  var(--border-color);
-    margin-left: 10px;
-  }
-  .layout-sidebar.ThirdPartyTender .header .row1 .filter_search:hover{
-    color: var(--white);
-    background-color: var(--blue);
-  }
-  /*End Secondary Sidebar Header Area*/
-  
-  /*Start Secondary Sidebar Content Area*/
-  .layout-sidebar.ThirdPartyTender .content{
-    height: calc( 100vh - (var(--used-height) + 68px + 25px) );
-    overflow-y: scroll;
-  }
-  .layout-sidebar.ThirdPartyTender .credit{
-    color: var(--green)!important;
-  }
-  .layout-sidebar.ThirdPartyTender .cash{
-    color: var(--red)!important;
-  }
-  .layout-sidebar.ThirdPartyTender .content .card_body {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+    padding         : 15px 10px;
+}
+
+.layout-sidebar.ThirdPartyTender .header .row1 {
+    display        : flex;
     justify-content: space-between;
-    background-color: var(--white);
-    border-bottom: 1px solid var(--border-color);
-  }
-  .layout-sidebar.ThirdPartyTender .content .card_body:hover,
-  .layout-sidebar.ThirdPartyTender .content .card_body:active {
-    background-color: var(--bluish-white);
-  }
-  .layout-sidebar.ThirdPartyTender .content .card_body .row1,
-  .layout-sidebar.ThirdPartyTender .content .card_body .row2,
-  .layout-sidebar.ThirdPartyTender .content .card_body .row3 {
-    margin: 1px 0px;
-    display: flex;
-    justify-content:space-between; 
-  }
-  .layout-sidebar.ThirdPartyTender .content .card_body .row1 h5 {
+}
+
+.layout-sidebar.ThirdPartyTender .header .row2 {
+    margin-top: 10px;
+}
+
+.layout-sidebar.ThirdPartyTender .header .row2 h5 {
+    color    : var(--text-label);
     font-size: var(--font14);
+}
+
+.layout-sidebar.ThirdPartyTender .header .row2 span {
     color: var(--blue);
+}
+
+.layout-sidebar.ThirdPartyTender .header .row1 .form-group {
+    position     : relative;
+    margin-bottom: 0px !important;
+    width        : 100%;
+}
+
+.layout-sidebar.ThirdPartyTender .header .row1 .form-group span {
+    position : absolute;
+    top      : 12px;
+    left     : 10px;
+    color    : #AAC0D9;
+    font-size: var(--font14);
+}
+
+.layout-sidebar.ThirdPartyTender .header .row1 .form-group input {
+    padding-left : 36px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
+}
+
+.layout-sidebar.ThirdPartyTender .header .row1 .form-group input::placeholder {
+    font-size: var(--font14);
+    color    : #AAC0D9;
+}
+
+.layout-sidebar.ThirdPartyTender .header .row1 .form-group input:focus {
+    border-color: var(--blue);
+    box-shadow  : none;
+}
+
+.layout-sidebar.ThirdPartyTender .header .row1 .filter_search {
+    color        : #AAC0D9;
+    font-size    : var(--font16);
+    text-align   : center;
+    padding      : 8px;
+    height       : 38px;
+    width        : 38px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
+    margin-left  : 10px;
+}
+
+.layout-sidebar.ThirdPartyTender .header .row1 .filter_search:hover {
+    color           : var(--white);
+    background-color: var(--blue);
+}
+
+/*End Secondary Sidebar Header Area*/
+
+/*Start Secondary Sidebar Content Area*/
+.layout-sidebar.ThirdPartyTender .content {
+    height    : calc(100vh - (var(--used-height) + 68px + 25px));
+    overflow-y: scroll;
+}
+
+.layout-sidebar.ThirdPartyTender .credit {
+    color: var(--green) !important;
+}
+
+.layout-sidebar.ThirdPartyTender .cash {
+    color: var(--red) !important;
+}
+
+.layout-sidebar.ThirdPartyTender .content .card_body {
+    padding         : 10px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    background-color: var(--white);
+    border-bottom   : 1px solid var(--border-color);
+}
+
+.layout-sidebar.ThirdPartyTender .content .card_body:hover,
+.layout-sidebar.ThirdPartyTender .content .card_body:active {
+    background-color: var(--bluish-white);
+}
+
+.layout-sidebar.ThirdPartyTender .content .card_body .row1,
+.layout-sidebar.ThirdPartyTender .content .card_body .row2,
+.layout-sidebar.ThirdPartyTender .content .card_body .row3 {
+    margin         : 1px 0px;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.layout-sidebar.ThirdPartyTender .content .card_body .row1 h5 {
+    font-size    : var(--font14);
+    color        : var(--blue);
     text-overflow: ellipsis;
-    width: inherit;
-    white-space: nowrap;
-  }
-  .layout-sidebar.ThirdPartyTender .content .card_body .row1 p {
-    text-align: center;
+    width        : inherit;
+    white-space  : nowrap;
+}
+
+.layout-sidebar.ThirdPartyTender .content .card_body .row1 p {
+    text-align : center;
     font-weight: 500;
-    font-size: var(--font14);
-    color: var(--text-black);
-  }
-  .layout-sidebar.ThirdPartyTender .content .card_body .row2 p {
-    font-size: var(--font14) ;
-    color: var(--text-black);
+    font-size  : var(--font14);
+    color      : var(--text-black);
+}
+
+.layout-sidebar.ThirdPartyTender .content .card_body .row2 p {
+    font-size  : var(--font14);
+    color      : var(--text-black);
     font-weight: 500;
-  }
-  .layout-sidebar.ThirdPartyTender .content .card_body .row3 p {
+}
+
+.layout-sidebar.ThirdPartyTender .content .card_body .row3 p {
     font-size: var(--font14);
-    color: #879097;
-  }
-  @media screen and (max-width: 768px) { 
-    .layout-sidebar.ThirdPartyTender{
+    color    : #879097;
+}
+
+@media screen and (max-width: 768px) {
+    .layout-sidebar.ThirdPartyTender {
         width: 100%;
     }
-    .layout-sidebar.ThirdPartyTender .content{
-        height: calc(230px - (68px + 25px));
+
+    .layout-sidebar.ThirdPartyTender .content {
+        height    : calc(230px - (68px + 25px));
         overflow-y: scroll;
     }
-  }
-  /*End Secondary Sidebar Content Area*/
-  
-  .ThirdPartyTender-area{
-      margin-top: 15px;
-      min-height: calc(100vh - (var(--used-height) - (-30px)));
-      background-color: var(--white);
-      box-shadow: 0px 0px 8px #026CD11A;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      box-sizing: border-box;
-  }
-  .ThirdPartyTender-area .ThirdPartyTender-header{
-      padding: 10px 0px;
-      border-bottom: 1px solid var(--border-color);
-  }
-  .ThirdPartyTender-area .ThirdPartyTender-header h5{
-      font-size: var(--font16);
-      color: var(--text-label);
-      margin-bottom: 5px;
-      display: flex;
-      align-items: center;
-  }
-  .ThirdPartyTender-area .ThirdPartyTender-header h5 .order-id{
-      font-size: var(--font16);
-      color:  var(--blue);
-      margin-left: 5px;
-  }
-  .ThirdPartyTender-area .ThirdPartyTender-header h5 .form-control-sm{
-    border-radius: 2px;
-    font-size: var(--font12) ;
-    border: 1px solid var(--border-color);
-    width: 160px;
-    height: 25px !important;
-    margin: 0px 5px;
-  }
-  .ThirdPartyTender-area .ThirdPartyTender-header p{
-      font-weight: 400;
-      font-size: var(--font14);
-      color: var(--text-black);
-  }
-  .ThirdPartyTender-area .ThirdPartyTender-header p span{
-      font-size: var(--font14);
-      color:  var(--blue);
-  }
-  .ThirdPartyTender-area .ThirdPartyTender-header .form-group{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0rem;
-  }
-  .ThirdPartyTender-area .ThirdPartyTender-header .form-group label{
-      font-weight: 400;
-      font-size: var(--font14);
-      color: var(--text-black);
-      margin-bottom: 0rem;
-  }
-  .ThirdPartyTender-area .ThirdPartyTender-header .form-control-sm{
-    text-align: left;
-    padding: 0rem .5rem;   
-    width: 65%;
-    border-radius: 2px;
-    font-size: var(--font12) ;
-    border: 1px solid var(--border-color);
-    height: 25px !important;
-    margin-left: 5px;
-  }
-  .ThirdPartyTender-area .ThirdPartyTender-header .form-control-sm:focus{
-    outline: none !important;
-    border-color: var(--blue)!important;
-    box-shadow: none;
-  }
-  /*---------Start Third Party Order Table ---------*/
-  .ThirdPartyTender-table{
-      display: block;
-      empty-cells: show;
-      border-spacing: 0;
-      box-sizing: border-box;
-    }
-    .ThirdPartyTender-table tr{
-      width: 100%;
-      display:flex;
-    }
-    .ThirdPartyTender-table td,
-    .ThirdPartyTender-table th{
-      flex-grow:1;
-      display: block;
-      padding: 0rem 1rem;
-    }
-    /* Start Table Head Area */
-    .ThirdPartyTender-table thead{ 
-      position:relative;
-      display: block;
-      width:100%;
-    }
-    .ThirdPartyTender-table thead tr{
-      min-height: var(--table-height);
-      font-size: var(--font14);
-      text-transform: uppercase;
-      color: var(--blue);
-      border-bottom: 1px solid var(--border-color);
-    }
-    .ThirdPartyTender-table thead tr th{
-      min-height: var(--table-height);
-      display:flex;
-      align-items: center;
-    }
-    /* Start Table Body Area */
-    .ThirdPartyTender-table tbody{
-      width:100%; 
-      display: block; 
-      position:relative;
-      overflow-y:scroll;
-      font-size: var(--font14);
-      color:var(--text-black);
-      height:  calc( (100vh - 50vh) - (var(--used-height)  + 23px ));
-    }
-  .ThirdPartyTender-table tbody .product .name{
-      font-size: var(--font14);
-      color: var(--blue);
-     } 
-  .ThirdPartyTender-table tbody .product .name span{
-      font-size: var(--font14);
-      color: var(--text-black);
-      } 
-  .ThirdPartyTender-table tbody .product .type{
-      font-size: var(--font14);
-      color: var(--text-black);
-      font-weight: 400;
-      } 
-  .ThirdPartyTender-table tbody tr{
-      position: relative;
-      width: 100%;
-      display:flex;
-      align-items: center;
-      min-height: var(--table-height);
-      border-bottom: 1px solid var(--border-color);
-    }
-    .ThirdPartyTender-table tbody tr td{
-      display: flex;
-      align-items: center;
-      min-height: var(--table-height);
-    }
-    /* Start Table Foot Area */
-    .ThirdPartyTender-table tfoot{ 
-      display: block;
-      width:100%;
-      font-size: var(--font14);
-    }
-    .ThirdPartyTender-table tfoot tr{
-      min-height: 30px;
-      display: flex;
-      align-items: center;
-      color: var(--text-black);
-    }
-    .ThirdPartyTender-table tfoot tr:last-child{
-      min-height: 30px;
-      display: flex;
-      align-items: center;
-      color: var(--blue);
-      border-top: 1px solid  var(--bluish-white);
-    }
-    .ThirdPartyTender-table tfoot tr th {
-      min-height: 30px;
-      display: flex;
-      align-items: center;
-    }
-    .ThirdPartyTender-table tfoot tr th .small-text{
-      font-weight: 500;
-      font-size: var(--font12);
-    }
-    .ThirdPartyTender-table tfoot tr th .grand-total{
-      font-weight: 600;
-      font-size: var(--font14);
-    }
-    .ThirdPartyTender-table thead th:nth-child(2) div{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .ThirdPartyTender-table thead th:nth-child(2) span{
-      font-size: var(--font10);
-    }
-    /* Start Table Alignment Area*/
-    .ThirdPartyTender-table thead th:nth-child(1),
-    .ThirdPartyTender-table tbody td:nth-child(1){
-      flex-basis:30%;
-      flex-grow:1;
-      display: flex;
-      justify-content: start;
-    }
-    .ThirdPartyTender-table thead th:nth-child(2),
-    .ThirdPartyTender-table tbody td:nth-child(2),
-    .ThirdPartyTender-table thead th:nth-child(3),
-    .ThirdPartyTender-table tbody td:nth-child(3){
-      flex-basis:20%;
-      flex-grow:1;
-      display: flex;
-      justify-content: center;
-    }
-    .ThirdPartyTender-table thead th:nth-child(4),
-    .ThirdPartyTender-table tbody td:nth-child(4){
-      flex-basis: 15%;
-      flex-grow:1;
-      display: flex;
-      justify-content: flex-end;
-    }
-    .ThirdPartyTender-table thead th:nth-child(5),
-    .ThirdPartyTender-table tbody td:nth-child(5){
-      flex-basis: 15%;
-      flex-grow:1;
-      display: flex;
-      justify-content: flex-end;
-    }
-    .ThirdPartyTender-table tfoot th:nth-child(1){
-      flex-basis:50%;
-    }
-    .ThirdPartyTender-table tfoot th:nth-child(2){
-      flex-basis:20%;
-      flex-grow:1;
-      display: flex;
-      justify-content: flex-end;
-    }
-    .ThirdPartyTender-table tfoot th:nth-child(3){
-      flex-basis:15%;
-      flex-grow:1;
-      display: flex;
-      justify-content: flex-end;
-    }
-    .ThirdPartyTender-table tfoot th:nth-child(4){
-      flex-basis:15%;
-      flex-grow:1;
-      display: flex;
-      justify-content: flex-end;
-    }
-  /* StartTable Input Area */
-  .ThirdPartyTender-table .quantity-input{
-    display: flex;
-    width: 110px;
-    height: 30px;
-    border-radius: 2px;
+}
+
+/*End Secondary Sidebar Content Area*/
+
+.ThirdPartyTender-area {
+    margin-top      : 15px;
+    min-height      : calc(100vh - (var(--used-height) - (-30px)));
     background-color: var(--white);
-  }
-  .ThirdPartyTender-table .quantity-input .quantity {
-    width: 60px;
-    height: 30px;
-    margin: 0;
-    text-align:center;
-    background:transparent;  
-    border: 1px solid var(--border-color);
-    border-right: none;
-    border-left: none;
-  }
-  .ThirdPartyTender-table .quantity-input .quantity::placeholder {
-    color: var(--border-color);
-  }
-  .ThirdPartyTender-table .quantity-input .minus{
-    width: 25px;
-    height: 30px;
-    font-weight: 700;
-    margin: 0px;
-    padding: 0px;
-    font-size: var(--font18);
-    color: var(--text-black);
-    background-color:transparent;  
-    border-radius: 2px 0px 0px 2px;
-    border: 1px solid var(--border-color);
-    border-right: none;
-  }
-  .ThirdPartyTender-table .quantity-input .plus{
-    width: 25px;
-    height: 30px;
-    font-weight: 700;
-    font-size: var(--font18);
-    color: var(--text-black);
-    background-color:transparent;  
-    border-radius: 0px 2px 2px 0px;
-    border: 1px solid var(--border-color);
-    border-left: none;
-  }
-  .ThirdPartyTender-table .quantity-input .quantity:focus{
-    color: var(--blue);
-    outline: none !important;
-    border-color: var(--blue)!important;
-    box-shadow: none;
-    border-left: 1px solid var(--blue);
-    border-right: 1px solid var(--blue);
-  }
-  .ThirdPartyTender-table .quantity-input .minus:hover,
-  .ThirdPartyTender-table .quantity-input .plus:hover{
-    color: var(--white);
-    outline: none !important;
-    box-shadow: none;
-    background-color: var(--blue);
-  }
-  .ThirdPartyTender-table .quantity-input .minus:focus,
-  .ThirdPartyTender-table .quantity-input .plus:focus{
-    color: var(--white);
-    outline: none !important;
-    box-shadow: none;
-    background-color: var(--blue);
-  }
-  input[type="button"] {
-    cursor: pointer
-  }
-  .ThirdPartyTender-table .form-control-sm{
-    text-align: center;
+    box-shadow      : 0px 0px 8px #026CD11A;
+    border-radius   : 8px;
+    border          : 1px solid var(--border-color);
+    box-sizing      : border-box;
+}
+
+.ThirdPartyTender-area .ThirdPartyTender-header {
+    padding      : 10px 0px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ThirdPartyTender-area .ThirdPartyTender-header h5 {
+    font-size    : var(--font16);
+    color        : var(--text-label);
+    margin-bottom: 5px;
+    display      : flex;
+    align-items  : center;
+}
+
+.ThirdPartyTender-area .ThirdPartyTender-header h5 .order-id {
+    font-size  : var(--font16);
+    color      : var(--blue);
+    margin-left: 5px;
+}
+
+.ThirdPartyTender-area .ThirdPartyTender-header h5 .form-control-sm {
     border-radius: 2px;
-    font-size: var(--font14) ;
-    border: 1px solid var(--border-color);
-    width: 110px;
-    height: 30px !important;
-  }
-  .ThirdPartyTender-table .form-control-sm:placeholder{
-    font-size: var(--font14) ;
-    color: #AAC0D9;
-  }
-  .ThirdPartyTender-table .form-control-sm:focus{
-    outline: none !important;
-    border-color: var(--blue)!important;
-    box-shadow: none;
-  }
-  /* End Table Input Area */
-  
-    /*>> Start Table Hover Button Component <<*/
-    .ThirdPartyTender-table tbody tr:hover {
-      background-color: var(--bluish-white);
-      cursor: pointer;
-    }
-    .ThirdPartyTender-table tbody tr .hover-btns {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      position: absolute;
-      right: 0;
-      background: rgba(255, 255, 255, 0);
-      -webkit-transition: all .1s;
-      transition: all .1s;
-      padding: 0px 15px;
-    }
-    .ThirdPartyTender-table tbody tr .hover-btns::before {
-      width: 100px;
-      height: 100%;
-      margin-left: -100px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      content: "";
-      -webkit-transition: all .1s;
-      transition: all .1s;
-      background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#E2EDFA));
-      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #E2EDFA 100%);
-    }
-    /*----- Start Active State -----*/
-    .ThirdPartyTender-table tbody tr.active {
-      background-color: var(--bluish-white);
-      cursor: pointer;
-    }
-    .ThirdPartyTender-table tbody tr.active .hover-btns::before {
-      opacity: 1;
-    }
-    .ThirdPartyTender-table tbody tr.active .hover-btns {
-      height: 100%;
-      background-color: var(--bluish-white);
-    }
-    .ThirdPartyTender-table tbody tr.active .hover-btns span {
-      opacity: 1;
-    }
-    /*----- Start Hover State -----*/
-    .ThirdPartyTender-table tbody tr:hover .hover-btns {
-      height: 100%;
-      background-color: var(--bluish-white);
-    }
-    .ThirdPartyTender-table tbody tr:hover .hover-btns::before {
-      opacity: 1;
-    }
-    .ThirdPartyTender-table tbody tr:hover .hover-btns span {
-      opacity: 1;
-    }
-    /*----- Start Button Style -----*/
-    .ThirdPartyTender-table tbody tr .hover-btns .action-btn {
-      opacity: 0;
-      -webkit-transition: all .2s;
-      transition: all .2s;
-      /* Button Style */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      margin: 0px 5px;
-      border-radius: 100px;
-      font-weight: 200;
-      color:  var(--blue);
-      font-size: var(--font16);
-      background-color:var(--white);
-    }
-    .ThirdPartyTender-table tbody tr .hover-btns .action-btn.active {
-      color:  var(--white);
-      font-size: var(--font16);
-      background-color:var(--blue);
-    }
-    .ThirdPartyTender-table tbody tr .hover-btns .action-btn.remove {
-      color:  var(--red);
-      font-size: var(--font16);
-      background-color:var(--redish-white);
-    }
-    /*>> End Table Hover Button Component <<*/
-  /*---------End Collection Table 3 ---------*/
-  .btn-add-product,
-  .btn-add-atachment{
+    font-size    : var(--font12);
+    border       : 1px solid var(--border-color);
+    width        : 160px;
+    height       : 25px !important;
+    margin       : 0px 5px;
+}
+
+.ThirdPartyTender-area .ThirdPartyTender-header p {
+    font-weight: 400;
+    font-size  : var(--font14);
+    color      : var(--text-black);
+}
+
+.ThirdPartyTender-area .ThirdPartyTender-header p span {
     font-size: var(--font14);
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    color: var(--blue)!important;
-  }
-  .btn-add-product span,
-  .btn-add-atachment span{
-    margin-right: 5px;
-    /* padding: 2px;
-    border-radius: 100px;
-    background-color: var(--bluish-white); */
-  }
-  .btn-add-product:hover,
-  .btn-add-atachment:hover{
-    color: #0153a0!important;
-  }
-  .ThirdPartyTender-footer{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0px;
-  }
-  .ThirdPartyTender-footer .btn-discard{
-    background-color: var(--white)!important;
-    border: 1px solid var(--red)!important;
-    color: var(--red);
-  }
-  .ThirdPartyTender-footer .btn-discard:hover{
-    background-color: var(--white)!important;
-    border: 1px solid var(--red)!important;
-    color: var(--red);
-  }
-  @media screen and (max-width: 1440px) {
-    :root {
-      --table-height: 35px;
-      }
-  }
-  
-  
-  
-  /*--------- Start Add Product Modal ---------*/
-  #add-product-modal .modal-dialog {
-    max-width: 80% !important;
-    width: 1000px;
-    height: 100%;
-    padding: 0;
-    margin: auto;
-  }
-  #add-product-modal .modal-header .modal-title{
-    color: var(--black)!important;
-    font-size: var(--font16)!important;
-  }
-  #add-product-modal .modal-header .modal-title span{
-    font-size: var(--font16);
-    color:  var(--blue);
-    margin-left: 5px;
-  }
-  #add-product-modal .modal-header button span {
-    height: 35px;
-    width: 35px;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 4px;
-  }
-  #add-product-modal .modal-header button span:hover {
-    background-color: var(--bluish-white);
-  }
-  #add-product-modal .modal-body{
-    padding: 0px 30px 0px 0px;
-  }
-  #add-product-modal .input-group-text {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      padding: .375rem .75rem;
-      margin-bottom: 0;
-      font-size: var(--font14);
-      font-weight: 400;
-      line-height: 1.5;
-      color: var(--text-label);
-      text-align: center;
-      white-space: nowrap;
-      background-color: transparent;
-      border: 1px solid var(--border-color);
-      border-radius: 0px 2px 2px 0px;
-  }
-  /*Start Left Sidebar Product List Area*/
-  #add-product-modal .leftsidebar-productlist{
-      width: 100%;
-      border-right: 1px solid  var(--border-color);
-  }
-  #add-product-modal .leftsidebar-productlist .header{
-      background-color: var(--white);
-      padding: 15px 10px;
-  }
-  #add-product-modal .leftsidebar-productlist .header .row1{
-      display: flex;
-      justify-content:space-between; 
-  }
-  #add-product-modal .leftsidebar-productlist .header .row1 .form-group {
-      position: relative;
-      margin-bottom: 0px!important;
-      width: 100%;
-  }
-  #add-product-modal .leftsidebar-productlist .header .row1 .form-group i{
-      position: absolute; 
-      top: 12px; 
-      left:10px; 
-      color: #AAC0D9;
-      font-size: var(--font14);
-      }
-  #add-product-modal .leftsidebar-productlist .header .row1 .form-group input{
-      padding-left: 36px;
-      border-radius: 2px;
-      border: 1px solid var(--border-color);
-  }
-  #add-product-modal .leftsidebar-productlist .header .row1 .form-group input::placeholder{
-      font-size: var(--font14) ;
-      color: #AAC0D9;
-  }
-  #add-product-modal .leftsidebar-productlist .header .row1 .form-group input:focus{
-      border-color: var(--blue);
-      box-shadow: none;
-  }
-  /*Start Secondary Sidebar Content Area*/
-  #add-product-modal .leftsidebar-productlist .content{
-      height: 350px;
-      overflow-y: scroll;
-  }
-  #add-product-modal .leftsidebar-productlist .content .card_body {
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background-color: var(--white);
-      border-bottom: 1px solid var(--border-color);
-  }
-  #add-product-modal .leftsidebar-productlist .content .card_body:hover,
-  #add-product-modal .leftsidebar-productlist .content .card_body.active {
-      background-color: var(--bluish-white);
-  }
-  #add-product-modal .leftsidebar-productlist .content .card_body .row1,
-  #add-product-modal .leftsidebar-productlist .content .card_body .row2 {
-      margin: 1px 0px;
-      display: flex;
-      justify-content:space-between; 
-  }
-  #add-product-modal .leftsidebar-productlist .content .card_body .row1 h5 {
-      font-size: var(--font14);
-      color: var(--blue);
-      text-overflow: ellipsis;
-      width: inherit;
-      white-space: nowrap;
-  }
-  #add-product-modal .leftsidebar-productlist .content .card_body .row2 p {
-      font-size: var(--font12) ;
-      color: var(--text-black);
-  }
-  /* Start Modal Table Area */
-  .addproduct-modal-table{
-      display: block;
-      empty-cells: show;
-      border-spacing: 0;
-      box-sizing: border-box;
-    }
-    .addproduct-modal-table tr{
-      width: 100%;
-      display:flex;
-    }
-    .addproduct-modal-table td,
-    .addproduct-modal-table th{
-      flex-grow:1;
-      display: block;
-      padding: 0rem 1rem;
-    }
-    /* Start Table Head Area */
-    .addproduct-modal-table thead{ 
-      position:relative;
-      display: block;
-      width:100%;
-    }
-    .addproduct-modal-table thead tr{
-      min-height: var(--table-height);
-      font-size: var(--font14);
-      text-transform: uppercase;
-      color: var(--blue);
-      border-bottom: 1px solid var(--border-color);
-    }
-    .addproduct-modal-table thead tr th{
-      min-height: var(--table-height);
-      display:flex;
-      align-items: center;
-    }
-    /* Start Table Body Area */
-    .addproduct-modal-table tbody{
-      width:100%; 
-      display: block; 
-      position:relative;
-      overflow-y:scroll;
-      font-size: var(--font14);
-      color:var(--text-black);
-      height: 378px ;
-    }
-  .addproduct-modal-table tbody .product .name{
-      font-size: var(--font14);
-      font-weight: 500;
-      color: var(--blue);
-     } 
-  .addproduct-modal-table tbody .product .type{
-      font-size: var(--font12);
-      color: var(--text-black);
-      font-weight: 400;
-      } 
-  .addproduct-modal-table tbody tr{
-      position: relative;
-      width: 100%;
-      display:flex;
-      align-items: center;
-      min-height: var(--table-height);
-      border-bottom: 1px solid var(--border-color);
-    }
-    .addproduct-modal-table tbody tr td{
-      display: flex;
-      align-items: center;
-      min-height: var(--table-height);
-    }
-    /* Start Table Alignment Area*/
-    .addproduct-modal-table thead th:nth-child(1),
-    .addproduct-modal-table tbody td:nth-child(1){
-      flex-basis:40%;
-      flex-grow:1;
-      display: flex;
-      justify-content: start;
-    }
-    .addproduct-modal-table thead th:nth-child(2),
-    .addproduct-modal-table tbody td:nth-child(2){
-      flex-basis:20%;
-      flex-grow:1;
-      display: flex;
-      justify-content: center;
-    }
-    .addproduct-modal-table thead th:nth-child(3),
-    .addproduct-modal-table tbody td:nth-child(3){
-      flex-basis:20%;
-      flex-grow:1;
-      display: flex;
-      justify-content: flex-end;
-    }
-    .addproduct-modal-table thead th:nth-child(4),
-    .addproduct-modal-table tbody td:nth-child(4){
-      flex-basis: 20%;
-      flex-grow:1;
-      display: flex;
-      justify-content: flex-end;
-    }
-  /* StartTable Input Area */
-  .addproduct-modal-table .quantity-input{
-    display: flex;
-    width: 110px;
-    height: 30px;
+    color    : var(--blue);
+}
+
+.ThirdPartyTender-area .ThirdPartyTender-header .form-group {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    margin-bottom  : 0rem;
+}
+
+.ThirdPartyTender-area .ThirdPartyTender-header .form-group label {
+    font-weight  : 400;
+    font-size    : var(--font14);
+    color        : var(--text-black);
+    margin-bottom: 0rem;
+}
+
+.ThirdPartyTender-area .ThirdPartyTender-header .form-control-sm {
+    text-align   : left;
+    padding      : 0rem .5rem;
+    width        : 65%;
     border-radius: 2px;
-    background-color: var(--white);
-  }
-  .addproduct-modal-table .quantity-input .quantity {
-    width: 60px;
-    height: 30px;
-    margin: 0;
-    text-align:center;
-    background:transparent;  
-    border: 1px solid var(--border-color);
-    border-right: none;
-    border-left: none;
-  }
-  .addproduct-modal-table .quantity-input .quantity::placeholder {
-    color: var(--border-color);
-  }
-  .addproduct-modal-table .quantity-input .minus{
-    width: 25px;
-    height: 30px;
-    font-weight: 700;
-    margin: 0px;
-    padding: 0px;
-    font-size: var(--font18);
-    color: var(--text-black);
-    background-color:transparent;  
-    border-radius: 2px 0px 0px 2px;
-    border: 1px solid var(--border-color);
-    border-right: none;
-  }
-  .addproduct-modal-table .quantity-input .plus{
-    width: 25px;
-    height: 30px;
-    font-weight: 700;
-    font-size: var(--font18);
-    color: var(--text-black);
-    background-color:transparent;  
-    border-radius: 0px 2px 2px 0px;
-    border: 1px solid var(--border-color);
-    border-left: none;
-  }
-  .addproduct-modal-table .quantity-input .quantity:focus{
-    color: var(--blue);
-    outline: none !important;
-    border-color: var(--blue)!important;
-    box-shadow: none;
-    border-left: 1px solid var(--blue);
-    border-right: 1px solid var(--blue);
-  }
-  .addproduct-modal-table .quantity-input .minus:hover,
-  .addproduct-modal-table .quantity-input .plus:hover{
-    color: var(--white);
-    outline: none !important;
-    box-shadow: none;
-    background-color: var(--blue);
-  }
-  .addproduct-modal-table .quantity-input .minus:focus,
-  .addproduct-modal-table .quantity-input .plus:focus{
-    color: var(--white);
-    outline: none !important;
-    box-shadow: none;
-    background-color: var(--blue);
-  }
-  .addproduct-modal-table tbody tr span.remove{
+    font-size    : var(--font12);
+    border       : 1px solid var(--border-color);
+    height       : 25px !important;
+    margin-left  : 5px;
+}
+
+.ThirdPartyTender-area .ThirdPartyTender-header .form-control-sm:focus {
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
+}
+
+/*---------Start Third Party Order Table ---------*/
+.ThirdPartyTender-table {
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
+}
+
+.ThirdPartyTender-table tr {
+    width  : 100%;
     display: flex;
+}
+
+.ThirdPartyTender-table td,
+.ThirdPartyTender-table th {
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
+}
+
+/* Start Table Head Area */
+.ThirdPartyTender-table thead {
+    position: relative;
+    display : block;
+    width   : 100%;
+}
+
+.ThirdPartyTender-table thead tr {
+    min-height    : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
+}
+
+.ThirdPartyTender-table thead tr th {
+    min-height : var(--table-height);
+    display    : flex;
     align-items: center;
+}
+
+/* Start Table Body Area */
+.ThirdPartyTender-table tbody {
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc((100vh - 50vh) - (var(--used-height) + 23px));
+}
+
+.ThirdPartyTender-table tbody .product .name {
+    font-size: var(--font14);
+    color    : var(--blue);
+}
+
+.ThirdPartyTender-table tbody .product .name span {
+    font-size: var(--font14);
+    color    : var(--text-black);
+}
+
+.ThirdPartyTender-table tbody .product .type {
+    font-size  : var(--font14);
+    color      : var(--text-black);
+    font-weight: 400;
+}
+
+.ThirdPartyTender-table tbody tr {
+    position     : relative;
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    min-height   : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ThirdPartyTender-table tbody tr td {
+    display    : flex;
+    align-items: center;
+    min-height : var(--table-height);
+}
+
+/* Start Table Foot Area */
+.ThirdPartyTender-table tfoot {
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
+}
+
+.ThirdPartyTender-table tfoot tr {
+    min-height : 30px;
+    display    : flex;
+    align-items: center;
+    color      : var(--text-black);
+}
+
+.ThirdPartyTender-table tfoot tr:last-child {
+    min-height : 30px;
+    display    : flex;
+    align-items: center;
+    color      : var(--blue);
+    border-top : 1px solid var(--bluish-white);
+}
+
+.ThirdPartyTender-table tfoot tr th {
+    min-height : 30px;
+    display    : flex;
+    align-items: center;
+}
+
+.ThirdPartyTender-table tfoot tr th .small-text {
+    font-weight: 500;
+    font-size  : var(--font12);
+}
+
+.ThirdPartyTender-table tfoot tr th .grand-total {
+    font-weight: 600;
+    font-size  : var(--font14);
+}
+
+.ThirdPartyTender-table thead th:nth-child(2) div {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+}
+
+.ThirdPartyTender-table thead th:nth-child(2) span {
+    font-size: var(--font10);
+}
+
+/* Start Table Alignment Area*/
+.ThirdPartyTender-table thead th:nth-child(1),
+.ThirdPartyTender-table tbody td:nth-child(1) {
+    flex-basis     : 30%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: start;
+}
+
+.ThirdPartyTender-table thead th:nth-child(2),
+.ThirdPartyTender-table tbody td:nth-child(2),
+.ThirdPartyTender-table thead th:nth-child(3),
+.ThirdPartyTender-table tbody td:nth-child(3) {
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    margin: 0px 5px;
-    border-radius: 100px;
-    font-weight: 200;
-    color:  var(--red);
-    font-size: var(--font16);
-    background-color:var(--redish-white);
-  }
-  /*--------- End Add Product Modal ---------*/
-  
-  
-  /*--------- Start Popup Modal Area ---------*/
-  #popup-modal .modal-dialog{
+}
+
+.ThirdPartyTender-table thead th:nth-child(4),
+.ThirdPartyTender-table tbody td:nth-child(4) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.ThirdPartyTender-table thead th:nth-child(5),
+.ThirdPartyTender-table tbody td:nth-child(5) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.ThirdPartyTender-table tfoot th:nth-child(1) {
+    flex-basis: 50%;
+}
+
+.ThirdPartyTender-table tfoot th:nth-child(2) {
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.ThirdPartyTender-table tfoot th:nth-child(3) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.ThirdPartyTender-table tfoot th:nth-child(4) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+/* StartTable Input Area */
+.ThirdPartyTender-table .quantity-input {
+    display         : flex;
+    width           : 110px;
+    height          : 30px;
+    border-radius   : 2px;
+    background-color: var(--white);
+}
+
+.ThirdPartyTender-table .quantity-input .quantity {
+    width       : 60px;
+    height      : 30px;
+    margin      : 0;
+    text-align  : center;
+    background  : transparent;
+    border      : 1px solid var(--border-color);
+    border-right: none;
+    border-left : none;
+}
+
+.ThirdPartyTender-table .quantity-input .quantity::placeholder {
+    color: var(--border-color);
+}
+
+.ThirdPartyTender-table .quantity-input .minus {
+    width           : 25px;
+    height          : 30px;
+    font-weight     : 700;
+    margin          : 0px;
+    padding         : 0px;
+    font-size       : var(--font18);
+    color           : var(--text-black);
+    background-color: transparent;
+    border-radius   : 2px 0px 0px 2px;
+    border          : 1px solid var(--border-color);
+    border-right    : none;
+}
+
+.ThirdPartyTender-table .quantity-input .plus {
+    width           : 25px;
+    height          : 30px;
+    font-weight     : 700;
+    font-size       : var(--font18);
+    color           : var(--text-black);
+    background-color: transparent;
+    border-radius   : 0px 2px 2px 0px;
+    border          : 1px solid var(--border-color);
+    border-left     : none;
+}
+
+.ThirdPartyTender-table .quantity-input .quantity:focus {
+    color       : var(--blue);
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
+    border-left : 1px solid var(--blue);
+    border-right: 1px solid var(--blue);
+}
+
+.ThirdPartyTender-table .quantity-input .minus:hover,
+.ThirdPartyTender-table .quantity-input .plus:hover {
+    color           : var(--white);
+    outline         : none !important;
+    box-shadow      : none;
+    background-color: var(--blue);
+}
+
+.ThirdPartyTender-table .quantity-input .minus:focus,
+.ThirdPartyTender-table .quantity-input .plus:focus {
+    color           : var(--white);
+    outline         : none !important;
+    box-shadow      : none;
+    background-color: var(--blue);
+}
+
+input[type="button"] {
+    cursor: pointer
+}
+
+.ThirdPartyTender-table .form-control-sm {
+    text-align   : center;
+    border-radius: 2px;
+    font-size    : var(--font14);
+    border       : 1px solid var(--border-color);
+    width        : 110px;
+    height       : 30px !important;
+}
+
+.ThirdPartyTender-table .form-control-sm:placeholder {
+    font-size: var(--font14);
+    color    : #AAC0D9;
+}
+
+.ThirdPartyTender-table .form-control-sm:focus {
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
+}
+
+/* End Table Input Area */
+
+/*>> Start Table Hover Button Component <<*/
+.ThirdPartyTender-table tbody tr:hover {
+    background-color: var(--bluish-white);
+    cursor          : pointer;
+}
+
+.ThirdPartyTender-table tbody tr .hover-btns {
+    display           : flex;
+    align-items       : center;
+    justify-content   : center;
+    height            : 100%;
+    position          : absolute;
+    right             : 0;
+    background        : rgba(255, 255, 255, 0);
+    -webkit-transition: all .1s;
+    transition        : all .1s;
+    padding           : 0px 15px;
+}
+
+.ThirdPartyTender-table tbody tr .hover-btns::before {
+    width             : 100px;
+    height            : 100%;
+    margin-left       : -100px;
+    position          : absolute;
+    top               : 0;
+    left              : 0;
+    opacity           : 0;
+    content           : "";
+    -webkit-transition: all .1s;
+    transition        : all .1s;
+    background-image  : -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#E2EDFA));
+    background-image  : linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #E2EDFA 100%);
+}
+
+/*----- Start Active State -----*/
+.ThirdPartyTender-table tbody tr.active {
+    background-color: var(--bluish-white);
+    cursor          : pointer;
+}
+
+.ThirdPartyTender-table tbody tr.active .hover-btns::before {
+    opacity: 1;
+}
+
+.ThirdPartyTender-table tbody tr.active .hover-btns {
+    height          : 100%;
+    background-color: var(--bluish-white);
+}
+
+.ThirdPartyTender-table tbody tr.active .hover-btns span {
+    opacity: 1;
+}
+
+/*----- Start Hover State -----*/
+.ThirdPartyTender-table tbody tr:hover .hover-btns {
+    height          : 100%;
+    background-color: var(--bluish-white);
+}
+
+.ThirdPartyTender-table tbody tr:hover .hover-btns::before {
+    opacity: 1;
+}
+
+.ThirdPartyTender-table tbody tr:hover .hover-btns span {
+    opacity: 1;
+}
+
+/*----- Start Button Style -----*/
+.ThirdPartyTender-table tbody tr .hover-btns .action-btn {
+    opacity           : 0;
+    -webkit-transition: all .2s;
+    transition        : all .2s;
+    /* Button Style */
+    display           : flex;
+    align-items       : center;
+    justify-content   : center;
+    width             : 30px;
+    height            : 30px;
+    margin            : 0px 5px;
+    border-radius     : 100px;
+    font-weight       : 200;
+    color             : var(--blue);
+    font-size         : var(--font16);
+    background-color  : var(--white);
+}
+
+.ThirdPartyTender-table tbody tr .hover-btns .action-btn.active {
+    color           : var(--white);
+    font-size       : var(--font16);
+    background-color: var(--blue);
+}
+
+.ThirdPartyTender-table tbody tr .hover-btns .action-btn.remove {
+    color           : var(--red);
+    font-size       : var(--font16);
+    background-color: var(--redish-white);
+}
+
+/*>> End Table Hover Button Component <<*/
+/*---------End Collection Table 3 ---------*/
+.btn-add-product,
+.btn-add-atachment {
+    font-size  : var(--font14);
+    display    : flex;
+    align-items: center;
+    padding    : 5px;
+    color      : var(--blue) !important;
+}
+
+.btn-add-product span,
+.btn-add-atachment span {
+    margin-right    : 5px;
+    /* padding      : 2px;
+    border-radius   : 100px;
+    background-color: var(--bluish-white); */
+}
+
+.btn-add-product:hover,
+.btn-add-atachment:hover {
+    color: #0153a0 !important;
+}
+
+.ThirdPartyTender-footer {
+    position       : absolute;
+    bottom         : 0px;
+    width          : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    padding        : 10px 0px;
+}
+
+.ThirdPartyTender-footer .btn-discard {
+    background-color: var(--white) !important;
+    border          : 1px solid var(--red) !important;
+    color           : var(--red);
+}
+
+.ThirdPartyTender-footer .btn-discard:hover {
+    background-color: var(--white) !important;
+    border          : 1px solid var(--red) !important;
+    color           : var(--red);
+}
+
+@media screen and (max-width: 1440px) {
+    :root {
+        --table-height: 35px;
+    }
+}
+
+
+
+/*--------- Start Add Product Modal ---------*/
+#add-product-modal .modal-dialog {
+    max-width: 80% !important;
+    width    : 1000px;
+    height   : 100%;
+    padding  : 0;
+    margin   : auto;
+}
+
+#add-product-modal .modal-header .modal-title {
+    color    : var(--black) !important;
+    font-size: var(--font16) !important;
+}
+
+#add-product-modal .modal-header .modal-title span {
+    font-size  : var(--font16);
+    color      : var(--blue);
+    margin-left: 5px;
+}
+
+#add-product-modal .modal-header button span {
+    height         : 35px;
+    width          : 35px;
+    border-radius  : 100px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    padding-bottom : 4px;
+}
+
+#add-product-modal .modal-header button span:hover {
+    background-color: var(--bluish-white);
+}
+
+#add-product-modal .modal-body {
+    padding: 0px 30px 0px 0px;
+}
+
+#add-product-modal .input-group-text {
+    display          : -webkit-box;
+    display          : -ms-flexbox;
+    display          : flex;
+    -webkit-box-align: center;
+    -ms-flex-align   : center;
+    align-items      : center;
+    padding          : .375rem .75rem;
+    margin-bottom    : 0;
+    font-size        : var(--font14);
+    font-weight      : 400;
+    line-height      : 1.5;
+    color            : var(--text-label);
+    text-align       : center;
+    white-space      : nowrap;
+    background-color : transparent;
+    border           : 1px solid var(--border-color);
+    border-radius    : 0px 2px 2px 0px;
+}
+
+/*Start Left Sidebar Product List Area*/
+#add-product-modal .leftsidebar-productlist {
+    width       : 100%;
+    border-right: 1px solid var(--border-color);
+}
+
+#add-product-modal .leftsidebar-productlist .header {
+    background-color: var(--white);
+    padding         : 15px 10px;
+}
+
+#add-product-modal .leftsidebar-productlist .header .row1 {
+    display        : flex;
+    justify-content: space-between;
+}
+
+#add-product-modal .leftsidebar-productlist .header .row1 .form-group {
+    position     : relative;
+    margin-bottom: 0px !important;
+    width        : 100%;
+}
+
+#add-product-modal .leftsidebar-productlist .header .row1 .form-group i {
+    position : absolute;
+    top      : 12px;
+    left     : 10px;
+    color    : #AAC0D9;
+    font-size: var(--font14);
+}
+
+#add-product-modal .leftsidebar-productlist .header .row1 .form-group input {
+    padding-left : 36px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
+}
+
+#add-product-modal .leftsidebar-productlist .header .row1 .form-group input::placeholder {
+    font-size: var(--font14);
+    color    : #AAC0D9;
+}
+
+#add-product-modal .leftsidebar-productlist .header .row1 .form-group input:focus {
+    border-color: var(--blue);
+    box-shadow  : none;
+}
+
+/*Start Secondary Sidebar Content Area*/
+#add-product-modal .leftsidebar-productlist .content {
+    height    : 350px;
+    overflow-y: scroll;
+}
+
+#add-product-modal .leftsidebar-productlist .content .card_body {
+    padding         : 10px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    background-color: var(--white);
+    border-bottom   : 1px solid var(--border-color);
+}
+
+#add-product-modal .leftsidebar-productlist .content .card_body:hover,
+#add-product-modal .leftsidebar-productlist .content .card_body.active {
+    background-color: var(--bluish-white);
+}
+
+#add-product-modal .leftsidebar-productlist .content .card_body .row1,
+#add-product-modal .leftsidebar-productlist .content .card_body .row2 {
+    margin         : 1px 0px;
+    display        : flex;
+    justify-content: space-between;
+}
+
+#add-product-modal .leftsidebar-productlist .content .card_body .row1 h5 {
+    font-size    : var(--font14);
+    color        : var(--blue);
+    text-overflow: ellipsis;
+    width        : inherit;
+    white-space  : nowrap;
+}
+
+#add-product-modal .leftsidebar-productlist .content .card_body .row2 p {
+    font-size: var(--font12);
+    color    : var(--text-black);
+}
+
+/* Start Modal Table Area */
+.addproduct-modal-table {
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
+}
+
+.addproduct-modal-table tr {
+    width  : 100%;
+    display: flex;
+}
+
+.addproduct-modal-table td,
+.addproduct-modal-table th {
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
+}
+
+/* Start Table Head Area */
+.addproduct-modal-table thead {
+    position: relative;
+    display : block;
+    width   : 100%;
+}
+
+.addproduct-modal-table thead tr {
+    min-height    : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
+}
+
+.addproduct-modal-table thead tr th {
+    min-height : var(--table-height);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Body Area */
+.addproduct-modal-table tbody {
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : 378px;
+}
+
+.addproduct-modal-table tbody .product .name {
+    font-size  : var(--font14);
+    font-weight: 500;
+    color      : var(--blue);
+}
+
+.addproduct-modal-table tbody .product .type {
+    font-size  : var(--font12);
+    color      : var(--text-black);
+    font-weight: 400;
+}
+
+.addproduct-modal-table tbody tr {
+    position     : relative;
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    min-height   : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.addproduct-modal-table tbody tr td {
+    display    : flex;
+    align-items: center;
+    min-height : var(--table-height);
+}
+
+/* Start Table Alignment Area*/
+.addproduct-modal-table thead th:nth-child(1),
+.addproduct-modal-table tbody td:nth-child(1) {
+    flex-basis     : 40%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: start;
+}
+
+.addproduct-modal-table thead th:nth-child(2),
+.addproduct-modal-table tbody td:nth-child(2) {
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.addproduct-modal-table thead th:nth-child(3),
+.addproduct-modal-table tbody td:nth-child(3) {
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.addproduct-modal-table thead th:nth-child(4),
+.addproduct-modal-table tbody td:nth-child(4) {
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+/* StartTable Input Area */
+.addproduct-modal-table .quantity-input {
+    display         : flex;
+    width           : 110px;
+    height          : 30px;
+    border-radius   : 2px;
+    background-color: var(--white);
+}
+
+.addproduct-modal-table .quantity-input .quantity {
+    width       : 60px;
+    height      : 30px;
+    margin      : 0;
+    text-align  : center;
+    background  : transparent;
+    border      : 1px solid var(--border-color);
+    border-right: none;
+    border-left : none;
+}
+
+.addproduct-modal-table .quantity-input .quantity::placeholder {
+    color: var(--border-color);
+}
+
+.addproduct-modal-table .quantity-input .minus {
+    width           : 25px;
+    height          : 30px;
+    font-weight     : 700;
+    margin          : 0px;
+    padding         : 0px;
+    font-size       : var(--font18);
+    color           : var(--text-black);
+    background-color: transparent;
+    border-radius   : 2px 0px 0px 2px;
+    border          : 1px solid var(--border-color);
+    border-right    : none;
+}
+
+.addproduct-modal-table .quantity-input .plus {
+    width           : 25px;
+    height          : 30px;
+    font-weight     : 700;
+    font-size       : var(--font18);
+    color           : var(--text-black);
+    background-color: transparent;
+    border-radius   : 0px 2px 2px 0px;
+    border          : 1px solid var(--border-color);
+    border-left     : none;
+}
+
+.addproduct-modal-table .quantity-input .quantity:focus {
+    color       : var(--blue);
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
+    border-left : 1px solid var(--blue);
+    border-right: 1px solid var(--blue);
+}
+
+.addproduct-modal-table .quantity-input .minus:hover,
+.addproduct-modal-table .quantity-input .plus:hover {
+    color           : var(--white);
+    outline         : none !important;
+    box-shadow      : none;
+    background-color: var(--blue);
+}
+
+.addproduct-modal-table .quantity-input .minus:focus,
+.addproduct-modal-table .quantity-input .plus:focus {
+    color           : var(--white);
+    outline         : none !important;
+    box-shadow      : none;
+    background-color: var(--blue);
+}
+
+.addproduct-modal-table tbody tr span.remove {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    width           : 30px;
+    height          : 30px;
+    margin          : 0px 5px;
+    border-radius   : 100px;
+    font-weight     : 200;
+    color           : var(--red);
+    font-size       : var(--font16);
+    background-color: var(--redish-white);
+}
+
+/*--------- End Add Product Modal ---------*/
+
+
+/*--------- Start Popup Modal Area ---------*/
+#popup-modal .modal-dialog {
     width: 400px;
-  }
-  #popup-modal .modal-body {
+}
+
+#popup-modal .modal-body {
     height: 220px;
-  }
-  #popup-modal .modal-body .close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
+}
+
+#popup-modal .modal-body .close {
+    position   : absolute;
+    top        : 15px;
+    right      : 15px;
+    font-size  : 1.5rem;
     font-weight: 700;
     line-height: .5;
-    color: #000;
+    color      : #000;
     text-shadow: 0 1px 0 #fff;
-    opacity: .5;
-  }
-  #popup-modal .modal-body .popup-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    opacity    : .5;
+}
+
+#popup-modal .modal-body .popup-content {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: space-between;
-    height: 100%;
-    padding-top:5px;
-  }
-  #popup-modal .modal-body .popup-content .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: var(--blue);
-    background-color:var(--bluish-white);
-    width: 65px;
-    height: 65px;
-    border-radius: 100px;
-  }
-  #popup-modal .modal-body .popup-content .context{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height         : 100%;
+    padding-top    : 5px;
+}
+
+#popup-modal .modal-body .popup-content .icon {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    font-size       : 3rem;
+    color           : var(--blue);
+    background-color: var(--bluish-white);
+    width           : 65px;
+    height          : 65px;
+    border-radius   : 100px;
+}
+
+#popup-modal .modal-body .popup-content .context {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: space-between;
-  }
-  #popup-modal .modal-body .popup-content .context h5 {
-    color: var(--text-black);
+}
+
+#popup-modal .modal-body .popup-content .context h5 {
+    color    : var(--text-black);
     font-size: var(--font18);
-  }
-  #popup-modal .modal-body .popup-content .context p {
-    opacity: .7;
-    text-align: center;
-    color: var(--text-black);
+}
+
+#popup-modal .modal-body .popup-content .context p {
+    opacity    : .7;
+    text-align : center;
+    color      : var(--text-black);
     font-weight: 500;
-    font-size: 14px;
-  }
-  #popup-modal .modal-body .popup-content .btns-group{
-    display: flex;
-    align-items: center;
+    font-size  : 14px;
+}
+
+#popup-modal .modal-body .popup-content .btns-group {
+    display        : flex;
+    align-items    : center;
     justify-content: space-between;
-  }
-  #popup-modal .modal-body .popup-content .btns-group button{
-    width: 150px;
-    height: 40px;
-    margin: 0px 10px;
-    font-size:var(--font14);
-    text-transform: uppercase;
-    font-weight: 500;
-    border-radius: 2px;
-    border:none;
-    transition: all 0.3s ease 0s;
-    background-color: transparent!important;
-    }
-  #popup-modal .modal-body .popup-content .btns-group button span{
+}
+
+#popup-modal .modal-body .popup-content .btns-group button {
+    width           : 150px;
+    height          : 40px;
+    margin          : 0px 10px;
+    font-size       : var(--font14);
+    text-transform  : uppercase;
+    font-weight     : 500;
+    border-radius   : 2px;
+    border          : none;
+    transition      : all 0.3s ease 0s;
+    background-color: transparent !important;
+}
+
+#popup-modal .modal-body .popup-content .btns-group button span {
     color: var(--text-black);
-  }
-  #popup-modal .modal-body .popup-content .btns-group .btn-discard{
-    color: var(--red);
+}
+
+#popup-modal .modal-body .popup-content .btns-group .btn-discard {
+    color              : var(--red);
     /* background-color: var(--white)!important;
-    border: 1px solid var(--red)!important; */
-  }
-  #popup-modal .modal-body .popup-content .btns-group .btn-continue{
-    color: var(--blue);
+    border             : 1px solid var(--red)!important; */
+}
+
+#popup-modal .modal-body .popup-content .btns-group .btn-continue {
+    color              : var(--blue);
     /* background-color: var(--blue)!important;
-    border: 1px solid var(--blue)!important; */
-  }
-  /*--------- End Popup Modal Area ---------*/
+    border             : 1px solid var(--blue)!important; */
+}
+
+/*--------- End Popup Modal Area ---------*/
+
+
+
+/* 
+  ******************************************************************
+  ******************************************************************
+  ******************************************************************
+  ******************************************************************
+  ******************************************************************
+  ******************************************************************
+  */
+
+
+.mdp .occupied {
+    color: var(--yellow) !important;
+}
+
+.mdp .available {
+    color: var(--green) !important;
+}
+
+.mdp .delivery_collection_area .deCollection_header .material-icons.add {
+    font-size: 16px !important;
+    width    : 20px !important;
+    height   : 20px !important;
+}
+
+.mdp .calendar {
+    padding         : 10px;
+    background-color: #E2EDFA;
+}
+
+.mdp .calendar h5 {
+    font-size    : var(--font14);
+    color        : var(--text-label);
+    margin-bottom: 5px;
+    display      : flex;
+    align-items  : center;
+}
+
+.mdp .calendar h5 span.blue {
+    color      : var(--blue);
+    margin-left: 5px;
+}
+
+.mdp .calendar h5 span .material-icons {
+    font-size: 16px !important;
+    width    : 24px !important;
+    height   : 24px !important;
+}
+
+.mdp .calendar h5 span .material-icons.delete_outline {
+    color: #DF2A43;
+}
+
+.mdp .calendar h5 span .material-icons.delete_outline:hover {
+    color: #FFFFFF;
+}
+
+.mdp .calendar p {
+    font-weight: 400;
+    font-size  : var(--font14);
+    color      : var(--text-black);
+}
+
+.mdp .calendar p span {
+    font-size: var(--font14);
+    color    : var(--blue);
+}
+
+.mdp .calendar .card-text p.day {
+    /* background-color: #E2EDFA; */
+    color        : #026CD1;
+    max-width    : 20px;
+    min-width    : 16px;
+    text-align   : center;
+    margin       : 2px;
+    padding      : 6px 0;
+    border-radius: 2px;
+}
+
+.mdp .calendar .card-text p.date {
+    background-color: #FFFFFF;
+    color           : #026CD1;
+    max-width       : 20px;
+    min-width       : 16px;
+    text-align      : center;
+    margin          : 2px;
+    padding         : 6px 0;
+    border-radius   : 2px;
+    cursor          : pointer;
+}
+.mdp .calendar .card-text p.date:hover {
+    background-color: #026CD1;
+    color           : #FFFFFF;
+}
+
+
+
+
+/* 
+***********************************************************************************
+***********************************************************************************
+***********************************************************************************
+***********************************************************************************
+***********************************************************************************
+***********************************************************************************
+***********************************************************************************
+***********************************************************************************
+***********************************************************************************
+***********************************************************************************
+***********************************************************************************
+*/
+
+
+/* Start Table Alignment Area*/
+.grn .delivery-collection-table thead th:nth-child(1),
+.grn .delivery-collection-table tbody td:nth-child(1) {
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
+}
+
+.grn .delivery-collection-table thead th:nth-child(2),
+.grn .delivery-collection-table tbody td:nth-child(2) {
+    flex-basis     : 30%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-start;
+}
+
+.grn .delivery-collection-table thead th:nth-child(3),
+.grn .delivery-collection-table tbody td:nth-child(3),
+.grn .delivery-collection-table thead th:nth-child(4),
+.grn .delivery-collection-table tbody td:nth-child(4),
+.grn .delivery-collection-table thead th:nth-child(5),
+.grn .delivery-collection-table tbody td:nth-child(5),
+.grn .delivery-collection-table thead th:nth-child(6),
+.grn .delivery-collection-table tbody td:nth-child(6) {
+    flex-basis     : 10%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.grn .delivery-collection-table thead th:nth-child(7),
+.grn .delivery-collection-table tbody td:nth-child(7) {
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+
+
+/* 
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*************************************************************************************************
+*/
+
+
+/*Start Secondary Sidebar Header Area*/
+.layout-sidebar.expenditure-register {
+    min-width   : var(--sidebar-width);
+    width       : 100%;
+    border-right: 1px solid var(--border-color);
+}
+
+.layout-sidebar.expenditure-register .header {
+    background-color: var(--white);
+    padding         : 15px 10px;
+}
+
+.layout-sidebar.expenditure-register .header .row1 {
+    display        : flex;
+    justify-content: space-between;
+}
+
+.layout-sidebar.expenditure-register .header .row2 {
+    margin-top: 10px;
+}
+
+.layout-sidebar.expenditure-register .header .row2 h5 {
+    color    : var(--text-label);
+    font-size: var(--font14);
+}
+
+.layout-sidebar.expenditure-register .header .row2 span {
+    color: var(--blue);
+}
+
+.layout-sidebar.expenditure-register .header .row1 .form-group {
+    position     : relative;
+    margin-bottom: 0px !important;
+    width        : 100%;
+}
+
+.layout-sidebar.expenditure-register .header .row1 .form-group span {
+    position : absolute;
+    top      : 8px;
+    left     : 10px;
+    color    : #AAC0D9;
+    font-size: var(--font22);
+}
+
+.layout-sidebar.expenditure-register .header .row1 .form-group input {
+    padding-left : 36px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
+}
+
+.layout-sidebar.expenditure-register .header .row1 .form-group input::placeholder {
+    font-size: var(--font14);
+    color    : #AAC0D9;
+}
+
+.layout-sidebar.expenditure-register .header .row1 .form-group input:focus {
+    border-color: var(--blue);
+    box-shadow  : none;
+}
+
+.layout-sidebar.expenditure-register .header .row1 .action-btn span {
+    cursor         : pointer;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    color          : #AAC0D9;
+    font-size      : var(--font22);
+    text-align     : center;
+    padding        : 8px;
+    height         : 38px;
+    width          : 38px;
+    border-radius  : 2px;
+    border         : 1px solid var(--border-color);
+    margin-left    : 10px;
+}
+
+.layout-sidebar.expenditure-register .header .row1 .filter_search:hover {
+    color           : var(--white);
+    background-color: var(--blue);
+}
+
+/*End Secondary Sidebar Header Area*/
+
+.layout-sidebar.expenditure-register .sticky-footer {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    height         : 40px;
+    padding        : 10px;
+}
+
+.layout-sidebar.expenditure-register .sticky-footer p {
+    display    : flex;
+    align-items: center;
+    font-size  : var(--font12);
+    color      : vae(--text-black);
+}
+
+.layout-sidebar.expenditure-register .sticky-footer p span.material-icons {
+    font-size       : 10px;
+    color           : transparent !important;
+    background-color: var(--blue);
+    border-radius   : 2px;
+    margin-right    : 5px;
+}
+
+/*Start Secondary Sidebar Content Area*/
+.layout-sidebar.expenditure-register .content {
+    display       : flex;
+    flex-direction: column;
+    height        : calc(100vh - (var(--used-height) + 68px + 65px));
+    overflow-y    : auto;
+}
+
+.layout-sidebar.expenditure-register .content .card_body {
+    padding         : 10px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    background-color: var(--white);
+    border-bottom   : 1px solid var(--border-color);
+}
+
+.layout-sidebar.expenditure-register .content .card_body:hover,
+.layout-sidebar.expenditure-register .content .card_body:active {
+    background-color: var(--bluish-white);
+}
+
+.layout-sidebar.expenditure-register .content .card_body .row1,
+.layout-sidebar.expenditure-register .content .card_body .row2,
+.layout-sidebar.expenditure-register .content .card_body .row3 {
+    margin         : 1px 0px;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.layout-sidebar.expenditure-register .content .card_body .row1 h5 {
+    display      : flex;
+    align-items  : center;
+    font-size    : var(--font14);
+    color        : var(--blue);
+    text-overflow: ellipsis;
+    width        : inherit;
+    white-space  : nowrap;
+}
+
+.layout-sidebar.expenditure-register .content .card_body .row1 h5 span.material-icons {
+    font-size       : 12px;
+    color           : transparent !important;
+    background-color: var(--blue);
+    border-radius   : 2px;
+    margin-right    : 5px;
+}
+
+.layout-sidebar.expenditure-register .content .card_body .row1 .date {
+    font-size: var(--font14);
+    color    : var(--text-black);
+}
+
+.layout-sidebar.expenditure-register .content .card_body .row2 p {
+    font-size  : var(--font14);
+    color      : var(--text-black);
+    font-weight: 500;
+}
+
+.layout-sidebar.expenditure-register .content .card_body .row3 p {
+    font-size: var(--font14);
+    color    : #879097;
+}
+
+.layout-sidebar.expenditure-register .content .card_body .row3 p.payment-type {
+    display    : flex;
+    align-items: center;
+    font-size  : var(--font14);
+    font-weight: 500;
+    color      : var(--blue);
+}
+
+.layout-sidebar.expenditure-register .content .card_body .row3 p.payment-type span {
+    font-size   : var(--font18);
+    margin-right: 5px;
+}
+
+.layout-sidebar.expenditure-register .approved {
+    background-color: var(--green) !important;
+}
+
+.layout-sidebar.expenditure-register .verified {
+    background-color: var(--blue) !important;
+}
+
+.layout-sidebar.expenditure-register .new {
+    background-color: #AEC1D0 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .layout-sidebar.expenditure-register {
+        width: 100%;
+    }
+
+    .layout-sidebar.expenditure-register .content {
+        height    : calc(230px - (68px + 25px));
+        overflow-y: scroll;
+    }
+}
+
+/*End Secondary Sidebar Content Area*/
+
+.expenditure-reg-area {
+    margin-top: 15px;
+    min-height: calc(100vh - (var(--used-height) + 30px));
+}
+
+.expenditure-reg-area .create-btn {
+    display    : flex;
+    align-items: center;
+    width      : 120px;
+}
+
+.expenditure-body {
+    margin-top        : 15px;
+    min-height        : calc(100vh - (var(--used-height) + 85px));
+    background-color  : var(--white);
+    -webkit-box-shadow: 0px 0px 8px #026CD11A;
+    box-shadow        : 0px 0px 8px #026CD11A;
+    border-radius     : 8px;
+    border            : 1px solid var(--border-color);
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+}
+
+.expenditure-body .expenditure-header {
+    margin-top: 10px;
+}
+
+.expenditure-body .expenditure-header .header-row-1 {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.expenditure-body .expenditure-header .header-row-1 .header-info h5 {
+    font-size: var(--font16);
+    color    : var(--blue);
+}
+
+.expenditure-body .expenditure-header .header-row-1 .header-info h5 span {
+    font-size       : var(--font12);
+    color           : var(--blue);
+    background-color: var(--bluish-white);
+    padding         : 2px 10px;
+    border-radius   : 2px;
+    margin-left     : 5px;
+}
+
+.expenditure-body .expenditure-header .header-row-1 .header-info p {
+    font-size: var(--font12);
+    color    : var(--text-black);
+}
+
+.expenditure-body .expenditure-header .header-row-1 .header-info p span {
+    font-size  : var(--font12);
+    color      : var(--text-black);
+    margin-left: 5px;
+}
+
+.expenditure-body .expenditure-header .header-row-1 .btn-edit {
+    cursor           : pointer;
+    display          : -webkit-box;
+    display          : -ms-flexbox;
+    display          : flex;
+    -webkit-box-pack : center;
+    -ms-flex-pack    : center;
+    justify-content  : center;
+    -webkit-box-align: center;
+    -ms-flex-align   : center;
+    align-items      : center;
+    width            : 35px;
+    height           : 35px;
+    font-size        : var(--font16);
+    color            : var(--blue);
+    border-radius    : 100px;
+    background-color : var(--bluish-white);
+}
+
+.expenditure-body .expenditure-header .header-row-1 .btn-edit:hover {
+    color           : var(--white);
+    background-color: var(--blue);
+}
+
+.expenditure-body .expenditure-header .header-row-2 {
+    margin-top   : 5px;
+    margin-bottom: 5px;
+}
+
+.expenditure-body .expenditure-header .header-row-2 .info-col {
+    display    : flex;
+    align-items: center;
+    font-size  : var(--font14);
+    padding    : 5px 0px;
+}
+
+.expenditure-body .expenditure-header .header-row-2 .info-col h5 {
+    font-size: var(--font14);
+    color    : var(--text-black);
+}
+
+.expenditure-body .expenditure-header .header-row-2 .info-col h5 span {
+    color       : var(--blue);
+    padding-left: 5px;
+}
+
+.expenditure-body .expenditure-header .header-row-2 .info-col span {
+    color       : var(--text-black);
+    margin-right: 5px;
+}
+
+.expenditure-body .expenditure-header .header-row-2 .info-col p {
+    font-weight: 500;
+    color      : var(--blue);
+}
+
+.expenditure-body .expenditure-header .narration {
+    margin-bottom: 5px;
+}
+
+.expenditure-body .expenditure-header .narration span {
+    font-size: var(--font14);
+    color    : var(--blue);
+}
+
+.expenditure-body .expenditure-header .narration p {
+    font-size  : var(--font14);
+    color      : var(--text-black);
+    font-weight: 500;
+}
+
+/*--------- Start Expenditure Register Table Area ---------*/
+.expenditure-register-table {
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
+}
+
+.expenditure-register-table tr {
+    width  : 100%;
+    display: flex;
+}
+
+.expenditure-register-table td,
+.expenditure-register-table th {
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
+}
+
+/* Start Table Head Area */
+.expenditure-register-table thead {
+    position: relative;
+    display : block;
+    width   : 100%;
+}
+
+.expenditure-register-table thead tr {
+    min-height    : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
+}
+
+.expenditure-register-table thead tr th {
+    min-height : var(--table-height);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Body Area */
+.expenditure-register-table tbody {
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc(100vh - (var(--used-height) + 360px));
+    overflow-y: auto;
+}
+
+.expenditure-register-table tbody tr {
+    position     : relative;
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    min-height   : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.expenditure-register-table tbody tr:hover {
+    background-color: var(--bluish-white);
+    cursor          : pointer;
+}
+
+.expenditure-register-table tbody tr td {
+    display    : flex;
+    align-items: center;
+    min-height : var(--table-height);
+}
+
+/* Start Table Alignment Area*/
+.expenditure-register-table thead th:nth-child(1),
+.expenditure-register-table tbody td:nth-child(1) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: start;
+}
+
+.expenditure-register-table thead th:nth-child(2),
+.expenditure-register-table tbody td:nth-child(2) {
+    flex-basis     : 35%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: start;
+}
+
+.expenditure-register-table thead th:nth-child(3),
+.expenditure-register-table tbody td:nth-child(3) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.expenditure-register-table thead th:nth-child(4),
+.expenditure-register-table tbody td:nth-child(4) {
+    flex-basis     : 20%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.expenditure-register-table thead th:nth-child(5),
+.expenditure-register-table tbody td:nth-child(5) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+/*--------- End Expenditure Register Table Area ---------*/
+
+/*--------- Start Create & Edit Expenditure Modal Area ---------*/
+#edit-expenditure-modal .modal-header .modal-title p {
+    display  : inline-block;
+    font-size: var(--font16);
+    color    : var(--blue);
+}
+
+#edit-expenditure-modal .modal-body,
+#create-expenditure-modal .modal-body {
+    height    : 450px;
+    overflow-y: auto;
+}
+
+#edit-expenditure-modal .modal-body textarea,
+#create-expenditure-modal .modal-body textarea {
+    max-height: 65px;
+}
+
+#edit-expenditure-modal .modal-footer,
+#create-expenditure-modal .modal-footer {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+#edit-expenditure-modal .modal-footer p,
+#create-expenditure-modal .modal-footer p {
+    font-size  : var(--font14);
+    font-weight: 500;
+    color      : var(--text-black);
+}
+
+#edit-expenditure-modal .modal-footer .wizard-btn-group,
+#create-expenditure-modal .modal-footer .wizard-btn-group {
+    display    : flex;
+    align-items: center;
+}
+
+#edit-expenditure-modal .modal-footer button,
+#create-expenditure-modal .modal-footer button {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+#edit-expenditure-modal .modal-footer .wizard-btn-group .btn-back,
+#create-expenditure-modal .modal-footer .wizard-btn-group .btn-back {
+    width           : 150px;
+    height          : 40px;
+    padding         : 0px 10px;
+    border-radius   : 2px;
+    margin-right    : 15px;
+    font-size       : var(--font14);
+    color           : var(--text-black) !important;
+    border          : 1px solid var(--text-black) !important;
+    background-color: var(--white) !important;
+}
+
+#edit-expenditure-modal .modal-footer .wizard-btn-group .btn-back span,
+#create-expenditure-modal .modal-footer .wizard-btn-group .btn-back span {
+    margin-right: 15px;
+}
+
+#edit-expenditure-modal .modal-footer .wizard-btn-group .btn-next,
+#create-expenditure-modal .modal-footer .wizard-btn-group .btn-next {
+    width           : 150px;
+    height          : 40px;
+    padding         : 0px 10px;
+    border-radius   : 2px;
+    margin-right    : 15px;
+    font-size       : var(--font14);
+    color           : var(--white) !important;
+    border          : 1px solid var(--blue) !important;
+    background-color: var(--blue) !important;
+}
+
+#edit-expenditure-modal .modal-footer .wizard-btn-group .btn-next span,
+#create-expenditure-modal .modal-footer .wizard-btn-group .btn-next span {
+    margin-left: 15px;
+}
+
+.upload-expenditure-file {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    padding        : 10px;
+    border-bottom  : 1px solid var(--border-color);
+}
+
+.preview-expenditure-file {
+    margin-top   : 15px;
+    position     : relative;
+    height       : 150px;
+    width        : 100%;
+    border-radius: 2px;
+}
+
+.preview-expenditure-file .file-info {
+    cursor         : pointer;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    position       : absolute;
+    top            : 0px;
+    padding        : 10px;
+    width          : 100%;
+    z-index        : 6;
+    color          : var(--white);
+    font-size      : var(--font14);
+}
+
+.preview-expenditure-file .overlay {
+    border-radius: 2px;
+    position     : absolute;
+    top          : 0px;
+    z-index      : 5;
+    width        : 100%;
+    height       : 150px;
+    background   : -moz-linear-gradient(top, rgba(38, 38, 38, 1) 0%, rgba(232, 235, 237, 0.6) 40%, rgba(232, 235, 237, 0) 100%);
+    /* FF3.6-15 */
+    background   : -webkit-linear-gradient(top, rgba(38, 38, 38, 1) 0%, rgba(232, 235, 237, 0.6) 40%, rgba(232, 235, 237, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background   : linear-gradient(to bottom, rgba(38, 38, 38, 1) 0%, rgba(232, 235, 237, 0.6) 40%, rgba(232, 235, 237, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter       : progid:DXImageTransform.Microsoft.gradient(startColorstr='#262626', endColorstr='#00e8ebed', GradientType=0);
+    /* IE6-9 */
+}
+
+.preview-expenditure-file img {
+    border-radius: 2px;
+    position     : absolute;
+    top          : 0px;
+    width        : 100%;
+    height       : 150px;
+    z-index      : 1;
+}
+
+/*--------- Start Expenditure Register Edit Table Area ---------*/
+.expenditure-register-edit-table {
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
+}
+
+.expenditure-register-edit-table tr {
+    width  : 100%;
+    display: flex;
+}
+
+.expenditure-register-edit-table td,
+.expenditure-register-edit-table th {
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
+}
+
+/* Start Table Head Area */
+.expenditure-register-edit-table thead {
+    position: relative;
+    display : block;
+    width   : 100%;
+}
+
+.expenditure-register-edit-table thead tr {
+    min-height    : var(--table-height);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
+}
+
+.expenditure-register-edit-table thead tr th {
+    min-height : var(--table-height);
+    display    : flex;
+    align-items: center;
+}
+
+.expenditure-register-edit-table .form-control-sm {
+    border-radius: 2px;
+    font-size    : var(--font14);
+    border       : 1px solid var(--border-color);
+    height       : 30px !important;
+    width        : 100%;
+}
+
+.expenditure-register-edit-table .form-control-sm:placeholder {
+    font-size: var(--font14);
+    color    : #AAC0D9;
+}
+
+.expenditure-register-edit-table .form-control-sm:focus {
+    outline     : none !important;
+    border-color: var(--blue) !important;
+    box-shadow  : none;
+}
+
+/* Start Table Body Area */
+.expenditure-register-edit-table tbody {
+    width    : 100%;
+    display  : block;
+    position : relative;
+    font-size: var(--font14);
+    color    : var(--text-black);
+}
+
+.expenditure-register-edit-table tbody tr {
+    position     : relative;
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    min-height   : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.expenditure-register-edit-table tbody tr:hover {
+    background-color: var(--bluish-white);
+    cursor          : pointer;
+}
+
+.expenditure-register-edit-table tbody tr td {
+    display    : flex;
+    align-items: center;
+    min-height : var(--table-height);
+}
+
+/* Start Table Alignment Area*/
+.expenditure-register-edit-table thead th:nth-child(1),
+.expenditure-register-edit-table tbody td:nth-child(1) {
+    flex-basis     : 20%;
+    display        : flex;
+    justify-content: start;
+}
+
+.expenditure-register-edit-table thead th:nth-child(2),
+.expenditure-register-edit-table tbody td:nth-child(2) {
+    flex-basis     : 20%;
+    display        : flex;
+    justify-content: start;
+}
+
+.expenditure-register-edit-table thead th:nth-child(3),
+.expenditure-register-edit-table tbody td:nth-child(3) {
+    flex-basis     : 12%;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.expenditure-register-edit-table thead th:nth-child(4),
+.expenditure-register-edit-table tbody td:nth-child(4) {
+    flex-basis     : 20%;
+    display        : flex;
+    justify-content: center;
+}
+
+.expenditure-register-edit-table thead th:nth-child(5),
+.expenditure-register-edit-table tbody td:nth-child(5) {
+    flex-basis     : 20%;
+    display        : flex;
+    justify-content: center;
+}
+
+.expenditure-register-edit-table thead th:nth-child(6),
+.expenditure-register-edit-table tbody td:nth-child(6) {
+    flex-basis     : 8%;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.expenditure-register-edit-table tbody td span {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    width          : 30px;
+    height         : 30px;
+    font-size      : var(--font18);
+    border-radius  : 100px;
+}
+
+.expenditure-register-edit-table tbody td span.addmore {
+    color           : var(--white);
+    background-color: var(--blue);
+}
+
+.expenditure-register-edit-table tbody td span.remove {
+    color           : var(--red);
+    background-color: var(--redish-white);
+}
+
+/*--------- End Expenditure Register Edit Table Area ---------*/
+/*--------- End Create & Edit Expenditure Modal Area  ---------*/
+
+/*Empty State*/
+.eState-body {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    /* Use height when it needs otherwise remove the height*/
+    min-height     : calc(100vh - (var(--used-height)));
+}
+
+.eState-container img {
+    height: 200px;
+    width : 200px;
+}
+
+.eState-container h5 {
+    margin-top  : 30px;
+    margin-right: 10px;
+    font-size   : var(--font20);
+    font-weight : 600;
+    color       : #36454F;
+    text-align  : center;
+}
+
+.eState-container p {
+    margin-top   : 10px;
+    margin-bottom: 10px;
+    font-size    : var(--font16);
+    color        : #6D7A85;
+}
+
+.eState-container button {
+    margin-top: 10px;
+    width     : 200px;
+}
+
+.eState-container .create-btn {
+    display        : flex;
+    align-items    : center;
+    align-content  : center;
+    flex-wrap      : nowrap;
+    flex-direction : row;
+    justify-content: center;
+}
+
+.eState-container .create-btn span {
+    font-size   : var(--font20);
+    margin-right: 5px;
+}
+
+/* End Empty Stage*/

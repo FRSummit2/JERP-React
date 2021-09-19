@@ -274,7 +274,7 @@ class Deliveries extends React.Component {
                             {/* <!-- End Secondary Sidebar Area-->  */}
                         </div>
 
-                        <div className="layout-container" style={{ width: '100%' }}>
+                        <div className="layout-container w-100">
                             <div className="container-fluid">
                                 <div className="col-12 delivery_collection_area">
                                     <div className="row deCollection_header">

@@ -46,7 +46,7 @@ class ThirdPartyTender extends React.Component {
                                 <div className="ds_accordion" id="accordion-1">
                                     {
                                         Array.from({ length: 10 }, (_, card_body) => (
-                                            <div className="card_body">
+                                            <div className="card_body" key={card_body}>
                                                 <div className="row1"><h5>JMI-2231225</h5> <p className="credit">Credit</p></div>
                                                 <div className="row2"><p>New Bhai Bhai Pharmacy</p></div>
                                                 <div className="row3"><p>House:100, Road: 11,Block:C,Dhaka 1213</p></div>
@@ -162,8 +162,8 @@ class ThirdPartyTender extends React.Component {
                                                             </td>
                                                             <td>
                                                                 <div className="hover-btns">
-                                                                    <span title="Edit" data-toggle="tooltip" data-placement="left"><span class="material-icons edit"> edit </span></span>
-                                                                    <span title="Remove" data-toggle="tooltip" data-placement="left"><span class="material-icons delete"> delete </span></span>
+                                                                    <span title="Edit" data-toggle="tooltip" data-placement="left"><span className="material-icons edit"> edit </span></span>
+                                                                    <span title="Remove" data-toggle="tooltip" data-placement="left"><span className="material-icons delete"> delete </span></span>
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -201,33 +201,33 @@ class ThirdPartyTender extends React.Component {
                             </div>
                         </div>
 
-                        <div class="modal" id="add-product-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Add Product</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <div className="modal" id="add-product-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div className="modal-dialog modal-dialog-centered">
+                                <div className="modal-content">
+                                    <div className="modal-header">
+                                        <h5 className="modal-title">Add Product</h5>
+                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <div class="leftsidebar-productlist">
-                                                    <div class="header">
-                                                        <div class="row1">
-                                                            <div class="form-group">
-                                                                <i class="fa fa-search"> </i>
-                                                                <input type="text" placeholder="Search by Name, ID No" class="form-control" />
+                                    <div className="modal-body">
+                                        <div className="row">
+                                            <div className="col-4">
+                                                <div className="leftsidebar-productlist">
+                                                    <div className="header">
+                                                        <div className="row1">
+                                                            <div className="form-group">
+                                                                <i className="fa fa-search"> </i>
+                                                                <input type="text" placeholder="Search by Name, ID No" className="form-control" />
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="content">
+                                                    <div className="content">
                                                         {
                                                             Array.from({ length: 20 }, (_, index) => (
-                                                                <div class="card_body" key={index}>
-                                                                    <div class="row1"><h5>Ace® Power - 500mg Ace®</h5></div>
-                                                                    <div class="row2"><p>Code: NP2125</p> <p>TP: 60.00 | MRP: 100.00</p></div>
+                                                                <div className="card_body" key={index}>
+                                                                    <div className="row1"><h5>Ace® Power - 500mg Ace®</h5></div>
+                                                                    <div className="row2"><p>Code: NP2125</p> <p>TP: 60.00 | MRP: 100.00</p></div>
                                                                 </div>
                                                             ))
                                                         }
@@ -235,9 +235,9 @@ class ThirdPartyTender extends React.Component {
                                                 </div>
                                             </div>
 
-                                            <div class="col-8">
-                                                <div class="row addproduct-modal-table">
-                                                    <table class="col-12">
+                                            <div className="col-8">
+                                                <div className="row addproduct-modal-table">
+                                                    <table className="col-12">
                                                         <thead>
                                                             <tr>
                                                                 <th>Name</th>
@@ -251,17 +251,17 @@ class ThirdPartyTender extends React.Component {
                                                                 Array.from({ length: 20 }, (_, index) => (
                                                                     <tr key={index}>
                                                                         <td>
-                                                                            <div class="product">
-                                                                                <p class="name">Ace® Power <span>500mg</span></p>
-                                                                                <p class="type">Code: NP2125</p>
+                                                                            <div className="product">
+                                                                                <p className="name">Ace® Power <span>500mg</span></p>
+                                                                                <p className="type">Code: NP2125</p>
                                                                             </div>
                                                                         </td>
                                                                         <td>
                                                                             <form>
-                                                                                <div class="quantity-input">
-                                                                                    <input class='minus' type='button' value='-' field='quantity' />
-                                                                                    <input class='quantity' type='text' name='quantity' placeholder="0" />
-                                                                                    <input class='plus' type='button' value='+' field='quantity' />
+                                                                                <div className="quantity-input">
+                                                                                    <input className='minus' type='button' value='-' field='quantity' />
+                                                                                    <input className='quantity' type='text' name='quantity' placeholder="0" />
+                                                                                    <input className='plus' type='button' value='+' field='quantity' />
                                                                                 </div>
                                                                             </form>
                                                                         </td>
@@ -269,7 +269,7 @@ class ThirdPartyTender extends React.Component {
                                                                             <p>300</p>
                                                                         </td>
                                                                         <td>
-                                                                            <span class="fa fa-trash remove" aria-hidden="true"></span>
+                                                                            <span className="fa fa-trash remove" aria-hidden="true"></span>
                                                                         </td>
                                                                     </tr>
                                                                 ))
@@ -281,32 +281,32 @@ class ThirdPartyTender extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="modal-footer justify-content-center">
-                                        <button type="button" class="btn btn-primary btn-global">Add Product</button>
+                                    <div className="modal-footer justify-content-center">
+                                        <button type="button" className="btn btn-primary btn-global">Add Product</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="modal fade popup-name" id="popup-modal" tabindex="-1" role="dialog" aria-labelledby="popupmodal" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <div className="modal fade popup-name" id="popup-modal" tabindex="-1" role="dialog" aria-labelledby="popupmodal" aria-hidden="true">
+                            <div className="modal-dialog modal-dialog-centered" role="document">
+                                <div className="modal-content">
+                                    <div className="modal-body">
+                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
-                                        <div class="popup-content">
-                                            <div class="icon">
-                                                {/* <span class="zmdi zmdi-help"></span> */}
-                                                <span class="material-icons help_outline"> help_outline </span>
+                                        <div className="popup-content">
+                                            <div className="icon">
+                                                {/* <span className="zmdi zmdi-help"></span> */}
+                                                <span className="material-icons help_outline"> help_outline </span>
                                             </div>
-                                            <div class="context">
+                                            <div className="context">
                                                 <h5>Are you Sure?</h5>
                                                 <p>Lorem Ipsum is simply dummy text of the printing.</p>
                                             </div>
-                                            <div class="btns-group">
-                                                <button type="button" class="btn btn-primary btn-discard" data-dismiss="modal" aria-label="Close">Discard</button>
-                                                <button type="button" class="btn btn-primary btn-continue">Continue</button>
+                                            <div className="btns-group">
+                                                <button type="button" className="btn btn-primary btn-discard" data-dismiss="modal" aria-label="Close">Discard</button>
+                                                <button type="button" className="btn btn-primary btn-continue">Continue</button>
                                             </div>
                                         </div>
                                     </div>

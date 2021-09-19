@@ -164,6 +164,20 @@
 
 /* FONT - ENDS */
 
+/* SELECT - START */
+.form-select {
+    border       : 1px solid #E2EDFA;
+    border-radius: 2px;
+    color        : #026CD1;
+    padding: 4px 6px;
+}
+
+.form-select:focus {
+    outline: #E2EDFA;
+}
+
+/* SELECT - ENDS */
+
 /* ICON */
 .material-icons.add,
 .material-icons.edit,
@@ -174,6 +188,7 @@
 .material-icons.lock,
 .material-icons.insert_invitation,
 .material-icons.help_outline,
+.material-icons.content_copy,
 .material-icons.delete_outline {
     display        : flex !important;
     justify-content: center !important;
@@ -188,6 +203,7 @@
 .material-icons.add,
 .material-icons.lock,
 .material-icons.vpn_key,
+.material-icons.content_copy,
 .material-icons.help_outline {
     color           : #026CD1;
     background-color: #E2EDFA;
@@ -208,6 +224,7 @@
 .material-icons.lock:hover,
 .material-icons.insert_invitation:hover,
 .material-icons.help_outline:hover,
+.material-icons.content_copy:hover,
 .material-icons.vpn_key:hover {
     background-color: #026CD1;
     color           : #FFFFFF;
