@@ -358,8 +358,8 @@ class Deliveries extends React.Component {
                                                                             </td>
                                                                             <td>
                                                                                 <div className="hover-btns">
-                                                                                    <span className="edit action-btn"><span className="material-icons edit" title="Edit" data-toggle="tooltip"> edit </span></span>
-                                                                                    <span className="remove action-btn"><span className="material-icons delete_outline" title="Remove" data-toggle="tooltip"> delete_outline </span></span>
+                                                                                    <span title="Edit" data-toggle="tooltip" data-placement="left"><span className="material-icons edit" title="Edit" data-toggle="tooltip"> edit </span></span>
+                                                                                    <span title="Remove" data-toggle="tooltip" data-placement="left"><span className="material-icons delete_outline" title="Remove" data-toggle="tooltip"> delete_outline </span></span>
                                                                                     {/* <a title="Edit" data-toggle="tooltip" data-placement="left"><span className="action-btn fa fa-pencil"></span></a>
                                                                                     <a title="Remove" data-toggle="tooltip" data-placement="left"><span className="action-btn remove fa fa-trash"></span></a> */}
                                                                                 </div>

@@ -4450,13 +4450,14 @@ input[type="button"] {
     right      : 0px;
     top        : 10px;
 }
+
 .layout-sidebar.delivery_preparation .content .deliveryPre_accordion .card .card-header .btn-link[aria-expanded="true"] {
     color           : var(--white);
     background-color: var(--blue);
 }
 
 .layout-sidebar.delivery_preparation .content .deliveryPre_accordion .card .card-header .btn-link[aria-expanded="true"] h5 {
-    color    : var(--white);
+    color: var(--white);
 }
 
 .layout-sidebar.delivery_preparation .content .deliveryPre_accordion .card .card-header .btn-link[aria-expanded="true"]:after {
@@ -4850,203 +4851,1566 @@ input[type="button"] {
 *****************************************************************************
 */
 
-:root{
+:root {
     --table-height-2: 45px;
-    --table-height: 30px;
+    --table-height  : 30px;
+}
+
+/*Start Secondary Sidebar Header Area*/
+.layout-sidebar.delivery_schedule {
+    min-width   : var(--sidebar-width);
+    width       : 100%;
+    border-right: 1px solid var(--border-color);
+}
+
+.layout-sidebar.delivery_schedule .header {
+    background-color: var(--white);
+    padding         : 15px 10px;
+}
+
+.layout-sidebar.delivery_schedule .header .row1 {
+    display        : flex;
+    justify-content: space-between;
+}
+
+.layout-sidebar.delivery_schedule .header .row2 {
+    margin-top: 10px;
+}
+
+.layout-sidebar.delivery_schedule .header .row2 h5 {
+    color    : var(--text-label);
+    font-size: var(--font14);
+}
+
+.layout-sidebar.delivery_schedule .header .row2 span {
+    color: var(--blue);
+}
+
+.layout-sidebar.delivery_schedule .header .row1 .form-group {
+    position     : relative;
+    margin-bottom: 0px !important;
+    width        : 100%;
+}
+
+.layout-sidebar.delivery_schedule .header .row1 .form-group i {
+    position : absolute;
+    top      : 12px;
+    left     : 10px;
+    color    : #AAC0D9;
+    font-size: var(--font14);
+}
+
+.layout-sidebar.delivery_schedule .header .row1 .form-group input {
+    padding-left : 36px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
+}
+
+.layout-sidebar.delivery_schedule .header .row1 .form-group input::placeholder {
+    font-size: var(--font14);
+    color    : #AAC0D9;
+}
+
+.layout-sidebar.delivery_schedule .header .row1 .form-group input:focus {
+    border-color: var(--blue);
+    box-shadow  : none;
+}
+
+.layout-sidebar.delivery_schedule .header .row1 .filter_search {
+    color        : #AAC0D9;
+    font-size    : var(--font16);
+    text-align   : center;
+    padding      : 8px;
+    height       : 38px;
+    width        : 38px;
+    border-radius: 2px;
+    border       : 1px solid var(--border-color);
+    margin-left  : 10px;
+}
+
+.layout-sidebar.delivery_schedule .header .row1 .filter_search:hover {
+    color           : var(--white);
+    background-color: var(--blue);
+}
+
+/*End Secondary Sidebar Header Area*/
+
+/*Start Secondary Sidebar Content Area*/
+.layout-sidebar.delivery_schedule .content {
+    height    : calc(100vh - (var(--used-height) + 68px + 25px));
+    overflow-y: scroll;
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card {
+    border       : none;
+    padding      : 0px;
+    margin-bottom: 0px;
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header {
+    padding         : 0px;
+    display         : flex;
+    align-items     : center;
+    color           : var(--blue);
+    font-size       : var(--font14);
+    height          : 50px;
+    background-color: var(--white);
+    border-radius   : unset !important;
+    border-bottom   : 1px solid var(--border-color);
+    justify-content : space-between;
+    cursor          : pointer;
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header button {
+    height: 100%;
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header span {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    margin-right    : 50px;
+    text-align      : center;
+    height          : 25px;
+    padding         : 5px 10px;
+    font-size       : var(--font14);
+    font-weight     : 500;
+    color           : var(--blue);
+    border-radius   : 8px;
+    background-color: var(--bluish-white);
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header h5 {
+    color    : var(--blue);
+    font-size: var(--font14);
+}
+
+/* Start For Active */
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header.active {
+    padding         : 0px;
+    display         : flex;
+    align-items     : center;
+    color           : var(--white);
+    font-size       : var(--font14);
+    height          : 50px;
+    background-color: var(--blue);
+    border-radius   : unset !important;
+    border-bottom   : 1px solid var(--border-color);
+    justify-content : space-between;
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header.active span {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    margin-right    : 50px;
+    text-align      : center;
+    height          : 25px;
+    padding         : 5px 10px;
+    font-size       : var(--font14);
+    font-weight     : 500;
+    color           : var(--white);
+    border          : 1px solid var(--white);
+    border-radius   : 8px;
+    background-color: var(--blue);
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header.active h5 {
+    color    : var(--white);
+    font-size: var(--font14);
+}
+
+/* End For Active */
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link {
+    text-align     : left;
+    text-decoration: none;
+    width          : 100%;
+
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link:after {
+    color      : var(--text-black);
+    font-family: FontAwesome;
+    content    : '\f106';
+    width      : 35px;
+    font-size  : 20px;
+    text-align : center;
+    border     : 5px;
+    position   : absolute;
+    right      : 0px;
+    top        : 10px;
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link.collapsed:after {
+    font-family: FontAwesome;
+    content    : '\f107';
+    width      : 35px;
+    font-size  : 20px;
+    text-align : center;
+    border     : 5px;
+    position   : absolute;
+    right      : 0px;
+    top        : 10px;
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link[aria-expanded="true"] {
+    color           : var(--white);
+    background-color: var(--blue);
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link[aria-expanded="true"] h5 {
+    color: var(--white);
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link[aria-expanded="true"]:after {
+    color: #FFFFFF;
+}
+
+.layout-sidebar.delivery_schedule .content .ds_accordion .card .card-body {
+    border : none !important;
+    padding: 0rem;
+}
+
+.ds_accordion .card .card-body .ds_innerItem {
+    padding         : 10px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    background-color: var(--white);
+    border-bottom   : 1px solid var(--border-color);
+}
+
+.ds_accordion .card .card-body .ds_innerItem:hover,
+.ds_accordion .card .card-body .ds_innerItem:active {
+    background-color: var(--bluish-white);
+}
+
+.ds_accordion .card .card-body .ds_innerItem .row1,
+.ds_accordion .card .card-body .ds_innerItem .row2,
+.ds_accordion .card .card-body .ds_innerItem .row3 {
+    margin         : 1px 0px;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.ds_accordion .card .card-body .ds_innerItem .row1 .group-1 {
+    display    : flex;
+    align-items: center;
+    font-size  : var(--font14);
+}
+
+.ds_accordion .card .card-body .ds_innerItem .row1 .group-1 .status-active {
+    font-size   : var(--font14);
+    color       : var(--blue);
+    margin-right: 5px;
+}
+
+.ds_accordion .card .card-body .ds_innerItem .row1 .group-1 p {
+    color      : var(--blue);
+    font-weight: 500;
+}
+
+.ds_accordion .card .card-body .ds_innerItem .row1 .group-1 p span {
+    color      : var(--text-black);
+    font-weight: 500;
+}
+
+.ds_accordion .card .card-body .ds_innerItem .row1 h5 {
+    font-size: var(--font14);
+    color    : var(--blue);
+}
+
+.layout-sidebar.delivery_schedule .content .ds_innerItem .row2 p {
+    font-size: var(--font14);
+    color    : var(--text-black);
+}
+
+.ds_accordion .card .card-body .ds_innerItem .row3 .group-2 {
+    display    : flex;
+    align-items: center;
+}
+
+.ds_accordion .card .card-body .ds_innerItem .row3 .group-2 p {
+    font-size   : var(--font14);
+    color       : #879097;
+    margin-right: 5px;
+    display     : flex;
+}
+
+.ds_accordion .card .card-body .ds_innerItem .row3 .group-2 p span {
+    font-size  : var(--font14);
+    color      : var(--blue);
+    font-weight: 500;
+}
+
+.ds_accordion .card .card-body .ds_innerItem .row3 i {
+    height          : 30px;
+    width           : 30px;
+    font-size       : var(--font16);
+    border-radius   : 100px;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    background-color: var(--bluish-white);
+    color           : var(--blue);
+}
+
+@media screen and (max-width: 768px) {
+    .layout-sidebar.delivery_schedule {
+        width: 100%;
+    }
+
+    .layout-sidebar.delivery_schedule .content {
+        height    : calc(230px - (68px + 25px));
+        overflow-y: scroll;
+    }
+}
+
+/*End Secondary Sidebar Content Area*/
+
+.empty-body {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    margin-top      : 15px;
+    min-height      : calc(100vh - (var(--used-height) - (-30px)));
+    background-color: var(--white);
+}
+
+.empty_data {
+    text-align: center;
+}
+
+.empty_data img {
+    height: 70px;
+    width : 80px;
+}
+
+.empty_data h5 {
+    margin-top : 10px;
+    font-size  : var(--font18);
+    font-weight: 600;
+    color      : #879097;
+}
+
+.empty_data p {
+    margin-top   : 10px;
+    margin-bottom: 10px;
+    font-size    : var(--font16);
+    font-weight  : 600;
+    color        : #C4C8CB;
+}
+
+
+.delivery_schedule-body {
+    margin-top        : 15px;
+    min-height        : calc(100vh - (var(--used-height) - (-30px)));
+    background-color  : var(--white);
+    -webkit-box-shadow: 0px 0px 8px #026CD11A;
+    box-shadow        : 0px 0px 8px #026CD11A;
+    border-radius     : 8px;
+    border            : 1px solid var(--border-color);
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+}
+
+.delivery_schedule-body .ds-header {
+    padding      : 10px 0px;
+    border-bottom: 1px solid var(--border-color);
+    font-size    : var(--font14);
+}
+
+.delivery_schedule-body .ds-header .sr_name {
+    color: var(--text-black);
+}
+
+.delivery_schedule-body .ds-header .sr_name span {
+    color          : var(--blue);
+    font-weight    : 500;
+    text-decoration: underline;
+}
+
+.delivery_schedule-body .ds-header p {
+    color: var(--text-black);
+}
+
+.delivery_schedule-body .ds-header p .open {
+    color      : var(--green);
+    font-weight: 500;
+}
+
+.delivery_schedule-body .ds-header p .date {
+    color      : var(--text-black);
+    font-weight: 500;
+}
+
+#delivery_schedule-tab .nav-tabs {
+    border-bottom: 1px solid var(--border-color);
+    margin       : 0px -15px;
+}
+
+#delivery_schedule-tab .nav-tabs li a {
+    padding-top   : 10px;
+    padding-bottom: 10px;
+    font-size     : var(--font14);
+    font-weight   : 500;
+    color         : var(--black);
+}
+
+#delivery_schedule-tab .tab-content>.tab-pane {
+    padding: 0 0 0 0;
+}
+
+#delivery_schedule-tab .nav-tabs .nav-link.active {
+    border-color    : transparent;
+    border-bottom   : 1px solid var(--blue);
+    color           : var(--blue);
+    background-color: transparent;
+}
+
+#delivery_schedule-tab .nav-tabs .nav-link.active:hover,
+#delivery_schedule-tab .nav-tabs .nav-link.active:focus {
+    border-bottom: 1px solid var(--blue);
+}
+
+#delivery_schedule-tab .nav-tabs .nav-link:focus,
+#delivery_schedule-tab .nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+
+/*--------- Start Delivery Schedule Table Area ---------*/
+.delivery_schedule-table {
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
+}
+
+.delivery_schedule-table tr {
+    width  : 100%;
+    display: flex;
+}
+
+.delivery_schedule-table td,
+.delivery_schedule-table th {
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
+}
+
+/* Start Table Head Area */
+.delivery_schedule-table thead {
+    position: relative;
+    display : block;
+    width   : 100%;
+}
+
+.delivery_schedule-table thead tr {
+    height        : var(--table-height-2);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
+}
+
+.delivery_schedule-table thead tr th {
+    height     : var(--table-height-2);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Body Area */
+.delivery_schedule-table tbody {
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc(100vh - (var(--used-height) + 250px));
+}
+
+.delivery_schedule-table tbody tr {
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    height       : var(--table-height-2);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.delivery_schedule-table tbody tr:hover {
+    background-color: var(--bluish-white);
+}
+
+.delivery_schedule-table tbody tr.active {
+    background-color: var(--bluish-white);
+}
+
+.delivery_schedule-table tbody tr td {
+    display    : flex;
+    align-items: center;
+    font-size  : var(--font14);
+    height     : var(--table-height-2);
+}
+
+/* Start Table Foot Area */
+.delivery_schedule-table tfoot {
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
+}
+
+.delivery_schedule-table tfoot tr {
+    height     : var(--table-height-2);
+    display    : flex;
+    align-items: center;
+    color      : var(--blue);
+    border-top : 1px solid var(--bluish-white);
+}
+
+.delivery_schedule-table tfoot tr th {
+    height     : var(--table-height-2);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Alignment Area*/
+.delivery_schedule-table thead th:nth-child(1),
+.delivery_schedule-table tbody td:nth-child(1) {
+    flex-basis     : 5%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.delivery_schedule-table thead th:nth-child(2),
+.delivery_schedule-table tbody td:nth-child(2) {
+    flex-basis     : 50%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: start;
+}
+
+.delivery_schedule-table tbody td:nth-child(2) .order span {
+    font-size: var(--font12);
+}
+
+.delivery_schedule-table tbody td:nth-child(2) .order span {
+    color: var(--blue);
+}
+
+.delivery_schedule-table thead th:nth-child(3),
+.delivery_schedule-table tbody td:nth-child(3) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+    cursor         : pointer;
+}
+
+.delivery_schedule-table tbody td:nth-child(3) {
+    color          : var(--blue);
+    text-decoration: underline;
+}
+
+.delivery_schedule-table thead th:nth-child(4),
+.delivery_schedule-table tbody td:nth-child(4),
+.delivery_schedule-table thead th:nth-child(5),
+.delivery_schedule-table tbody td:nth-child(5) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.delivery_schedule-table tfoot th:nth-child(1) {
+    flex-basis: 55%;
+}
+
+.delivery_schedule-table tfoot th:nth-child(2),
+.delivery_schedule-table tfoot th:nth-child(3),
+.delivery_schedule-table tfoot th:nth-child(4) {
+    flex-basis     : 15%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.delivery_schedule-table .bulk-action {
+    display: flex;
+}
+
+.delivery_schedule-table i {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 30px;
+    height          : 30px;
+    font-size       : var(--font18);
+    border-radius   : 100px;
+    margin          : 0px 5px;
+    font-weight     : 200;
+    color           : var(--blue);
+    background-color: var(--white);
+}
+
+.delivery_schedule-table .bulk-button {
+    display    : flex;
+    align-items: center;
+    margin     : 0px 15px;
+    cursor     : pointer;
+    font-size  : var(--font14);
+}
+
+.delivery_schedule-table .bulk-button span {
+    font-size   : var(--font18);
+    margin-right: 10px;
+    font-weight : 200;
+    color       : var(--blue);
+}
+
+/*--------- End Delivery Schedule Table Area ---------*/
+
+/* Start Reshedule Modal */
+.modal-header .modal-title {
+    color    : var(--black) !important;
+    font-size: var(--font16) !important;
+}
+
+#reshedule-modal .modal-footer {
+    padding-bottom: 0rem;
+}
+
+#reshedule-modal .form-control {
+    font-size: var(--font14);
+}
+
+#reshedule-modal .invoice-list {
+    display      : flex;
+    align-items  : center;
+    color        : var(--blue);
+    font-size    : var(--font14);
+    margin-bottom: 15px;
+}
+
+#reshedule-modal .invoice-list span {
+    color    : var(--text-black);
+    font-size: var(--font14);
+}
+
+#reshedule-modal .invoice-list span .moreInvoice {
+    color           : var(--blue);
+    background-color: var(--bluish-white);
+    padding         : 5px 10px;
+    font-size       : var(--font14);
+    border-radius   : 2px;
+}
+
+/* End Reshedule Modal */
+
+/*--------- Start Invoice Modal Area ---------*/
+#invoice-modal .modal-content {
+    width : 90%;
+    margin: auto;
+}
+
+#invoice-modal .modal-body {
+    padding: 0rem 1rem;
+}
+
+#invoice-modal .modal-body .customer_info {
+    padding: 10px 0px;
+}
+
+#invoice-modal .modal-body .customer_info p {
+    font-size: var(--font14);
+    color    : var(--text-black);
+}
+
+#invoice-modal .modal-body .customer_info p span {
+    font-size  : var(--font14);
+    color      : var(--blue);
+    font-weight: 500;
+}
+
+.invoice-modal-table {
+    display       : block;
+    empty-cells   : show;
+    border-spacing: 0;
+    box-sizing    : border-box;
+}
+
+.invoice-modal-table tr {
+    width  : 100%;
+    display: flex;
+}
+
+.invoice-modal-table td,
+.invoice-modal-table th {
+    flex-grow: 1;
+    display  : block;
+    padding  : 0rem 1rem;
+}
+
+/* Start Table Head Area */
+.invoice-modal-table thead {
+    position: relative;
+    display : block;
+    width   : 100%;
+}
+
+.invoice-modal-table thead tr {
+    height        : var(--table-height-2);
+    font-size     : var(--font14);
+    text-transform: uppercase;
+    color         : var(--blue);
+    border-bottom : 1px solid var(--border-color);
+}
+
+.invoice-modal-table thead tr th {
+    height     : var(--table-height-2);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Body Area */
+.invoice-modal-table tbody {
+    width     : 100%;
+    display   : block;
+    position  : relative;
+    overflow-y: scroll;
+    font-size : var(--font14);
+    color     : var(--text-black);
+    height    : calc(50vh - (var(--used-height) + 10px));
+}
+
+.invoice-modal-table tbody tr {
+    width        : 100%;
+    display      : flex;
+    align-items  : center;
+    height       : var(--table-height);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.invoice-modal-table tbody tr td {
+    display    : flex;
+    align-items: center;
+    height     : var(--table-height);
+}
+
+/* Start Table Foot Area */
+.invoice-modal-table tfoot {
+    display  : block;
+    width    : 100%;
+    font-size: var(--font14);
+}
+
+.invoice-modal-table tfoot tr {
+    height     : var(--table-height-2);
+    display    : flex;
+    align-items: center;
+    color      : var(--blue);
+    border-top : 1px solid var(--bluish-white);
+}
+
+.invoice-modal-table tfoot tr .notmatch {
+    color: var(--red);
+}
+
+.invoice-modal-table tfoot tr th {
+    height     : var(--table-height-2);
+    display    : flex;
+    align-items: center;
+}
+
+/* Start Table Alignment Area*/
+.invoice-modal-table thead th:nth-child(1),
+.invoice-modal-table tbody td:nth-child(1) {
+    flex-basis     : 40%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: start;
+}
+
+.invoice-modal-table thead th:nth-child(2),
+.invoice-modal-table tbody td:nth-child(2) {
+    flex-basis     : 25%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: center;
+}
+
+.invoice-modal-table thead th:nth-child(3),
+.invoice-modal-table tbody td:nth-child(3) {
+    flex-basis     : 25%;
+    flex-grow      : 1;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.invoice-modal-table tfoot tr {
+    height          : 15px;
+    background-color: transparent;
+    border          : none;
+    display         : flex;
+    align-items     : center;
+}
+
+.invoice-modal-table tfoot tr span {
+    color      : var(--text-black);
+    font-size  : var(--font12);
+    font-weight: 400;
+}
+
+.invoice-modal-table tfoot tr p {
+    color      : var(--text-black);
+    font-size  : var(--font12);
+    font-weight: 400;
+}
+
+.invoice-modal-table tfoot tr th:nth-child(1) {
+    height         : 15px;
+    flex-basis     : 85%;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.invoice-modal-table tfoot tr th:nth-child(2) {
+    height         : 15px;
+    flex-basis     : 25%;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.invoice-modal-table tfoot tr:last-child {
+    height          : var(--table-height-2);
+    background-color: transparent;
+    border          : none;
+    display         : flex;
+    align-items     : center;
+}
+
+.invoice-modal-table tfoot tr:last-child span {
+    color      : var(--blue);
+    font-size  : var(--font14);
+    font-weight: 700;
+}
+
+.invoice-modal-table tfoot tr:last-child p {
+    color      : var(--blue);
+    font-size  : var(--font14);
+    font-weight: 700;
+}
+
+/*--------- End Invoice Modal Area ---------*/
+@media screen and (max-width: 1440px) {
+    :root {
+        --table-height-2: 40px;
+    }
+}
+
+
+/*
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+*/
+
+:root{
+    --table-height: 40px;
   }
   /*Start Secondary Sidebar Header Area*/
-  .layout-sidebar.delivery_schedule{
-      min-width: var(--sidebar-width);
+  .layout-sidebar.ThirdPartyTender{
+    min-width: var(--sidebar-width);
+    width: 100%;
+    border-right: 1px solid  var(--border-color);
+  }
+  .layout-sidebar.ThirdPartyTender .header{
+    background-color: var(--white);
+    padding: 15px 10px;
+  }
+  .layout-sidebar.ThirdPartyTender .header .row1{
+    display: flex;
+    justify-content:space-between; 
+  }
+  .layout-sidebar.ThirdPartyTender .header .row2{
+    margin-top: 10px;
+  }
+  .layout-sidebar.ThirdPartyTender .header .row2 h5{
+    color: var(--text-label);
+    font-size: var(--font14);
+  }
+  .layout-sidebar.ThirdPartyTender .header .row2 span{
+    color: var(--blue);
+  }
+  .layout-sidebar.ThirdPartyTender .header .row1 .form-group {
+    position: relative;
+    margin-bottom: 0px!important;
+    width: 100%;
+  }
+  .layout-sidebar.ThirdPartyTender .header .row1 .form-group span{
+    position: absolute; 
+    top: 12px; 
+    left:10px; 
+    color: #AAC0D9;
+    font-size: var(--font14);
+    }
+  .layout-sidebar.ThirdPartyTender .header .row1 .form-group input{
+    padding-left: 36px;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+  }
+  .layout-sidebar.ThirdPartyTender .header .row1 .form-group input::placeholder{
+    font-size: var(--font14) ;
+    color: #AAC0D9;
+  }
+  .layout-sidebar.ThirdPartyTender .header .row1 .form-group input:focus{
+    border-color: var(--blue);
+    box-shadow: none;
+  }
+  .layout-sidebar.ThirdPartyTender .header .row1 .filter_search{
+    color: #AAC0D9;
+    font-size: var(--font16);
+    text-align: center;
+    padding: 8px;
+    height: 38px;
+    width: 38px;
+    border-radius: 2px;
+    border: 1px solid  var(--border-color);
+    margin-left: 10px;
+  }
+  .layout-sidebar.ThirdPartyTender .header .row1 .filter_search:hover{
+    color: var(--white);
+    background-color: var(--blue);
+  }
+  /*End Secondary Sidebar Header Area*/
+  
+  /*Start Secondary Sidebar Content Area*/
+  .layout-sidebar.ThirdPartyTender .content{
+    height: calc( 100vh - (var(--used-height) + 68px + 25px) );
+    overflow-y: scroll;
+  }
+  .layout-sidebar.ThirdPartyTender .credit{
+    color: var(--green)!important;
+  }
+  .layout-sidebar.ThirdPartyTender .cash{
+    color: var(--red)!important;
+  }
+  .layout-sidebar.ThirdPartyTender .content .card_body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .layout-sidebar.ThirdPartyTender .content .card_body:hover,
+  .layout-sidebar.ThirdPartyTender .content .card_body:active {
+    background-color: var(--bluish-white);
+  }
+  .layout-sidebar.ThirdPartyTender .content .card_body .row1,
+  .layout-sidebar.ThirdPartyTender .content .card_body .row2,
+  .layout-sidebar.ThirdPartyTender .content .card_body .row3 {
+    margin: 1px 0px;
+    display: flex;
+    justify-content:space-between; 
+  }
+  .layout-sidebar.ThirdPartyTender .content .card_body .row1 h5 {
+    font-size: var(--font14);
+    color: var(--blue);
+    text-overflow: ellipsis;
+    width: inherit;
+    white-space: nowrap;
+  }
+  .layout-sidebar.ThirdPartyTender .content .card_body .row1 p {
+    text-align: center;
+    font-weight: 500;
+    font-size: var(--font14);
+    color: var(--text-black);
+  }
+  .layout-sidebar.ThirdPartyTender .content .card_body .row2 p {
+    font-size: var(--font14) ;
+    color: var(--text-black);
+    font-weight: 500;
+  }
+  .layout-sidebar.ThirdPartyTender .content .card_body .row3 p {
+    font-size: var(--font14);
+    color: #879097;
+  }
+  @media screen and (max-width: 768px) { 
+    .layout-sidebar.ThirdPartyTender{
+        width: 100%;
+    }
+    .layout-sidebar.ThirdPartyTender .content{
+        height: calc(230px - (68px + 25px));
+        overflow-y: scroll;
+    }
+  }
+  /*End Secondary Sidebar Content Area*/
+  
+  .ThirdPartyTender-area{
+      margin-top: 15px;
+      min-height: calc(100vh - (var(--used-height) - (-30px)));
+      background-color: var(--white);
+      box-shadow: 0px 0px 8px #026CD11A;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      box-sizing: border-box;
+  }
+  .ThirdPartyTender-area .ThirdPartyTender-header{
+      padding: 10px 0px;
+      border-bottom: 1px solid var(--border-color);
+  }
+  .ThirdPartyTender-area .ThirdPartyTender-header h5{
+      font-size: var(--font16);
+      color: var(--text-label);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+  }
+  .ThirdPartyTender-area .ThirdPartyTender-header h5 .order-id{
+      font-size: var(--font16);
+      color:  var(--blue);
+      margin-left: 5px;
+  }
+  .ThirdPartyTender-area .ThirdPartyTender-header h5 .form-control-sm{
+    border-radius: 2px;
+    font-size: var(--font12) ;
+    border: 1px solid var(--border-color);
+    width: 160px;
+    height: 25px !important;
+    margin: 0px 5px;
+  }
+  .ThirdPartyTender-area .ThirdPartyTender-header p{
+      font-weight: 400;
+      font-size: var(--font14);
+      color: var(--text-black);
+  }
+  .ThirdPartyTender-area .ThirdPartyTender-header p span{
+      font-size: var(--font14);
+      color:  var(--blue);
+  }
+  .ThirdPartyTender-area .ThirdPartyTender-header .form-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0rem;
+  }
+  .ThirdPartyTender-area .ThirdPartyTender-header .form-group label{
+      font-weight: 400;
+      font-size: var(--font14);
+      color: var(--text-black);
+      margin-bottom: 0rem;
+  }
+  .ThirdPartyTender-area .ThirdPartyTender-header .form-control-sm{
+    text-align: left;
+    padding: 0rem .5rem;   
+    width: 65%;
+    border-radius: 2px;
+    font-size: var(--font12) ;
+    border: 1px solid var(--border-color);
+    height: 25px !important;
+    margin-left: 5px;
+  }
+  .ThirdPartyTender-area .ThirdPartyTender-header .form-control-sm:focus{
+    outline: none !important;
+    border-color: var(--blue)!important;
+    box-shadow: none;
+  }
+  /*---------Start Third Party Order Table ---------*/
+  .ThirdPartyTender-table{
+      display: block;
+      empty-cells: show;
+      border-spacing: 0;
+      box-sizing: border-box;
+    }
+    .ThirdPartyTender-table tr{
+      width: 100%;
+      display:flex;
+    }
+    .ThirdPartyTender-table td,
+    .ThirdPartyTender-table th{
+      flex-grow:1;
+      display: block;
+      padding: 0rem 1rem;
+    }
+    /* Start Table Head Area */
+    .ThirdPartyTender-table thead{ 
+      position:relative;
+      display: block;
+      width:100%;
+    }
+    .ThirdPartyTender-table thead tr{
+      min-height: var(--table-height);
+      font-size: var(--font14);
+      text-transform: uppercase;
+      color: var(--blue);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .ThirdPartyTender-table thead tr th{
+      min-height: var(--table-height);
+      display:flex;
+      align-items: center;
+    }
+    /* Start Table Body Area */
+    .ThirdPartyTender-table tbody{
+      width:100%; 
+      display: block; 
+      position:relative;
+      overflow-y:scroll;
+      font-size: var(--font14);
+      color:var(--text-black);
+      height:  calc( (100vh - 50vh) - (var(--used-height)  + 23px ));
+    }
+  .ThirdPartyTender-table tbody .product .name{
+      font-size: var(--font14);
+      color: var(--blue);
+     } 
+  .ThirdPartyTender-table tbody .product .name span{
+      font-size: var(--font14);
+      color: var(--text-black);
+      } 
+  .ThirdPartyTender-table tbody .product .type{
+      font-size: var(--font14);
+      color: var(--text-black);
+      font-weight: 400;
+      } 
+  .ThirdPartyTender-table tbody tr{
+      position: relative;
+      width: 100%;
+      display:flex;
+      align-items: center;
+      min-height: var(--table-height);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .ThirdPartyTender-table tbody tr td{
+      display: flex;
+      align-items: center;
+      min-height: var(--table-height);
+    }
+    /* Start Table Foot Area */
+    .ThirdPartyTender-table tfoot{ 
+      display: block;
+      width:100%;
+      font-size: var(--font14);
+    }
+    .ThirdPartyTender-table tfoot tr{
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+      color: var(--text-black);
+    }
+    .ThirdPartyTender-table tfoot tr:last-child{
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+      color: var(--blue);
+      border-top: 1px solid  var(--bluish-white);
+    }
+    .ThirdPartyTender-table tfoot tr th {
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+    }
+    .ThirdPartyTender-table tfoot tr th .small-text{
+      font-weight: 500;
+      font-size: var(--font12);
+    }
+    .ThirdPartyTender-table tfoot tr th .grand-total{
+      font-weight: 600;
+      font-size: var(--font14);
+    }
+    .ThirdPartyTender-table thead th:nth-child(2) div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ThirdPartyTender-table thead th:nth-child(2) span{
+      font-size: var(--font10);
+    }
+    /* Start Table Alignment Area*/
+    .ThirdPartyTender-table thead th:nth-child(1),
+    .ThirdPartyTender-table tbody td:nth-child(1){
+      flex-basis:30%;
+      flex-grow:1;
+      display: flex;
+      justify-content: start;
+    }
+    .ThirdPartyTender-table thead th:nth-child(2),
+    .ThirdPartyTender-table tbody td:nth-child(2),
+    .ThirdPartyTender-table thead th:nth-child(3),
+    .ThirdPartyTender-table tbody td:nth-child(3){
+      flex-basis:20%;
+      flex-grow:1;
+      display: flex;
+      justify-content: center;
+    }
+    .ThirdPartyTender-table thead th:nth-child(4),
+    .ThirdPartyTender-table tbody td:nth-child(4){
+      flex-basis: 15%;
+      flex-grow:1;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .ThirdPartyTender-table thead th:nth-child(5),
+    .ThirdPartyTender-table tbody td:nth-child(5){
+      flex-basis: 15%;
+      flex-grow:1;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .ThirdPartyTender-table tfoot th:nth-child(1){
+      flex-basis:50%;
+    }
+    .ThirdPartyTender-table tfoot th:nth-child(2){
+      flex-basis:20%;
+      flex-grow:1;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .ThirdPartyTender-table tfoot th:nth-child(3){
+      flex-basis:15%;
+      flex-grow:1;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .ThirdPartyTender-table tfoot th:nth-child(4){
+      flex-basis:15%;
+      flex-grow:1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  /* StartTable Input Area */
+  .ThirdPartyTender-table .quantity-input{
+    display: flex;
+    width: 110px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: var(--white);
+  }
+  .ThirdPartyTender-table .quantity-input .quantity {
+    width: 60px;
+    height: 30px;
+    margin: 0;
+    text-align:center;
+    background:transparent;  
+    border: 1px solid var(--border-color);
+    border-right: none;
+    border-left: none;
+  }
+  .ThirdPartyTender-table .quantity-input .quantity::placeholder {
+    color: var(--border-color);
+  }
+  .ThirdPartyTender-table .quantity-input .minus{
+    width: 25px;
+    height: 30px;
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px;
+    font-size: var(--font18);
+    color: var(--text-black);
+    background-color:transparent;  
+    border-radius: 2px 0px 0px 2px;
+    border: 1px solid var(--border-color);
+    border-right: none;
+  }
+  .ThirdPartyTender-table .quantity-input .plus{
+    width: 25px;
+    height: 30px;
+    font-weight: 700;
+    font-size: var(--font18);
+    color: var(--text-black);
+    background-color:transparent;  
+    border-radius: 0px 2px 2px 0px;
+    border: 1px solid var(--border-color);
+    border-left: none;
+  }
+  .ThirdPartyTender-table .quantity-input .quantity:focus{
+    color: var(--blue);
+    outline: none !important;
+    border-color: var(--blue)!important;
+    box-shadow: none;
+    border-left: 1px solid var(--blue);
+    border-right: 1px solid var(--blue);
+  }
+  .ThirdPartyTender-table .quantity-input .minus:hover,
+  .ThirdPartyTender-table .quantity-input .plus:hover{
+    color: var(--white);
+    outline: none !important;
+    box-shadow: none;
+    background-color: var(--blue);
+  }
+  .ThirdPartyTender-table .quantity-input .minus:focus,
+  .ThirdPartyTender-table .quantity-input .plus:focus{
+    color: var(--white);
+    outline: none !important;
+    box-shadow: none;
+    background-color: var(--blue);
+  }
+  input[type="button"] {
+    cursor: pointer
+  }
+  .ThirdPartyTender-table .form-control-sm{
+    text-align: center;
+    border-radius: 2px;
+    font-size: var(--font14) ;
+    border: 1px solid var(--border-color);
+    width: 110px;
+    height: 30px !important;
+  }
+  .ThirdPartyTender-table .form-control-sm:placeholder{
+    font-size: var(--font14) ;
+    color: #AAC0D9;
+  }
+  .ThirdPartyTender-table .form-control-sm:focus{
+    outline: none !important;
+    border-color: var(--blue)!important;
+    box-shadow: none;
+  }
+  /* End Table Input Area */
+  
+    /*>> Start Table Hover Button Component <<*/
+    .ThirdPartyTender-table tbody tr:hover {
+      background-color: var(--bluish-white);
+      cursor: pointer;
+    }
+    .ThirdPartyTender-table tbody tr .hover-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      background: rgba(255, 255, 255, 0);
+      -webkit-transition: all .1s;
+      transition: all .1s;
+      padding: 0px 15px;
+    }
+    .ThirdPartyTender-table tbody tr .hover-btns::before {
+      width: 100px;
+      height: 100%;
+      margin-left: -100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      content: "";
+      -webkit-transition: all .1s;
+      transition: all .1s;
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#E2EDFA));
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #E2EDFA 100%);
+    }
+    /*----- Start Active State -----*/
+    .ThirdPartyTender-table tbody tr.active {
+      background-color: var(--bluish-white);
+      cursor: pointer;
+    }
+    .ThirdPartyTender-table tbody tr.active .hover-btns::before {
+      opacity: 1;
+    }
+    .ThirdPartyTender-table tbody tr.active .hover-btns {
+      height: 100%;
+      background-color: var(--bluish-white);
+    }
+    .ThirdPartyTender-table tbody tr.active .hover-btns span {
+      opacity: 1;
+    }
+    /*----- Start Hover State -----*/
+    .ThirdPartyTender-table tbody tr:hover .hover-btns {
+      height: 100%;
+      background-color: var(--bluish-white);
+    }
+    .ThirdPartyTender-table tbody tr:hover .hover-btns::before {
+      opacity: 1;
+    }
+    .ThirdPartyTender-table tbody tr:hover .hover-btns span {
+      opacity: 1;
+    }
+    /*----- Start Button Style -----*/
+    .ThirdPartyTender-table tbody tr .hover-btns .action-btn {
+      opacity: 0;
+      -webkit-transition: all .2s;
+      transition: all .2s;
+      /* Button Style */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      margin: 0px 5px;
+      border-radius: 100px;
+      font-weight: 200;
+      color:  var(--blue);
+      font-size: var(--font16);
+      background-color:var(--white);
+    }
+    .ThirdPartyTender-table tbody tr .hover-btns .action-btn.active {
+      color:  var(--white);
+      font-size: var(--font16);
+      background-color:var(--blue);
+    }
+    .ThirdPartyTender-table tbody tr .hover-btns .action-btn.remove {
+      color:  var(--red);
+      font-size: var(--font16);
+      background-color:var(--redish-white);
+    }
+    /*>> End Table Hover Button Component <<*/
+  /*---------End Collection Table 3 ---------*/
+  .btn-add-product,
+  .btn-add-atachment{
+    font-size: var(--font14);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    color: var(--blue)!important;
+  }
+  .btn-add-product span,
+  .btn-add-atachment span{
+    margin-right: 5px;
+    /* padding: 2px;
+    border-radius: 100px;
+    background-color: var(--bluish-white); */
+  }
+  .btn-add-product:hover,
+  .btn-add-atachment:hover{
+    color: #0153a0!important;
+  }
+  .ThirdPartyTender-footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+  }
+  .ThirdPartyTender-footer .btn-discard{
+    background-color: var(--white)!important;
+    border: 1px solid var(--red)!important;
+    color: var(--red);
+  }
+  .ThirdPartyTender-footer .btn-discard:hover{
+    background-color: var(--white)!important;
+    border: 1px solid var(--red)!important;
+    color: var(--red);
+  }
+  @media screen and (max-width: 1440px) {
+    :root {
+      --table-height: 35px;
+      }
+  }
+  
+  
+  
+  /*--------- Start Add Product Modal ---------*/
+  #add-product-modal .modal-dialog {
+    max-width: 80% !important;
+    width: 1000px;
+    height: 100%;
+    padding: 0;
+    margin: auto;
+  }
+  #add-product-modal .modal-header .modal-title{
+    color: var(--black)!important;
+    font-size: var(--font16)!important;
+  }
+  #add-product-modal .modal-header .modal-title span{
+    font-size: var(--font16);
+    color:  var(--blue);
+    margin-left: 5px;
+  }
+  #add-product-modal .modal-header button span {
+    height: 35px;
+    width: 35px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4px;
+  }
+  #add-product-modal .modal-header button span:hover {
+    background-color: var(--bluish-white);
+  }
+  #add-product-modal .modal-body{
+    padding: 0px 30px 0px 0px;
+  }
+  #add-product-modal .input-group-text {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: .375rem .75rem;
+      margin-bottom: 0;
+      font-size: var(--font14);
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--text-label);
+      text-align: center;
+      white-space: nowrap;
+      background-color: transparent;
+      border: 1px solid var(--border-color);
+      border-radius: 0px 2px 2px 0px;
+  }
+  /*Start Left Sidebar Product List Area*/
+  #add-product-modal .leftsidebar-productlist{
       width: 100%;
       border-right: 1px solid  var(--border-color);
   }
-  .layout-sidebar.delivery_schedule .header{
+  #add-product-modal .leftsidebar-productlist .header{
       background-color: var(--white);
       padding: 15px 10px;
   }
-  .layout-sidebar.delivery_schedule .header .row1{
+  #add-product-modal .leftsidebar-productlist .header .row1{
       display: flex;
       justify-content:space-between; 
   }
-  .layout-sidebar.delivery_schedule .header .row2{
-      margin-top: 10px;
-  }
-  .layout-sidebar.delivery_schedule .header .row2 h5{
-      color: var(--text-label);
-      font-size: var(--font14);
-  }
-  .layout-sidebar.delivery_schedule .header .row2 span{
-      color: var(--blue);
-  }
-  .layout-sidebar.delivery_schedule .header .row1 .form-group {
+  #add-product-modal .leftsidebar-productlist .header .row1 .form-group {
       position: relative;
       margin-bottom: 0px!important;
       width: 100%;
   }
-  .layout-sidebar.delivery_schedule .header .row1 .form-group i{
+  #add-product-modal .leftsidebar-productlist .header .row1 .form-group i{
       position: absolute; 
       top: 12px; 
       left:10px; 
       color: #AAC0D9;
       font-size: var(--font14);
       }
-  .layout-sidebar.delivery_schedule .header .row1 .form-group input{
+  #add-product-modal .leftsidebar-productlist .header .row1 .form-group input{
       padding-left: 36px;
       border-radius: 2px;
       border: 1px solid var(--border-color);
   }
-  .layout-sidebar.delivery_schedule .header .row1 .form-group input::placeholder{
+  #add-product-modal .leftsidebar-productlist .header .row1 .form-group input::placeholder{
       font-size: var(--font14) ;
       color: #AAC0D9;
   }
-  .layout-sidebar.delivery_schedule .header .row1 .form-group input:focus{
+  #add-product-modal .leftsidebar-productlist .header .row1 .form-group input:focus{
       border-color: var(--blue);
       box-shadow: none;
   }
-  .layout-sidebar.delivery_schedule .header .row1 .filter_search{
-      color: #AAC0D9;
-      font-size: var(--font16);
-      text-align: center;
-      padding: 8px;
-      height: 38px;
-      width: 38px;
-      border-radius: 2px;
-      border: 1px solid  var(--border-color);
-      margin-left: 10px;
-  }
-  .layout-sidebar.delivery_schedule .header .row1 .filter_search:hover{
-      color: var(--white);
-      background-color: var(--blue);
-  }
-  /*End Secondary Sidebar Header Area*/
-  
   /*Start Secondary Sidebar Content Area*/
-  .layout-sidebar.delivery_schedule .content {
-      height: calc( 100vh - (var(--used-height) + 68px + 25px) );
+  #add-product-modal .leftsidebar-productlist .content{
+      height: 350px;
       overflow-y: scroll;
   }
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card{
-      border: none;
-      padding: 0px;
-      margin-bottom: 0px;
-  }
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header{
-      padding: 0px;
-      display: flex;
-      align-items: center;
-      color: var(--blue);
-      font-size: var(--font14);
-      height: 50px;
-      background-color: var(--white);
-      border-radius: unset!important;
-      border-bottom: 1px solid var(--border-color);
-      justify-content: space-between;
-      cursor: pointer;
-  }
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header button{
-   height: 100%;
-  }
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header span {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 50px;
-      text-align: center;
-      height: 25px;
-      padding: 5px 10px;
-      font-size: var(--font14);
-      font-weight: 500;
-      color: var(--blue);
-      border-radius: 8px;
-      background-color: var(--bluish-white);
-  }
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header h5{
-      color: var(--blue);
-      font-size: var(--font14);
-  }
-  /* Start For Active */
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header.active{
-      padding: 0px;
-      display: flex;
-      align-items: center;
-      color:var(--white);
-      font-size: var(--font14);
-      height: 50px;
-      background-color: var(--blue);
-      border-radius: unset!important;
-      border-bottom: 1px solid var(--border-color);
-      justify-content: space-between;
-  }
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header.active span {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 50px;
-      text-align: center;
-      height: 25px;
-      padding: 5px 10px;
-      font-size: var(--font14);
-      font-weight: 500;
-      color: var(--white);
-      border: 1px solid var(--white);
-      border-radius: 8px;
-      background-color: var(--blue);
-  }
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header.active h5{
-      color:var(--white);
-      font-size: var(--font14);
-  }
-  /* End For Active */
-  
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link{
-      text-align: left;
-      text-decoration: none;
-      width: 100%;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  }
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link:after{
-      color: var(--text-black);
-      font-family: FontAwesome;
-      content:'\f106';
-      width: 35px;
-      font-size: 20px;
-      text-align: center;
-      border: 5px;
-      position: absolute;
-      right: 0px;
-      top:10px;
-  }
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link.collapsed:after{
-      font-family: FontAwesome;
-      content:'\f107';
-      width: 35px;
-      font-size: 20px;
-      text-align: center;
-      border: 5px;
-      position: absolute;
-      right: 0px;
-      top:10px;
-  }
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link[aria-expanded="true"] {
-      color           : var(--white);
-      background-color: var(--blue);
-  }
-  
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link[aria-expanded="true"] h5 {
-      color    : var(--white);
-  }
-  
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link[aria-expanded="true"]:after {
-      color: #FFFFFF;
-  }
-  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-body{
-      border: none!important;
-      padding: 0rem;
-  }
-  .ds_accordion .card .card-body .ds_innerItem {
+  #add-product-modal .leftsidebar-productlist .content .card_body {
       padding: 10px;
       display: flex;
       flex-direction: column;
@@ -5054,540 +6418,289 @@ input[type="button"] {
       background-color: var(--white);
       border-bottom: 1px solid var(--border-color);
   }
-  .ds_accordion .card .card-body .ds_innerItem:hover,
-  .ds_accordion .card .card-body .ds_innerItem:active {
+  #add-product-modal .leftsidebar-productlist .content .card_body:hover,
+  #add-product-modal .leftsidebar-productlist .content .card_body.active {
       background-color: var(--bluish-white);
   }
-  .ds_accordion .card .card-body .ds_innerItem .row1,
-  .ds_accordion .card .card-body .ds_innerItem .row2,
-  .ds_accordion .card .card-body .ds_innerItem .row3{
+  #add-product-modal .leftsidebar-productlist .content .card_body .row1,
+  #add-product-modal .leftsidebar-productlist .content .card_body .row2 {
       margin: 1px 0px;
       display: flex;
-      align-items: center;
       justify-content:space-between; 
   }
-  .ds_accordion .card .card-body .ds_innerItem .row1 .group-1{
-      display: flex;
-      align-items: center;
-      font-size: var(--font14);
-  }
-  .ds_accordion .card .card-body .ds_innerItem .row1 .group-1 .status-active {
+  #add-product-modal .leftsidebar-productlist .content .card_body .row1 h5 {
       font-size: var(--font14);
       color: var(--blue);
-      margin-right: 5px;
+      text-overflow: ellipsis;
+      width: inherit;
+      white-space: nowrap;
   }
-  .ds_accordion .card .card-body .ds_innerItem .row1 .group-1 p {
-    color: var(--blue);
-    font-weight: 500;
-  }
-  .ds_accordion .card .card-body .ds_innerItem .row1 .group-1 p span {
-    color: var(--text-black);
-    font-weight: 500;
-  }
-  .ds_accordion .card .card-body .ds_innerItem .row1 h5 {
-    font-size: var(--font14);
-    color: var(--blue);
-  }
-  .layout-sidebar.delivery_schedule .content .ds_innerItem .row2 p {
-      font-size: var(--font14) ;
+  #add-product-modal .leftsidebar-productlist .content .card_body .row2 p {
+      font-size: var(--font12) ;
       color: var(--text-black);
   }
-  .ds_accordion .card .card-body .ds_innerItem .row3 .group-2{
-    display: flex;
-    align-items: center;
-  }
-  .ds_accordion .card .card-body .ds_innerItem .row3 .group-2 p{
-    font-size: var(--font14);
-    color: #879097;
-    margin-right: 5px;
-    display: flex;
-  }
-  .ds_accordion .card .card-body .ds_innerItem .row3 .group-2 p span{
-    font-size: var(--font14);
-    color: var(--blue);
-    font-weight: 500;
-  }
-  .ds_accordion .card .card-body .ds_innerItem .row3 i {
-    height: 30px;
-    width: 30px;
-    font-size: var(--font16);
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bluish-white);
-    color: var(--blue);
-  }
-  @media screen and (max-width: 768px) { 
-      .layout-sidebar.delivery_schedule{
-          width: 100%;
-      }
-      .layout-sidebar.delivery_schedule .content{
-          height: calc(230px - (68px + 25px));
-          overflow-y: scroll;
-      }
-  }
-  /*End Secondary Sidebar Content Area*/
-  
-  .empty-body{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 15px;
-      min-height: calc(100vh - (var(--used-height) - (-30px)));
-      background-color: var(--white);
-  }
-  .empty_data{
-      text-align: center;
-  }
-  .empty_data img{
-      height: 70px;
-      width: 80px;
-  }
-  .empty_data h5{
-      margin-top: 10px;
-      font-size:var(--font18);
-      font-weight: 600;
-      color: #879097;
-  }
-  .empty_data p{
-      margin-top: 10px;
-      margin-bottom: 10px;
-      font-size: var(--font16);
-      font-weight: 600;
-      color: #C4C8CB;
-  }
-  
-  
-  .delivery_schedule-body {
-    margin-top: 15px;
-    min-height: calc(100vh - (var(--used-height) - (-30px)));
-    background-color: var(--white);
-    -webkit-box-shadow: 0px 0px 8px #026CD11A;
-            box-shadow: 0px 0px 8px #026CD11A;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .delivery_schedule-body .ds-header {
-    padding: 10px 0px;
-    border-bottom: 1px solid var(--border-color);
-    font-size: var(--font14);
-  }
-  .delivery_schedule-body .ds-header .sr_name{
-    color: var(--text-black);
-  }
-  .delivery_schedule-body .ds-header .sr_name span{
-    color: var(--blue);
-    font-weight: 500;
-    text-decoration: underline;
-  }
-  .delivery_schedule-body .ds-header p{
-    color: var(--text-black);
-  }
-  .delivery_schedule-body .ds-header p .open{
-    color: var(--green);
-    font-weight: 500;
-  }
-  .delivery_schedule-body .ds-header p .date{
-    color: var(--text-black);
-    font-weight: 500;
-  }
-  #delivery_schedule-tab .nav-tabs { 
-    border-bottom: 1px solid var(--border-color); 
-    margin: 0px -15px;
-  }
-  #delivery_schedule-tab .nav-tabs li a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: var(--font14);
-    font-weight: 500;
-    color: var(--black);
-  }
-  #delivery_schedule-tab .tab-content>.tab-pane { 
-    padding: 0 0 0 0; 
-  }
-  #delivery_schedule-tab .nav-tabs .nav-link.active {
-    border-color: transparent;
-    border-bottom: 1px solid  var(--blue);
-    color: var(--blue);
-    background-color: transparent;
-  }
-  #delivery_schedule-tab .nav-tabs .nav-link.active:hover, 
-  #delivery_schedule-tab .nav-tabs .nav-link.active:focus {
-    border-bottom: 1px solid  var(--blue);
-  }
-  #delivery_schedule-tab .nav-tabs .nav-link:focus,
-  #delivery_schedule-tab .nav-tabs .nav-link:hover {
-    border-color: transparent;
-  }
-  
-  /*--------- Start Delivery Schedule Table Area ---------*/
-  .delivery_schedule-table{
-    display: block;
-    empty-cells: show;
-    border-spacing: 0;
-    box-sizing: border-box;
-  }
-  .delivery_schedule-table tr{
-    width: 100%;
-    display:flex;
-  }
-  .delivery_schedule-table td,
-  .delivery_schedule-table th{
-    flex-grow:1;
-    display: block;
-    padding: 0rem 1rem;
-  }
-  /* Start Table Head Area */
-  .delivery_schedule-table thead{ 
-    position:relative;
-    display: block;
-    width:100%;
-  }
-  .delivery_schedule-table thead tr{
-    height: var(--table-height-2);
-    font-size: var(--font14);
-    text-transform: uppercase;
-    color: var(--blue);
-    border-bottom: 1px solid var(--border-color);
-  }
-  .delivery_schedule-table thead tr th{
-    height: var(--table-height-2);
-    display:flex;
-    align-items: center;
-  }
-  /* Start Table Body Area */
-  .delivery_schedule-table tbody{
-    width:100%; 
-    display: block; 
-    position:relative;
-    overflow-y:scroll;
-    font-size: var(--font14);
-    color:var(--text-black);
-    height: calc( 100vh - (var(--used-height) + 250px));
-  }
-  .delivery_schedule-table tbody tr{
-    width: 100%;
-    display:flex;
-    align-items: center;
-    height: var(--table-height-2);
-    border-bottom: 1px solid var(--border-color);
-  }
-  .delivery_schedule-table tbody tr:hover{
-    background-color: var(--bluish-white);
-  }
-  .delivery_schedule-table tbody tr.active{
-    background-color: var(--bluish-white);
-  }
-  .delivery_schedule-table tbody tr td{
-    display: flex;
-    align-items: center;
-    font-size:var(--font14);
-    height: var(--table-height-2);
-  }
-  /* Start Table Foot Area */
-  .delivery_schedule-table tfoot{ 
-    display: block;
-    width:100%;
-    font-size: var(--font14);
-  }
-  .delivery_schedule-table tfoot tr{
-    height: var(--table-height-2);
-    display: flex;
-    align-items: center;
-    color: var(--blue);
-    border-top: 1px solid  var(--bluish-white);
-  }
-  .delivery_schedule-table tfoot tr th{
-    height: var(--table-height-2);
-    display: flex;
-    align-items: center;
-  }
-  /* Start Table Alignment Area*/
-  .delivery_schedule-table thead th:nth-child(1),
-  .delivery_schedule-table tbody td:nth-child(1){
-    flex-basis:5%;
-    flex-grow:1;
-    display: flex;
-    justify-content: center;
-  }
-  .delivery_schedule-table thead th:nth-child(2),
-  .delivery_schedule-table tbody td:nth-child(2){
-    flex-basis:50%;
-    flex-grow:1;
-    display: flex;
-    justify-content: start;
-  }
-  .delivery_schedule-table tbody td:nth-child(2) .order span{
-    font-size: var(--font12);
-  }
-  .delivery_schedule-table tbody td:nth-child(2) .order span{
-    color: var(--blue);
-  }
-  .delivery_schedule-table thead th:nth-child(3),
-  .delivery_schedule-table tbody td:nth-child(3){
-    flex-basis: 15%;
-    flex-grow:1;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-  }
-  .delivery_schedule-table tbody td:nth-child(3){
-    color: var(--blue);
-    text-decoration: underline;
-  }
-  .delivery_schedule-table thead th:nth-child(4),
-  .delivery_schedule-table tbody td:nth-child(4),
-  .delivery_schedule-table thead th:nth-child(5),
-  .delivery_schedule-table tbody td:nth-child(5){
-    flex-basis: 15%;
-    flex-grow:1;
-    display: flex;
-    justify-content: center;
-  }
-  .delivery_schedule-table tfoot th:nth-child(1){
-    flex-basis:55%;
-  }
-  .delivery_schedule-table tfoot th:nth-child(2),
-  .delivery_schedule-table tfoot th:nth-child(3),
-  .delivery_schedule-table tfoot th:nth-child(4){
-    flex-basis:15%;
-    flex-grow:1;
-    display: flex;
-    justify-content: center;
-  }
-  .delivery_schedule-table .bulk-action{
-    display: flex;
-  }
-  .delivery_schedule-table i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    font-size: var(--font18);
-    border-radius: 100px;
-    margin: 0px 5px;
-    font-weight: 200;
-    color: var(--blue);
-    background-color: var(--white);
-  }
-  .delivery_schedule-table .bulk-button {
-    display: flex;
-    align-items: center;
-    margin: 0px 15px;
-    cursor: pointer;
-    font-size: var(--font14);
-  }
-  .delivery_schedule-table .bulk-button span {
-    font-size: var(--font18);
-    margin-right: 10px;
-    font-weight: 200;
-    color: var(--blue);
-  }
-  /*--------- End Delivery Schedule Table Area ---------*/
-  
-  /* Start Reshedule Modal */
-  .modal-header .modal-title{
-    color: var(--black)!important;
-    font-size: var(--font16)!important;
-  }
-  #reshedule-modal .modal-footer {
-    padding-bottom: 0rem;
-  }
-  #reshedule-modal .form-control {
-    font-size: var(--font14);
-  }
-  #reshedule-modal .invoice-list {
-    display: flex;
-    align-items: center;
-    color: var(--blue);
-    font-size: var(--font14);
-    margin-bottom: 15px;
-  }
-  #reshedule-modal .invoice-list span{
-    color: var(--text-black);
-    font-size: var(--font14);
-  }
-  #reshedule-modal .invoice-list span .moreInvoice{
-    color: var(--blue);
-    background-color: var(--bluish-white);
-    padding: 5px 10px;
-    font-size: var(--font14);
-    border-radius: 2px;
-  }
-  /* End Reshedule Modal */
-  
-  /*--------- Start Invoice Modal Area ---------*/
-  #invoice-modal .modal-content {
-      width: 90%;
-      margin: auto;
-  }
-  #invoice-modal .modal-body{
-      padding: 0rem 1rem;
-  }
-  #invoice-modal .modal-body .customer_info{
-  padding: 10px 0px;
-  }
-  #invoice-modal .modal-body .customer_info p{
-    font-size: var(--font14);
-    color: var(--text-black);
-  }
-  #invoice-modal .modal-body .customer_info p span{
-    font-size: var(--font14);
-    color: var(--blue);
-    font-weight: 500;
-  }
-  .invoice-modal-table{
+  /* Start Modal Table Area */
+  .addproduct-modal-table{
       display: block;
       empty-cells: show;
       border-spacing: 0;
       box-sizing: border-box;
     }
-    .invoice-modal-table tr{
+    .addproduct-modal-table tr{
       width: 100%;
       display:flex;
     }
-    .invoice-modal-table td,
-    .invoice-modal-table th{
+    .addproduct-modal-table td,
+    .addproduct-modal-table th{
       flex-grow:1;
       display: block;
       padding: 0rem 1rem;
     }
     /* Start Table Head Area */
-    .invoice-modal-table thead{ 
+    .addproduct-modal-table thead{ 
       position:relative;
       display: block;
       width:100%;
     }
-    .invoice-modal-table thead tr{
-      height: var(--table-height-2);
+    .addproduct-modal-table thead tr{
+      min-height: var(--table-height);
       font-size: var(--font14);
       text-transform: uppercase;
       color: var(--blue);
       border-bottom: 1px solid var(--border-color);
     }
-    .invoice-modal-table thead tr th{
-      height: var(--table-height-2);
+    .addproduct-modal-table thead tr th{
+      min-height: var(--table-height);
       display:flex;
       align-items: center;
     }
     /* Start Table Body Area */
-    .invoice-modal-table tbody{
+    .addproduct-modal-table tbody{
       width:100%; 
       display: block; 
       position:relative;
       overflow-y:scroll;
       font-size: var(--font14);
       color:var(--text-black);
-      height: calc( 50vh - (var(--used-height) + 10px));
+      height: 378px ;
     }
-    .invoice-modal-table tbody tr{
+  .addproduct-modal-table tbody .product .name{
+      font-size: var(--font14);
+      font-weight: 500;
+      color: var(--blue);
+     } 
+  .addproduct-modal-table tbody .product .type{
+      font-size: var(--font12);
+      color: var(--text-black);
+      font-weight: 400;
+      } 
+  .addproduct-modal-table tbody tr{
+      position: relative;
       width: 100%;
       display:flex;
       align-items: center;
-      height: var(--table-height);
+      min-height: var(--table-height);
       border-bottom: 1px solid var(--border-color);
     }
-    .invoice-modal-table tbody tr td{
+    .addproduct-modal-table tbody tr td{
       display: flex;
       align-items: center;
-      height: var(--table-height);
-    }
-    /* Start Table Foot Area */
-    .invoice-modal-table tfoot{ 
-      display: block;
-      width:100%;
-      font-size: var(--font14);
-    }
-    .invoice-modal-table tfoot tr{
-      height: var(--table-height-2);
-      display: flex;
-      align-items: center;
-      color: var(--blue);
-      border-top: 1px solid  var(--bluish-white);
-    }
-    .invoice-modal-table tfoot tr .notmatch{
-      color: var(--red);
-    }
-    .invoice-modal-table tfoot tr th{
-      height: var(--table-height-2);
-      display: flex;
-      align-items: center;
+      min-height: var(--table-height);
     }
     /* Start Table Alignment Area*/
-    .invoice-modal-table thead th:nth-child(1),
-    .invoice-modal-table tbody td:nth-child(1){
+    .addproduct-modal-table thead th:nth-child(1),
+    .addproduct-modal-table tbody td:nth-child(1){
       flex-basis:40%;
       flex-grow:1;
       display: flex;
       justify-content: start;
     }
-    .invoice-modal-table thead th:nth-child(2),
-    .invoice-modal-table tbody td:nth-child(2){
-      flex-basis: 25%;
+    .addproduct-modal-table thead th:nth-child(2),
+    .addproduct-modal-table tbody td:nth-child(2){
+      flex-basis:20%;
       flex-grow:1;
       display: flex;
       justify-content: center;
     }
-    .invoice-modal-table thead th:nth-child(3),
-    .invoice-modal-table tbody td:nth-child(3){
-      flex-basis:25%;
+    .addproduct-modal-table thead th:nth-child(3),
+    .addproduct-modal-table tbody td:nth-child(3){
+      flex-basis:20%;
       flex-grow:1;
       display: flex;
       justify-content: flex-end;
     }
-    .invoice-modal-table tfoot tr {
-      height: 15px;
-      background-color: transparent;
-      border: none;
-      display: flex;
-      align-items: center;
-    }
-    .invoice-modal-table tfoot tr span {
-      color: var(--text-black);
-      font-size: var(--font12);
-      font-weight: 400;
-    }
-    .invoice-modal-table tfoot tr p {
-      color: var(--text-black);
-      font-size: var(--font12);
-      font-weight: 400;
-    }
-    .invoice-modal-table tfoot tr th:nth-child(1){
-      height: 15px;
-      flex-basis:85%;
+    .addproduct-modal-table thead th:nth-child(4),
+    .addproduct-modal-table tbody td:nth-child(4){
+      flex-basis: 20%;
+      flex-grow:1;
       display: flex;
       justify-content: flex-end;
     }
-    .invoice-modal-table tfoot tr th:nth-child(2){
-      height: 15px;
-      flex-basis:25%;
-      display: flex;
-      justify-content: flex-end;
-    }
-    .invoice-modal-table tfoot tr:last-child {
-      height: var(--table-height-2);
-      background-color: transparent;
-      border: none;
-      display: flex;
-      align-items: center;
-    }
-    .invoice-modal-table tfoot tr:last-child span {
-      color:  var(--blue);
-      font-size: var(--font14);
-      font-weight: 700;
-    }
-    .invoice-modal-table tfoot tr:last-child p {
-      color: var(--blue);
-      font-size: var(--font14);
-      font-weight: 700;
-    }
-  /*--------- End Invoice Modal Area ---------*/
-  @media screen and (max-width: 1440px) {
-    :root {
-      --table-height-2: 40px;
-      }
+  /* StartTable Input Area */
+  .addproduct-modal-table .quantity-input{
+    display: flex;
+    width: 110px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: var(--white);
   }
+  .addproduct-modal-table .quantity-input .quantity {
+    width: 60px;
+    height: 30px;
+    margin: 0;
+    text-align:center;
+    background:transparent;  
+    border: 1px solid var(--border-color);
+    border-right: none;
+    border-left: none;
+  }
+  .addproduct-modal-table .quantity-input .quantity::placeholder {
+    color: var(--border-color);
+  }
+  .addproduct-modal-table .quantity-input .minus{
+    width: 25px;
+    height: 30px;
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px;
+    font-size: var(--font18);
+    color: var(--text-black);
+    background-color:transparent;  
+    border-radius: 2px 0px 0px 2px;
+    border: 1px solid var(--border-color);
+    border-right: none;
+  }
+  .addproduct-modal-table .quantity-input .plus{
+    width: 25px;
+    height: 30px;
+    font-weight: 700;
+    font-size: var(--font18);
+    color: var(--text-black);
+    background-color:transparent;  
+    border-radius: 0px 2px 2px 0px;
+    border: 1px solid var(--border-color);
+    border-left: none;
+  }
+  .addproduct-modal-table .quantity-input .quantity:focus{
+    color: var(--blue);
+    outline: none !important;
+    border-color: var(--blue)!important;
+    box-shadow: none;
+    border-left: 1px solid var(--blue);
+    border-right: 1px solid var(--blue);
+  }
+  .addproduct-modal-table .quantity-input .minus:hover,
+  .addproduct-modal-table .quantity-input .plus:hover{
+    color: var(--white);
+    outline: none !important;
+    box-shadow: none;
+    background-color: var(--blue);
+  }
+  .addproduct-modal-table .quantity-input .minus:focus,
+  .addproduct-modal-table .quantity-input .plus:focus{
+    color: var(--white);
+    outline: none !important;
+    box-shadow: none;
+    background-color: var(--blue);
+  }
+  .addproduct-modal-table tbody tr span.remove{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 0px 5px;
+    border-radius: 100px;
+    font-weight: 200;
+    color:  var(--red);
+    font-size: var(--font16);
+    background-color:var(--redish-white);
+  }
+  /*--------- End Add Product Modal ---------*/
+  
+  
+  /*--------- Start Popup Modal Area ---------*/
+  #popup-modal .modal-dialog{
+    width: 400px;
+  }
+  #popup-modal .modal-body {
+    height: 220px;
+  }
+  #popup-modal .modal-body .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: .5;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+  }
+  #popup-modal .modal-body .popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding-top:5px;
+  }
+  #popup-modal .modal-body .popup-content .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--blue);
+    background-color:var(--bluish-white);
+    width: 65px;
+    height: 65px;
+    border-radius: 100px;
+  }
+  #popup-modal .modal-body .popup-content .context{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #popup-modal .modal-body .popup-content .context h5 {
+    color: var(--text-black);
+    font-size: var(--font18);
+  }
+  #popup-modal .modal-body .popup-content .context p {
+    opacity: .7;
+    text-align: center;
+    color: var(--text-black);
+    font-weight: 500;
+    font-size: 14px;
+  }
+  #popup-modal .modal-body .popup-content .btns-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #popup-modal .modal-body .popup-content .btns-group button{
+    width: 150px;
+    height: 40px;
+    margin: 0px 10px;
+    font-size:var(--font14);
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 2px;
+    border:none;
+    transition: all 0.3s ease 0s;
+    background-color: transparent!important;
+    }
+  #popup-modal .modal-body .popup-content .btns-group button span{
+    color: var(--text-black);
+  }
+  #popup-modal .modal-body .popup-content .btns-group .btn-discard{
+    color: var(--red);
+    /* background-color: var(--white)!important;
+    border: 1px solid var(--red)!important; */
+  }
+  #popup-modal .modal-body .popup-content .btns-group .btn-continue{
+    color: var(--blue);
+    /* background-color: var(--blue)!important;
+    border: 1px solid var(--blue)!important; */
+  }
+  /*--------- End Popup Modal Area ---------*/

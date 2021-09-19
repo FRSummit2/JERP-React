@@ -167,11 +167,13 @@
 /* ICON */
 .material-icons.add,
 .material-icons.edit,
+.material-icons.pencil,
 .material-icons.delete,
 .material-icons.print,
 .material-icons.vpn_key,
 .material-icons.lock,
 .material-icons.insert_invitation,
+.material-icons.help_outline,
 .material-icons.delete_outline {
     display        : flex !important;
     justify-content: center !important;
@@ -185,13 +187,15 @@
 
 .material-icons.add,
 .material-icons.lock,
-.material-icons.vpn_key {
+.material-icons.vpn_key,
+.material-icons.help_outline {
     color           : #026CD1;
     background-color: #E2EDFA;
     font-size       : 24px !important;
     border          : 1px solid #026CD1;
     border-radius   : 50% !important;
 }
+
 .material-icons.insert_invitation {
     color           : #026CD1;
     background-color: #E2EDFA;
@@ -203,21 +207,40 @@
 .material-icons.add:hover,
 .material-icons.lock:hover,
 .material-icons.insert_invitation:hover,
+.material-icons.help_outline:hover,
 .material-icons.vpn_key:hover {
     background-color: #026CD1;
     color           : #FFFFFF;
 }
 
-.material-icons.edit {
-    font-size    : 24px !important;
-    border       : 1px solid #026CD1;
-    border-radius: 50% !important;
+.material-icons.edit,
+.material-icons.pencil {
+    color           : #026CD1;
+    background-color: #E2EDFA;
+    font-size       : 24px !important;
+    border          : 1px solid #026CD1;
+    border-radius   : 50% !important;
 }
 
+.material-icons.edit:hover,
+.material-icons.pencil:hover {
+    background-color: #026CD1;
+    color           : #FFFFFF;
+}
+
+.material-icons.delete,
 .material-icons.delete_outline {
-    font-size    : 24px !important;
-    border       : 1px solid var(--red);
-    border-radius: 50% !important;
+    background-color: #F5BEC6;
+    color           : #DF2A43;
+    font-size       : 24px !important;
+    border          : 1px solid var(--red);
+    border-radius   : 50% !important;
+}
+
+.material-icons.delete:hover,
+.material-icons.delete_outline:hover {
+    background-color: #DF2A43;
+    color           : #FFFFFF;
 }
 
 .material-icons.print {
