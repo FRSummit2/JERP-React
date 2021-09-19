@@ -168,6 +168,7 @@
 .material-icons.add,
 .material-icons.edit,
 .material-icons.delete,
+.material-icons.print,
 .material-icons.delete_outline {
     display        : flex !important;
     justify-content: center !important;
@@ -188,6 +189,19 @@
     font-size    : 24px !important;
     border       : 1px solid var(--red);
     border-radius: 50% !important;
+}
+
+.material-icons.print {
+    color           : #026CD1 !important;
+    font-size       : 24px !important;
+    border          : 1px solid #026CD1;
+    border-radius   : 50% !important;
+    background-color: #E2EDFA;
+}
+
+.material-icons.print:hover {
+    color           : #FFFFFF !important;
+    background-color: #026CD1 !important;
 }
 
 /* ICON */
