@@ -4834,3 +4834,760 @@ input[type="button"] {
         margin         : 20px;
     }
 }
+
+
+/*
+*****************************************************************************
+*****************************************************************************
+*****************************************************************************
+*****************************************************************************
+*****************************************************************************
+*****************************************************************************
+*****************************************************************************
+*****************************************************************************
+*****************************************************************************
+*****************************************************************************
+*****************************************************************************
+*/
+
+:root{
+    --table-height-2: 45px;
+    --table-height: 30px;
+  }
+  /*Start Secondary Sidebar Header Area*/
+  .layout-sidebar.delivery_schedule{
+      min-width: var(--sidebar-width);
+      width: 100%;
+      border-right: 1px solid  var(--border-color);
+  }
+  .layout-sidebar.delivery_schedule .header{
+      background-color: var(--white);
+      padding: 15px 10px;
+  }
+  .layout-sidebar.delivery_schedule .header .row1{
+      display: flex;
+      justify-content:space-between; 
+  }
+  .layout-sidebar.delivery_schedule .header .row2{
+      margin-top: 10px;
+  }
+  .layout-sidebar.delivery_schedule .header .row2 h5{
+      color: var(--text-label);
+      font-size: var(--font14);
+  }
+  .layout-sidebar.delivery_schedule .header .row2 span{
+      color: var(--blue);
+  }
+  .layout-sidebar.delivery_schedule .header .row1 .form-group {
+      position: relative;
+      margin-bottom: 0px!important;
+      width: 100%;
+  }
+  .layout-sidebar.delivery_schedule .header .row1 .form-group i{
+      position: absolute; 
+      top: 12px; 
+      left:10px; 
+      color: #AAC0D9;
+      font-size: var(--font14);
+      }
+  .layout-sidebar.delivery_schedule .header .row1 .form-group input{
+      padding-left: 36px;
+      border-radius: 2px;
+      border: 1px solid var(--border-color);
+  }
+  .layout-sidebar.delivery_schedule .header .row1 .form-group input::placeholder{
+      font-size: var(--font14) ;
+      color: #AAC0D9;
+  }
+  .layout-sidebar.delivery_schedule .header .row1 .form-group input:focus{
+      border-color: var(--blue);
+      box-shadow: none;
+  }
+  .layout-sidebar.delivery_schedule .header .row1 .filter_search{
+      color: #AAC0D9;
+      font-size: var(--font16);
+      text-align: center;
+      padding: 8px;
+      height: 38px;
+      width: 38px;
+      border-radius: 2px;
+      border: 1px solid  var(--border-color);
+      margin-left: 10px;
+  }
+  .layout-sidebar.delivery_schedule .header .row1 .filter_search:hover{
+      color: var(--white);
+      background-color: var(--blue);
+  }
+  /*End Secondary Sidebar Header Area*/
+  
+  /*Start Secondary Sidebar Content Area*/
+  .layout-sidebar.delivery_schedule .content {
+      height: calc( 100vh - (var(--used-height) + 68px + 25px) );
+      overflow-y: scroll;
+  }
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card{
+      border: none;
+      padding: 0px;
+      margin-bottom: 0px;
+  }
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header{
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      color: var(--blue);
+      font-size: var(--font14);
+      height: 50px;
+      background-color: var(--white);
+      border-radius: unset!important;
+      border-bottom: 1px solid var(--border-color);
+      justify-content: space-between;
+      cursor: pointer;
+  }
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header button{
+   height: 100%;
+  }
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 50px;
+      text-align: center;
+      height: 25px;
+      padding: 5px 10px;
+      font-size: var(--font14);
+      font-weight: 500;
+      color: var(--blue);
+      border-radius: 8px;
+      background-color: var(--bluish-white);
+  }
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header h5{
+      color: var(--blue);
+      font-size: var(--font14);
+  }
+  /* Start For Active */
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header.active{
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      color:var(--white);
+      font-size: var(--font14);
+      height: 50px;
+      background-color: var(--blue);
+      border-radius: unset!important;
+      border-bottom: 1px solid var(--border-color);
+      justify-content: space-between;
+  }
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header.active span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 50px;
+      text-align: center;
+      height: 25px;
+      padding: 5px 10px;
+      font-size: var(--font14);
+      font-weight: 500;
+      color: var(--white);
+      border: 1px solid var(--white);
+      border-radius: 8px;
+      background-color: var(--blue);
+  }
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header.active h5{
+      color:var(--white);
+      font-size: var(--font14);
+  }
+  /* End For Active */
+  
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link{
+      text-align: left;
+      text-decoration: none;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link:after{
+      color: var(--text-black);
+      font-family: FontAwesome;
+      content:'\f106';
+      width: 35px;
+      font-size: 20px;
+      text-align: center;
+      border: 5px;
+      position: absolute;
+      right: 0px;
+      top:10px;
+  }
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link.collapsed:after{
+      font-family: FontAwesome;
+      content:'\f107';
+      width: 35px;
+      font-size: 20px;
+      text-align: center;
+      border: 5px;
+      position: absolute;
+      right: 0px;
+      top:10px;
+  }
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link[aria-expanded="true"] {
+      color           : var(--white);
+      background-color: var(--blue);
+  }
+  
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link[aria-expanded="true"] h5 {
+      color    : var(--white);
+  }
+  
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-header .btn-link[aria-expanded="true"]:after {
+      color: #FFFFFF;
+  }
+  .layout-sidebar.delivery_schedule .content .ds_accordion .card .card-body{
+      border: none!important;
+      padding: 0rem;
+  }
+  .ds_accordion .card .card-body .ds_innerItem {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-color);
+  }
+  .ds_accordion .card .card-body .ds_innerItem:hover,
+  .ds_accordion .card .card-body .ds_innerItem:active {
+      background-color: var(--bluish-white);
+  }
+  .ds_accordion .card .card-body .ds_innerItem .row1,
+  .ds_accordion .card .card-body .ds_innerItem .row2,
+  .ds_accordion .card .card-body .ds_innerItem .row3{
+      margin: 1px 0px;
+      display: flex;
+      align-items: center;
+      justify-content:space-between; 
+  }
+  .ds_accordion .card .card-body .ds_innerItem .row1 .group-1{
+      display: flex;
+      align-items: center;
+      font-size: var(--font14);
+  }
+  .ds_accordion .card .card-body .ds_innerItem .row1 .group-1 .status-active {
+      font-size: var(--font14);
+      color: var(--blue);
+      margin-right: 5px;
+  }
+  .ds_accordion .card .card-body .ds_innerItem .row1 .group-1 p {
+    color: var(--blue);
+    font-weight: 500;
+  }
+  .ds_accordion .card .card-body .ds_innerItem .row1 .group-1 p span {
+    color: var(--text-black);
+    font-weight: 500;
+  }
+  .ds_accordion .card .card-body .ds_innerItem .row1 h5 {
+    font-size: var(--font14);
+    color: var(--blue);
+  }
+  .layout-sidebar.delivery_schedule .content .ds_innerItem .row2 p {
+      font-size: var(--font14) ;
+      color: var(--text-black);
+  }
+  .ds_accordion .card .card-body .ds_innerItem .row3 .group-2{
+    display: flex;
+    align-items: center;
+  }
+  .ds_accordion .card .card-body .ds_innerItem .row3 .group-2 p{
+    font-size: var(--font14);
+    color: #879097;
+    margin-right: 5px;
+    display: flex;
+  }
+  .ds_accordion .card .card-body .ds_innerItem .row3 .group-2 p span{
+    font-size: var(--font14);
+    color: var(--blue);
+    font-weight: 500;
+  }
+  .ds_accordion .card .card-body .ds_innerItem .row3 i {
+    height: 30px;
+    width: 30px;
+    font-size: var(--font16);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bluish-white);
+    color: var(--blue);
+  }
+  @media screen and (max-width: 768px) { 
+      .layout-sidebar.delivery_schedule{
+          width: 100%;
+      }
+      .layout-sidebar.delivery_schedule .content{
+          height: calc(230px - (68px + 25px));
+          overflow-y: scroll;
+      }
+  }
+  /*End Secondary Sidebar Content Area*/
+  
+  .empty-body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      min-height: calc(100vh - (var(--used-height) - (-30px)));
+      background-color: var(--white);
+  }
+  .empty_data{
+      text-align: center;
+  }
+  .empty_data img{
+      height: 70px;
+      width: 80px;
+  }
+  .empty_data h5{
+      margin-top: 10px;
+      font-size:var(--font18);
+      font-weight: 600;
+      color: #879097;
+  }
+  .empty_data p{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: var(--font16);
+      font-weight: 600;
+      color: #C4C8CB;
+  }
+  
+  
+  .delivery_schedule-body {
+    margin-top: 15px;
+    min-height: calc(100vh - (var(--used-height) - (-30px)));
+    background-color: var(--white);
+    -webkit-box-shadow: 0px 0px 8px #026CD11A;
+            box-shadow: 0px 0px 8px #026CD11A;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .delivery_schedule-body .ds-header {
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: var(--font14);
+  }
+  .delivery_schedule-body .ds-header .sr_name{
+    color: var(--text-black);
+  }
+  .delivery_schedule-body .ds-header .sr_name span{
+    color: var(--blue);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  .delivery_schedule-body .ds-header p{
+    color: var(--text-black);
+  }
+  .delivery_schedule-body .ds-header p .open{
+    color: var(--green);
+    font-weight: 500;
+  }
+  .delivery_schedule-body .ds-header p .date{
+    color: var(--text-black);
+    font-weight: 500;
+  }
+  #delivery_schedule-tab .nav-tabs { 
+    border-bottom: 1px solid var(--border-color); 
+    margin: 0px -15px;
+  }
+  #delivery_schedule-tab .nav-tabs li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: var(--font14);
+    font-weight: 500;
+    color: var(--black);
+  }
+  #delivery_schedule-tab .tab-content>.tab-pane { 
+    padding: 0 0 0 0; 
+  }
+  #delivery_schedule-tab .nav-tabs .nav-link.active {
+    border-color: transparent;
+    border-bottom: 1px solid  var(--blue);
+    color: var(--blue);
+    background-color: transparent;
+  }
+  #delivery_schedule-tab .nav-tabs .nav-link.active:hover, 
+  #delivery_schedule-tab .nav-tabs .nav-link.active:focus {
+    border-bottom: 1px solid  var(--blue);
+  }
+  #delivery_schedule-tab .nav-tabs .nav-link:focus,
+  #delivery_schedule-tab .nav-tabs .nav-link:hover {
+    border-color: transparent;
+  }
+  
+  /*--------- Start Delivery Schedule Table Area ---------*/
+  .delivery_schedule-table{
+    display: block;
+    empty-cells: show;
+    border-spacing: 0;
+    box-sizing: border-box;
+  }
+  .delivery_schedule-table tr{
+    width: 100%;
+    display:flex;
+  }
+  .delivery_schedule-table td,
+  .delivery_schedule-table th{
+    flex-grow:1;
+    display: block;
+    padding: 0rem 1rem;
+  }
+  /* Start Table Head Area */
+  .delivery_schedule-table thead{ 
+    position:relative;
+    display: block;
+    width:100%;
+  }
+  .delivery_schedule-table thead tr{
+    height: var(--table-height-2);
+    font-size: var(--font14);
+    text-transform: uppercase;
+    color: var(--blue);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .delivery_schedule-table thead tr th{
+    height: var(--table-height-2);
+    display:flex;
+    align-items: center;
+  }
+  /* Start Table Body Area */
+  .delivery_schedule-table tbody{
+    width:100%; 
+    display: block; 
+    position:relative;
+    overflow-y:scroll;
+    font-size: var(--font14);
+    color:var(--text-black);
+    height: calc( 100vh - (var(--used-height) + 250px));
+  }
+  .delivery_schedule-table tbody tr{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    height: var(--table-height-2);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .delivery_schedule-table tbody tr:hover{
+    background-color: var(--bluish-white);
+  }
+  .delivery_schedule-table tbody tr.active{
+    background-color: var(--bluish-white);
+  }
+  .delivery_schedule-table tbody tr td{
+    display: flex;
+    align-items: center;
+    font-size:var(--font14);
+    height: var(--table-height-2);
+  }
+  /* Start Table Foot Area */
+  .delivery_schedule-table tfoot{ 
+    display: block;
+    width:100%;
+    font-size: var(--font14);
+  }
+  .delivery_schedule-table tfoot tr{
+    height: var(--table-height-2);
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    border-top: 1px solid  var(--bluish-white);
+  }
+  .delivery_schedule-table tfoot tr th{
+    height: var(--table-height-2);
+    display: flex;
+    align-items: center;
+  }
+  /* Start Table Alignment Area*/
+  .delivery_schedule-table thead th:nth-child(1),
+  .delivery_schedule-table tbody td:nth-child(1){
+    flex-basis:5%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .delivery_schedule-table thead th:nth-child(2),
+  .delivery_schedule-table tbody td:nth-child(2){
+    flex-basis:50%;
+    flex-grow:1;
+    display: flex;
+    justify-content: start;
+  }
+  .delivery_schedule-table tbody td:nth-child(2) .order span{
+    font-size: var(--font12);
+  }
+  .delivery_schedule-table tbody td:nth-child(2) .order span{
+    color: var(--blue);
+  }
+  .delivery_schedule-table thead th:nth-child(3),
+  .delivery_schedule-table tbody td:nth-child(3){
+    flex-basis: 15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .delivery_schedule-table tbody td:nth-child(3){
+    color: var(--blue);
+    text-decoration: underline;
+  }
+  .delivery_schedule-table thead th:nth-child(4),
+  .delivery_schedule-table tbody td:nth-child(4),
+  .delivery_schedule-table thead th:nth-child(5),
+  .delivery_schedule-table tbody td:nth-child(5){
+    flex-basis: 15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .delivery_schedule-table tfoot th:nth-child(1){
+    flex-basis:55%;
+  }
+  .delivery_schedule-table tfoot th:nth-child(2),
+  .delivery_schedule-table tfoot th:nth-child(3),
+  .delivery_schedule-table tfoot th:nth-child(4){
+    flex-basis:15%;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+  }
+  .delivery_schedule-table .bulk-action{
+    display: flex;
+  }
+  .delivery_schedule-table i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: var(--font18);
+    border-radius: 100px;
+    margin: 0px 5px;
+    font-weight: 200;
+    color: var(--blue);
+    background-color: var(--white);
+  }
+  .delivery_schedule-table .bulk-button {
+    display: flex;
+    align-items: center;
+    margin: 0px 15px;
+    cursor: pointer;
+    font-size: var(--font14);
+  }
+  .delivery_schedule-table .bulk-button span {
+    font-size: var(--font18);
+    margin-right: 10px;
+    font-weight: 200;
+    color: var(--blue);
+  }
+  /*--------- End Delivery Schedule Table Area ---------*/
+  
+  /* Start Reshedule Modal */
+  .modal-header .modal-title{
+    color: var(--black)!important;
+    font-size: var(--font16)!important;
+  }
+  #reshedule-modal .modal-footer {
+    padding-bottom: 0rem;
+  }
+  #reshedule-modal .form-control {
+    font-size: var(--font14);
+  }
+  #reshedule-modal .invoice-list {
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    font-size: var(--font14);
+    margin-bottom: 15px;
+  }
+  #reshedule-modal .invoice-list span{
+    color: var(--text-black);
+    font-size: var(--font14);
+  }
+  #reshedule-modal .invoice-list span .moreInvoice{
+    color: var(--blue);
+    background-color: var(--bluish-white);
+    padding: 5px 10px;
+    font-size: var(--font14);
+    border-radius: 2px;
+  }
+  /* End Reshedule Modal */
+  
+  /*--------- Start Invoice Modal Area ---------*/
+  #invoice-modal .modal-content {
+      width: 90%;
+      margin: auto;
+  }
+  #invoice-modal .modal-body{
+      padding: 0rem 1rem;
+  }
+  #invoice-modal .modal-body .customer_info{
+  padding: 10px 0px;
+  }
+  #invoice-modal .modal-body .customer_info p{
+    font-size: var(--font14);
+    color: var(--text-black);
+  }
+  #invoice-modal .modal-body .customer_info p span{
+    font-size: var(--font14);
+    color: var(--blue);
+    font-weight: 500;
+  }
+  .invoice-modal-table{
+      display: block;
+      empty-cells: show;
+      border-spacing: 0;
+      box-sizing: border-box;
+    }
+    .invoice-modal-table tr{
+      width: 100%;
+      display:flex;
+    }
+    .invoice-modal-table td,
+    .invoice-modal-table th{
+      flex-grow:1;
+      display: block;
+      padding: 0rem 1rem;
+    }
+    /* Start Table Head Area */
+    .invoice-modal-table thead{ 
+      position:relative;
+      display: block;
+      width:100%;
+    }
+    .invoice-modal-table thead tr{
+      height: var(--table-height-2);
+      font-size: var(--font14);
+      text-transform: uppercase;
+      color: var(--blue);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .invoice-modal-table thead tr th{
+      height: var(--table-height-2);
+      display:flex;
+      align-items: center;
+    }
+    /* Start Table Body Area */
+    .invoice-modal-table tbody{
+      width:100%; 
+      display: block; 
+      position:relative;
+      overflow-y:scroll;
+      font-size: var(--font14);
+      color:var(--text-black);
+      height: calc( 50vh - (var(--used-height) + 10px));
+    }
+    .invoice-modal-table tbody tr{
+      width: 100%;
+      display:flex;
+      align-items: center;
+      height: var(--table-height);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .invoice-modal-table tbody tr td{
+      display: flex;
+      align-items: center;
+      height: var(--table-height);
+    }
+    /* Start Table Foot Area */
+    .invoice-modal-table tfoot{ 
+      display: block;
+      width:100%;
+      font-size: var(--font14);
+    }
+    .invoice-modal-table tfoot tr{
+      height: var(--table-height-2);
+      display: flex;
+      align-items: center;
+      color: var(--blue);
+      border-top: 1px solid  var(--bluish-white);
+    }
+    .invoice-modal-table tfoot tr .notmatch{
+      color: var(--red);
+    }
+    .invoice-modal-table tfoot tr th{
+      height: var(--table-height-2);
+      display: flex;
+      align-items: center;
+    }
+    /* Start Table Alignment Area*/
+    .invoice-modal-table thead th:nth-child(1),
+    .invoice-modal-table tbody td:nth-child(1){
+      flex-basis:40%;
+      flex-grow:1;
+      display: flex;
+      justify-content: start;
+    }
+    .invoice-modal-table thead th:nth-child(2),
+    .invoice-modal-table tbody td:nth-child(2){
+      flex-basis: 25%;
+      flex-grow:1;
+      display: flex;
+      justify-content: center;
+    }
+    .invoice-modal-table thead th:nth-child(3),
+    .invoice-modal-table tbody td:nth-child(3){
+      flex-basis:25%;
+      flex-grow:1;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .invoice-modal-table tfoot tr {
+      height: 15px;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+    }
+    .invoice-modal-table tfoot tr span {
+      color: var(--text-black);
+      font-size: var(--font12);
+      font-weight: 400;
+    }
+    .invoice-modal-table tfoot tr p {
+      color: var(--text-black);
+      font-size: var(--font12);
+      font-weight: 400;
+    }
+    .invoice-modal-table tfoot tr th:nth-child(1){
+      height: 15px;
+      flex-basis:85%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .invoice-modal-table tfoot tr th:nth-child(2){
+      height: 15px;
+      flex-basis:25%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .invoice-modal-table tfoot tr:last-child {
+      height: var(--table-height-2);
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+    }
+    .invoice-modal-table tfoot tr:last-child span {
+      color:  var(--blue);
+      font-size: var(--font14);
+      font-weight: 700;
+    }
+    .invoice-modal-table tfoot tr:last-child p {
+      color: var(--blue);
+      font-size: var(--font14);
+      font-weight: 700;
+    }
+  /*--------- End Invoice Modal Area ---------*/
+  @media screen and (max-width: 1440px) {
+    :root {
+      --table-height-2: 40px;
+      }
+  }
