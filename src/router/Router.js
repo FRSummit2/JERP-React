@@ -64,6 +64,8 @@ import Page503 from '../views/errors/Page503';
 import PageUnderConstruction from '../views/errors/PageUnderConstruction';
 import PageUnderMaintenance from '../views/errors/PageUnderMaintenance';
 
+import Reports from '../views/reports/Reports';
+
 const Router = () => {
 
   return (
@@ -76,15 +78,15 @@ const Router = () => {
 
         {/* MDP */}
         <PrivateRoute path="/features/local_sales/delivery_plan" component={MonthlyDeliveryPlan} />
-        
+
         {/* DISPATCH & PACKING PREPARATION */}
         <PrivateRoute path="/features/local_sales/dispatch-entry" component={DispatchEntry} />
         <PrivateRoute path="/features/local_sales/ds-transfer-packing-preparation" component={TransferPackingPreparation} />
-        
+
         {/* ORDERS */}
         <PrivateRoute path="/features/local_sales/sales_order" component={SalesOrder} />
         <PrivateRoute path="/features/local_sales/order_approval" component={OrderApproval} />
-        
+
         {/* PRODUCTS */}
         <PrivateRoute path="/features/goods_movement/add-stock" component={AddStock} />
         <PrivateRoute path="/features/reports/stock-report" component={StockReport} />
@@ -92,12 +94,12 @@ const Router = () => {
         <PrivateRoute path="/features/inventory/all-products" component={ProductsList} />
         <PrivateRoute path="/features/inventory/product-price-approval" component={ProductPriceApproval} />
         <PrivateRoute path="/features/local_sales/special-req-approval" component={SpecialReqApproval} />
-        
+
         {/* CUSTOMER */}
         <PrivateRoute path="/features/marketing_and_crm/customer-pending-list" component={CustomerPendingList} />
         <PrivateRoute path="/features/stakeholders/retailer" component={CustomerList} />
         <PrivateRoute path="/features/marketing_and_crm/customer-credit" component={CustomerCredit} />
-        
+
         {/* DELIVERIES & DS */}
         <PrivateRoute path="/features/local_sales/deliveries" component={Deliveries} />
         <PrivateRoute path="/features/local_sales/customer-payment" component={CustomerPayment} />
@@ -107,13 +109,13 @@ const Router = () => {
         <PrivateRoute path="/features/local_sales/collection2" component={Collection2} />
         <PrivateRoute path="/features/local_sales/delivery_grn" component={DeliveryGRN} />
         <PrivateRoute path="/features/inventory/grn" component={GRN} />
-        
+
         {/* EMPLOYEE */}
         <PrivateRoute path="/features/configuration/employee" component={Employee} />
-        
+
         {/* BAANCE SHEET */}
         <PrivateRoute path="/features/local_sales/balance-sheet" component={BalanceSheet} />
-        
+
         {/* REQUISITION */}
         <PrivateRoute path="/features/inventory/requisition" component={Requisition} />
         <PrivateRoute path="/features/local_sales/create-requisition" component={CreateRequisition} />
@@ -121,7 +123,7 @@ const Router = () => {
         <PrivateRoute path="/features/goods_movement/verified-requisition" component={VerifiedRequisition} />
         <PrivateRoute path="/features/goods_movement/verified-requisition-update" component={VerifiedRequisitionUpdate} />
         <PrivateRoute path="/features/inventory/transfer" component={Transfer} />
-        
+
         {/* TENDER, SALES AREA, SLAB DISCOUNT */}
         <PrivateRoute path="/features/local_sales/third-party-tender" component={ThirdPartyTender} />
         <PrivateRoute path="/features/configuration/sales_area" component={SalesArea} />
@@ -134,6 +136,8 @@ const Router = () => {
         <PrivateRoute path="/features/accounts/bank-register" component={BankRegister} />
         <PrivateRoute path="/features/accounts/cheque-register" component={ChequeRegister} />
         <PrivateRoute path="/features/accounts/expenditure-register" component={ExpenditureRegister} />
+
+        <PrivateRoute path="/features/reports/printing-reports" component={Reports} />
 
         {/* ERROR */}
         <PrivateRoute path="/unauthorized" component={Page401} />

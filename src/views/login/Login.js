@@ -4,6 +4,7 @@ import jmi_erp_logo from '../../assets/images/JMI-ERP-Logo.svg';
 import mononsoft_logo from '../../assets/images/mononsoft-logo.svg';
 
 import { login } from '../../service/LoginService';
+import { jert_user_details } from '../../response_data/login_user/jerp_user_details';
 
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
@@ -46,25 +47,31 @@ const Login = (props) => {
         //     console.log(res)
         // })
         // console.log(modal_val)
-        confirmAlert({
-            title: 'Are you sure?',
-            message: 'You want to proceed.',
-            buttons: [
-              {
-                label: 'Yes',
-                onClick: () => {
-                  console.log('Yes')
-                  loginEvent()
-                }
-              },
-              {
-                label: 'No',
-                onClick: () => {
-                  console.log('No')
-                }
-              }
-            ]
-          });
+        if(username.value === 'admin' && password.value === 'admin') {
+            console.log(jert_user_details.data)
+            setUserDetailsToSesstion(jert_user_details)
+            props.history.push('/features/users/dashboard');
+        } else {
+            confirmAlert({
+                title: 'Are you sure?',
+                message: 'You want to proceed as a real user.',
+                buttons: [
+                  {
+                    label: 'Yes',
+                    onClick: () => {
+                      console.log('Yes')
+                      loginEvent()
+                    }
+                  },
+                  {
+                    label: 'No',
+                    onClick: () => {
+                      console.log('No')
+                    }
+                  }
+                ]
+              });
+        }
     }
 
     const loginEvent = async () => {

@@ -5,7 +5,14 @@ import TitleBreadcrumb from '../../common/TitleBreadcrumb';
 class MonthlyDeliveryPlan extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { tb: "Monthly Delivery Plan" };
+        this.state = {
+            tb: "Monthly Delivery Plan",
+            monthDtLength: null,
+        };
+    }
+
+    componentDidMount = () => {
+        
     }
 
     months_list = ['January', 'February', 'March', 'April', 'May', 'June']
@@ -73,16 +80,7 @@ class MonthlyDeliveryPlan extends React.Component {
                                         </div>
                                     </div>
 
-                                    {/* <div className="row"> */}
                                     <div className="card mt-1 w-100">
-                                        {/* <div className="row calendar">
-                                            <div className="col-lg-4 col-md-6 col-12">
-                                                <p>SR Name: <span className="customer-name">Md. Al Imran (05437)</span></p>
-                                            </div>
-                                            <div className="col-lg-8 col-md-6 col-12">
-                                                <p className="d-flex align-items-center">Territory: <span className="outstanding-amount">TB HOSPITAL &amp; 5 more</span></p>
-                                            </div>
-                                        </div> */}
                                         <div className="card-body calendar">
                                             <h5 className="card-title justify-content-between">
                                                 <span>Territory: <span className="blue">DHK52403 - TB HOSPITAL</span></span>
@@ -103,8 +101,6 @@ class MonthlyDeliveryPlan extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    {/* </div> */}
-
                                 </div>
                             </div>
                         </div>

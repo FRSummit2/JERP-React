@@ -111,7 +111,8 @@ class Dashboard extends React.Component {
         { name: '* Challan Register', url: '/features/accounts/challan-register' },
         { name: '* Bank Register', url: '/features/accounts/bank-register' },
         { name: '* Cheque Register', url: '/features/accounts/cheque-register' },
-        { name: '* Expenditure Register', url: '/features/accounts/expenditure-register' }
+        { name: '* Expenditure Register', url: '/features/accounts/expenditure-register' },
+        { name: '* Printing Reports', url: '/features/reports/printing-reports' }
     ]
 
     // RADAR CHART
