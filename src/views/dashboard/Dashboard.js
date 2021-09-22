@@ -7,6 +7,8 @@ import { NavLink } from "react-router-dom"
 import CommonLayout from '../common/CommonLayout.js';
 import TitleBreadcrumb from '../common/TitleBreadcrumb.js';
 
+import CounterRedux from './CounterRedux.js';
+
 // function Dashboard(props) {
 class Dashboard extends React.Component {
     constructor(props) {
@@ -142,12 +144,14 @@ class Dashboard extends React.Component {
     // }
 
     render() {
+        // const { counter, increment, decrement, reset } = this.props;
         return (
             <div>
                 <CommonLayout />
                 <TitleBreadcrumb titleBreadcrumb={this.state.tb} />
                 {/* Welcome {user.name}!<br /><br /> */}
                 <div id="main-section" className="main-section">
+
                     {/* <input type="button" onClick={this.handleLogout} value="Logout" /> */}
 
                     <div className="dashboard-menu row">
@@ -160,6 +164,19 @@ class Dashboard extends React.Component {
                                 </div>
                             ))
                         }
+                    </div>
+
+                    {/* REDUX */}
+                    <div>
+                        {/* <div>{counter}</div>
+                        <div>
+                            <button onClick={increment}>INCREMENT BY 1</button>
+                        </div>
+                        <div>
+                            <button onClick={decrement}>DECREMENT BY 1</button>
+                        </div>
+                        <button onClick={reset}>RESET</button> */}
+                        <CounterRedux />
                     </div>
 
                     <div className="dashboard-menu row hide">
