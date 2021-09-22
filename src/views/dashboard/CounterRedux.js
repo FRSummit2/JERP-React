@@ -68,6 +68,7 @@ export default CounterRedux;
 
 // REDUX
 /*
+* https://www.youtube.com/watch?v=CVpUuw9XSjY&ab_channel=DevEd
 * 1. Configure index.js as bellow
         import { createStore } from 'redux';
         import allReducer from './reducer'
