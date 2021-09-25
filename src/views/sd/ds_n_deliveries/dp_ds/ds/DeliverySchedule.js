@@ -178,7 +178,7 @@ class DeliverySchedule extends React.Component {
                                                                     </td>
                                                                     <td>
                                                                         <span title="Add" data-toggle="tooltip" data-placement="bottom"><span className="material-icons add"> add </span></span>
-                                                                        <span title="Reshedule" data-toggle="tooltip" data-placement="bottom"><span class="material-icons insert_invitation"> insert_invitation </span></span>
+                                                                        <span title="Reshedule" data-toggle="tooltip" data-placement="bottom"><span className="material-icons insert_invitation"> insert_invitation </span></span>
                                                                     </td>
                                                                 </tr>
                                                             ))

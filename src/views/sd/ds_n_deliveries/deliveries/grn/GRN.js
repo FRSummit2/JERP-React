@@ -49,7 +49,7 @@ class GRN extends React.Component {
                                     <div className="row deCollection_header">
                                         <div className="col-12 d-flex justify-content-between">
                                             <h5>GRN No: <span>GRN/DHK/1052</span></h5>
-                                            <span title="Print" data-toggle="tooltip" class="material-icons print"> print </span>
+                                            <span title="Print" data-toggle="tooltip" className="material-icons print"> print </span>
                                         </div>
                                     </div>
 

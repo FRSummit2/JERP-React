@@ -85,8 +85,8 @@ class MonthlyDeliveryPlan extends React.Component {
                                             <h5 className="card-title justify-content-between">
                                                 <span>Territory: <span className="blue">DHK52403 - TB HOSPITAL</span></span>
                                                 <span className="d-flex">
-                                                    <span class="material-icons content_copy"> content_copy </span>
-                                                    <span class="material-icons delete_outline"> delete_outline </span>
+                                                    <span className="material-icons content_copy"> content_copy </span>
+                                                    <span className="material-icons delete_outline"> delete_outline </span>
                                                 </span>
                                             </h5>
                                             <div className="card-text d-flex justify-content-around">

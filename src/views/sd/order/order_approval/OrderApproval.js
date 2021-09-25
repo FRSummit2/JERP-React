@@ -53,7 +53,7 @@ class OrderApproval extends React.Component {
                                     <div className="row deCollection_header">
                                         <div className="col-12 d-flex justify-content-between">
                                             <h5>Invoice No: <span onClick={this.invoiceNoClickHandler} style={{ cursor: 'pointer', textDecoration: 'underline' }}>102131</span></h5>
-                                            <span title="Print" data-toggle="tooltip" class="material-icons print"> print </span>
+                                            <span title="Print" data-toggle="tooltip" className="material-icons print"> print </span>
                                         </div>
                                         <div className="col-lg-4 col-md-4 col-12">
                                             <p>Customer: <span className="customer-name">ABI Pharmacy and Diagnostic Center</span></p>

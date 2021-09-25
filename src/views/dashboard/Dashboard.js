@@ -80,7 +80,7 @@ class Dashboard extends React.Component {
         { name: 'DS Transfer Packing Preparation', url: '/features/local_sales/ds-transfer-packing-preparation' },
         { name: '* Sales Order', url: '/features/local_sales/sales_order' },
         { name: '* Order Approval', url: '/features/local_sales/order_approval' },
-        { name: 'Add Stock', url: '/features/goods_movement/add-stock' },
+        { name: '* Add Stock', url: '/features/goods_movement/add-stock' },
         { name: 'Customer Pending List', url: '/features/marketing_and_crm/customer-pending-list' },
         { name: 'Customer List', url: '/features/stakeholders/retailer' },
         { name: 'Customer Credit', url: '/features/marketing_and_crm/customer-credit' },
