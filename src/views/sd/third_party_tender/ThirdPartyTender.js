@@ -172,7 +172,7 @@ class ThirdPartyTender extends React.Component {
                                             </tbody>
                                             <tfoot>
                                                 <tr>
-                                                    <th colspan="2"><a className="btn-add-product" data-toggle="modal" data-target="#add-product-modal"><span className="material-icons">add</span>Add Product</a></th>
+                                                    <th colspan="2"><span className="btn-add-product" data-toggle="modal" data-target="#add-product-modal"><span className="material-icons">add</span>Add Product</span></th>
                                                     <th> <p className="small-text">Subtotal</p> </th>
                                                     <th> <p className="small-text">13,032.20</p> </th>
                                                     <th></th>
@@ -184,7 +184,7 @@ class ThirdPartyTender extends React.Component {
                                                     <th></th>
                                                 </tr>
                                                 <tr>
-                                                    <th colspan="2"><a className="btn-add-atachment"><span className="material-icons">attachment</span>Atachment</a></th>
+                                                    <th colspan="2"><span className="btn-add-atachment"><span className="material-icons">attachment</span>Atachment</span></th>
                                                     <th><p className="grand-total">Grand Total</p></th>
                                                     <th><p className="grand-total">14,505.55</p></th>
                                                     <th></th>

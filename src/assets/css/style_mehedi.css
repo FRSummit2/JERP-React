@@ -9708,6 +9708,980 @@ input[type="button"] {
 ****************************************************************************************
 */
 
+:root{
+    --table-height: 40px;
+  }
+.customer_area{
+    margin-top: 15px;
+    height: calc(100vh - (var(--used-height) - (-30px)));
+}
+/* Start Employee Preview Area */
+.employee-preview {
+    background-color: var(--white);
+    box-shadow: 0px 0px 8px #026CD11A;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    height: 100%;
+    padding: 15px 0px;
+}
+.employee-preview .preview-scroll {
+    padding: 15px;
+    height: calc(100vh - (var(--used-height) + 60px));
+    overflow-y: scroll;
+}
+.employee-preview .preview-scroll .user-row1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+.employee-preview .preview-scroll .user-row1 .user-status {
+    position: relative;
+     width: 140px;
+}
+.employee-preview .preview-scroll .user-row1 .user-status .form-control-sm{
+    border-radius: 2px;
+    padding-left: 25px;
+    font-size: var(--font14) ;
+    border: 1px solid var(--border-color);
+    height: 30px !important;
+}
+.employee-preview .preview-scroll .user-row1 .user-status .form-control-sm:placeholder{
+    font-size: var(--font14) ;
+    color: #AAC0D9;
+}
+.employee-preview .preview-scroll .user-row1 .user-status .form-control-sm:focus{
+    outline: none !important;
+    border-color: var(--blue)!important;
+    box-shadow: none;
+}
+.employee-preview .preview-scroll .user-row1 .user-status span{
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+}
+.employee-preview .preview-scroll .user-row1 .user-status span.active{
+    background-color: var(--green);
+}
+.employee-preview .preview-scroll .user-row1 .user-status span.inactive{
+    background-color: #AAC0D9;
+}
+.employee-preview .preview-scroll .user-row1 .employee-type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 5px 15px;
+    font-weight: 500;
+    font-size: var(--font14);
+    color: var(--blue);
+    border-radius: 100px;
+    background-color: var(--bluish-white);
+}
+.employee-preview .preview-scroll .user-row2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:20px 0px;
+}
+
+.employee-preview .preview-scroll .user-row2 .user-img {
+  position: relative;
+  height: 85px;
+  width: 85px;
+  border-radius: 100px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 10px;
+}
+
+.employee-preview .preview-scroll .user-row2 .user-img a {
+  position: absolute;
+  font-size: var(--font12);
+  color: var(--white);
+  text-align: center;
+  height: 32px;
+  width: 78.5px;
+  bottom: 0px;
+  left: 3.5px;
+  z-index: 5;
+  border-radius: 0px 0px 890px 890px;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+}
+.employee-preview .preview-scroll .user-row2 .user-img img {
+  z-index: 4;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 85px;
+  width: 85px;
+  border-radius: 100px;
+  border: 2px solid var(--blue);
+  margin: 0px 15px 0px 0px;
+}
+.employee-preview .preview-scroll .user-row2 h5 {
+    display: flex;
+    align-items: center;
+    font-size: var(--font16);
+    color: var(--blue);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.employee-preview .preview-scroll .user-row2 h5 span{
+    padding: 0px 5px;
+    font-size: var(--font16);
+}
+.employee-preview .preview-scroll .user-row2 p{
+    font-size: var(--font14);
+    color: var(--text-blacks);
+}
+.employee-preview .preview-scroll .user-row4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+/* Added new */
+@media screen and (max-width: 1366px) { 
+  .employee-preview .preview-scroll .user-row4{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0px;
+}
+.employee-preview .preview-scroll .user-row4 a{
+  padding: 2px 0px;
+}
+  }
+/* Added new */
+.employee-preview .preview-scroll .user-row4 a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    font-weight: 500;
+    font-size: var(--font14);
+}
+.employee-preview .preview-scroll .user-row4 a span{
+    font-size: var(--font16);
+    margin-right: 3px;
+}
+.employee-preview .preview-scroll .user-row5 h5{
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    font-size: var(--font14);
+    padding: 15px 0px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 10px;
+}
+.employee-preview .preview-scroll .user-row5 h5 span{
+    color: var(--blue);
+    font-size: var(--font14);
+}
+.employee-preview .preview-scroll .user-row5 p{
+    color: var(--text-black);
+    font-size: var(--font14);  
+}
+/* Start Employee Preview Area */
+
+/* Start Employee Details Tab Area */
+.employee-details{
+  background-color: var(--white);
+  box-shadow: 0px 0px 8px #026CD11A;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  height: 100%;
+}
+.employee-details .info-col{
+  display: flex;
+  align-items: center;
+  font-size: var(--font14);
+  padding: 5px 0px;
+}
+.employee-details .info-col span{
+  color: var(--text-black);
+}
+.employee-details .info-col p{
+  font-weight: 500;
+  color: var(--blue);
+}
+#employee-details-tab .btn-active {
+  color: var(--white) !important;
+  background-color: var(--blue) !important;
+}
+#employee-details-tab #employee-details-tab-inner{
+    border-bottom: none;
+}
+#employee-details-tab #employee-details-tab-inner .employee-single-tab {
+    font-size: var(--font14);
+    color:var(--text-black);
+    font-weight: 500;
+    border:0;
+    line-height: unset;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0px;
+    padding: 10px 0px;
+}
+#employee-details-tab #employee-details-tab-inner .employee-single-tab.active {
+    position: relative;
+    z-index: 9;
+}
+#employee-details-tab #employee-details-tab-inner .employee-single-tab.active::before {
+    content: "";
+    background: var(--blue);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border:0;
+}
+#employee-details-tab #employee-details-tab-inner .employee-single-tab, 
+#employee-details-tab #employee-details-tab-inner .employee-single-tab.active {
+    background-color: transparent;
+}
+#employee-details-tab .tab-content{
+  padding: 0px 15px;
+   border-color: black;
+  height:  calc( 100vh - (var(--used-height) + 70px));
+  overflow-x: scroll;
+}
+.employee-details .content-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 8px 0px;
+    border-bottom: 1px solid var(--border-color);
+  }
+.employee-details .content-header h5 {
+    font-size: var(--font16);
+    color: var(--blue);
+  }
+.employee-details .content-header .btn-edit span,
+.employee-details .content-header .btn-add span
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: var(--font16);
+    color: var(--blue);
+    border-radius: 100px;
+    background-color: var(--bluish-white);
+  }
+.employee-details .content-header .btn-edit span:hover,
+.employee-details .content-header .btn-add span:hover {
+    color: var(--white);
+    background-color: var(--blue);
+  }
+.employee-details .content-header .btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.employee-details .content-header .btn-group .btn-save {
+  width: 140px;
+  height: 35px;
+  padding: 0px 10px;
+  font-size: var(--font14);
+  color: var(--blue);
+  background-color: var(--bluish-white);
+  border-radius: 100px!important;
+  margin: 0px 15px;
+  font-weight: 600;
+  border: none;
+}
+.employee-details .content-header .btn-group .btn-edit span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  font-size: var(--font16);
+  color: var(--blue);
+  border-radius: 50%;
+  background-color: var(--bluish-white);
+}
+.employee-details .content-header .btn-group .btn-edit span:hover {
+  color: var(--white);
+  background-color: var(--blue);
+}
+/* Start Custom Modal Area */
+.employee-details .modal-header{
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+}
+.employee-details .modal-header .modal-title{
+  color: var(--black)!important;
+  font-size: var(--font16)!important;
+}
+.employee-details .modal-body .form-control{
+  font-size: var(--font14)!important;
+  height: 38px;
+}
+.employee-details .modal-body textarea{
+  height: 100px !important;
+}
+.employee-details .modal-header button span {
+  height: 35px;
+  width: 35px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4px;
+}
+.employee-details .modal-header button span:hover {
+  background-color: var(--bluish-white);
+}
+/* End Custom Modal Area */
+
+/*---------Start Pay Structure Tab Area ---------*/
+/*---------Start Pay Structure Table ---------*/
+.pay-structure-table{
+  display: block;
+  empty-cells: show;
+  border-spacing: 0;
+  background-color: var(--white);
+  box-shadow: 0px 0px 8px #026CD11A;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+.pay-structure-table tr{
+  width: 100%;
+  display:flex;
+}
+.pay-structure-table td,
+.pay-structure-table th{
+  flex-grow:1;
+  display: block;
+  padding: 0rem 1rem;
+}
+/* Start Table Head Area */
+.pay-structure-table thead{ 
+  position:relative;
+  display: block;
+  width:100%;
+}
+.pay-structure-table thead tr:nth-child(1){
+  height: 50px;
+  font-size: var(--font14);
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pay-structure-table thead tr:nth-child(1) th{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pay-structure-table thead tr:nth-child(1) th h5{
+  color: var(--blue);
+  font-size: var(--font16);
+}
+.pay-structure-table thead tr:nth-child(1) th span{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  font-size: var(--font20);
+  font-weight: 600;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--bluish-white);
+}
+.pay-structure-table thead tr:nth-child(1) th span:hover{
+  color: var(--white);
+  background-color: var(--blue);
+}
+.pay-structure-table thead tr:nth-child(2){
+  min-height: var(--table-height);
+  font-size: var(--font14);
+  text-transform: uppercase;
+  color: var(--blue);
+  border-bottom: 1px solid var(--border-color);
+}
+.pay-structure-table thead tr:nth-child(2) th{
+  min-height: var(--table-height);
+  display:flex;
+  align-items: center;
+}
+/* Start Table Body Area */
+.pay-structure-table tbody{
+  width:100%; 
+  display: block; 
+  position:relative;
+  overflow-y:scroll;
+  font-size: var(--font14);
+  color:var(--text-black);
+  height:  calc( 100vh - (var(--used-height) + 400px));
+}
+.pay-structure-table tbody tr{
+  width: 100%;
+  display:flex;
+  align-items: center;
+  min-height: var(--table-height);
+  border-bottom: 1px solid var(--border-color);
+}
+.pay-structure-table tbody tr:hover{
+ background-color:var(--bluish-white);
+}
+.pay-structure-table tbody tr td{
+  display: flex;
+  align-items: center;
+  min-height: var(--table-height);
+}
+.pay-structure-table tbody .form-control-sm{
+  border-radius: 2px;
+  font-size: var(--font14) ;
+  border: 1px solid var(--border-color);
+  height: 30px !important;
+  width: 80px;
+  margin-right: -8px;
+}
+.pay-structure-table tbody .form-control-sm:placeholder{
+  font-size: var(--font14) ;
+  color: #AAC0D9;
+}
+.pay-structure-table tbody .form-control-sm:focus{
+  outline: none !important;
+  border-color: var(--blue)!important;
+  box-shadow: none;
+}
+/* Start Table Foot Area */
+.pay-structure-table tfoot{ 
+  display: block;
+  width:100%;
+  font-size: var(--font14);
+}
+.pay-structure-table tfoot tr{
+  min-height: var(--table-height);
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  border-radius: 0px 0px 8px 8px;
+  background-color: var(--bluish-white);
+}
+.pay-structure-table tfoot tr th{
+  min-height: var(--table-height);
+  display: flex;
+  align-items: center;
+}
+ /* Start Table Alignment Area*/
+.pay-structure-table thead tr:nth-child(2) th:nth-child(1),
+.pay-structure-table tbody td:nth-child(1),
+.pay-structure-table tfoot th:nth-child(1){
+  flex-basis:60%;
+  flex-grow:1;
+  display: flex;
+  justify-content: flex-start;
+}
+.pay-structure-table thead tr:nth-child(2) th:nth-child(2),
+.pay-structure-table tbody td:nth-child(2),
+ .pay-structure-table tfoot th:nth-child(2){
+  flex-basis:40%;
+  flex-grow:1;
+  display: flex;
+  justify-content: flex-end;
+}
+/*---------End Pay Structure Table ---------*/
+#employee-pay-structure .checkbox-group{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#employee-pay-structure .checkbox-group label{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0px 15px 0px 5px;
+  min-width: 100px;
+  height: 38px;
+  background-color: var(--white);
+  border: 1px solid var(--bluish-white);
+}
+#employee-pay-structure .checkbox-group label input{
+  margin: 5px;
+}
+#employee-pay-structure .checkbox-group label span{
+  font-size: var(--font14);
+  font-weight: 500;
+  color: var(--text-black);
+}
+/*---------End Pay Structure Tab Area ---------*/
+
+/* --------- Start Employee List Area --------- */
+.employee-list-area {
+  margin-top: 15px;
+  min-height: calc(100vh - (var(--used-height) - (-30px)));
+  background-color: var(--white);
+  box-shadow: 0px 0px 8px #026CD11A;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+.employee-list-area  .employee-list-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+.employee-list-area .employee-list-header .header-left{
+  display: flex;
+  align-items: center;
+}
+.employee-list-area .employee-list-header .header-left h5{
+  display: flex;
+  align-items: center;
+  font-size: var(--font16);
+  color: var(--text-label);
+}
+.employee-list-area .employee-list-header .header-left h5 p{
+  font-size: var(--font16);
+  color:  var(--blue);
+}
+.employee-list-area .employee-list-header .header-left h5 span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font22);
+  font-weight: 600;
+  color:  var(--blue);
+  background-color: var(--white);
+  width: 30px;
+  height: 30px;
+  padding: 5px 5px;
+  border-radius: 50%;
+  margin: 0px 10px;
+}
+.employee-list-area .employee-list-header .header-left h5 span:hover{
+  color: var(--white);
+  background-color: var(--blue);
+}
+.employee-list-area .employee-list-header .header-right{
+  display: flex;
+  align-items: center;
+}
+.employee-list-area .employee-list-header .header-right .create-btn {
+  display: flex;
+  align-items: center;
+}
+.employee-list-area .employee-list-header .header-right .create-btn span {
+  font-size: var(--font20);
+
+  margin-right: 5px;
+}
+.employee-list-area .employee-list-header .header-right .form-group {
+  position: relative;
+  margin-bottom: 0px!important;
+  width: 250px;
+}
+.employee-list-area .employee-list-header .header-right .form-group span{
+  position: absolute; 
+  top: 8px; 
+  left:10px; 
+  color: #AAC0D9;
+  }
+.employee-list-area .employee-list-header .header-right .form-group input{
+  padding-left: 36px;
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+}
+.employee-list-area .employee-list-header .header-right .form-group input::placeholder{
+  font-size: var(--font14) ;
+  color: #AAC0D9;
+}
+.employee-list-area  .employee-list-header .header-right .form-group input:focus{
+  border-color: var(--blue);
+  box-shadow: none;
+}
+.employee-list-area .employee-list-header .header-right .filter_search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #AAC0D9;
+  font-size: var(--font16);
+  text-align: center;
+  padding: 8px;
+  height: 38px;
+  width: 38px;
+  border-radius: 2px;
+  border: 1px solid  var(--border-color);
+  margin-left: 10px;
+}
+.employee-list-area .employee-list-header .header-right .filter_search:hover{
+  color: var(--white);
+  background-color: var(--blue);
+}
+.employee-list-area .employee-list-header .header-right button{
+  height: 38px;
+  width: 150px;
+  margin: 0px 10px;
+}
+/*--------- Start Employee List Table Area ---------*/
+.employee-list-table{
+  display: block;
+  empty-cells: show;
+  border-spacing: 0;
+}
+.employee-list-table tr{
+  width: 100%;
+  display:flex;
+}
+.employee-list-table td,
+.employee-list-table th{
+  flex-grow:1;
+  display: block;
+  padding: 0rem 1rem;
+}
+/* Start Table Head Area */
+.employee-list-table thead{ 
+  position:relative;
+  display: block;
+  width:100%;
+}
+.employee-list-table thead tr{
+  min-height: var(--table-height);
+  font-size: var(--font14);
+  text-transform: uppercase;
+  color: var(--blue);
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+}
+.employee-list-table thead tr th{
+  min-height: var(--table-height);
+  display:flex;
+  align-items: center;
+}
+/* Start Table Body Area */
+.employee-list-table tbody{
+  width:100%; 
+  display: block; 
+  position:relative;
+  overflow-y:scroll;
+  font-size: var(--font14);
+  color:var(--text-black);
+  height: calc(100vh - (var(--used-height) + (140px)));
+}
+.employee-list-table tbody tr{
+  position: relative;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  min-height: var(--table-height);
+  border-bottom: 1px solid var(--border-color);
+}
+.employee-list-table tbody tr td{
+  display: flex;
+  align-items: center;
+  min-height: var(--table-height);
+}
+.employee-list-table tbody tr td .user-table{
+  display: flex;
+  align-items: center;
+}
+.employee-list-table tbody tr td .user-table img{
+  height: 35px;
+  width: 35px;
+  border-radius: 100px;
+  border: 2px solid var(--border-color);
+  margin-right:10px ;
+}
+.employee-list-table tbody .inactive{
+  color:  var(--red)!important;
+}
+.employee-list-table tbody .active{
+  color: var(--green)!important;
+}
+/* Start Table Alignment Area*/
+.employee-list-table thead th:nth-child(1),
+.employee-list-table tbody td:nth-child(1){
+  flex-basis:15%;
+  display: flex;
+  justify-content: flex-start;
+  /* background-color: aqua; */
+}
+.employee-list-table thead th:nth-child(2),
+.employee-list-table tbody td:nth-child(2){
+  flex-basis: 10%;
+  display: flex;
+  justify-content: flex-start;
+  /* background-color: bisque; */
+}
+.employee-list-table thead th:nth-child(3),
+.employee-list-table tbody td:nth-child(3){
+  flex-basis: 10%;
+  display: flex;
+  justify-content: flex-start;
+  /* background-color: chartreuse; */
+}
+.employee-list-table thead th:nth-child(4),
+.employee-list-table tbody td:nth-child(4){
+  flex-basis:10%;
+  display: flex;
+  justify-content: flex-start;
+  /* background-color: cornflowerblue; */
+}
+.employee-list-table thead th:nth-child(5),
+.employee-list-table tbody td:nth-child(5){
+  flex-basis:15%;
+  display: flex;
+  justify-content: flex-start;
+  /* background-color: crimson; */
+}
+.employee-list-table thead th:nth-child(6),
+.employee-list-table tbody td:nth-child(6){
+  flex-basis:15%;
+  display: flex;
+  justify-content: flex-start;
+  /* background-color: darkcyan; */
+}
+.employee-list-table thead th:nth-child(7),
+.employee-list-table tbody td:nth-child(7){
+  flex-basis:10%;
+  display: flex;
+  justify-content: flex-start;
+  /* background-color: darkkhaki; */
+}
+.employee-list-table thead th:nth-child(8),
+.employee-list-table tbody td:nth-child(8){
+  flex-basis:10%;
+  display: flex;
+  justify-content: center;
+  /* background-color: chocolate; */
+}
+.employee-list-table thead th:nth-child(9),
+.employee-list-table tbody td:nth-child(9){
+  flex-basis:5%;
+  display: flex;
+  justify-content: flex-start;
+  /* background-color: darkblue; */
+}
+/*>> Start Table Hover Button Component <<*/
+.employee-list-table tbody tr:hover {
+background-color: var(--bluish-white);
+cursor: pointer;
+}
+.employee-list-table tbody tr .hover-btns {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+position: absolute;
+right: 0;
+background: rgba(255, 255, 255, 0);
+-webkit-transition: all .1s;
+transition: all .1s;
+padding: 0px 15px;
+}
+.employee-list-table tbody tr .hover-btns::before {
+width: 100px;
+height: 100%;
+margin-left: -100px;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+content: "";
+-webkit-transition: all .1s;
+transition: all .1s;
+background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#E2EDFA));
+background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #E2EDFA 100%);
+}
+/*----- Start Active State -----*/
+.employee-list-table tbody tr.active {
+background-color: var(--bluish-white);
+cursor: pointer;
+}
+.employee-list-table tbody tr.active .hover-btns::before {
+opacity: 1;
+}
+.employee-list-table tbody tr.active .hover-btns {
+height: 100%;
+background-color: var(--bluish-white);
+}
+.employee-list-table tbody tr.active .hover-btns span {
+opacity: 1;
+}
+/*----- Start Hover State -----*/
+.employee-list-table tbody tr:hover .hover-btns {
+height: 100%;
+background-color: var(--bluish-white);
+}
+.employee-list-table tbody tr:hover .hover-btns::before {
+opacity: 1;
+}
+.employee-list-table tbody tr:hover .hover-btns span {
+opacity: 1;
+}
+/*----- Start Button Style -----*/
+.employee-list-table tbody tr .hover-btns .action-btn {
+opacity: 0;
+-webkit-transition: all .2s;
+transition: all .2s;
+/* Button Style */
+display: flex;
+align-items: center;
+justify-content: center;
+width: 30px;
+height: 30px;
+margin: 0px 5px;
+border-radius: 100px;
+font-weight: 200;
+color:  var(--blue);
+font-size: var(--font16);
+background-color:var(--white);
+}
+/*>> End Table Hover Button Component <<*/
+/*--------- End Employee List Table Area ---------*/
+
+/* Start Create Employee Modal Area */
+.modal-header .modal-title{
+  color: var(--black)!important;
+  font-size: var(--font16)!important;
+}
+.modal-header .modal-title span{
+  font-size: var(--font16);
+  color:  var(--blue);
+  margin-left: 5px;
+}
+#create-employee-modal .modal-body{
+  height: 450px;
+  overflow-y: auto;
+} 
+#create-employee-modal .modal-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#create-employee-modal .modal-footer p{
+  font-size: var(--font14);
+  font-weight: 500;
+  color: var(--text-black);
+}
+#create-employee-modal .modal-footer .wizard-btn-group{
+  display: flex;
+  align-items: center;
+}
+#create-employee-modal .modal-footer button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#create-employee-modal .modal-footer .wizard-btn-group .btn-back{
+  width: 150px;
+  height: 40px;
+  padding: 0px 10px;
+  border-radius: 2px;
+  margin-right: 15px;
+  font-size:var(--font14);
+  color: var(--text-black)!important;
+  border: 1px solid var(--text-black)!important;
+  background-color: var(--white)!important;
+}
+#create-employee-modal .modal-footer .wizard-btn-group .btn-back span{
+  margin-right: 15px;
+}
+#create-employee-modal .modal-footer .wizard-btn-group .btn-next{
+  width: 150px;
+  height: 40px;
+  padding: 0px 10px;
+  border-radius: 2px;
+  margin-right: 15px;
+  font-size:var(--font14);
+  color: var(--white)!important;
+  border: 1px solid var(--blue)!important;
+  background-color: var(--blue)!important;
+}
+#create-employee-modal .modal-footer .wizard-btn-group .btn-next span{
+  margin-left: 15px;
+}
+#create-employee-modal .sales-area-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:5px 15px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 15px;
+}
+#create-employee-modal .sales-area-header p {
+  font-size: var(--font14);
+  color: var(--black);
+}
+#create-employee-modal .sales-area-header p span{
+  font-size: var(--font14);
+  color: var(--blue)!important;
+  margin-left: 5px;
+}
+#create-employee-modal .sales-area-header p span.see-more{
+  font-size: var(--font14);
+  font-weight: 500;
+  color: var(--text-black)!important;
+}
+#create-employee-modal .sales-area-header .btn-edit span,
+#create-employee-modal .sales-area-header .btn-add span{
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  font-weight: 600;
+  font-size: var(--font20);
+  color: var(--blue);
+  border-radius: 100px;
+  background-color: var(--bluish-white);
+}
+#create-employee-modal .sales-area-header .btn-edit span:hover,
+#create-employee-modal .sales-area-header .btn-add span:hover {
+  color: var(--white);
+  background-color: var(--blue);
+}
+/*End Create Employee Modal Area */
+/* --------- End Employee List Area --------- */
 
 
 /* 

@@ -291,7 +291,7 @@ class Collection extends React.Component {
                                                         </div>
                                                     </div>
                                                     <div className="modal-footer justify-content-center">
-                                                        <a href="#"><button type="button" className="btn btn-primary btn-global">Save</button></a>
+                                                        <span><button type="button" className="btn btn-primary btn-global">Save</button></span>
                                                     </div>
                                                 </div>
                                             </div>

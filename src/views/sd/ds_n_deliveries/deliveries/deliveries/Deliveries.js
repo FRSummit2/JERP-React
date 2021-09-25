@@ -6,7 +6,7 @@ import TitleBreadcrumb from '../../../../common/TitleBreadcrumb.js';
 // import SuccessModal from '../../../../helpers/modals/success.js';
 import doc_img from '../../../../../assets/images/products/documents.jpg';
 import { pending_delivered_invoice_list_service_demo } from '../../../../../service/DeliveryCollection.js';
-import { pending_delivered_invoice_list } from '../../../../../response_data/delivery_collection.js';
+// import { pending_delivered_invoice_list } from '../../../../../response_data/delivery_collection.js';
 
 class Deliveries extends React.Component {
     constructor(props) {

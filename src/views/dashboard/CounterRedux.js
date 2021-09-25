@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import { createStore } from 'redux';
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement } from '../../actions';

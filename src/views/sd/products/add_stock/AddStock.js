@@ -107,7 +107,7 @@ class AddStock extends React.Component {
                                                     </td>
                                                     <td>
                                                         <div className="hover-btns">
-                                                            <a title="View" data-toggle="tooltip" data-placement="left"> <span className="action-btn material-icons">delete</span> </a>
+                                                            <span title="View" data-toggle="tooltip" data-placement="left"> <span className="action-btn material-icons">delete</span> </span>
                                                         </div>
                                                     </td>
                                                 </tr>

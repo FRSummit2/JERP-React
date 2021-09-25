@@ -35,6 +35,7 @@ import DeliveryGRN from '../views/sd/ds_n_deliveries/deliveries/grn/GRN'
 import GRN from '../views/sd/ds_n_deliveries/deliveries/grn/GRN'
 
 import Employee from '../views/sd/employee/Employee'
+import EmployeeProfile from '../views/sd/employee/EmployeeProfile'
 
 import BalanceSheet from '../views/sd/balance_sheet/BalanceSheet'
 
@@ -112,6 +113,7 @@ const Router = () => {
 
         {/* EMPLOYEE */}
         <PrivateRoute path="/features/configuration/employee" component={Employee} />
+        <PrivateRoute path={'/features/configuration/employee:id'} component={EmployeeProfile} />
 
         {/* BAANCE SHEET */}
         <PrivateRoute path="/features/local_sales/balance-sheet" component={BalanceSheet} />
