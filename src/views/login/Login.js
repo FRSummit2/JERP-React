@@ -3,7 +3,7 @@ import { setUserSession } from '../../Utils/Common';
 import jmi_erp_logo from '../../assets/images/JMI-ERP-Logo.svg';
 import mononsoft_logo from '../../assets/images/mononsoft-logo.svg';
 
-import { login } from '../../service/LoginService';
+import { login, testUser } from '../../service/LoginService';
 import { jert_user_details } from '../../response_data/login_user/jerp_user_details';
 
 import { confirmAlert } from 'react-confirm-alert'; // Import
@@ -37,6 +37,12 @@ const Login = (props) => {
         console.log('use effect')
         console.log(props)
         sessionStorage.removeItem('jerp_user_details');
+
+        testUser().then(res => {
+            console.log(res.data)
+        }).catch(err => {
+            console.log(err)
+        })
     })
 
     const handleLoginJerp = async () => {
